@@ -1,0 +1,322 @@
+\documentclass[greek]{beamer}
+%\usepackage{fontspec}
+\usepackage{amsmath,amsthm}
+\usepackage{unicode-math}
+\usepackage{xltxtra}
+\usepackage{graphicx}
+\usetheme{CambridgeUS}
+\usecolortheme{seagull}
+\usepackage{hyperref}
+\usepackage{ulem}
+\usepackage{xgreek}
+\usepackage{pgfpages}
+\usepackage{tikz}
+%\setbeameroption{show notes on second screen}
+%\setbeameroption{show only notes}
+
+\setsansfont{Noto Serif}
+
+% \newtheorem{definition}{Ορισμός}
+
+\title{Συναρτήσεις}
+\subtitle{Μη πεπερασμένο όριο στο $x_0$}
+\author[Λόλας]{Κωνσταντίνος Λόλας}
+\date{}
+
+\begin{document}
+
+\begin{frame}
+ \titlepage
+\end{frame}
+
+\section{Θεωρία}
+\begin{frame}{Στο άπειρο λοιπόν...}
+ \centering
+ \includegraphics[height=0.6\columnwidth]{images/buzz}
+\end{frame}
+
+\begin{frame}{Λάθος συλλογισμός}
+ Το άπειρο ΔΕΝ ΕΙΝΑΙ ΑΡΙΘΜΟΣ! \pause
+ \begin{block}{Ορισμός απείρου}
+  Αν για κάθε $k\in\mathbb{R}$ μπορώ να βρώ $m\in Α$ ώστε $m>k$, τότε λέμε ότι το $Α$ έχει οσοδήποτε μεγάλους αριθμούς.
+ \end{block} \pause
+ άρα
+ \begin{block}{Ορισμός μη πεπερασμένου ορίου}
+  Έστω συνάρτηση $f:Α\to\mathbb{R}$. Αν για κάθε $k\in\mathbb{R}$ υπάρχει $x_0\in Α$ ώστε για κάθε $x$ σε κατάλληλη περιοχή γύρω από το $x_0$ να ισχύει $f(x)>k$
+ \end{block}
+\end{frame}
+
+\begin{frame}{Ελληνικά!}
+ \begin{block}{Ορισμός μη πεπερασμένου ορίου}
+  Έστω συνάρτηση $f:Α\to\mathbb{R}$. Θα λέμε ότι τείνει στο άπειρο αν μεγαλώνει συνεχώς όταν πλησιάζουμε στο $x_0$. Τότε θα γράφουμε
+  $$\lim\limits_{x \to x_0}{ f(x) }=+\infty$$
+ \end{block} \pause
+ ΜΟΝΟ ΕΓΩ θα επιτρέπεται να γράφω σκέτο $\infty$ και θα εννοώ $+\infty$ και εννοείται επειδή ξεχνάω!
+\end{frame}
+
+\begin{frame}{Το άλλο άπειρο?}
+ \begin{block}{Ορισμός μη πεπερασμένου ορίου}
+  Έστω συνάρτηση $f:Α\to\mathbb{R}$. Θα λέμε ότι τείνει στο μείον άπειρο αν μικραίνει συνεχώς όταν πλησιάζουμε στο $x_0$. Τότε θα γράφουμε
+  $$\lim\limits_{x \to x_0}{ f(x) }=-\infty$$
+ \end{block} \pause
+ Αυτό δεν μπορώ να το παραβλέψω και αναγκαστικά το γράφω και εγώ!
+\end{frame}
+
+\begin{frame}{Πάμε στα γνωστά}
+ Συναρτήσεις που πηγαίνουν στο $+\infty$. \pause Πάμε... \pause
+ \begin{itemize}
+  \item $\frac{1}{x}$
+  \item $\frac{1}{x^2}$
+  \item $\frac{1}{x^{2k}}$
+  \item $\frac{1}{x^{2k+1}}$
+  \item $\ln{x}$
+  \item $εφ(x)$
+ \end{itemize}
+\end{frame}
+
+\begin{frame}{Το άπειρο δεν είναι παιχνίδι (part 1)}
+Γρίφος time!
+  \begin{itemize}
+   \item Υπάρχει ένα ξενοδοχείο με άπειρα δωμάτια.
+   \item Έρχεται ένας ταλαιπωρημένος οδηπόρος και ζητάει δωμάτιο!!!!!
+   \item Ο ξενοδόχος του λέει ότι όλα τα δωμάτια είναι κατελημένα και δεν έχει ελεύθερο.
+   \item Επειδή ο οδηπόρος είστε εσείς και κάνετε μαθηματικά με τον Λόλα, του δίνετε την λύση και τελικά παίρνετε το δωμάτιο 4.
+   \item Προτείνετε μία λύση
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Το άπειρο δεν είναι παιχνίδι (part 2)}
+Μπορώ πολύ εύκολα να αποδείξω ότι $1+2+3+4+\cdots = -\frac{1}{12}$
+
+ \centering
+ \includegraphics[height=0.4\columnwidth]{images/qiev6}
+\end{frame}
+
+\begin{frame}{Σχεδόν τελειώσαμε}
+ \begin{block}{Και λίγα άγνωστα όρια}
+  \begin{itemize}
+   \item $\lim\limits_{x \to 0}{ \frac{ημx}{x} }=1$, \pause
+   \item $\lim\limits_{x \to 0}{ \frac{1-συνx}{x} }=0$
+  \end{itemize}
+ \end{block}
+\end{frame}
+
+\begin{frame}{Όλα τα είχε η Μαριωρή...}
+ Τι γίνεται με τη σύνθεση  $\lim\limits_{x \to x_0}{ f(g(x))}$? \pause
+ \begin{enumerate}
+  \item Θέτουμε $u=g(x)$ \pause
+  \item Υπολογίζουμε (αν υπάρχει!) το $u_0=\lim\limits_{x \to x_0}{ g(x)}$ \pause
+  \item Υπολογίζουμε (αν υπάρχει!) το $k=\lim\limits_{u \to u_0}{ f(u)}$ \pause
+ \end{enumerate}
+ Τότε αν $g(x)\ne u_0$ κοντά στο $x_0$, τότε προφανώς $\lim\limits_{x \to x_0}{ f(g(x))}=k$
+\end{frame}
+
+\section{Ασκήσεις}
+\begin{frame}{Εξάσκηση}
+ Αν για τις συναρτήσεις $f$, $g$ ισχύουν
+ $$\lim\limits_{x \to 2}{ f(x) }=1 \text{ και } \lim\limits_{ x \to 2}{ f(x) }=2$$
+ να υπολογίσετε το $\lim\limits_{x \to 2}{ (3f(x)+f(x)\cdot g(x)) }$
+\end{frame}
+
+\begin{frame}{Εξάσκηση}
+ Να υπολογίσετε τα όρια
+ \begin{enumerate}
+  \item $\lim\limits_{x \to 3}{ \frac{x^2-3x}{x^2-9} }$ \pause
+  \item $\lim\limits_{x \to 1}{ \frac{2x^3-2x}{2x^2-5x+3} }$ \pause
+  \item $\lim\limits_{x \to 2}{ \frac{x^3-8}{x^3-7x+6} }$ \pause
+  \item $\lim\limits_{x \to 1}{ \left( \frac{x}{x-1}+\frac{x-2}{x^2-x}  \right)  }$
+ \end{enumerate}
+\end{frame}
+
+\begin{frame}{Εξάσκηση}
+ Να υπολογίσετε τα όρια
+ \begin{enumerate}
+  \item $\lim\limits_{x \to 4}{ \frac{x-4}{\sqrt{x}-2} }$ \pause
+  \item $\lim\limits_{x \to -1}{ \frac{\sqrt{x+5}-2}{x^2+x} }$ \pause
+  \item $\lim\limits_{x \to 1}{ \frac{\sqrt{x^2+3}-3x+1}{x^2-1} }$ \pause
+  \item $\lim\limits_{x \to 1}{ \frac{2\sqrt{2x-1}-\sqrt{x+3}}{\sqrt{x}-1} }$
+ \end{enumerate}
+\end{frame}
+
+\begin{frame}{Εξάσκηση}
+ Έστω η συνάρτηση $f(x)=\begin{cases}
+   x-2,  & 0<x\le 1 \\
+   3x-4, & 1<x<2    \\
+   2x-1, & x>2
+  \end{cases}$.
+ Να βρείτε (αν υπάρχουν) τα όρια:
+ \begin{enumerate}
+  \item $\lim\limits_{x \to 3}{ f(x) }$ \pause
+  \item $\lim\limits_{x \to 1}{ f(x) }$ \pause
+  \item $\lim\limits_{x \to 2}{ f(x) }$
+ \end{enumerate}
+\end{frame}
+
+\begin{frame}{Εξάσκηση}
+ Έστω η συνάρτηση $f(x)=\begin{cases}
+   \frac{x^2-x-2}{2x-4}, & x\ne 2 \\
+   a,                    & x=2
+  \end{cases}$.
+ \begin{enumerate}
+  \item Να βρείτε το $\lim\limits_{x \to 2}{ f(x) }$ \pause
+  \item Να βρείτε το $a$ ώστε $\lim\limits_{x \to 2}{ f(x) }=f(2)$
+ \end{enumerate}
+\end{frame}
+
+\begin{frame}{Εξάσκηση}
+ Έστω η συνάρτηση $f(x)=\begin{cases}
+   ασυνx+ημx-β,    & x<0    \\
+   α\sqrt{x+1}+2β, & x\ge 0
+  \end{cases}$.
+ Να βρείτε τα $α$ και $β\in\mathbb{R}$ ώστε $\lim\limits_{x \to 0}{ f(x) }=1$
+\end{frame}
+
+\begin{frame}{Εξάσκηση}
+ Να βρείτε αν υπάρχουν τα όρια:
+ \begin{enumerate}
+  \item $\lim\limits_{x \to 2}{ \frac{|x^3-x-1|-|x-7|}{x^2-4} }$ \pause
+  \item $\lim\limits_{x \to 2}{ \frac{|x^2-4|-x+2}{x^2-2x} }$
+ \end{enumerate}
+\end{frame}
+
+\begin{frame}{Εξάσκηση}
+ Έστω $f:\mathbb{R}\to\mathbb{R}$ μια συνάρτηση, για την οποία:
+ \begin{enumerate}
+  \item Αν ισχύει $3x-2-x^2\le f(x) \le x^2-x$, για κάθε $x\in\mathbb{R}$, να βρείτε το $\lim\limits_{x \to 1}{ f(x) }$ \pause
+  \item Αν ισχύει $|f(x)-2|\le x^2$, για κάθε $x\in\mathbb{R}$, να βρείτε το $\lim\limits_{x \to 0}{ f(x) }$ \pause
+  \item Αν ισχύει $f(\mathbb{R})=(0,1)$, να βρείτε το $\lim\limits_{x \to 0}{ \left(x^2f(x)  \right) }$
+ \end{enumerate}
+\end{frame}
+
+\begin{frame}{Εξάσκηση}
+ Να βρείτε το $\lim\limits_{x \to 0}{ \frac{f(x)}{x} }$, όταν ισχύει:
+ $$2x-3x^2\le f(x) \le x^4+2x$$
+\end{frame}
+
+\begin{frame}{Εξάσκηση}
+ Να βρείτε το $\lim\limits_{x \to 0}{ xσυν\frac{1}{x} }$
+\end{frame}
+
+\begin{frame}{Εξάσκηση}
+ Να υπολογίσετε τα όρια
+ \begin{enumerate}
+  \item $\lim\limits_{x \to 0}{ \frac{ημx}{x}+συνx^2 }$ \pause
+  \item $\lim\limits_{x \to 0}{ \frac{συνx-1}{x}-εφx }$ \pause
+  \item $\lim\limits_{x \to 0}{ \left( xημ\frac{1}{x}+\frac{ημ^2x}{x^2} \right)}$ \pause
+  \item $\lim\limits_{x \to 0}{ \frac{1-συν^2x}{x} }$
+ \end{enumerate}
+\end{frame}
+
+\begin{frame}{Εξάσκηση}
+ Να υπολογίσετε τα όρια
+ \begin{enumerate}
+  \item $\lim\limits_{x \to 0}{ \frac{x}{ημx} }$ \pause
+  \item $\lim\limits_{x \to 0}{ \frac{εφx}{x} }$ \pause
+  \item $\lim\limits_{x \to 0}{ \frac{συνx-1}{ημx} }$ \pause
+  \item $\lim\limits_{x \to 0}{ \left( ημx\cdot ημ\frac{1}{x} \right) }$
+ \end{enumerate}
+\end{frame}
+
+\begin{frame}{Εξάσκηση}
+ Να υπολογίσετε τα όρια
+ \begin{enumerate}
+  \item $\lim\limits_{x \to 0}{ \frac{x+ημx}{x} }$ \pause
+  \item $\lim\limits_{x \to 0}{ \frac{ημ(π-x)}{x^2+x} }$ \pause
+  \item $\lim\limits_{x \to 0}{ \frac{ημx+3x}{2x-ημx} }$ \pause
+  \item $\lim\limits_{x \to 0}{ \frac{ημ^2x}{\sqrt{x^2+1}-1} }$
+ \end{enumerate}
+\end{frame}
+
+\begin{frame}{Εξάσκηση}
+ Να υπολογίσετε τα όρια
+ \begin{enumerate}
+  \item $\lim\limits_{x \to 0}{ \frac{ημ5x}{x} }$ \pause
+  \item $\lim\limits_{x \to 0}{ \frac{συν3x-1}{x} }$ \pause
+  \item $\lim\limits_{x \to 0}{ \frac{ημx}{π-x} }$ \pause
+  \item $\lim\limits_{x \to 0}{ \frac{ημx^2}{ημ3x} }$
+ \end{enumerate}
+\end{frame}
+
+\begin{frame}{Εξάσκηση}
+ Να υπολογίσετε τα όρια
+ \begin{enumerate}
+  \item $\lim\limits_{x \to 0}{ \frac{x\sqrt{x}-1}{x^2-\sqrt{x}} }$ \pause
+  \item $\lim\limits_{x \to 0}{ \frac{\sqrt{x-1}+\sqrt[3]{x-1}-2}{x-2} }$
+ \end{enumerate}
+\end{frame}
+
+\begin{frame}{Εξάσκηση}
+ Αν $\lim\limits_{x \to 1}{ f(x) }=0$, να βρείτε το $\lim\limits_{x \to 1}{ \frac{f(x)-2ημf(x)}{f(x)+1-συνf(x)} }$
+\end{frame}
+
+\begin{frame}{Εξάσκηση}
+ Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση για την οποία ισχύει $\lim\limits_{x \to 0}{ \frac{f(x)-1}{x} }=2$. Να βρείτε τα όρια:
+ \begin{enumerate}
+  \item $\lim\limits_{x \to 0}{ \frac{f(5x)-1}{x} }$ \pause
+  \item $\lim\limits_{x \to 0}{ \frac{f(3x)-f(2x)}{x} }$
+ \end{enumerate}
+\end{frame}
+
+\begin{frame}{Εξάσκηση}
+ Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση για την οποία ισχύει $\lim\limits_{h \to 0}{ \frac{f(1+h)-1}{h} }=2$. Να βρείτε τα όρια:
+ \begin{enumerate}
+  \item $\lim\limits_{h \to 0}{ \frac{f(1-2h)-1}{h} }$ \pause
+  \item $\lim\limits_{h \to 0}{ \frac{f(1+2h)-f(1-h)}{h} }$
+ \end{enumerate}
+\end{frame}
+
+\begin{frame}{Εξάσκηση}
+ Αν $\lim\limits_{x \to 1}{ \frac{f(x)-3}{x-1} }=2$, να βρείτε το $\lim\limits_{x \to 1}{ \frac{f(x^2-x+1)-3}{x-1} }$
+\end{frame}
+
+\begin{frame}{Εξάσκηση}
+ Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση. Να βρείτε το $\lim\limits_{x \to x_0}{ f(x) }$ όταν:
+ \begin{enumerate}
+  \item $\lim\limits_{x \to x_0}{\left(f(x)-x^2+3x  \right)=3  }$ και $x_0=2$ \pause
+  \item $\lim\limits_{x \to x_0}{\frac{f(x)-1}{x-2}=3  }$ και $x_0=2$ \pause
+  \item $\lim\limits_{x \to x_0}{\frac{f(x)+ημx}{x}=2  }$ και $x_0=0$
+ \end{enumerate}
+\end{frame}
+
+\begin{frame}{Εξάσκηση}
+ Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση για την οποία ισχύει $\lim\limits_{x \to 0}{ \frac{f(x)}{x} }=1$.
+ \begin{enumerate}
+  \item Να βρείτε το $\lim\limits_{x \to 0}{f(x)}$ \pause
+  \item Να βρείτε το $\lim\limits_{x \to 0}{\frac{f^2(x)+xf(x)+xημx}{f^2(x)+x^2+ημ^2x}}$
+ \end{enumerate}
+\end{frame}
+
+\begin{frame}{Εξάσκηση}
+ Να βρείτε το πεδίο ορισμού των συναρτήσεων:
+ \begin{enumerate}
+  \item $f(x)=\sqrt{|x|-|ημx|}$ \pause
+  \item $f(x)=\frac{1}{ημ^2x-x^2}$
+ \end{enumerate}
+\end{frame}
+
+\begin{frame}{Εξάσκηση}
+ Να λύσετε την εξίσωση $|ημx|=|π-x|$
+\end{frame}
+
+\begin{frame}{Εξάσκηση}
+ \begin{enumerate}
+  \item Να λύσετε την εξίσωση $ημ(x^2+x)-x^2=x$ \pause
+  \item Δίνεται η συνάρτηση $f(x)=2x+3\frac{ημx}{x}$. Να αποδείξετε ότι
+        $$2x-3<f(x)<2x+3 \text{ για κάθε } x\ne 0$$
+ \end{enumerate}
+\end{frame}
+
+\begin{frame}{Εξάσκηση}
+ Να υπολογίσετε τα όρια
+ \begin{enumerate}
+  \item $\lim\limits_{x \to 0}{ \frac{x}{\sqrt[3]{x}} }$ \pause
+  \item $\lim\limits_{x \to 0}{ \frac{x}{\sqrt[3]{x^2}} }$
+ \end{enumerate}
+\end{frame}
+
+\section{}
+\begin{frame}
+ Στο moodle θα βρείτε τις ασκήσεις που πρέπει να κάνετε, όπως και αυτή τη παρουσίαση
+\end{frame}
+
+\end{document}
