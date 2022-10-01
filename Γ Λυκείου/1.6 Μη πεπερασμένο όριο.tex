@@ -16,6 +16,8 @@
 
 \setsansfont{Noto Serif}
 
+\usepackage{multicol}
+
 % \newtheorem{definition}{Ορισμός}
 
 \title{Συναρτήσεις}
@@ -75,122 +77,141 @@
 \end{frame}
 
 \begin{frame}{Το άπειρο δεν είναι παιχνίδι (part 1)}
-Γρίφος time!
-  \begin{itemize}
-   \item Υπάρχει ένα ξενοδοχείο με άπειρα δωμάτια.
-   \item Έρχεται ένας ταλαιπωρημένος οδηπόρος και ζητάει δωμάτιο!!!!!
-   \item Ο ξενοδόχος του λέει ότι όλα τα δωμάτια είναι κατελημένα και δεν έχει ελεύθερο.
-   \item Επειδή ο οδηπόρος είστε εσείς και κάνετε μαθηματικά με τον Λόλα, του δίνετε την λύση και τελικά παίρνετε το δωμάτιο 4.
-   \item Προτείνετε μία λύση
-  \end{itemize}
+ Γρίφος time!
+ \begin{itemize}
+  \item Υπάρχει ένα ξενοδοχείο με άπειρα δωμάτια.
+  \item Έρχεται ένας ταλαιπωρημένος οδηπόρος και ζητάει δωμάτιο!!!!!
+  \item Ο ξενοδόχος του λέει ότι όλα τα δωμάτια είναι κατελημένα και δεν έχει ελεύθερο.
+  \item Επειδή ο οδηπόρος είστε εσείς και κάνετε μαθηματικά με τον Λόλα, του δίνετε την λύση και τελικά παίρνετε το δωμάτιο 4.
+  \item Προτείνετε μία λύση
+ \end{itemize}
 \end{frame}
 
 \begin{frame}{Το άπειρο δεν είναι παιχνίδι (part 2)}
-Μπορώ πολύ εύκολα να αποδείξω ότι $1+2+3+4+\cdots = -\frac{1}{12}$
+ Μπορώ πολύ εύκολα να αποδείξω ότι $1+2+3+4+\cdots = -\frac{1}{12}$
 
  \centering
  \includegraphics[height=0.4\columnwidth]{images/qiev6}
 \end{frame}
 
-\begin{frame}{Σχεδόν τελειώσαμε}
- \begin{block}{Και λίγα άγνωστα όρια}
-  \begin{itemize}
-   \item $\lim\limits_{x \to 0}{ \frac{ημx}{x} }=1$, \pause
-   \item $\lim\limits_{x \to 0}{ \frac{1-συνx}{x} }=0$
-  \end{itemize}
- \end{block}
+\begin{frame}{Τι θα ήταν τα μαθηματικά χωρίς πράξεις}
+ Μα, μα, μα... Είπαμε δεν είναι αριθμός!\pause, αλλά, αν μπορώ να μεγαλώνω συνέχεια και...
+ \begin{itemize}
+  \item προσθέσω έναν αριθμό? \pause
+  \item αφαιρέσω έναν αριθμό? \pause
+  \item πολλαπλασιάσω με αριθμό πάνω από 1? \pause
+  \item διαιρέσω με αριθμό? \pause
+  \item υψώσω σε δύναμη? \pause
+  \item πολλαπλασιάσω με άλλο τόσο? \pause
+  \item αφαιρέσω άλλο τόσο? \pause
+  \item πολλαπλασιάσω με 0? \pause
+  \item διαιρέσω με άλλο τόσο? \pause
+ \end{itemize}
+ Άρα προσοχή σε όσα δεν ορίζονται!
 \end{frame}
 
-\begin{frame}{Όλα τα είχε η Μαριωρή...}
- Τι γίνεται με τη σύνθεση  $\lim\limits_{x \to x_0}{ f(g(x))}$? \pause
- \begin{enumerate}
-  \item Θέτουμε $u=g(x)$ \pause
-  \item Υπολογίζουμε (αν υπάρχει!) το $u_0=\lim\limits_{x \to x_0}{ g(x)}$ \pause
-  \item Υπολογίζουμε (αν υπάρχει!) το $k=\lim\limits_{u \to u_0}{ f(u)}$ \pause
- \end{enumerate}
- Τότε αν $g(x)\ne u_0$ κοντά στο $x_0$, τότε προφανώς $\lim\limits_{x \to x_0}{ f(g(x))}=k$
+\begin{frame}{Ας τα δούμε ΟΛΑ}
+ όπου $a\in\mathbb{R}$ και δεν προκύπτει από όριο, δηλαδή είναι αριθμός
+ \begin{multicols}{2}
+  \begin{itemize}
+   \item $\pm\infty + a=$ \pause $\pm\infty$ \pause
+   \item $\pm\infty - a=$ \pause $\pm\infty$ \pause
+   \item $\pm\infty \cdot a=$ \pause $\begin{cases} \pm\infty, & a>0 \\ \mp\infty, & a<0 \\ ?, & a=0\end{cases}$ \pause
+   \item $\frac{\pm\infty}{a}=$ \pause $\begin{cases} \pm\infty, & a>0 \\ \mp\infty, & a<0\end{cases}$ \pause
+   \item $\frac{a}{\pm\infty}=$ \pause $0$ \pause
+   \item $(+\infty)^a=$ \pause $\begin{cases} +\infty, & a>0 \\ -\infty, & a<0 \\ ?, & a=0\end{cases}$ \pause
+   \item $a^{+\infty}=$ \pause $\begin{cases} 0, & 0\le a <1 \\ ?, & a=1 \\ +\infty, & a>1\end{cases}$ \pause
+   \item $a^{-\infty}=$ \pause $\begin{cases} +\infty, & 0\le a <1 \\ ?, & a=1 \\ 0, & a>1\end{cases}$ \pause
+  \end{itemize}
+ \end{multicols}
+ Κρατάμε τα $\infty\cdot 0$, $\infty^0$, $1^{\pm\infty}$
+\end{frame}
+
+\begin{frame}{Και παιχνίδι με τα $\pm\infty$}
+ \begin{multicols}{2}
+  \begin{itemize}
+   \item $+\infty + +\infty=$ \pause $+\infty$ \pause
+   \item $-\infty + (-\infty)=$ \pause $-\infty$ \pause
+   \item $+\infty + (-\infty)=$ \pause $?$ \pause
+   \item $\pm\infty \cdot \pm\infty=$ \pause $\pm\infty$ \pause
+   \item $\frac{\pm\infty}{\pm\infty}=$ \pause $?$ \pause
+   \item $(+\infty)^{+\infty}=$ \pause $+\infty$ \pause
+   \item $(+\infty)^{-\infty}=$ \pause $0$ \pause
+  \end{itemize}
+ \end{multicols}
+ Κρατάμε τα $\infty\cdot 0$, $\infty^0$, $1^{\pm\infty}$, $+\infty + (-\infty)$, $\frac{\pm\infty}{\pm\infty}$, $\frac{0}{0}$
 \end{frame}
 
 \section{Ασκήσεις}
 \begin{frame}{Εξάσκηση}
- Αν για τις συναρτήσεις $f$, $g$ ισχύουν
- $$\lim\limits_{x \to 2}{ f(x) }=1 \text{ και } \lim\limits_{ x \to 2}{ f(x) }=2$$
- να υπολογίσετε το $\lim\limits_{x \to 2}{ (3f(x)+f(x)\cdot g(x)) }$
+ Στο σχήμα
+ \href{https://www.geogebra.org/m/xzc6usbm}{\beamergotobutton{Geogebra}}
+ φαίνεται η γραφική παράσταση μιας συνάρτησης $f(x)$. Να υπολογίσετε τα παρακάτω όρια (εφόσον υπάρχουν):
+ \begin{itemize}
+  \item $\lim\limits_{x \to 1}{ f(x) }$, $\lim\limits_{x \to 1}{ |f(x)| }$, $\lim\limits_{x \to 1}{ \sqrt{f(x)} }$ και $\lim\limits_{x \to 1}{ \frac{1}{f(x)} }$ \pause
+  \item $\lim\limits_{x \to 0}{ f(x) }$, $\lim\limits_{x \to 0}{ |f(x)| }$ και $\lim\limits_{x \to 0}{ \frac{1}{f(x)} }$ \pause
+  \item $\lim\limits_{x \to 3}{ f(x) }$, $\lim\limits_{x \to 3}{ |f(x)| }$ και $\lim\limits_{x \to 3}{ \frac{1}{f(x)} }$ \pause
+  \item $\lim\limits_{x \to 4}{ \frac{1}{f(x)} }$, $\lim\limits_{x \to 6}{ \frac{1}{f(x)-3} }$ και $\lim\limits_{x \to 7}{ \frac{1}{f(x)} }$
+ \end{itemize}
 \end{frame}
 
 \begin{frame}{Εξάσκηση}
- Να υπολογίσετε τα όρια
+ Να βρείτε τα όρια (αν υπάρχουν)
  \begin{enumerate}
-  \item $\lim\limits_{x \to 3}{ \frac{x^2-3x}{x^2-9} }$ \pause
-  \item $\lim\limits_{x \to 1}{ \frac{2x^3-2x}{2x^2-5x+3} }$ \pause
-  \item $\lim\limits_{x \to 2}{ \frac{x^3-8}{x^3-7x+6} }$ \pause
-  \item $\lim\limits_{x \to 1}{ \left( \frac{x}{x-1}+\frac{x-2}{x^2-x}  \right)  }$
+  \item $\lim\limits_{x \to 3}{ \frac{1}{|x-3|} }$ \pause
+  \item $\lim\limits_{x \to 1}{ \frac{x-3}{(x-1)^2} }$ \pause
+  \item $\lim\limits_{x \to 2}{ \frac{2x+1}{x-2} }$ \pause
+  \item $\lim\limits_{x \to 0}{ \frac{1+\sqrt{x}}{x}}$
  \end{enumerate}
 \end{frame}
 
 \begin{frame}{Εξάσκηση}
- Να υπολογίσετε τα όρια
+ Να βρείτε, (αν υπάρχει) το $\lim\limits_{x \to 1}{ \frac{3x+2}{x^2-1} }$
+\end{frame}
+
+\begin{frame}{Εξάσκηση}
+ Για τις διάφορες τιμές του $λ$ να βρείτε το $\lim\limits_{x \to 2}{ \frac{x^2-λx+λ}{(x-2)^2} }$
+\end{frame}
+
+\begin{frame}{Εξάσκηση}
+ Να βρείτε την τιμή του $α\in\mathbb{R}$ για την οποία το $\lim\limits_{x \to 1}{\frac{αx^2+x-2}{x^2-x}  }$ είναι πραγματικός αριθμός
+\end{frame}
+
+\begin{frame}{Εξάσκηση}
+ Έστω μια συνάρτηση $f:(0,+\infty)\to\mathbb{R}$ για την οποία ισχύει:
+ $$f(x)\le x-\frac{1}{x} \text{ για κάθε } x>0$$
+ Να βρείτε τα όρια:
  \begin{enumerate}
-  \item $\lim\limits_{x \to 4}{ \frac{x-4}{\sqrt{x}-2} }$ \pause
-  \item $\lim\limits_{x \to -1}{ \frac{\sqrt{x+5}-2}{x^2+x} }$ \pause
-  \item $\lim\limits_{x \to 1}{ \frac{\sqrt{x^2+3}-3x+1}{x^2-1} }$ \pause
-  \item $\lim\limits_{x \to 1}{ \frac{2\sqrt{2x-1}-\sqrt{x+3}}{\sqrt{x}-1} }$
+  \item $\lim\limits_{x \to 0}{ f(x) }$ \pause
+  \item $\lim\limits_{x \to 0}{ \frac{|f(x)-3|}{f^2(x)-3f(x)} }$
  \end{enumerate}
 \end{frame}
 
 \begin{frame}{Εξάσκηση}
- Έστω η συνάρτηση $f(x)=\begin{cases}
-   x-2,  & 0<x\le 1 \\
-   3x-4, & 1<x<2    \\
-   2x-1, & x>2
-  \end{cases}$.
- Να βρείτε (αν υπάρχουν) τα όρια:
+ Αν για μια συνάρτηση ισχύει:
+ $$|x-2|f(x)\ge x-1 \text{ για κάθε } x\ne 2$$
+ Να βρείτε τα όρια:
  \begin{enumerate}
-  \item $\lim\limits_{x \to 3}{ f(x) }$ \pause
-  \item $\lim\limits_{x \to 1}{ f(x) }$ \pause
-  \item $\lim\limits_{x \to 2}{ f(x) }$
+  \item $\lim\limits_{x \to 2}{ f(x) }$ \pause
+  \item $\lim\limits_{x \to 2}{ f(x)ημ\frac{1}{f(x)} }$
  \end{enumerate}
 \end{frame}
 
 \begin{frame}{Εξάσκηση}
- Έστω η συνάρτηση $f(x)=\begin{cases}
-   \frac{x^2-x-2}{2x-4}, & x\ne 2 \\
-   a,                    & x=2
-  \end{cases}$.
+ Έστω $f:\mathbb{R}\to\mathbb{R}$ μια συνάρτηση, για την οποία ισχύει $\lim\limits_{x \to 0}{ \left x^2f(x)  \right  }=1$.
+ Να βρείτε τα όρια
  \begin{enumerate}
-  \item Να βρείτε το $\lim\limits_{x \to 2}{ f(x) }$ \pause
-  \item Να βρείτε το $a$ ώστε $\lim\limits_{x \to 2}{ f(x) }=f(2)$
+  \item $\lim\limits_{x \to 0}{ f(x) }$ \pause
+  \item $\lim\limits_{x \to 0}{ \frac{x-1}{f(x)} }$
  \end{enumerate}
 \end{frame}
 
 \begin{frame}{Εξάσκηση}
- Έστω η συνάρτηση $f(x)=\begin{cases}
-   ασυνx+ημx-β,    & x<0    \\
-   α\sqrt{x+1}+2β, & x\ge 0
-  \end{cases}$.
- Να βρείτε τα $α$ και $β\in\mathbb{R}$ ώστε $\lim\limits_{x \to 0}{ f(x) }=1$
-\end{frame}
-
-\begin{frame}{Εξάσκηση}
- Να βρείτε αν υπάρχουν τα όρια:
+ Να βρείτε (αν υπάρχουν) τα παρακάτω όρια.
  \begin{enumerate}
-  \item $\lim\limits_{x \to 2}{ \frac{|x^3-x-1|-|x-7|}{x^2-4} }$ \pause
-  \item $\lim\limits_{x \to 2}{ \frac{|x^2-4|-x+2}{x^2-2x} }$
+   \item $\lim\limits_{x \to 0}{ \frac{3x+2}{|ημx|-|x|} }$ \pause
+   \item $\lim\limits_{x \to 0}{ \left \frac{1}{|x|}-\frac{1}{x}  \right)  }$
  \end{enumerate}
-\end{frame}
-
-\begin{frame}{Εξάσκηση}
- Έστω $f:\mathbb{R}\to\mathbb{R}$ μια συνάρτηση, για την οποία:
- \begin{enumerate}
-  \item Αν ισχύει $3x-2-x^2\le f(x) \le x^2-x$, για κάθε $x\in\mathbb{R}$, να βρείτε το $\lim\limits_{x \to 1}{ f(x) }$ \pause
-  \item Αν ισχύει $|f(x)-2|\le x^2$, για κάθε $x\in\mathbb{R}$, να βρείτε το $\lim\limits_{x \to 0}{ f(x) }$ \pause
-  \item Αν ισχύει $f(\mathbb{R})=(0,1)$, να βρείτε το $\lim\limits_{x \to 0}{ \left(x^2f(x)  \right) }$
- \end{enumerate}
-\end{frame}
-
-\begin{frame}{Εξάσκηση}
- Να βρείτε το $\lim\limits_{x \to 0}{ \frac{f(x)}{x} }$, όταν ισχύει:
- $$2x-3x^2\le f(x) \le x^4+2x$$
 \end{frame}
 
 \begin{frame}{Εξάσκηση}
