@@ -1,0 +1,128 @@
+\documentclass[greek]{beamer}
+%\usepackage{fontspec}
+\usepackage{amsmath,amsthm}
+\usepackage{unicode-math}
+\usepackage{xltxtra}
+\usepackage{graphicx}
+\usetheme{CambridgeUS}
+\usecolortheme{seagull}
+\usepackage{hyperref}
+\usepackage{ulem}
+\usepackage{xgreek}
+\usepackage{pgfpages}
+\usepackage{tikz}
+%\setbeameroption{show notes on second screen}
+%\setbeameroption{show only notes}
+
+\setsansfont{Noto Serif}
+
+\usepackage{multicol}
+
+% \newtheorem{definition}{Ορισμός}
+
+\title{Συναρτήσεις}
+\subtitle{Συνέπειες Bolzano 1 (Διατήρηση Προσήμου)}
+\author[Λόλας]{Κωνσταντίνος Λόλας}
+\date{}
+
+\begin{document}
+
+\begin{frame}
+ \titlepage
+\end{frame}
+
+\section{Θεωρία}
+\begin{frame}{Ένα μάθημα μόνο για το πρόσημο?}
+ \begin{itemize}
+  \item Φτιάξτε άξονες \pause
+  \item Σχεδιάστε όσες συναρτήσεις μπορείτε που ισχύει $f^2(x)=1$ \pause
+ \end{itemize}
+ Συμπέρασμα...
+\end{frame}
+
+\begin{frame}{Θεώρημα 1}
+ \begin{block}{Θεώρημα σταθερού προσήμου}
+  Έστω μια συνάρτηση $f$ συνεχής στο διάστημα $Δ$. Αν $f(x)\ne 0$ για κάθε $x\in Δ$ τότε η $f$ διατηρεί το πρόσημο της σε όλο το $Δ$
+ \end{block}
+\end{frame}
+
+\begin{frame}{Θεώρημα 2}
+ \begin{block}{Θεώρημα σταθερού προσήμου (γενίκευση)}
+  Μια συνεχής συνάρτηση $f$ διατηρεί το πρόσημό της μεταξύ δύο διαδοχικών της ριζών.
+ \end{block}
+\end{frame}
+
+\section{Ασκήσεις}
+\begin{frame}{Εξάσκηση}
+ Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση με $f(0)=1$ η οποία είναι συνεχής και ισχύει $f(x)\ne 0$ για κάθε $x\in\mathbb{R}$. Να βρείτε το πεδίο ορισμού της συνάρτησης $g(x)=\ln f(x)$
+\end{frame}
+
+\begin{frame}{Εξάσκηση}
+ Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση η οποία είναι συνεχής και ισχύει $f^2(x)>0$ για κάθε $x\in\mathbb{R}$. Να βρείτε το
+ $$\lim\limits_{x \to +\infty}{ \frac{f(1)x^2+1}{f(0)x+2} }$$
+\end{frame}
+
+\begin{frame}{Εξάσκηση}
+ Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση η οποία είναι συνεχής. Αν $f(3)=-2$ και $x_1=1$ και $x_2=4$ είναι διαδοχικές ρίζες της εξίσωσης $f(x)=0$, να βρείτε το
+ $$\lim\limits_{x \to +\infty}{ f(2)x^3-x+1 }$$
+\end{frame}
+
+\begin{frame}{Εξάσκηση}
+ Να βρείτε το πρόσημο των συναρτήσεων
+ \begin{itemize}
+  \item $f(x)=2x^3-x-1$
+  \item $f(x)=x-ημx$
+  \item $f(x)=\sqrt{x^2+1}-x$
+ \end{itemize}
+\end{frame}
+
+\begin{frame}{Εξάσκηση}
+ Να βρείτε το πρόσημο της συνάρτησης $f(x)=2ημx-1$, $x\in [0,π]$.
+\end{frame}
+
+\begin{frame}{Εξάσκηση}
+ Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση η οποία είναι συνεχής και ισχύει
+ $$|f(x)|=e^x \text{ για κάθε } x\in\mathbb{R}$$
+ \begin{itemize}
+  \item Να αποδείξετε ότι $f(x)\ne 0$, για κάθε $x\in\mathbb{R}$
+  \item Αν $f(0)=-1$ να βρείτε τον τύπο της $f$
+ \end{itemize}
+\end{frame}
+
+\begin{frame}{Εξάσκηση}
+ Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση με $f(0)=1$ η οποία είναι συνεχής και ισχύει $f^2(x)=x^2+1$ για κάθε $x\in\mathbb{R}$. Να βρείτε τον τύπο της $f$.
+\end{frame}
+
+\begin{frame}{Εξάσκηση}
+ Να βρείτε τη συνεχή συνάρτηση $f$ με $f(0)=1$ για την οποία ισχύει $f^2(x)=1+2xf(x)$ για κάθε $x\in\mathbb{R}$
+\end{frame}
+
+\begin{frame}{Εξάσκηση}
+ Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση με $f(2)=2$ η οποία είναι συνεχής και ισχύει $f^2(x)+2=x+2f(x)$ για κάθε $x\in [1,+\infty]$. Να βρείτε τον τύπο της $f$.
+\end{frame}
+
+\begin{frame}{Εξάσκηση}
+ Έστω $f:[-1,1]\to\mathbb{R}$ μία συνάρτηση με $f(0)=-1$ η οποία είναι συνεχής και ισχύει $x^2+f^2(x)=1$, $x\in [-1,1]$. Να βρείτε τον τύπο της $f$.
+\end{frame}
+
+\begin{frame}{Εξάσκηση}
+ Έστω $f:[-1,1]\to\mathbb{R}$ μία συνεχής συνάρτηση για την οποία ισχύει $4x^2+f^2(x)=4$ για κάθε $x\in [-1,1]$
+ \begin{itemize}
+   \item Να βρείτε τις ρίζες της εξίσωσης $f(x)=0$
+   \item Να δείξετε ότι η $f$ διατηρεί το πρόσημό της στο $(-1,1)$
+   \item Ποιος μπορεί να είναι ο τύπος της $f$;
+   \item Αν $f(0)=2$, να βρείτε την $f$
+ \end{itemize}
+\end{frame}
+
+\begin{frame}{Εξάσκηση}
+ Να βρείτε όλες τις συνεχείς συναρτήσεις $f:\mathbb{R}\to\mathbb{R}$ που ικανοποιούν τη σχέση
+ $$f^2(x)+2x=x^2+1 \text{, } x\in\mathbb{R}$$
+\end{frame}
+
+\section{}
+\begin{frame}
+ Στο moodle θα βρείτε τις ασκήσεις που πρέπει να κάνετε, όπως και αυτή τη παρουσίαση
+\end{frame}
+
+\end{document}
