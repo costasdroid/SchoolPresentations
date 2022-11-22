@@ -1,0 +1,267 @@
+\documentclass[greek]{beamer}
+%\usepackage{fontspec}
+\usepackage{amsmath,amsthm}
+\usepackage{unicode-math}
+\usepackage{xltxtra}
+\usepackage{graphicx}
+\usetheme{CambridgeUS}
+\usecolortheme{seagull}
+\usepackage{hyperref}
+\usepackage{ulem}
+\usepackage{xgreek}
+
+\usepackage{pgfpages}
+\usepackage{tikz}
+\usepackage{tkz-tab}
+%\setbeameroption{show notes on second screen}
+%\setbeameroption{show only notes}
+
+\setsansfont{Noto Serif}
+
+\usepackage{multicol}
+
+\usepackage{appendixnumberbeamer}
+
+\setbeamercovered{transparent}
+\beamertemplatenavigationsymbolsempty
+
+\title{Ευθεία}
+\subtitle{Εξίσωση Ευθείας}
+\author[Λόλας]{Κωνσταντίνος Λόλας}
+\date{}
+
+\begin{document}
+
+\begin{frame}
+ \titlepage
+\end{frame}
+
+\section{Θεωρία}
+\begin{frame}{Το μεγάλο ταξίδι}
+ \begin{itemize}
+  \item<1-> Ορισμός
+  \item<2-> Εξίσωση
+  \item<3-> Γενική Εξίσωση, to rule them all!
+  \item<4-> Ελάχιστος συνδυασμός με διανύσματα, shame!
+  \item<5-> Εύρεση εξίσωσης από κάθε περίπτωση, brace yourselfs!
+  \item<6-> 2 νέοι τύποι (απόστασης και εμβαδού)
+ \end{itemize}
+\end{frame}
+
+\begin{frame}{Γνωστά ή Άγνωστα νερά?}
+ Λέξεις κλειδιά
+ \begin{itemize}
+  \item Κλίση
+  \item Συντελεστής διεύθυνσης
+  \item $εφθ$
+  \item $α$
+  \item Σημεία
+  \item Παραλληλία
+  \item Καθετότητα
+  \item Σημεία τομής...
+ \end{itemize}
+ είναι μερικά που θυμάμαι!
+\end{frame}
+
+\begin{frame}{Γραμμές, γραμμές παντού}
+ \begin{itemize}
+  \item<1-> Τι είναι γραμμή?
+  \item<2-> Γραφικά ή Αλγεβρικά?
+ \end{itemize}
+\end{frame}
+
+\begin{frame}{Γραφικά}
+ Εύκολο!
+\end{frame}
+
+\begin{frame}{Αλγεβρικά}
+ \begin{block}{Ορισμός γραμμής}
+  Μία εξίσωση με τουλάχιστον έναν άγνωστο
+ \end{block}
+ \begin{block}{Σημείο στη γραμμή}
+  Κάθε σημείο που επαληθεύει την εξίσωση
+ \end{block}
+\end{frame}
+
+\begin{frame}{Ας φτιάξουμε απλές γραμμές}
+ \begin{itemize}
+  \item<1-> $y=2$
+  \item<2-> $x=1$
+  \item<3-> $x-y=0$
+  \item<4-> $y=2x$
+ \end{itemize}
+\end{frame}
+
+\begin{frame}{Ορισμοί}
+ \begin{block}{Γωνία Ευθείας}
+  Ονομάζουμε \emph{γωνία της ευθείας με τον άξονα $x'x$}, την γωνία που σχηματίζει ο $x'x$ όταν στραφεί αντίστροφα με τους δείκτες του ρολογιού έως ότου συμπέσει με την ευθεία
+ \end{block}
+ \begin{block}{Συντελεστής Διεύθυνσης Ευθείας}
+  Ονομάζουμε \emph{συντελεστή διεύθυνσης} (ή κλίση) της ευθείας την εφαπτομένη της γωνίας της ευθείας με τον $x'x$
+ \end{block}
+\end{frame}
+
+\begin{frame}{Ξεπηδούν οι απορίες}
+ \begin{itemize}
+  \item<2-> Τι τιμές παίρνει μία γωνία
+  \item<3-> Τι τιμές παίρνει η κλίση
+  \item<4-> Πότε είναι παράλληλες δύο ευθείες
+  \item<5-> Πότε είναι παράλληλη μία ευθεία με ένα διάνυσμα
+  \item<6-> Ποιά άλλα διανύσματα είναι παράλληλα με την ευθεία?
+  \item<7-> Πότε είναι κάθετες δύο ευθείες? \pause μην βιάζεστε!!!!!
+ \end{itemize}
+\end{frame}
+
+\begin{frame}{Λίγη ιστορία}
+ \begin{block}{Κλίση διανύσματος}
+  $λ=\frac{y_2-y_1}{x_2-x_1}$
+ \end{block}
+\end{frame}
+
+\begin{frame}{Εξισώση ευθείας 1 (από κλίση και σημείο)}
+ Ας θεωρήσουμε ότι \emph{υπάρχει συντελεστής διεύθυνσης $λ$} και ας έχουμε γνωστό \emph{ένα σημείο} $(x_0,y_0)$. Κάθε σημείο $(x,y)$ που ανήκει στην ευθεία θα έχει με το γνωστό σημείο κλίση $λ$. Άρα
+ \begin{align*}
+  \frac{y-y_0}{x-x_0}=λ \\
+  \pause y-y_0=λ(x-x_0)
+ \end{align*}
+\end{frame}
+
+\begin{frame}{Εξισώση ευθείας 2 (από δύο σημεία)}
+ Ας είναι δύο σημεία $(x_1,y_1)$ και $(x_2,y_2)$. Αν $x_1\ne x_2$... \pause
+
+ $λ=\frac{y_2-y_1}{x_2-x_1}$... \pause
+
+ και έχουμε κλίση και σημείο (κοίτα προηγούμενη διαφάνεια)
+\end{frame}
+
+\begin{frame}{Εξισώση ευθείας 3 (δεν έχει κλίση)}
+ Εύκολο?
+\end{frame}
+
+\section{Ασκήσεις}
+\subsection{Άσκηση 1}
+\begin{frame}[label=Άσκηση1]{Εξάσκηση 1}
+ Να βρείτε το συντελεστή διαύθυνσης $λ$ μιας ευθείας η οποία:
+ \begin{enumerate}
+  \item<1-> σχηματίζει με τον άξονα $x'x$ γωνία $ω=\frac{π}{3}$
+  \item<2-> είναι παράλληλη στο διάνυσμα $\vec{α}=(2,-4)$
+  \item<3-> διέρχεται από τα σημεία $Α(1,3)$ και $Β(3,6)$
+ \end{enumerate}
+
+ % \hyperlink{Λύση1}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 2}
+\begin{frame}[label=Άσκηση2]{Εξάσκηση 2}
+ Να βρείτε τη γωνία που σχηματίζουν με τον άξονα $x'x$ οι ευθείες που διέρχονται από τα σημεία
+ \begin{enumerate}
+  \item<1-> $Α(1,0)$ και $Β(2,\sqrt{3})$
+  \item<2-> $Α(2,3)$ και $Β(1,3)$
+ \end{enumerate}
+
+ % \hyperlink{Λύση2}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 3}
+\begin{frame}[label=Άσκηση3]{Εξάσκηση 3}
+ Να βρείτε τον συντελεστή διεύθυνσης $λ$ μιας ευθείας $ε$, η οποία:
+ \begin{enumerate}
+  \item<1-> είναι παράλληλη στην ευθεία $ε_1$ που σχηματίζει με τον άξονα $x'x$ γωνία $ω=120^{\circ}$
+  \item<2-> είναι κάθετη στην ευθεία $ε_2$ που διέρχεται από τα σημεία $Α(2,3)$ και $Β(3,5)$
+ \end{enumerate}
+
+ % \hyperlink{Λύση3}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 4}
+\begin{frame}[label=Άσκηση4]{Εξάσκηση 4}
+ Έστω η ευθεία $ε$ που σχηματίζει με τον άξονα $x'x$ γωνία $ω=45^{\circ}$ και η ευθεία $ζ$ που διέρχεται από τα σημεία $Α(3,α)$ και $Β(5,3α-2)$. Να βρείτε την τιμή του $α$, ώστε:
+ \begin{enumerate}
+   \item<1-> Οι ευθείες $ε$ και $ζ$ να είναι παράλληλες
+   \item<2-> Οι ευθείες $ε$ και $ζ$ να είναι κάθετες
+ \end{enumerate}
+
+ % \hyperlink{Λύση4}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 5}
+\begin{frame}[label=Άσκηση5]{Εξάσκηση 5}
+ Θεωρούμε την ευθεία $ε$ που διέρχεται από το σημείο $Α(1,2)$ και έχει συντελεστή διεύθυνσης $λ=3$. Να βρείτε:
+ \begin{enumerate}
+   \item<1-> Την εξίσωση της ευθείας $ε$
+   \item<2-> Την τιμή του $λ$, για την οποία το σημείο $Μ(λ-1,2λ)$ ανήκει στην ευθεία $ε$.
+ \end{enumerate}
+
+ % \hyperlink{Λύση5}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 6}
+\begin{frame}[label=Άσκηση6]{Εξάσκηση 6}
+ Να βρείτε την εξίσωση της ευθείας $ε$ που διέρχεται από το σημείο $Α(3,2)$ και:
+ \begin{enumerate}
+   \item<1-> σχηματίζει με τον άξονα $x'x$ γωνία $ω=45^{\circ}$
+   \item<2-> είναι παράλληλη στο διάνυσμα $\vec{α}=(2,-4)$
+   \item<3-> είναι κάθετη στην ευθεία $ζ$ με συντελεστή διεύθυνσης $-\frac{1}{2}$
+ \end{enumerate}
+
+ % \hyperlink{Λύση6}{\beamerbutton{Λύση}}
+\end{frame}
+%
+% \appendix
+% \section{Λύσεις Ασκήσεων}
+% \begin{frame}
+%  \tableofcontents
+% \end{frame}
+%
+% \subsection{Άσκηση 1}
+% \begin{frame}[label=Λύση1]
+%  Με θεώρημα ενδιαμέσων τιμών. Η συνάρτηση είναι συνεχής στο $[10,11]$ με $f(10)=1024$ και $f(11)=2048$. Αφού $2023\in (1024,2048)$ υπάρχει $x_0$...
+%
+%  \hyperlink{Άσκηση1}{\beamerbutton{Πίσω στην άσκηση}}
+% \end{frame}
+%
+% \subsection{Άσκηση 2}
+% \begin{frame}[label=Λύση2]
+%  Με Bolzano ή με μέγιστης ελάχιστης τιμής και ΘΕΤ.
+%
+%  \begin{gather*}
+%   f(3)<f(2)<f(1) \\
+%   3f(3)<f(1)+f(2)+f(3)<3f(1) \\
+%   f(3)<\frac{f(1)+f(2)+f(3)}{3}<f(1)
+%  \end{gather*}
+%
+%  \hyperlink{Άσκηση2}{\beamerbutton{Πίσω στην άσκηση}}
+% \end{frame}
+%
+% \subsection{Άσκηση 3}
+% \begin{frame}[label=Λύση3]
+%  Προφανές ελάχιστο στα $x_1=1$ και $x_2=3$. Ως συνεχής στο $[1,3]$ έχει σίγουρα ΚΑΙ μέγιστο στο $(1,3)$
+%
+%  \hyperlink{Άσκηση3}{\beamerbutton{Πίσω στην άσκηση}}
+% \end{frame}
+%
+% \subsection{Άσκηση 4}
+% \begin{frame}[label=Λύση4]
+%  Η συνάρτηση `απόστασης` $f(x)-x$ είναι ορισμένη στο κλειστό διάστημα και έχει σίγουρα μέγιστο
+%
+%  \hyperlink{Άσκηση4}{\beamerbutton{Πίσω στην άσκηση}}
+% \end{frame}
+%
+% \subsection{Άσκηση 5}
+% \begin{frame}[label=Λύση5]
+%  Όμοια με την Άσκηση 2
+%
+%  \hyperlink{Άσκηση5}{\beamerbutton{Πίσω στην άσκηση}}
+% \end{frame}
+%
+% \subsection{Άσκηση 6}
+% \begin{frame}[label=Λύση6]
+%  \begin{enumerate}
+%   \item Είναι γνησίως αύξουσα άρα $(f(+\infty),f(-\infty))$
+%   \item Προφανώς $[f(0),f(1)]$...
+%  \end{enumerate}
+%
+%  \hyperlink{Άσκηση6}{\beamerbutton{Πίσω στην άσκηση}}
+% \end{frame}
+%
+\end{document}
