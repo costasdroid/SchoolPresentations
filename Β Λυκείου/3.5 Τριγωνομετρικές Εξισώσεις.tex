@@ -1,0 +1,299 @@
+\documentclass[greek]{beamer}
+%\usepackage{fontspec}
+\usepackage{amsmath,amsthm}
+\usepackage{unicode-math}
+\usepackage{xltxtra}
+\usepackage{graphicx}
+\usetheme{CambridgeUS}
+\usecolortheme{seagull}
+\usepackage{hyperref}
+\usepackage{ulem}
+\usepackage{xgreek}
+
+\usepackage{pgfpages}
+\usepackage{tikz}
+\usepackage{tkz-tab}
+%\setbeameroption{show notes on second screen}
+%\setbeameroption{show only notes}
+
+\setsansfont{Noto Serif}
+
+\usepackage{multicol}
+
+\usepackage{appendixnumberbeamer}
+
+\setbeamercovered{transparent}
+\beamertemplatenavigationsymbolsempty
+
+\title{Τριγωνομετρία}
+\subtitle{Τριγωνομετρικές Εξισώσεις}
+\author[Λόλας]{Κωνσταντίνος Λόλας}
+\date{}
+
+\begin{document}
+
+\begin{frame}
+ \titlepage
+\end{frame}
+
+\section{Θεωρία}
+\begin{frame}{Εξισώσεις! Πάλι?}
+ Μέχρι στιγμής τι είδους εξισώσεις λύναμε?
+ \begin{enumerate}
+  \item<1-> πολυωνυμικές 1ου βαθμού
+  \item<2-> πολυωνυμικές 2ου βαθμού
+  \item<3-> όσες ανάγονται σε πολυωνυμικές
+  \item<4-> ΑΥΤΑ
+ \end{enumerate}
+\end{frame}
+
+\begin{frame}{Γιατί?????}
+ Γιατί ειδικά οι τριγωνομετρικές?
+ \begin{enumerate}
+  \item<1-> δεν απομονώνεται το $x$
+  \item<2-> έχουν σχεδόν πάντα άπειρες??? λύσεις
+  \item<3-> και άλλα πολλά που δεν θυμάμαι...
+ \end{enumerate}
+\end{frame}
+
+\begin{frame}{Λίιιιιιγο μαθηματικά}
+ \begin{enumerate}
+  \item<1-> Φτιάξτε άξονες
+  \item<2-> Διαλέξτε μία τιμή στον άξονα των ημιτώνων
+  \item<3-> Βρείτε μία γωνία που να έχει αυτό το ημίτονο
+  \item<4-> Βρείτε δεύτερη γωνία που να έχει αυτό το ημίτονο
+  \item<5-> Βρείτε τρίτη γωνία που να έχει αυτό το ημίτονο
+ \end{enumerate}
+ \onslide<6-> Συμπέρασμα
+
+\end{frame}
+
+\begin{frame}{Εξίσωση 1}
+ \begin{block}{$ημx=ημθ$}
+  Η εξίσωση $ημx=ημθ$ έχει λύσεις
+  $$x=2κπ+θ$$
+  και
+  $$x=2κπ+π-θ$$
+  όπου $κ\in\mathbb{Z}$
+ \end{block}
+\end{frame}
+
+\begin{frame}{Λίιιιιιγο ακόμα μαθηματικά}
+ \begin{enumerate}
+  \item<1-> Φτιάξτε άξονες
+  \item<2-> Διαλέξτε μία τιμή στον άξονα των συνημιτώνων
+  \item<3-> Βρείτε μία γωνία που να έχει αυτό το συνημίτονο
+  \item<4-> Βρείτε δεύτερη γωνία που να έχει αυτό το συνημίτονο
+  \item<5-> Βρείτε τρίτη γωνία που να έχει αυτό το συνημίτονο
+ \end{enumerate}
+ \onslide<6-> Συμπέρασμα
+\end{frame}
+
+\begin{frame}{Εξίσωση 2}
+ \begin{block}{$συνx=συνθ$}
+  Η εξίσωση $συνx=συνθ$ έχει λύσεις
+  $$x=2κπ+θ$$
+  και
+  $$x=2κπ-θ$$
+  όπου $κ\in\mathbb{Z}$
+ \end{block}
+\end{frame}
+
+\begin{frame}{Λίιιιιιγο ακόμα μαθηματικά υπόσχομαι!}
+ \begin{enumerate}
+  \item<1-> Φτιάξτε άξονες
+  \item<2-> Διαλέξτε μία τιμή στον άξονα των εφαπτομένων
+  \item<3-> Βρείτε μία γωνία που να έχει αυτή την εφαπτόμενη
+  \item<4-> Βρείτε δεύτερη γωνία που να έχει αυτή την εφαπτόμενη
+  \item<5-> Βρείτε τρίτη γωνία που να έχει αυτή την εφαπτόμενη
+ \end{enumerate}
+ \onslide<6-> Συμπέρασμα
+\end{frame}
+
+\begin{frame}{Εξίσωση 3}
+ \begin{block}{$εφx=εφθ$}<1->
+  Η εξίσωση $εφx=εφθ$ έχει λύσεις
+  $$x=κπ+θ$$
+  όπου $κ\in\mathbb{Z}$
+ \end{block}
+ \onslide<2-> και όμοια γιατί το υποσχέθηκα
+
+ \begin{block}{$σφx=σφθ$}<3->
+  Η εξίσωση $σφx=σφθ$ έχει λύσεις
+  $$x=κπ+θ$$
+  όπου $κ\in\mathbb{Z}$
+ \end{block}
+\end{frame}
+
+\begin{frame}
+ Άρα
+ \begin{enumerate}
+  \item<1-> τα φέρνουμε πάντα στην μορφή $ημ=ημ$ ή $συν=συν$...
+  \item<2-> αν δεν είναι
+   \begin{itemize}
+    \item<3-> ανάγουμε στο 1ο τεταρτημόριο ή
+    \item<4-> χρησιμοποιούμε τριγωνομετρικές (και όχι μόνο) ταυτότητες ή
+    \item<5-> θέτουμε για να διευκολύνουμε και...
+    \item<6-> γενικά σκεφτόμαστε
+   \end{itemize}
+
+   \onslide<7-> και πάμε ξανά στο βήμα 1
+
+  \item<8-> ΜΟΝΟ τότε διώχνουμε τους "προστάτες"
+ \end{enumerate}
+\end{frame}
+
+\section{Ασκήσεις}
+\subsection{Άσκηση 1}
+\begin{frame}[label=Άσκηση1]{Εξάσκηση 1}
+ Να λύσετε τις εξισώσεις
+ \begin{enumerate}
+  \item<1-> $ημx=\frac{\sqrt{3}}{2}$
+  \item<2-> $2συνx-1=0$
+  \item<3-> $εφx-\sqrt{3}=0$
+  \item<4-> $\sqrt{3}σφx-1=0$
+ \end{enumerate}
+
+ % \hyperlink{Λύση1}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 2}
+\begin{frame}[label=Άσκηση2]{Εξάσκηση 2}
+ Να λύσετε τις εξισώσεις
+ \begin{enumerate}
+  \item<1-> $ημx=-\frac{1}{2}$
+  \item<2-> $\sqrt{2}συνx+1=0$
+  \item<3-> $εφx+1=0$
+  \item<4-> $(\sqrt{2}συνx+1)(εφx+1)=0$
+ \end{enumerate}
+
+ %\hyperlink{Λύση2}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 3}
+\begin{frame}[label=Άσκηση3]{Εξάσκηση 3}
+ Να λύσετε τις εξισώσεις
+ \begin{enumerate}
+  \item<1-> $(ημx-1)(συνx+1)=0$
+  \item<2-> $ημx\cdot συνx=ημx$
+  \item<3-> $1+ημx-συνx-ημx\cdot συνx=0$
+ \end{enumerate}
+
+ %\hyperlink{Λύση3}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 4}
+\begin{frame}[label=Άσκηση4]{Εξάσκηση 4}
+ \begin{enumerate}
+  \item<1-> Να λύσετε την ανίσωση: $ημx<\sqrt{1}{2}$, στο διάστημα $Δ=(0,\frac{π}{2})$
+  \item<2-> Να κάνετε τον πίνακα προσήμων της συνάρτησης $f(x)=2συνx-1$, $x\in\[0,π]$
+ \end{enumerate}
+
+ %\hyperlink{Λύση4}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 5}
+\begin{frame}[label=Άσκηση5]{Εξάσκηση 5}
+ Να λύσετε τις εξισώσεις
+ \begin{enumerate}
+  \item<1-> $εφ2x=1$
+  \item<2-> $συν(x-\frac{π}{3})=\frac{1}{2}$
+  \item<3-> $ημ3x=ημ2x$
+ \end{enumerate}
+
+ %\hyperlink{Λύση5}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 6}
+\begin{frame}[label=Άσκηση6]{Εξάσκηση 6}
+ Να λύσετε την εξίσωση $2ημ^2x-1=0$
+
+ %\hyperlink{Λύση6}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 7}
+\begin{frame}[label=Άσκηση]{Εξάσκηση 7}
+ Να λύσετε την εξίσωση $2ημ^2x+3συνx=0$
+
+ %\hyperlink{Λύση}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 8}
+\begin{frame}[label=Άσκηση8]{Εξάσκηση 8}
+ Να λύσετε την εξίσωση $ημ2x-συνx=0$
+
+ %\hyperlink{Λύση8}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 9}
+\begin{frame}[label=Άσκηση9]{Εξάσκηση 9}
+ Να λύσετε την εξίσωση $ημx-\sqrt{3}συνx=0$
+
+ %\hyperlink{Λύση9}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 10}
+\begin{frame}[label=Άσκηση10]{Εξάσκηση 10}
+ Να λύσετε την ανίσωση $ημx-συνx>0$ sto di;asthma $Δ=(0,\frac{π}{2})$
+
+ %\hyperlink{Λύση10}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 11}
+\begin{frame}[label=Άσκηση11]{Εξάσκηση 11}
+ Να κάνετε τον πίνακα προσήμων της συνάρτησης $f(x)=ημx+συνx$, $x\in (0,π)$
+
+ %\hyperlink{Λύση11}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 12}
+\begin{frame}[label=Άσκηση12]{Εξάσκηση 12}
+ Να λύσετε την εξίσωση $εφx-ημx=1-ημx\cdot εφx$
+
+ %\hyperlink{Λύση12}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 13}
+\begin{frame}[label=Άσκηση13]{Εξάσκηση 13}
+ Να λύσετε την εξίσωση $\sqrt{2}ημx+1=0$ στο διάστημα $[-π,π]$
+
+ %\hyperlink{Λύση13}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 14}
+\begin{frame}[label=Άσκηση14]{Εξάσκηση 14}
+ Να λύσετε την εξίσωση $ημ(συν(x))=0$
+
+ %\hyperlink{Λύση14}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 15}
+\begin{frame}[label=Άσκηση15]{Εξάσκηση 15}
+ Δίνεται η συνάρτηση $f(x)=xημx$
+ \begin{enumerate}
+  \item<1-> Να δείξετε ότι η συνάρτηση $f$ είναι άρτια
+  \item<2-> Να βρείτε τα κοινά σημεία της $C_f$ με τον άξονα $x'x$ και την ευθεία $y=x$
+  \item<3-> Να δείξετε ότι $-|x|\le f(x) \le |x|$
+ \end{enumerate}
+ %\hyperlink{Λύση15}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 16}
+\begin{frame}[label=Άσκηση16]{Εξάσκηση 16}
+ Να λύσετε την εξίσωση $\sqrt{x^2+1}=συνx$
+
+ %\hyperlink{Λύση16}{\beamerbutton{Λύση}}
+\end{frame}
+
+\section{}
+\begin{frame}
+ Στο moodle θα βρείτε τις ασκήσεις που πρέπει να κάνετε, όπως και αυτή τη παρουσίαση
+\end{frame}
+
+% \appendix
+% \section{Λύσεις Ασκήσεων}
+% \begin{frame}
+%  \tableofcontents
+% \end{frame}
+
+\end{document}
