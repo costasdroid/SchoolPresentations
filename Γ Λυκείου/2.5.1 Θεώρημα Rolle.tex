@@ -1,0 +1,268 @@
+\documentclass[greek]{beamer}
+%\usepackage{fontspec}
+\usepackage{amsmath,amsthm}
+\usepackage{unicode-math}
+\usepackage{xltxtra}
+\usepackage{graphicx}
+\usetheme{CambridgeUS}
+\usecolortheme{seagull}
+\usepackage{hyperref}
+\usepackage{ulem}
+\usepackage{xgreek}
+
+\usepackage{pgfpages}
+\usepackage{tikz}
+\usepackage{tkz-tab}
+%\setbeameroption{show notes on second screen}
+%\setbeameroption{show only notes}
+
+\setsansfont{Noto Serif}
+
+\usepackage{multicol}
+
+\usepackage{appendixnumberbeamer}
+
+\setbeamercovered{transparent}
+\beamertemplatenavigationsymbolsempty
+
+\title{Συναρτήσεις}
+\subtitle{Θεώρημα Rolle}
+\author[Λόλας]{Κωνσταντίνος Λόλας}
+\date{}
+
+\begin{document}
+
+\begin{frame}
+ \titlepage
+\end{frame}
+
+\section{Θεωρία}
+\begin{frame}{Ήρθε η ώρα για τα δύσκολα}
+ Το πιό εύκολο κεφάλαιο, με τις πιο δύσκολες ασκήσεις!
+ \begin{enumerate}
+  \item<1-> το θεώρημα... γελοίο
+  \item<2-> οι εφαρμογές... πφφφφ
+  \item<3-> οι αρχικές ασκήσεις... παιχνιδάκι
+  \item<4-> όταν είναι όμως στις πανελλαδικές... ΠΑΤΟΣ
+ \end{enumerate}
+\end{frame}
+
+\begin{frame}{But Whyyyyyyyyyy!}
+ Xωρίς τον Rolle ξεχάστε
+ \begin{enumerate}
+  \item<1-> μονοτονία
+  \item<2-> ακρότατα
+  \item<3-> αντιπαράγωγο, διαφορικές κτλ
+ \end{enumerate}
+\end{frame}
+
+\begin{frame}{Ώρα για Ζωγραφιές}
+ \begin{enumerate}
+  \item<1-> Φτιάξτε άξονες
+  \item<2-> Διαλέξτε δύο διαφορετικές τιμές στον άξονα των $x$ τις $α$ και $β$
+  \item<3-> θεωρήστε δύο σημεία μιας συνάρτησης με $f(α)=f(β)$
+  \item<4-> Φτιάξτε παραγωγίσιμη συνάρτηση στο $[α,β]$ και μελετήστε την εφαπτόμενή της
+  \item<5-> Εντοπίστε σημεία στα οποία η εφαπτόμενη είναι παράλληλη με τον άξονα $x'x$
+  \item<6-> Επαναλάβετε όλη τη διαδικασία, δημιουργώντας συνάρτηση που δεν έχει οριζόντια εφαπτόμενη
+ \end{enumerate}
+ \onslide<7-> Συμπέρασμα
+
+\end{frame}
+
+\begin{frame}{Θεώρημα Rolle}
+ \begin{block}{Θεώρημα Rolle}
+  Έστω μία συνάρτηση $f$:
+  \begin{itemize}
+   \item συνεχής στο $[α,β]$
+   \item παραγωγίσιμη στο $(α,β)$
+   \item $f(α)=f(β)$
+  \end{itemize}
+  τότε υπάρχει $ξ\in (α,β)$ με $f'(ξ)=0$
+ \end{block}
+\end{frame}
+
+\begin{frame}{Συμπεράσματα}
+ \begin{enumerate}
+  \item<1-> ο Rolle όπως και ο Bolzano δεν βρίσκει ρίζες, αλλά βεβαιώνει την ύπαρξη
+  \item<2-> ο Rolle από την συνάρτηση βγάζει συμπέρασμα για την παράγωγο
+  \item<3-> έχει περίεργες προϋποθέσεις
+ \end{enumerate}
+\end{frame}
+
+\begin{frame}{Πώς θα τον χρησιμοποιούμε?}
+ \begin{enumerate}
+  \item<1-> βεβαιώνουμε ύπαρξη, αν ο Bolzano δεν μας κάνει
+  \item<2-> βρίσκουμε πλήθος ριζών
+  \item<3-> βεβαιώνουμε ότι η συνάρτηση είναι 1-1 ?????????
+ \end{enumerate}
+\end{frame}
+
+\begin{frame}{Δεν σας πείθω για την δυσκολία έ?}
+ \onslide<1->
+ \begin{block}{Άσκηση 22}
+  Αν για τους αριθμούς $α$ και $β$ με $α<β$ ισχύει $\frac{συνα-συνβ}{α-β}=\frac{α+β}{2}$ να δείξετε ότι οι αριθμοί $α$ και $β$ είναι ετερόσημοι
+ \end{block}
+ \onslide<2->
+ \begin{block}{Άσκηση 24}
+  Έστω συνάρτηση παραγωγίσιμη στο $[2,3]$ με $2f(3)=3f(2)$. Να δείξετε ότι υπάρχει $x_0\in (2,3)$ ώστε $f'(x_0)=\frac{f(x_0)}{x_0}$
+ \end{block}
+ \onslide<3-> Και να φανταστείτε ΣΑΣ ΛΕΩ ότι λύνονται με Rolle
+\end{frame}
+
+\section{Ασκήσεις}
+\subsection{Άσκηση 1}
+\begin{frame}[label=Άσκηση1]{Εξάσκηση 1}
+ Δίνεται η συνάρτηση $f(x)=x^3-6x^2+9x$
+ \begin{enumerate}
+  \item<1-> Να δείξετε ότι η $f$ ικανοποιεί τις υποθέσεις του θ. Rolle στο $Δ=[0,3]$
+  \item<2-> Να βρείτε τα $ξ\in(0,3)$ για τα οποία ισχύει $f'(ξ)=0$
+ \end{enumerate}
+ % \hyperlink{Λύση1}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 2}
+\begin{frame}[label=Άσκηση2]{Εξάσκηση 2}
+ Δίνεται η συνάρτηση $f(x)=(x-2)ημx$. Να αποδείξετε ότι:
+ \begin{enumerate}
+  \item<1-> Η εξίσωση $f'(x)=0$ έχει μία τουλάχιστον ρίζα στο διάστημα $(2,π)$
+  \item<2-> Η εξίσωση $εφx=2-x$ έχει μία τουλάχιστον ρίζα στο $(2,π)$
+ \end{enumerate}
+
+ % \hyperlink{Λύση2}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 3}
+\begin{frame}[label=Άσκηση3]{Εξάσκηση 3}
+ Δίνεται η συνάρτηση $f(x)=x^4-20x^3-25x^2-x+1$
+ \begin{enumerate}
+  \item<1-> Να αποδείξετε ότι η εξίσωση $f(x)=0$ έχει μία τουλάχιστον ρίζα στο διάστημα $(-1,0)$ και μία τουλάχιστον στο διάστημα $(0,1)$
+  \item<2-> Να αποδείξετε ότι η εξίσωση $4x^3-60x^2-50x-1=0$ έχει μία τουλάχιστον ρίζα στο διάστημα $(-1,1)$
+ \end{enumerate}
+ % \hyperlink{Λύση3}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 4}
+\begin{frame}[label=Άσκηση4]{Εξάσκηση 4}
+ Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση, η οποία είναι παραγωγίσιμη και ισχύει
+ $$f'(x)\ne 1, \text{ για κάθε } x\in\mathbb{R}$$
+ Να δείξετε ότι η εξίσωση $f(x)=x$ έχει μία το πολύ ρίζα
+ % \hyperlink{Λύση4}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 5}
+\begin{frame}[label=Άσκηση5]{Εξάσκηση 5}
+ Δίνεται η συνάρτηση $f(x)=2^x+x^2-2x-1$
+ \begin{enumerate}
+  \item<1-> Να αποδείξετε ότι για την $f$ ισχύουν οι υποθέσεις του Rolle στο $[0,1]$
+  \item<2-> Να αποδείξετε ότι η $f$ έχει δύο το πολύ ρίζες
+  \item<3-> Να βρείτε τα κοινά σημεία των γραφικών παραστάσεων των συναρτήσεων:
+   $$g(x)=2^x \text{ και } h(x)=2x-x^2+1$$
+ \end{enumerate}
+ % \hyperlink{Λύση5}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 6}
+\begin{frame}[label=Άσκηση6]{Εξάσκηση 6}
+ Δίνεται η συνάρτηση $f(x)=ημ(2x)$. Να δείξετε ότι η $f$ ικανοποιεί τις υποθέσεις του Rolle στο διάστημα $[0,π]$ και στη συνέχεια, να βρείτε όλα τα $ξ\in (0,π)$ για τα οποία ισχύει $f'(ξ)=0$
+ % \hyperlink{Λύση6}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 7}
+\begin{frame}[label=Άσκηση7]{Εξάσκηση 7}
+ Αν $0<α<β$ και $α^β=β^α$, να δείξετε ότι:
+ \begin{enumerate}
+  \item<1-> Για τη συνάρτηση $f(x)=\frac{\ln x}{x}$ ισχύουν οι υποθέσεις Rolle στο $[α,β]$
+  \item<2-> $1<α<e<β$
+ \end{enumerate}
+ %\hyperlink{Λύση7}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 8}
+\begin{frame}[label=Άσκηση8]{Εξάσκηση 8}
+ Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση, η οποία είναι παραγωγίσιμη και ισχύει
+ $$f'(x)\ne 0, \text{ για κάθε } x\in\mathbb{R}$$
+ Να δείξετε ότι η $f$ είναι συνάρτηση $1-1$
+ %\hyperlink{Λύση8}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 9}
+\begin{frame}[label=Άσκηση9]{Εξάσκηση 9}
+ Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση, η οποία είναι παραγωγίσιμη και ισχύουν
+ \begin{itemize}
+  \item $f'(x)\ne 2x$ για κάθε $x\in\mathbb{R}$
+  \item $1<f(x)<2$ για κάθε $x\in\mathbb{R}$
+ \end{itemize}
+ Να δείξετε ότι υπάρχει μοναδικό $x_0\in (0,1)$ ώστε $f(x_0)=x_0^2+1$
+ %\hyperlink{Λύση9}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 10}
+\begin{frame}[label=Άσκηση10]{Εξάσκηση 10}
+ Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση, η οποία είναι παραγωγίσιμη και η γραφική της παράσταση τέμνει τον άξονα $x'x$ στα σημεία $x_1=1$ και $x_2=2$. Να αποδείξετε ότι:
+ \begin{itemize}
+  \item Για την συνάρτηση $G(x)=\frac{f(x)}{x-3}$ εφαρμόζεται το θ. Rolle στο $[1,2]$
+  \item Υπάρχει $ξ\in (1,2)$ τέτοιο ώστε η εφαπτομένη της $C_f$ στο σημείο $Μ(ξ,f(ξ))$ να διέρχεται από το σημείο $Α(3,0)$
+ \end{itemize}
+ %\hyperlink{Λύση10}{\beamerbutton{Λύση}}
+\end{frame}
+
+
+%
+% \appendix
+% \section{Λύσεις Ασκήσεων}
+% \begin{frame}
+%  \tableofcontents
+% \end{frame}
+%
+% \subsection{Άσκηση 1}
+% \begin{frame}[label=Λύση1]
+%  Με θεώρημα ενδιαμέσων τιμών. Η συνάρτηση είναι συνεχής στο $[10,11]$ με $f(10)=1024$ και $f(11)=2048$. Αφού $2023\in (1024,2048)$ υπάρχει $x_0$...
+%
+%  \hyperlink{Άσκηση1}{\beamerbutton{Πίσω στην άσκηση}}
+% \end{frame}
+%
+% \subsection{Άσκηση 2}
+% \begin{frame}[label=Λύση2]
+%  Με Bolzano ή με μέγιστης ελάχιστης τιμής και ΘΕΤ.
+%
+%  \begin{gather*}
+%   f(3)<f(2)<f(1) \\
+%   3f(3)<f(1)+f(2)+f(3)<3f(1) \\
+%   f(3)<\frac{f(1)+f(2)+f(3)}{3}<f(1)
+%  \end{gather*}
+%
+%  \hyperlink{Άσκηση2}{\beamerbutton{Πίσω στην άσκηση}}
+% \end{frame}
+%
+% \subsection{Άσκηση 3}
+% \begin{frame}[label=Λύση3]
+%  Προφανές ελάχιστο στα $x_1=1$ και $x_2=3$. Ως συνεχής στο $[1,3]$ έχει σίγουρα ΚΑΙ μέγιστο στο $(1,3)$
+%
+%  \hyperlink{Άσκηση3}{\beamerbutton{Πίσω στην άσκηση}}
+% \end{frame}
+%
+% \subsection{Άσκηση 4}
+% \begin{frame}[label=Λύση4]
+%  Η συνάρτηση `απόστασης` $f(x)-x$ είναι ορισμένη στο κλειστό διάστημα και έχει σίγουρα μέγιστο
+%
+%  \hyperlink{Άσκηση4}{\beamerbutton{Πίσω στην άσκηση}}
+% \end{frame}
+%
+% \subsection{Άσκηση 5}
+% \begin{frame}[label=Λύση5]
+%  Όμοια με την Άσκηση 2
+%
+%  \hyperlink{Άσκηση5}{\beamerbutton{Πίσω στην άσκηση}}
+% \end{frame}
+%
+% \subsection{Άσκηση 6}
+% \begin{frame}[label=Λύση6]
+%  \begin{enumerate}
+%   \item Είναι γνησίως αύξουσα άρα $(f(+\infty),f(-\infty))$
+%   \item Προφανώς $[f(0),f(1)]$...
+%  \end{enumerate}
+%
+%  \hyperlink{Άσκηση6}{\beamerbutton{Πίσω στην άσκηση}}
+% \end{frame}
+
+\end{document}

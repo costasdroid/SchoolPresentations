@@ -1,0 +1,269 @@
+\documentclass[greek]{beamer}
+%\usepackage{fontspec}
+\usepackage{amsmath,amsthm}
+\usepackage{unicode-math}
+\usepackage{xltxtra}
+\usepackage{graphicx}
+\usetheme{CambridgeUS}
+\usecolortheme{seagull}
+\usepackage{hyperref}
+\usepackage{ulem}
+\usepackage{xgreek}
+
+\usepackage{pgfpages}
+\usepackage{tikz}
+\usepackage{tkz-tab}
+%\setbeameroption{show notes on second screen}
+%\setbeameroption{show only notes}
+
+\setsansfont{Noto Serif}
+
+\usepackage{multicol}
+
+\usepackage{appendixnumberbeamer}
+
+\setbeamercovered{transparent}
+\beamertemplatenavigationsymbolsempty
+
+\title{Συναρτήσεις}
+\subtitle{Μονοτονία}
+\author[Λόλας]{Κωνσταντίνος Λόλας}
+\date{}
+
+\begin{document}
+
+\begin{frame}
+ \titlepage
+\end{frame}
+
+\section{Θεωρία}
+\begin{frame}{Κάτι που αφήσαμε πιο πριν...}
+ Δεν μπορούσαμε να υπολογίσουμε όλων των συναρτήσεων την μονοτονία π.χ.
+ \begin{enumerate}
+  \item $e^x-x$
+  \item $x^3-2x+1$
+  \item $\ln x - x^2$
+ \end{enumerate}
+\end{frame}
+
+\begin{frame}{Spoiler}
+ Γιατί υπολογίζαμε κλίση (εκτός διαφορικών εξισώσεων??)
+ \onslide<2-> θετική κλίση? Αρνητική?
+\end{frame}
+
+\begin{frame}{Μονοτονία}
+ \begin{block}{Μονοτονία}
+  Έστω μία συνάρτηση $f$ συνεχής στο $Δ$. Αν $f'(x)>0$ σε κάθε εσωτερικό σημείο $x$ του $Δ$, τότε η $f$ είναι γνησίως αύξουσα στο $Δ$
+ \end{block}
+ \onslide<2-> Όμοια για $f'(x)<0$
+\end{frame}
+
+\begin{frame}{Από εδώ και εμπρός...}
+ \begin{enumerate}
+  \item<1-> Ξαναλύνουμε όλες τις ασκήσεις με μονοτονία, τώρα όμως ΟΛΕΣ
+  \item<2-> Όσοι δεν τα μάθανε καλά, είναι ευκαιρία τώρα να επιστρέψουν
+  \item<3-> Όσοι τα είχατε καταλάβει ευκαιρία για επανάληψη
+  \item<4-> Θα ασχολούμαστε με πρόσημα!!!!
+ \end{enumerate}
+\end{frame}
+
+\begin{frame}{Και λίγο κατανόηση δεν βλάπτει}
+ \begin{enumerate}
+   \item<1-> Αν $f'>0$ τότε $f\uparrow$ \only<2> {\emph{ΛΑΘΟΣ!!!!!!!!!!}}
+   \item<3-> Αν $f\uparrow$ τότε $f>0$ \only<4> {\emph{ΛΑΘΟΣ!!!!!!!!!!}}
+   \item<5-> Αν $f\uparrow$ τότε $f\ge 0$ \only<6> {\emph{ΛΑΘΟΣ!!!!!!!!!!}}
+   \item<7-> Αν $f'\ne 0$ τότε $f$ γνησίως μονότονη \only<8> {\emph{ΛΑΘΟΣ!!!!!!!!!!}}
+ \end{enumerate}
+\end{frame}
+
+\section{Ασκήσεις}
+\subsection{Άσκηση 1}
+\begin{frame}[label=Άσκηση1]{Εξάσκηση 1}
+ Έστω $f:(0,+\infty)\to\mathbb{R}$ μία συνάρτηση, η οποία είναι παραγωγίσιμη και ισχύει $xf'(x)-2f(x)=0$ για κάθε $x>0$
+ \begin{enumerate}
+  \item<1-> Να δείξετε ότι η συνάρτηση $g(x)=\frac{f(x)}{x^2}$. $x>0$ είναι σταθερή
+  \item<2-> Αν επιπλέον $f(1)=2$ να βρείτε τον τύπο υης $f$
+ \end{enumerate}
+
+ % \hyperlink{Λύση1}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 2}
+\begin{frame}[label=Άσκηση2]{Εξάσκηση 2}
+ Έστω $f:[0,π]\to\mathbb{R}$ μία συνάρτηση με $f(0)=1$, η οποία είναι συνεχής και ισχύει $f'(x)=xσυνx$ για κάθε $x\in (0,π)$
+
+ Να δείξετε ότι $f(x)=xημx+συνx$, $x\in [0,π]$
+
+ % \hyperlink{Λύση2}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 3}
+\begin{frame}[label=Άσκηση3]{Εξάσκηση 3}
+ Έστω $f:(0,+\infty)\to\mathbb{R}$ μία συνάρτηση με $f(1)=0$, η οποία είναι παραγωγίσιμη και ισχύει $f'(x)=\frac{1-xf(x)}{x^2}$ για κάθε $x>0$
+
+ Να δείξετε ότι $f(x)=\frac{\ln x}{x}$, $x>0$
+
+ % \hyperlink{Λύση3}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 4}
+\begin{frame}[label=Άσκηση4]{Εξάσκηση 4}
+ Έστω $f:(0,π)\to\mathbb{R}$ μία συνάρτηση με $f(\frac{π}{2})=1$, η οποία είναι παραγωγίσιμη και ισχύει $f'(x)-σφx\cdot f(x)=0$ για κάθε $x\in (0,π)$
+
+ Να δείξετε ότι $f(x)=ημx$, $x\in (0,π)$
+
+ % \hyperlink{Λύση4}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 5}
+\begin{frame}[label=Άσκηση5]{Εξάσκηση 5}
+ Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση με $f(0)=1$, η οποία είναι παραγωγίσιμη και ισχύει $f'(x)=f(x)-e^xημx$ για κάθε $x\in\mathbb{R}$
+
+ Να δείξετε ότι $f(x)=e^xσυνx$, $x\in\mathbb{R}$
+
+ % \hyperlink{Λύση5}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 6}
+\begin{frame}[label=Άσκηση6]{Εξάσκηση 6}
+ Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση με $f(0)=0$, η οποία είναι παραγωγίσιμη και ισχύει $f'(x)=2xe^{-f(x)}$ για κάθε $x\in\mathbb{R}$
+
+ Να δείξετε ότι $f(x)=\ln (x^2+1)$, $x\in\mathbb{R}$
+
+ % \hyperlink{Λύση6}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 7}
+\begin{frame}[label=Άσκηση7]{Εξάσκηση 7}
+ Έστω $f$, $g:\mathbb{R}\to\mathbb{R}$ δύο συναρτήσεις οι οποίες είναι δύο φορές παραγωγίσιμες και ισχύουν
+ \begin{itemize}
+  \item $f''(x)=g''(x)$ για κάθε $x\in\mathbb{R}$
+  \item $f(0)=g(0)+1$
+ \end{itemize}
+
+ Να δείξετε ότι $f(0)=g(0)+1$
+
+ %\hyperlink{Λύση7}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 8}
+\begin{frame}[label=Άσκηση8]{Εξάσκηση 8}
+ Έστω $f:(0,+\infty)\to\mathbb{R}$ μία συνάρτηση με $f(0)=0$, η οποία είναι συνεχής και ισχύει $f(x)=x(f(x)-f'(x))$ για κάθε $x>0$
+ \begin{enumerate}
+  \item<1-> Αν $g(x)=xf(x)$, $x>0$ να δείξετε ότι $g(x)=c\cdot e^x$, $x>0$
+  \item<2-> Αν επιπλέον $f(1)=e$ να βρείτε τον τύπο της $f$
+ \end{enumerate}
+
+ %\hyperlink{Λύση8}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 9}
+\begin{frame}[label=Άσκηση9]{Εξάσκηση 9}
+ Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση η οποία είναι δύο φορές παραγωγίσιμη και ισχύουν
+ \begin{itemize}
+  \item $2f(x)+4xf'(x)+(x^2+9)f''(x)=0$ για κάθε $x\in\mathbb{R}$
+  \item $f(0)=0$ και $f'(0)=\frac{1}{9}$
+ \end{itemize}
+
+ Να δείξετε ότι $f(x)=\frac{x}{x^2+9}$
+
+ %\hyperlink{Λύση9}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 10}
+\begin{frame}[label=Άσκηση10]{Εξάσκηση 10}
+ Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση για την οποία ισχύει
+ $$|f(x)-f(y)|\le (x-y)^2 \text{ για κάθε } x,y\in\mathbb{R}$$
+
+ Να δείξετε ότι η $f$ είναι σταθερή
+
+ %\hyperlink{Λύση10}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 11}
+\begin{frame}[label=Άσκηση11]{Εξάσκηση 11}
+ Αν για τις συναρτήσεις $f$, $g$ ισχύουν $f(0)=0$, $g(0)=1$, $f'(x)=g(x)$ και $g'(x)=-f(x)$ για κάθε $x\in\mathbb{R}$ να αποδείξετε ότι:
+ \begin{enumerate}
+  \item<1-> $f^2(x)+g^2(x)=1$, $x\in\mathbb{R}$
+  \item<2-> $f(x)=ημx$, $x\in\mathbb{R}$ και $g(x)=συνx$, $x\in\mathbb{R}$
+ \end{enumerate}
+
+ %\hyperlink{Λύση11}{\beamerbutton{Λύση}}
+\end{frame}
+
+
+\appendix
+
+\section{Αποδείξεις}
+\begin{frame}{Απόδειξη σταθερής συνάρτησης}
+ Θα δείξουμε ότι για κάθε $x_1<x_2\in Δ \implies f(x_1)<f(x_2)$.
+
+ \onslide<1-> Στο $(x_1,x_2)$ είναι παραγωγίσιμη, άρα θα ισχύει το ΘΜΤ
+
+ \onslide<2-> Υπάρχει $ξ\in Δ$ ώστε $f'(ξ)=\frac{f(x_2)-f(x_1)}{x_2-x_1}$.
+
+ \onslide<3-> Αλλά $f'(x)>0$ για κάθε $x\in Δ$
+
+ \onslide<4-> Άρα $f'(ξ)=\frac{f(x_2)-f(x_1)}{x_2-x_1}>0$
+
+ \onslide<5-> $f(x_2)>f(x_1)$
+\end{frame}
+
+
+% \section{Λύσεις Ασκήσεων}
+% \begin{frame}
+%  \tableofcontents
+% \end{frame}
+%
+% \subsection{Άσκηση 1}
+% \begin{frame}[label=Λύση1]
+%  Με θεώρημα ενδιαμέσων τιμών. Η συνάρτηση είναι συνεχής στο $[10,11]$ με $f(10)=1024$ και $f(11)=2048$. Αφού $2023\in (1024,2048)$ υπάρχει $x_0$...
+%
+%  \hyperlink{Άσκηση1}{\beamerbutton{Πίσω στην άσκηση}}
+% \end{frame}
+%
+% \subsection{Άσκηση 2}
+% \begin{frame}[label=Λύση2]
+%  Με Bolzano ή με μέγιστης ελάχιστης τιμής και ΘΕΤ.
+%
+%  \begin{gather*}
+%   f(3)<f(2)<f(1) \\
+%   3f(3)<f(1)+f(2)+f(3)<3f(1) \\
+%   f(3)<\frac{f(1)+f(2)+f(3)}{3}<f(1)
+%  \end{gather*}
+%
+%  \hyperlink{Άσκηση2}{\beamerbutton{Πίσω στην άσκηση}}
+% \end{frame}
+%
+% \subsection{Άσκηση 3}
+% \begin{frame}[label=Λύση3]
+%  Προφανές ελάχιστο στα $x_1=1$ και $x_2=3$. Ως συνεχής στο $[1,3]$ έχει σίγουρα ΚΑΙ μέγιστο στο $(1,3)$
+%
+%  \hyperlink{Άσκηση3}{\beamerbutton{Πίσω στην άσκηση}}
+% \end{frame}
+%
+% \subsection{Άσκηση 4}
+% \begin{frame}[label=Λύση4]
+%  Η συνάρτηση `απόστασης` $f(x)-x$ είναι ορισμένη στο κλειστό διάστημα και έχει σίγουρα μέγιστο
+%
+%  \hyperlink{Άσκηση4}{\beamerbutton{Πίσω στην άσκηση}}
+% \end{frame}
+%
+% \subsection{Άσκηση 5}
+% \begin{frame}[label=Λύση5]
+%  Όμοια με την Άσκηση 2
+%
+%  \hyperlink{Άσκηση5}{\beamerbutton{Πίσω στην άσκηση}}
+% \end{frame}
+%
+% \subsection{Άσκηση 6}
+% \begin{frame}[label=Λύση6]
+%  \begin{enumerate}
+%   \item Είναι γνησίως αύξουσα άρα $(f(+\infty),f(-\infty))$
+%   \item Προφανώς $[f(0),f(1)]$...
+%  \end{enumerate}
+%
+%  \hyperlink{Άσκηση6}{\beamerbutton{Πίσω στην άσκηση}}
+% \end{frame}
+
+\end{document}

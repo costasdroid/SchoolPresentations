@@ -1,0 +1,262 @@
+\documentclass[greek]{beamer}
+%\usepackage{fontspec}
+\usepackage{amsmath,amsthm}
+\usepackage{unicode-math}
+\usepackage{xltxtra}
+\usepackage{graphicx}
+\usetheme{CambridgeUS}
+\usecolortheme{seagull}
+\usepackage{hyperref}
+\usepackage{ulem}
+\usepackage{xgreek}
+
+\usepackage{pgfpages}
+\usepackage{tikz}
+\usepackage{tkz-tab}
+%\setbeameroption{show notes on second screen}
+%\setbeameroption{show only notes}
+
+\setsansfont{Noto Serif}
+
+\usepackage{multicol}
+
+\usepackage{appendixnumberbeamer}
+
+\setbeamercovered{transparent}
+\beamertemplatenavigationsymbolsempty
+
+\title{Συναρτήσεις}
+\subtitle{Θεώρημα Μέσης Τιμής}
+\author[Λόλας]{Κωνσταντίνος Λόλας}
+\date{}
+
+\begin{document}
+
+\begin{frame}
+ \titlepage
+\end{frame}
+
+\section{Θεωρία}
+\begin{frame}{Ήρθε η ώρα για τα ΠΙΟ δύσκολα}
+ Θυμάστε Bolzano $\sim$ ΘΕΤ
+
+ Τώρα Rolle $\sim$ ΘΜΤ
+\end{frame}
+
+\begin{frame}{Ώρα για Ζωγραφιές}
+ \begin{enumerate}
+  \item<1-> Φτιάξτε άξονες
+  \item<2-> Διαλέξτε δύο διαφορετικές τιμές στον άξονα των $x$ τις $α$ και $β$
+  \item<3-> θεωρήστε δύο σημεία μιας συνάρτησης με $Α(α,f(α))$ και $Β(β,f(β))$
+  \item<4-> Φτιάξτε παραγωγίσιμη συνάρτηση στο $[α,β]$ και μελετήστε την εφαπτόμενή της
+  \item<5-> Εντοπίστε σημεία στα οποία η εφαπτόμενη είναι παράλληλη με το ευθύγραμμο τμήμα $ΑΒ$
+  \item<6-> Επαναλάβετε όλη τη διαδικασία, δημιουργώντας συνάρτηση που δεν έχει "τέτοια" εφαπτόμενη
+ \end{enumerate}
+ \onslide<7-> Συμπέρασμα
+
+\end{frame}
+
+\begin{frame}{Θεώρημα Μέσης Τιμής}
+ \begin{block}{Θεώρημα Μέσης Τιμής}
+  Έστω μία συνάρτηση $f$:
+  \begin{itemize}
+   \item συνεχής στο $[α,β]$
+   \item παραγωγίσιμη στο $(α,β)$
+  \end{itemize}
+  τότε υπάρχει $ξ\in (α,β)$ με $f'(ξ)=\frac{f(β)-f(α)}{β-α}$
+ \end{block}
+\end{frame}
+
+\begin{frame}{Παρατήρηση}
+ \begin{enumerate}
+  \item<1-> Ο Rolle είναι το ΘΜΤ για $f(α)=f(β)$
+  \item<2-> Το ΘΜΤ προκύπτει από το Rolle (μπορείτε να βρείτε ποιά συνάρτηση θα θέσουμε?)
+ \end{enumerate}
+ \onslide<3-> Άρα παίρνουμε ότι από τα δύο θέλουμε!
+\end{frame}
+
+\section{Ασκήσεις}
+\subsection{Άσκηση 1}
+\begin{frame}[label=Άσκηση1]{Εξάσκηση 1}
+ Δίνεται η συνάρτηση $f(x)=\sqrt{x-1}$. Να δείξετε ότι για την $f$ ισχύουν οι υποθέσεις του ΘΜΤ στο διάστημα $[1,5]$ και να βρείτε τα $ξ\in [1,5]$ για τα οποία ισχύει $f'(ξ)=\frac{1}{2}$
+
+ % \hyperlink{Λύση1}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 2}
+\begin{frame}[label=Άσκηση2]{Εξάσκηση 2}
+ Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση, η οποία είναι παραγωγίσιμη και ισχύει
+ $$f(3)-f(1)=4$$
+ \begin{enumerate}
+  \item<1-> Να δείξετε ότι υπάρχει $ξ\in (1,3)$ τέτοιο ώστε $f'(ξ)=2$
+  \item<2-> Να δείξετε ότι υπάρχει ένα τουλάχιστον σημείο $Μ$ της $C_f$ στο οποίο η εφαπτόμενη είναι παράλληλη στην ευθεία $ε:y=2x+3$
+ \end{enumerate}
+
+ % \hyperlink{Λύση2}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 3}
+\begin{frame}[label=Άσκηση3]{Εξάσκηση 3}
+ Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση, η οποία είναι παραγωγίσιμη με συνεχή παράγωγο και ισχύει $f(1)-f(0)>0$
+ \begin{enumerate}
+  \item<1-> Να δείξετε ότι υπάρχει $ξ\in (0,1)$ τέτοιο ώστε $f'(ξ)>0$
+  \item<2-> Αν επιπλέον ισχύει $f'(x)\ne 0$ για κάθε $x\in\mathbb{R}$, να δείξετε ότι $f'(x)>0$ για κάθε $x\in\mathbb{R}$
+ \end{enumerate}
+
+ % \hyperlink{Λύση3}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 4}
+\begin{frame}[label=Άσκηση4]{Εξάσκηση 4}
+ Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση με $f(0)=0$, η οποία είναι παραγωγίσιμη. Να δείξετε ότι υπάρχει $ξ\in (0,x)$, $x>0$ τέτοιο ώστε $f'(ξ)=\frac{f(x)}{x}$
+
+ % \hyperlink{Λύση4}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 5}
+\begin{frame}[label=Άσκηση5]{Εξάσκηση 5}
+ Για κάθε $α$, $β\in (0,+\infty)$ με $α<β$, να δείξετε ότι $1-\frac{α}{β}<\ln \frac{β}{α}<\frac{β}{α}-1$
+
+ % \hyperlink{Λύση5}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 6}
+\begin{frame}[label=Άσκηση6]{Εξάσκηση 6}
+ Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση, η οποία είναι παραγωγίσιμη και $f'\uparrow \mathbb{R}$
+ \begin{enumerate}
+  \item<1-> Αν $f(1)=0$ να δείξετε ότι $f'(x)>\frac{f(x)}{x-1}$ για $x>1$
+  \item<2-> Να δείξετε ότι $f(2x)>f(x)+xf'(x)$ για κάθε $x>0$
+  \item<3-> Να δείξετε ότι $f(x)+f(5x)>2f(3x)$ για κάθε $x>0$
+ \end{enumerate}
+
+ % \hyperlink{Λύση6}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 7}
+\begin{frame}[label=Άσκηση7]{Εξάσκηση 7}
+ Να δείξετε τις παρακάτω ανισότητες:
+ \begin{enumerate}
+  \item<1-> $e^x> x$, $x\in\mathbb{R}$
+  \item<2-> $\ln x<x$, $x>0$
+  \item<3-> $e^{x-1}\ge x$, $x\in\mathbb{R}$
+  \item<4-> $\ln x+\frac{1}{x}\ge 1$, $x>0$
+  \item<5-> $e^x>\ln x$, $x>0$
+  \item<6-> $e^x-\ln x>2$, $x>0$
+ \end{enumerate}
+
+ %\hyperlink{Λύση7}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 8}
+\begin{frame}[label=Άσκηση8]{Εξάσκηση 8}
+ Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση με $f(e)=e\ln 2$ και $f'(x)<\ln 2$, για κάθε $x\in \mathbb{R}$. Να δείξετε ότι $f(1)>\ln 2$
+
+ %\hyperlink{Λύση8}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 9}
+\begin{frame}[label=Άσκηση9]{Εξάσκηση 9}
+ Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση, η οποία είναι δύο φορές παραγωγίσιμη με συνεχή δεύτερη και ισχύουν $f''(x)\ne 0$ για κάθε $x\in\mathbb{R}$ και $f(1)-f(0)>f'(0)$. Να αποδείξετε ότι $f''(x)>0$ για κάθε $x\in\mathbb{R}$
+
+ %\hyperlink{Λύση9}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 10}
+\begin{frame}[label=Άσκηση10]{Εξάσκηση 10}
+ Έστω $f$ μία συνάρτηση, η οποία είναι παραγωγίσιμη στο $\mathbb{R}$ με $|f'(x)|\le 1$ για κάθε $x\in\mathbb{R}$
+ \begin{itemize}
+  \item<1-> Να αποδείξετε ότι για όλα τα $α$, $β\in\mathbb{R}$ ισχύει
+  $$|f(β)-f(α)|\le |β-α|$$
+  \item<2-> Να βρείτε το $\lim\limits_{x \to +\infty}{ f\left( \sqrt{x^2+1} \right)-f(x)  }$
+ \end{itemize}
+ %\hyperlink{Λύση10}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 11}
+\begin{frame}[label=Άσκηση11]{Εξάσκηση 11}
+  \begin{enumerate}
+    \item<1-> Έστω $f:[α,β]\to\mathbb{R}$ μία συνάρτηση η οποία είναι παραγωγίσιμη και η $f'$ είναι γνησίως αύξουσα στο $[α,β]$. Να δείξετε ότι $f\left( \frac{α+β}{2} \right)<\frac{f(α)+f(β)}{2} $
+    \item<2-> Να δείξετε ότι $2e^5<e^3+e^7$
+  \end{enumerate}
+
+  %\hyperlink{Λύση11}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 12}
+\begin{frame}[label=Άσκηση12]{Εξάσκηση 12}
+ Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση, η οποία είναι δύο φορές παραγωγίσιμη και ισχύει $f(α)+f(3α)=2f(2α)$, $α>0$. Να δείξετε ότι υπάρχει $ξ\in (α,3α)$ ώστε $f''(ξ)=0$
+
+  %\hyperlink{Λύση12}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 13}
+\begin{frame}[label=Άσκηση13]{Εξάσκηση 13}
+ Έστω $f:[α,β]\to\mathbb{R}$ μία συνάρτηση με $f(α)=β$ και $f(β)=α$ η οποία είναι συνεχής στο $[α,β]$ και παραγωγίσιμη στο $(α,β)$. Να αποδείξετε ότι:
+ \begin{enumerate}
+   \item<1-> η εξίσωση $f(x)=x$ έχει μία τουλάχιστον ρίζα $x_0\in (α,β)$
+   \item<2-> υπάρχουν $x_1$, $x_2\in (α,β)$ τέτοια ώστε $f'(x_1)f(x_2)=1$
+ \end{enumerate}
+
+  %\hyperlink{Λύση13}{\beamerbutton{Λύση}}
+\end{frame}
+
+
+%
+% \appendix
+% \section{Λύσεις Ασκήσεων}
+% \begin{frame}
+%  \tableofcontents
+% \end{frame}
+%
+% \subsection{Άσκηση 1}
+% \begin{frame}[label=Λύση1]
+%  Με θεώρημα ενδιαμέσων τιμών. Η συνάρτηση είναι συνεχής στο $[10,11]$ με $f(10)=1024$ και $f(11)=2048$. Αφού $2023\in (1024,2048)$ υπάρχει $x_0$...
+%
+%  \hyperlink{Άσκηση1}{\beamerbutton{Πίσω στην άσκηση}}
+% \end{frame}
+%
+% \subsection{Άσκηση 2}
+% \begin{frame}[label=Λύση2]
+%  Με Bolzano ή με μέγιστης ελάχιστης τιμής και ΘΕΤ.
+%
+%  \begin{gather*}
+%   f(3)<f(2)<f(1) \\
+%   3f(3)<f(1)+f(2)+f(3)<3f(1) \\
+%   f(3)<\frac{f(1)+f(2)+f(3)}{3}<f(1)
+%  \end{gather*}
+%
+%  \hyperlink{Άσκηση2}{\beamerbutton{Πίσω στην άσκηση}}
+% \end{frame}
+%
+% \subsection{Άσκηση 3}
+% \begin{frame}[label=Λύση3]
+%  Προφανές ελάχιστο στα $x_1=1$ και $x_2=3$. Ως συνεχής στο $[1,3]$ έχει σίγουρα ΚΑΙ μέγιστο στο $(1,3)$
+%
+%  \hyperlink{Άσκηση3}{\beamerbutton{Πίσω στην άσκηση}}
+% \end{frame}
+%
+% \subsection{Άσκηση 4}
+% \begin{frame}[label=Λύση4]
+%  Η συνάρτηση `απόστασης` $f(x)-x$ είναι ορισμένη στο κλειστό διάστημα και έχει σίγουρα μέγιστο
+%
+%  \hyperlink{Άσκηση4}{\beamerbutton{Πίσω στην άσκηση}}
+% \end{frame}
+%
+% \subsection{Άσκηση 5}
+% \begin{frame}[label=Λύση5]
+%  Όμοια με την Άσκηση 2
+%
+%  \hyperlink{Άσκηση5}{\beamerbutton{Πίσω στην άσκηση}}
+% \end{frame}
+%
+% \subsection{Άσκηση 6}
+% \begin{frame}[label=Λύση6]
+%  \begin{enumerate}
+%   \item Είναι γνησίως αύξουσα άρα $(f(+\infty),f(-\infty))$
+%   \item Προφανώς $[f(0),f(1)]$...
+%  \end{enumerate}
+%
+%  \hyperlink{Άσκηση6}{\beamerbutton{Πίσω στην άσκηση}}
+% \end{frame}
+
+\end{document}
