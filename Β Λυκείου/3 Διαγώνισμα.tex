@@ -1,0 +1,120 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+\usepackage{unicode-math}
+\usepackage{xltxtra}
+\usepackage{xgreek}
+
+\setmainfont{Liberation Serif}
+
+\usepackage{tabularx}
+
+\pagestyle{empty}
+
+\usepackage{geometry}
+ \geometry{a4paper, total={190mm,280mm}, left=10mm, top=10mm}
+
+ \usepackage{graphicx}
+ \graphicspath{ {images/} }
+
+ \usepackage{wrapfig}
+ \usepackage{multicol}
+ \usepackage{enumitem}
+
+\begin{document}
+
+\begin{table}
+ \small
+ \begin{tabularx}{\textwidth}{ c X r }
+  \begin{tabular}{ l }
+   Εισηγητής: Λόλας Κωνσταντίνος \\
+   Επαναληπτικό: Τριγωνομετρία
+  \end{tabular}
+   &  &
+  \begin{tabular}{ r }
+   Θεσσαλονίκη, 18 / 01 / 2023
+  \end{tabular}
+ \end{tabularx}
+\end{table}
+
+\part*{\centering{Διαγώνισμα Άλγεβρα Β Λυκείου}}
+
+\section*{Θέμα Α}
+\noindent
+\begin{enumerate}
+ \item \textbf{[Μονάδες 12]} Να αποδείξετε τις εξής ταυτότητες:
+
+       \begin{multicols}{2}
+        \begin{enumerate}[label=(\roman*).]
+         \item $συν^2ω=\frac{1}{1+εφ^2ω}$
+         \item $ημ^2ω=\frac{εφ^2ω}{1+εφ^2ω}$
+        \end{enumerate}
+       \end{multicols}
+
+ \item \textbf{[Μονάδες 3]} Πότε μια συνάρτηση $f$ λέγεται περιοδική;
+
+ \item \textbf{[Μονάδες 10]} Να χαρακτηρίσετε τις παρακάτω προτάσεις με Σωστό ή Λάθος
+       \begin{enumerate}
+        \item [α)] Οι αντίθετες γωνίες έχουν αντίθετο συνημίτονο
+        \item [β)] $εφ(2kπ+ω)=εφω$, $k\in\mathbb{Z}$
+        \item [γ)] Η συνάρτηση $f(x)=ημx$ είναι περιοδική με περίοδο $2π$
+        \item [δ)] Η εξίσωση $εφx=εφω$ έχει μία λύση
+        \item [ε)] Η συνάρτηση $f(x)=ρσυν(ωx)$, $ρ>0$, $ω>0$ έχει μέγιστη τιμή το $ρ$, ελάχιστη τιμή το $-ρ$ και περίοδο $Τ=\frac{2π}{ω}$
+       \end{enumerate}
+\end{enumerate}
+
+\section*{Θέμα Β}
+\noindent
+Έστω γωνία $ω\in\left( \frac{π}{2},π \right)$ για την οποία ισχύει η σχέση:
+$$ημ(π-ω)+συν(\frac{π}{2}-ω)=\frac{6}{5}$$
+\begin{enumerate}
+ \item \textbf{[Μονάδες 7]} Να αποδείξετε ότι $ημω=\frac{3}{5}$
+ \item \textbf{[Μονάδες 6]} Να βρείτε τους άλλους τριγωνομετρικούς αριθμούς της γωνίας $ω$
+ \item \textbf{[Μονάδες 6]} Να βρείτε τους τριγωνομετρικούς αριθμούς της γωνίας $\frac{15π}{2}+ω$
+ \item \textbf{[Μονάδες 6]} Να αποδείξετε ότι $\frac{3π}{4}<ω<\frac{5π}{6}$
+\end{enumerate}
+%\vspace{7\baselineskip}
+
+\section*{Θέμα Γ}
+\noindent
+Δίνεται η συνάρτηση $f(x)=4συν^2x-4συνx+2$, $x\in (0,2π)$.
+\begin{enumerate}
+ \item \textbf{[Μονάδες 8]} Να λύσετε τις εξισώσεις
+       \begin{multicols}{2}
+        \begin{enumerate}[label=(\roman*).]
+         \item $f(x)=2$
+         \item $f(x)=1$
+        \end{enumerate}
+       \end{multicols}
+ \item \textbf{[Μονάδες 9]} Να αποδείξετε ότι η συνάρτηση $f$
+       \begin{enumerate}[label=\roman*.]
+        \item είναι περιοδική με περίοδο $Τ=2π$
+        \item είναι άρτια
+        \item δεν είναι γνησίως μονότονη
+       \end{enumerate}
+ \item \textbf{[Μονάδες 8]} Να αποδείξετε ότι $f(x)\ge 1$ για κάθε $x\in (0,2π)$ και στη συνέχεια να βρείτε τα $x$ για τα οποία η $f$ παρουσιάζει ελάχιστο
+\end{enumerate}
+
+\section*{Θέμα Δ}
+\noindent
+Δίνεται η συνάρτηση $f(x)=ρ\cdot ημ(ωx)+κ$, όπου $ρ>0$, $ω>0$ και $κ\in \mathbb{R}$, τέτοια ώστε:
+\begin{itemize}
+ \item έχει περίοδο $Τ=π$
+ \item έχει ελάχιστη τιμή το 1
+ \item και η $C_f$ τέμνει τον άξονα $y'y$ στο σημείο με τεταγμένη $2$
+\end{itemize}
+\begin{enumerate}
+ \item \textbf{[Μονάδες 6]} να υπολογίσετε τα $ρ$, $ω$ και $κ$
+
+       Αν $ρ=1$, $ω=κ=2$, τότε
+
+ \item \textbf{[Μονάδες 4]} Να σχεδιάσετε τη γραφική παράσταση της συνάρτησης $f$ στο διάστημα $[0,π]$
+ \item \textbf{[Μονάδες 8]} Αν η ευθεία $y=\frac{5}{2}$ τέμνει τη γραφική παράσταση της $f$ στο διάστημα $[0,π]$ στα σημεία $Κ$ και $Λ$, τότε να υπολογίσετε το εμβαδόν και την περίμετρο του τριγώνου $ΟΚΛ$, όπου $Ο$ η αρχή των αξόνων
+ \item \textbf{[Μονάδες 7]} Να λύσετε την εξίσωση $f(2x)=f(3x)$ στο διάστημα $[0,π]$
+\end{enumerate}
+
+\vspace{3\baselineskip}
+
+\part*{\centering{Καλή επιτυχία}}
+
+\end{document}
