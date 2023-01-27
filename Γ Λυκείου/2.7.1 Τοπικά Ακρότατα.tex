@@ -1,0 +1,362 @@
+\documentclass[greek]{beamer}
+%\usepackage{fontspec}
+\usepackage{amsmath,amsthm}
+\usepackage{unicode-math}
+\usepackage{xltxtra}
+\usepackage{graphicx}
+\usetheme{CambridgeUS}
+\usecolortheme{seagull}
+\usepackage{hyperref}
+\usepackage{ulem}
+\usepackage{xgreek}
+
+\usepackage{pgfpages}
+\usepackage{tikz}
+\usepackage{tkz-tab}
+%\setbeameroption{show notes on second screen}
+%\setbeameroption{show only notes}
+
+\setsansfont{Noto Serif}
+
+\usepackage{multicol}
+
+\usepackage{appendixnumberbeamer}
+
+\setbeamercovered{transparent}
+\beamertemplatenavigationsymbolsempty
+
+\title{Συναρτήσεις}
+\subtitle{Fermat, Κρίσιμα Σημεία}
+\author[Λόλας]{Κωνσταντίνος Λόλας}
+\date{}
+
+\begin{document}
+
+\begin{frame}
+ \titlepage
+\end{frame}
+
+\section{Θεωρία}
+\begin{frame}{Λίγη Γεωγραφία?}
+ \begin{enumerate}
+  \item<1-> Το ψηλότερο σημείο στη γη
+  \item<2-> Το ψηλότερο σημείο στην Ελλάδα
+  \item<3-> Το ψηλότερο σημείο στη διαδρομή Θεσσαλονίκη - Γιάννινα
+ \end{enumerate}
+\end{frame}
+
+\begin{frame}{Τοπικά Ακρότατα}
+ \begin{block}{Ορισμός}
+  Μία συνάρτηση $f$, με πεδίο ορισμού $Α$, θα λέμε ότι παρουσιάζει στο $x_0\in Α$ \emph{τοπικό μέγιστο}, όταν υπάρχει $δ>0$ ώστε
+  $$f(x)\le f(x_0) \text{ για κάθε } x\in Α\cap (x_0-δ,x_0+δ)$$
+  Το $x_0$ λέγεται \emph{θέση} ή \emph{σημείο τοπικού ακροτάτου}, ενώ το $f(x_0)$ \emph{τοπικό μέγιστο} της $f$
+ \end{block}
+ \onslide<2->Άρα \emph{ΣΤΟ} $x_0$, \emph{ΤΟ} $f(x_0)$
+\end{frame}
+
+\begin{frame}{Συγκρίσεις παντού}
+ \begin{block}{Ορισμός}
+  Μία συνάρτηση $f$, με πεδίο ορισμού $Α$, θα λέμε ότι παρουσιάζει στο $x_0\in Α$ \emph{μέγιστο}, όταν
+  $$f(x)\le f(x_0) \text{ για κάθε } x\in Α$$
+ \end{block}
+ \begin{block}{Ορισμός}
+  Μία συνάρτηση $f$, με πεδίο ορισμού $Α$, θα λέμε ότι παρουσιάζει στο $x_0\in Α$ \emph{τοπικό μέγιστο}, όταν υπάρχει $δ>0$ ώστε
+  $$f(x)\le f(x_0) \text{ για κάθε } x\in Α\cap (x_0-δ,x_0+δ)$$
+  Το $x_0$ λέγεται \emph{θέση} ή \emph{σημείο τοπικού ακροτάτου}, ενώ το $f(x_0)$ \emph{τοπικό μέγιστο} της $f$
+ \end{block}
+\end{frame}
+
+\begin{frame}{Σιγά μην τα ξεκαθαρίσαμε}
+ \begin{enumerate}
+  \item<1-> Το μέγιστο είναι και τοπικό \only<2> {\emph{ΣΩΣΤΟ}}
+  \item<3-> Το τοπικό μέγιστο είναι το μέγιστο \only<4> {\emph{ΛΑΘΟΣ!!!!!!!!!!}}
+  \item<5-> Το μεγαλύτερο από τα τοπικά μέγιστα είναι το μέγιστο \only<6> {\emph{ΛΑΘΟΣ!!!!!!!!!!}}
+  \item<7-> Αν δεν έχει μέγιστο, δεν έχει και τοπικά μέγιστα \only<8> {\emph{ΛΑΘΟΣ!!!!!!!!!!}}
+  \item<9-> Υπάρχει συνάρτηση με άπειρα τοπικά μέγιστα \only<10> {\emph{ΣΩΣΤΟ}}
+ \end{enumerate}
+\end{frame}
+
+\begin{frame}{Ζωγραφική}
+ \begin{enumerate}
+  \item<1-> Φτιάξτε συνάρτηση με τοπικό ελάχιστο στο δεξί άκρο ενός διαστήματος
+  \item<2-> Συμπέρασμα για το $f'(x_0)$?
+  \item<3-> Φτιάξτε συνάρτηση με τοπικό ελάχιστο στο εσωτερικό ενός διαστήματος
+  \item<4-> Συμπέρασμα για το $f'(x_0)$?
+  \item<5-> Φτιάξτε συνάρτηση με τοπικό ελάχιστο στο εσωτερικό ενός διαστήματος και να υπάρχει το $f'(x_0)$
+  \item<6-> Συμπέρασμα για το $f'(x_0)$?
+ \end{enumerate}
+\end{frame}
+
+\begin{frame}[label=Θεώρημα1]{Θεώρημα Fermat}
+ \begin{block}{Ορισμός}
+  Έστω μια συνάρτηση $f$ ορισμένη σ’ ένα διάστημα $Δ$ και $x_0$ ένα εσωτερικό σημείο του $Δ$. Αν η $f$ παρουσιάζει τοπικό ακρότατο στο $x_0$ και είναι παραγωγίσιμη στο σημείο αυτό, τότε:
+  $f'(x_0) = 0$
+ \end{block}
+
+ \hyperlink{Απόδειξη1}{\beamerbutton{Απόδειξη}}
+\end{frame}
+
+\begin{frame}{Όλα μαζί}
+ \begin{enumerate}
+  \item<1-> Αν στο εσωτερικό δεν ισχύει $f'=0$ τότε δεν έχω τ.ακρότατο
+  \item<2-> Αν στο εσωτερικό δεν υπάρχει $f'$ τότε \emph{μπορεί} να έχω
+  \item<3-> Και μένουν τα άκρα (προσοχή, δεν είναι πάντα ακρότατα)
+ \end{enumerate}
+\end{frame}
+
+\begin{frame}{Πιθανά Τοπικά Ακρότατα}
+ \begin{enumerate}
+  \item<1-> Αν στο εσωτερικό δεν ισχύει $f'=0$ τότε δεν έχω τ.ακρότατο
+  \item<2-> Αν στο εσωτερικό δεν υπάρχει $f'$ τότε \emph{μπορεί} να έχω
+  \item<3-> Και μένουν τα άκρα (προσοχή, δεν είναι πάντα ακρότατα)
+ \end{enumerate}
+
+ \onslide<4->Άρα
+ \begin{block}{Πιθανές θέσεις ακροτάτων}
+  \begin{itemize}
+   \item Τα εσωτερικά που $f'=0$
+   \item Τα εσωτερικά που δεν ορίζεται η $f'$
+   \item Τα άκρα
+
+  \end{itemize}
+ \end{block}
+
+ Κρίσιμα σημεία είναι οι 2 πρώτες περιπτώσεις
+
+\end{frame}
+
+\begin{frame}{Ναι, αλλά πότε τα ``πιθανά'' είναι και ``σίγουρα''}
+ Να βρείτε συνθήκη για την $f$ ώστε ένα σημείο της να είναι τοπικό μέγιστο
+ \begin{block}{Έλεγχος πιθανών ακροτάτων}<2->
+  Έστω μια συνάρτηση $f$ παραγωγίσιμη σ’ ένα διάστημα $(α, β)$, με εξαίρεση ίσως ένα σημείο του $x_0$, στο οποίο όμως η $f$ είναι συνεχής.
+
+  \begin{itemize}
+   \item Αν $f'(x) > 0$ στο $(α, x_0)$ και $f'(x) < 0$ στο $(x_0, β)$, τότε το $f(x_0)$ είναι τοπικό μέγιστο της $f$
+   \item Αν $f'(x)< 0$ στο $(α, x_0)$ και $f'(x) > 0$ στο $(x_0, β)$, τότε το $f(x_0)$ είναι τοπικό ελάχιστο της $f$
+   \item Aν η $f'(x)$ διατηρεί πρόσημο στο $(α,x_0)\cup(β,x_0)$ τότε το $f(x_0)$ δεν είναι τοπικό ακρότατο και η $f$ είναι γνησίως μονότονη στο $(α, β)$
+
+  \end{itemize}
+ \end{block}
+
+\end{frame}
+
+\section{Ασκήσεις}
+\subsection{Άσκηση 1}
+\begin{frame}[label=Άσκηση1,t]{Εξάσκηση 1}
+ Έστω η συνάρτηση $f(x)=2α\ln x-\dfrac{β}{x}+3α$, όπου $α$, $β\in\mathbb{R}$. Αν η $f$ παρουσιάζει ακρότατο στο $1$ το $5$, να βρείτε τα $α$ και $β$
+
+ % \hyperlink{Λύση1}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 2}
+\begin{frame}[label=Άσκηση2,t]{Εξάσκηση 2}
+ Δίνεται η συνάρτηση $f(x)=e^x-αx$, για την οποία ισχύει
+ $$f(x)\ge 1 \text{ για κάθε } x\in\mathbb{R}$$
+
+ Να αποδείξετε ότι $α=1$
+
+ % \hyperlink{Λύση2}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 3}
+\begin{frame}[label=Άσκηση3,t]{Εξάσκηση 3}
+ Αν για κάθε $x>0$ ισχύει
+ $$α\ln x\le x-1,α\in\mathbb{R}$$
+
+ να βρείτε την τιμή του $α$
+
+ % \hyperlink{Λύση3}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 4}
+\begin{frame}[label=Άσκηση4,t]{Εξάσκηση 4}
+ Έστω $f:\mathbb{R}\to\mathbb{R}$ μία παραγωγίσιμη συνάρτηση με $f(0)=1$ και ισχύει
+ $$f(x)\ge 2e^x-x-1 \text{ για κάθε } x\in\mathbb{R}$$
+ \begin{enumerate}
+  \item<1-> Να βρείτε την εφαπτομένη της $C_f$ στο $x_0=0$
+  \item<2-> Να υπολογίσετε το $\lim\limits_{x \to +\infty}{ f(x) }$
+ \end{enumerate}
+
+ % \hyperlink{Λύση4}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 5}
+\begin{frame}[label=Άσκηση5,t]{Εξάσκηση 5}
+Έστω $f:\mathbb{R}\to\mathbb{R}$ μία παραγωγίσιμη συνάρτηση με $f(0)=1$ η οποία είναι δύο φορές παραγωγίσιμη και ισχύουν:
+\begin{itemize}
+ \item $f(x)\ge 1$ για κάθε $x\in\mathbb{R}$
+ \item $f''(x)>0 $ για κάθε $x\in\mathbb{R}$
+\end{itemize}
+Να μελετήσετε τη συνάρτηση $f$ ως προς τη μονοτονία
+
+
+ % \hyperlink{Λύση5}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 6}
+\begin{frame}[label=Άσκηση6,t]{Εξάσκηση 6}
+ Δίνεται η συνάρτηση $f(x)=\begin{cases}
+   x^3 &,-1\le x<1 \\
+   (x-2)^2 &, 1\le x\le \dfrac{5}{2}
+ \end{cases}$.
+ Να βρείτε
+ \begin{enumerate}
+  \item<1-> Τα κρίσιμα σημεία της $f$
+  \item<2-> Τις πιθανές θέσεις ακροτάτων της $f$
+  \item<3-> Το σύνολο τιμών της $f$
+ \end{enumerate}
+
+ % \hyperlink{Λύση6}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 7}
+\begin{frame}[label=Άσκηση7,t]{Εξάσκηση 7}
+Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση η οποία είναι παραγωγίσιμη και ισχύει:
+
+$$f^3(x)+3f(x)=x^3+x \text{ για κάθε } x\in\mathbb{R}$$
+Να δείξετε ότι η $f$ δεν έχει ακρότατα
+
+ %\hyperlink{Λύση7}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 8}
+\begin{frame}[label=Άσκηση8,t]{Εξάσκηση 8}
+Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση η οποία είναι παραγωγίσιμη με $f'(0)=1$ και ισχύει:
+
+$$f^3(x)+e^x=f(f(x))+x \text{ για κάθε } x\in\mathbb{R}$$
+Να δείξετε ότι η $f$ δεν έχει ακρότατα
+
+ %\hyperlink{Λύση8}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 9}
+\begin{frame}[label=Άσκηση9,t]{Εξάσκηση 9}
+Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση η οποία είναι παραγωγίσιμη με $f'(1)=1$ η οποία είναι δύο φορές παραγωγίσιμη και ισχύουν:
+\begin{itemize}
+  \item $f(x)\ge x$ για κάθε $x\in\mathbb{R}$
+  \item $\left( f^2(x) \right)'\ne 0$ για κάθε $x\in\mathbb{R}$
+\end{itemize}
+
+\begin{enumerate}
+  \item<1-> Να βρείτε την εφαπτομένη της $C_f$ στο $x_0=1$
+  \item<2-> Να αποδείξετε ότι η $f$ δεν έχει ακρότατα και είναι γνησίως αύξουσα
+  \item<3-> Να βρείτε το $\lim\limits_{x \to 0^+}{ f\left( \dfrac{1}{x} \right) }$
+\end{enumerate}
+
+ %\hyperlink{Λύση9}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 10}
+\begin{frame}[label=Άσκηση10,t]{Εξάσκηση 10}
+ Δίνεται η συνάρτηση $f(x)=|e^x+αx-1|$, $x\in\mathbb{R}$ η οποία είναι παραγωγίσιμη.
+ \begin{enumerate}
+   \item<1-> Να αποδείξετε ότι η $f$ παρουσιάζει ελάχιστο και στη συνέχεια ότι
+   $$f'(0)=0$$
+   \item<2-> Να βρείτε την τιμή του $α$ και να δείξετε ότι
+   $$f(x)=e^x-x-1,x\in\mathbb{R}$$
+   \item<3-> Αν η $f$ είναι ορισμένη στο $Β=[-1,1]$, να βρείτε το $f(Β)$
+ \end{enumerate}
+
+ %\hyperlink{Λύση10}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 11}
+\begin{frame}[label=Άσκηση11,,t]{Εξάσκηση 11}
+ Έστω $f:[0,2]\to\mathbb{R}$ μια συνάρτηση με $f(0)=1$, $f(1)=0$, $f(2)=3$ η οποία είναι παραγωγίσιμη. Αν $f'\uparrow (0,2)$, να δείξετε ότι υπάρχει μοναδικό $x_0\in (0,2)$ τέτοιο ώστε $f'(x_0)=0$
+
+ %\hyperlink{Λύση11}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 12}
+\begin{frame}[label=Άσκηση12,t]{Εξάσκηση 12}
+ Έστω $f,g:\mathbb{R}\to\mathbb{R}$ δύο συναρτήσεις παραγωγίσιμες που έχουν κοινά σημεία τα $(α,f(α))$ και $(β,f(β))$ και η $C_f$ είναι πάνω από τη $C_g$ στο διάστημα $(α,β)$. Να δείξετε ότι:
+ \begin{enumerate}
+  \item<1-> Υπάρχει $ξ\in (α,β)$, τέτοιο ώστε η κατακόρυφη απόσταση των σημείων με τετμημένη $ξ$ των $C_f$ και $C_g$, να γίνεται μέγιστη
+  \item<2-> Οι εφαπτόμενες των $C_f$ και $C_g$ στα σημεία $(ξ,f(ξ))$ και $(ξ,g(ξ))$ είναι παράλληλες
+ \end{enumerate}
+
+ %\hyperlink{Λύση12}{\beamerbutton{Λύση}}
+\end{frame}
+
+
+\appendix
+
+\section{Αποδείξεις}
+\begin{frame}[label=Απόδειξη1]{Απόδειξη Fermat}
+ \onslide<1-> Έστω ότι η $f$ έχει τοπικό μέγιστο στο $x_0$.
+
+ Άρα $f(x)\le f(x_0)$ για κάθε $x$ γύρω από το $x_0$.
+
+ \onslide<2-> Αφού $f$ παραγωγίσιμη, θα υπάρχει το όριο
+
+ $$f'(x_0)=\lim\limits_{x \to x_0}{ \dfrac{f(x)-f(x_0)}{x-x_0} }=k\in\mathbb{R}$$
+
+ \onslide<3-> Για $x<x_0\implies \dfrac{f(x)-f(x_0)}{x-x_0} >0$ άρα
+
+ $$\lim\limits_{x \to x_0^-}{ \dfrac{f(x)-f(x_0)}{x-x_0} }\ge 0$$
+
+ \onslide<4-> Για $x>x_0\implies \dfrac{f(x)-f(x_0)}{x-x_0} <0$ άρα
+
+ $$\lim\limits_{x \to x_0^+}{ \dfrac{f(x)-f(x_0)}{x-x_0} }\le 0$$
+
+ \onslide<5-> Άρα $0\le k \le 0$, δηλαδή $f'(x_0)=0$ \hyperlink{Θεώρημα1}{\beamerbutton{Πίσω στη θεωρία}}
+\end{frame}
+
+
+% \section{Λύσεις Ασκήσεων}
+% \begin{frame}
+%  \tableofcontents
+% \end{frame}
+%
+% \subsection{Άσκηση 1}
+% \begin{frame}[label=Λύση1]
+%  Με θεώρημα ενδιαμέσων τιμών. Η συνάρτηση είναι συνεχής στο $[10,11]$ με $f(10)=1024$ και $f(11)=2048$. Αφού $2023\in (1024,2048)$ υπάρχει $x_0$...
+%
+%  \hyperlink{Άσκηση1}{\beamerbutton{Πίσω στην άσκηση}}
+% \end{frame}
+%
+% \subsection{Άσκηση 2}
+% \begin{frame}[label=Λύση2]
+%  Με Bolzano ή με μέγιστης ελάχιστης τιμής και ΘΕΤ.
+%
+%  \begin{gather*}
+%   f(3)<f(2)<f(1) \\
+%   3f(3)<f(1)+f(2)+f(3)<3f(1) \\
+%   f(3)<\dfrac{f(1)+f(2)+f(3)}{3}<f(1)
+%  \end{gather*}
+%
+%  \hyperlink{Άσκηση2}{\beamerbutton{Πίσω στην άσκηση}}
+% \end{frame}
+%
+% \subsection{Άσκηση 3}
+% \begin{frame}[label=Λύση3]
+%  Προφανές ελάχιστο στα $x_1=1$ και $x_2=3$. Ως συνεχής στο $[1,3]$ έχει σίγουρα ΚΑΙ μέγιστο στο $(1,3)$
+%
+%  \hyperlink{Άσκηση3}{\beamerbutton{Πίσω στην άσκηση}}
+% \end{frame}
+%
+% \subsection{Άσκηση 4}
+% \begin{frame}[label=Λύση4]
+%  Η συνάρτηση `απόστασης` $f(x)-x$ είναι ορισμένη στο κλειστό διάστημα και έχει σίγουρα μέγιστο
+%
+%  \hyperlink{Άσκηση4}{\beamerbutton{Πίσω στην άσκηση}}
+% \end{frame}
+%
+% \subsection{Άσκηση 5}
+% \begin{frame}[label=Λύση5]
+%  Όμοια με την Άσκηση 2
+%
+%  \hyperlink{Άσκηση5}{\beamerbutton{Πίσω στην άσκηση}}
+% \end{frame}
+%
+% \subsection{Άσκηση 6}
+% \begin{frame}[label=Λύση6]
+%  \begin{enumerate}
+%   \item Είναι γνησίως αύξουσα άρα $(f(+\infty),f(-\infty))$
+%   \item Προφανώς $[f(0),f(1)]$...
+%  \end{enumerate}
+%
+%  \hyperlink{Άσκηση6}{\beamerbutton{Πίσω στην άσκηση}}
+% \end{frame}
+
+\end{document}
