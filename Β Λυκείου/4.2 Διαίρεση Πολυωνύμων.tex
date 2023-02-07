@@ -1,0 +1,361 @@
+\documentclass[greek]{beamer}
+%\usepackage{fontspec}
+\usepackage{amsmath,amsthm}
+\usepackage{unicode-math}
+\usepackage{xltxtra}
+\usepackage{graphicx}
+\usetheme{CambridgeUS}
+\usecolortheme{seagull}
+\usepackage{hyperref}
+\usepackage{ulem}
+\usepackage{xgreek}
+
+\usepackage{pgfpages}
+\usepackage{tikz}
+\usepackage{tkz-tab}
+%\setbeameroption{show notes on second screen}
+%\setbeameroption{show only notes}
+
+\setsansfont{Noto Serif}
+
+\usepackage{multicol}
+
+\usepackage{appendixnumberbeamer}
+
+\usepackage{polynom}
+
+\usepackage{pgffor}
+
+\setbeamercovered{transparent}
+\beamertemplatenavigationsymbolsempty
+
+\title{Πολυώνυμα}
+\subtitle{Διαίρεση}
+\author[Λόλας]{Κωνσταντίνος Λόλας}
+\date{}
+
+\begin{document}
+
+\begin{frame}
+ \titlepage
+\end{frame}
+
+\section{Θεωρία}
+\begin{frame}{Ποια πράξη σιχαίνεστε περισσότερο}
+ Εννοείται τη διαίρεση! \only<2>{και ειδικά την κάθετη!}
+
+ \only<3>{Να σας δω: Να γίνει η διαίρεση $$51.32:2.7$$}
+
+ \only<4>{Το τέλειο φέτος είναι ότι θα ασχολούμαστε \emph{ΜΟΝΟ} με ακέραιους συντελεστές}
+\end{frame}
+
+\begin{frame}{Δημοτικό ολέ!}
+ \begin{block}{Ευκελείδεια Διαίρεση}
+  Για κάθε ζευγάρι φυσικών $Δ$ και $δ>0$, υπάρχουν μοναδικοί $π\in\mathbb{N}$ και $υ\in\mathbb{N}$ ώστε
+  $$Δ=δ\cdot π+υ \text{, με } 0\le υ <δ$$
+  Με ονομασίες: $Δ$ διαιρετέος, $δ$ διαιρέτης, $π$ πηλίκο και $υ$ υπόλοιπο
+ \end{block}
+ \begin{block}{Άλλη μορφή της διαίρεσης}<2->
+  Αν $Δ=δ\cdot π+υ$ τότε
+  $$\dfrac{Δ}{δ}=π + \dfrac{υ}{δ}$$
+ \end{block}
+\end{frame}
+
+\begin{frame}{Περνάμε στα καινούρια}
+ \begin{block}{Διαίρεση Πολυωνύμων}
+  Για κάθε ζευγάρι πολυωνύμων $Δ(x)$ και $δ(x)\ne 0$, υπάρχουν μοναδικά πολυώνυμα $π(x)$ και $υ(x)$ ώστε
+  $$Δ(x)=δ(x)\cdot π(x)+υ(x)$$
+  Με $υ(x)$ να είναι μηδενικό πολυώνυμο ή βαθμού μικρότερου ή ίσου του $δ(x)$
+ \end{block}
+ \begin{block}{Άλλη μορφή της διαίρεσης}<2->
+  Αν $Δ(x)=δ(x)\cdot π(x)+υ(x)$ τότε
+  $$\dfrac{Δ(x)}{δ(x)}=π(x) + \dfrac{υ(x)}{δ(x)}$$
+ \end{block}
+\end{frame}
+
+\begin{frame}{Πάμε για γνωστά!}
+ \begin{enumerate}
+  \item<1-> $(x^2-1):(x-1)$
+  \item<2-> $(x^2-1):(x)$
+  \item<3-> $(x^2+2x+3):(x+1)$
+ \end{enumerate}
+\end{frame}
+
+\begin{frame}[t]{Πάμε για άγνωστα!}
+ Από γνωστά
+ \only<2>{\polylongdiv[stage=1,style=D]{x^3-5x^2+2x-1}{x-3}}
+ \only<3>{\polylongdiv[stage=2,style=D]{x^3-5x^2+2x-1}{x-3}}
+ \only<4>{\polylongdiv[stage=3,style=D]{x^3-5x^2+2x-1}{x-3}}
+ \only<5>{\polylongdiv[stage=4,style=D]{x^3-5x^2+2x-1}{x-3}}
+ \only<6>{\polylongdiv[stage=5,style=D]{x^3-5x^2+2x-1}{x-3}}
+ \only<7>{\polylongdiv[stage=6,style=D]{x^3-5x^2+2x-1}{x-3}}
+ \only<8>{\polylongdiv[stage=7,style=D]{x^3-5x^2+2x-1}{x-3}}
+ \only<9>{\polylongdiv[stage=8,style=D]{x^3-5x^2+2x-1}{x-3}}
+ \only<10>{\polylongdiv[stage=9,style=D]{x^3-5x^2+2x-1}{x-3}}
+ \only<11->{\polylongdiv[stage=10,style=D]{x^3-5x^2+2x-1}{x-3}}
+
+ \only<12->{Άρα $$\dfrac{x^3-5x^2+2x-1}{x-3}=x^2-2x-4+\dfrac{-13}{x-3}$$}
+\end{frame}
+
+\begin{frame}{Ουφ! Επιτέλους, στα 17 μου κατάλαβα διαίρεση}
+ Διαίρεση με
+ \begin{itemize}
+  \item<1-> $x-5$ θα δώσει υπόλοιπο πολυώνυμο μορφής...
+  \item<2-> $x^2+2x-1$ θα δώσει υπόλοιπο πολυώνυμο μορφής...
+  \item<3-> $x^5+3x+2$ θα δώσει υπόλοιπο πολυώνυμο μορφής...
+ \end{itemize}
+ \onslide<4-> Άρα $P(x)=(x-ρ)π(x)+υ$
+\end{frame}
+
+\begin{frame}{1 Θεωρηματάκι}
+ $$P(x)=(x-ρ)π(x)+υ$$
+ Βρείτε τρόπο να υπολογίσετε το $υ$
+ \begin{block}{Θεώρημα Υπολοίπου}<2->
+  Το υπόλοιπο της διαίρεσης του $P(x)$ με το $x-ρ$ δίνει υπόλοιπο $P(ρ)$
+ \end{block}
+\end{frame}
+
+\begin{frame}{Και το πόρισμά του!}
+ $$P(x)=(x-ρ)π(x)+P(ρ)$$
+ Τι γίνεται αν $P(ρ)=0$?
+ \begin{block}{Πόρισμα Υπολοίπου}<2->
+  Αν $P(ρ)=0$ τότε $P(x)=(x-ρ)π(x)$ δηλαδή το $x-ρ$ είναι παράγοντας
+ \end{block}
+
+ \begin{block}{Γενικά}<3->
+  Ένα πολυώνυμο $P(x)$ έχει παράγοντα το $x-ρ$ αν και μόνο αν το $ρ$ είναι ρίζα του
+ \end{block}
+
+\end{frame}
+
+\begin{frame}{Σχήμα Horner}
+ Αν έχουμε να διαιρέσουμε ένα πολυώνυμο με $x-α$ τότε \emph{ίσως} είναι καλύτερα να χρησιμοποιήσουμε Horner
+ \begin{enumerate}
+  \item γράφουμε \emph{όλους} τους συντελεστές του διαιρεταίου
+  \item γράφουμε το $α$ δεξιά
+  \item ράβουμε!!!!!
+ \end{enumerate}
+ \centering
+ \foreach \xxslide in {1,2,3,4,5,6,7,8}{
+   \only<\xxslide>{\polyhornerscheme[tutor=true, x=1, stage=\xxslide]{x^3-5x^2+2x-1}}
+  }
+\end{frame}
+
+
+\section{Ασκήσεις}
+\subsection{Άσκηση 1}
+\begin{frame}[label=Άσκηση1,t]{Εξάσκηση 1}
+ Δίνεται το πολυώνυμο $P(x)=x^3+3x+1$
+ \begin{enumerate}
+  \item<1-> Να κάνετε τη διαίρεση του πολυωνύμου $P(x)$ δια το $x^2-1$
+  \item<2-> Να βρείτε το πηλίκο $π(x)$ και το υπόλοιπο $υ(x)$ της παραπάνω διαίρεσης
+  \item<3-> Να γράψετε την ταυτότητα της παραπάνω διαίρεσης
+  \item<4-> Να εξετάσετε αν η παραπάνω διαίρεση είναι τέλεια
+  \item<5-> Να δείξετε ότι το πολυώνυμο $Q(x)=P(x)-(4x+1)$ διαιρείται από το $x^2-1$
+
+ \end{enumerate}
+
+ % \hyperlink{Λύση1}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 2}
+\begin{frame}[label=Άσκηση2,t]{Εξάσκηση 2}
+ Έστω το πολυώνυμο $P(x)=(x^2-1)(3x-2)+5x-1$
+ \begin{enumerate}
+  \item<1-> Να βρείτε το πηλίκο και το υπόλοιπο της διαίρεσης $P(x):(x^2-1)$
+  \item<2-> Η παραπάνω ισότητα είναι η ταυτότητα διαίρεσης του $P(x)$ με το $3x-2$;
+ \end{enumerate}
+
+ % \hyperlink{Λύση2}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 3}
+\begin{frame}[label=Άσκηση3,t]{Εξάσκηση 3}
+ \begin{enumerate}
+  \item<1-> Να βρείτε το υπόλοιπο της διαίρεσης του πολυωνύμου $P(x)=x^3-5x+1$ με το $x+1$
+  \item<2-> Να βρείτε τις τιμές του $α$, για τις οποίες το υπόλοιπο της διαίρεσης του $P(x)=2x^2-αx+α$ με το $x+2α$ είναι $11$
+ \end{enumerate}
+
+ % \hyperlink{Λύση3}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 4}
+\begin{frame}[label=Άσκηση4,t]{Εξάσκηση 4}
+ Αν το υπόλοιπο της διαίρεσης του πολυωνύμου $P(x)$ με το $x-1$ είναι $2$, να δείξετε ότι το πολυώνυμο $Q(x)=P(3x+7)-x^2+2$ έχει ρίζα το $-2$
+
+ % \hyperlink{Λύση4}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 5}
+\begin{frame}[label=Άσκηση5,t]{Εξάσκηση 5}
+ Αν το υπόλοιπο της διαίρεσης ενός πολυωνύμου $P(x)$ με το $3x^2-x-4$ είναι $2x+5$, να βρείτε το υπόλοιπο της διαίρεσης του $P(x)$ με το $x+1$
+
+ % \hyperlink{Λύση5}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 6}
+\begin{frame}[label=Άσκηση6,t]{Εξάσκηση 6}
+ \begin{enumerate}
+  \item<1-> Να εξετάσετε, αν τα πολυώνυμα $x+1$ και $x-1$ είναι παράγοντας του πολυωνύμου
+  \item<2-> Να βρείτε τις τιμές του $α$, για τις οποίες το πολυώνυμο $P(x)=α^3x^3-5x+2$ έχει παράγοντα το $x-2$
+ \end{enumerate}
+
+ % \hyperlink{Λύση6}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 7}
+\begin{frame}[label=Άσκηση7,t]{Εξάσκηση 7}
+ Να δείξετε ότι τα παρακάτω πολυώνυμο δεν έχουν παράγοντα της μορφής $x-ρ$
+ \begin{enumerate}
+  \item<1-> $P(x)=3x^6+5x^2+3$
+  \item<2-> $Q(x)=-3x^4-5x^2-3$
+ \end{enumerate}
+
+ %\hyperlink{Λύση7}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 8}
+\begin{frame}[label=Άσκηση8,t]{Εξάσκηση 8}
+ Να βρείτε τις τιμές των $α$ και $β$ για τις οποίες το πολυώνυμο $P(x)=-x^3+2αx-β+α$, έχει παράγοντα το $x+2$ και το υπόλοιπο της διαίρεσης του $P(x)$ με το $x+1$ είναι 3.
+
+ %\hyperlink{Λύση8}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 9}
+\begin{frame}[label=Άσκηση9,t]{Εξάσκηση 9}
+ Αν το πολυώνυμο $P(x)=x^3+αx-α+β$ έχει παράγοντες όλους τους παράγοντες του πολυωνύμου $x^2-2x$, να βρείτε τις τιμές των $α$ και $β$
+
+ %\hyperlink{Λύση9}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 10}
+\begin{frame}[label=Άσκηση10,t]{Εξάσκηση 10}
+ Με τη βοήθεια του σχήματος Horner, να βρείτε το πηλίκο $π(x)$ και το υπόλοιπο των παρακάτω διαιραίσεων και να γράψετε τις ταυτότητες των διαιρέσεων
+ \begin{enumerate}
+  \item<1-> $(2x^3-3x^2+5):(x-1)$
+  \item<2-> $-2x^3:(x+1)$
+ \end{enumerate}
+
+ %\hyperlink{Λύση10}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 11}
+\begin{frame}[label=Άσκηση11,t]{Εξάσκηση 11}
+ Με τη βοήθεια του σχήματος Horner μόνο, να αποδείξετε ότι το πολυώνυμο $P(x)=x^3-7x+6$ διαιρείται με το πολυώνυμο $Q(x)=(x-1)(x+3)$ και στη συνέχεια, να βρείτε το πηλίκο της διαίρεσης $P(x):Q(x)$
+
+ %\hyperlink{Λύση11}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 12}
+\begin{frame}[label=Άσκηση12,t]{Εξάσκηση 12}
+ Δίνεται η συνάρτηση $f(x)=x^5$, όπου $ν$ θετικός αριθμός. Να απλοποιήσετε την παράσταση $\dfrac{f(x)-f(1)}{x-1}$
+
+ %\hyperlink{Λύση12}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 13}
+\begin{frame}[label=Άσκηση13,t]{Εξάσκηση 13}
+ Να βρείτε το υπόλοιπο της διαίρεσης του $P(x)$ με το $x^2+x$, όταν ισχύουν $P(0)=2$ και το υπόλοιπο της διαίρεσής του $P(x)$ με το $x+1$ είναι $3$
+
+ %\hyperlink{Λύση13}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 14}
+\begin{frame}[label=Άσκηση14,t]{Εξάσκηση 14}
+ Να γράψετε τις παρακάτω συναρτήσεις στη μορφή $f(x)=αx+β+\dfrac{γ}{x-1}$
+ \begin{enumerate}
+  \item<1-> $f(x)=\dfrac{2x-3}{x-1}$
+  \item<2-> $f(x)=\dfrac{x^2}{x-1}$
+ \end{enumerate}
+ %\hyperlink{Λύση14}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 15}
+\begin{frame}[label=Άσκηση15,t]{Εξάσκηση 15}
+  Έστω $P(x)$ πολυώνυμο 3ου βαθμού, το οποίο διαιρείται με το $x^2+3$
+  \begin{enumerate}
+    \item<1-> Να βρείτε τη μορφή του πηλίκου $π(x)$
+    \item<2-> Αν επιπλέον έχει ρίζα το $-1$ και ισχύει $P(-2)=14$, να βρείτε το $P(x)$
+  \end{enumerate}
+
+  %\hyperlink{Λύση15}{\beamerbutton{Λύση}}
+\end{frame}
+
+
+% \appendix
+%
+% \section{Αποδείξεις}
+% \begin{frame}[label=Απόδειξη1]{Απόδειξη μονοτονίας συνάρτησης}
+%  Θα δείξουμε ότι για κάθε $x_1<x_2\in Δ \implies f(x_1)<f(x_2)$.
+%
+%  \onslide<1-> Στο $[x_1,x_2]$ είναι παραγωγίσιμη, άρα θα ισχύει το ΘΜΤ
+%
+%  \onslide<2-> Υπάρχει $ξ\in Δ$ ώστε $f'(ξ)=\dfrac{f(x_2)-f(x_1)}{x_2-x_1}$.
+%
+%  \onslide<3-> Αλλά $f'(x)>0$ για κάθε $x\in Δ$
+%
+%  \onslide<4-> Άρα $f'(ξ)=\dfrac{f(x_2)-f(x_1)}{x_2-x_1}>0$
+%
+%  \onslide<5-> $f(x_2)>f(x_1)$
+%
+%  \hyperlink{Θεώρημα1}{\beamerbutton{Πίσω στη θεωρία}}
+% \end{frame}
+
+
+% \section{Λύσεις Ασκήσεων}
+% \begin{frame}
+%  \tableofcontents
+% \end{frame}
+%
+% \subsection{Άσκηση 1}
+% \begin{frame}[label=Λύση1]
+%  Με θεώρημα ενδιαμέσων τιμών. Η συνάρτηση είναι συνεχής στο $[10,11]$ με $f(10)=1024$ και $f(11)=2048$. Αφού $2023\in (1024,2048)$ υπάρχει $x_0$...
+%
+%  \hyperlink{Άσκηση1}{\beamerbutton{Πίσω στην άσκηση}}
+% \end{frame}
+%
+% \subsection{Άσκηση 2}
+% \begin{frame}[label=Λύση2]
+%  Με Bolzano ή με μέγιστης ελάχιστης τιμής και ΘΕΤ.
+%
+%  \begin{gather*}
+%   f(3)<f(2)<f(1) \\
+%   3f(3)<f(1)+f(2)+f(3)<3f(1) \\
+%   f(3)<\dfrac{f(1)+f(2)+f(3)}{3}<f(1)
+%  \end{gather*}
+%
+%  \hyperlink{Άσκηση2}{\beamerbutton{Πίσω στην άσκηση}}
+% \end{frame}
+%
+% \subsection{Άσκηση 3}
+% \begin{frame}[label=Λύση3]
+%  Προφανές ελάχιστο στα $x_1=1$ και $x_2=3$. Ως συνεχής στο $[1,3]$ έχει σίγουρα ΚΑΙ μέγιστο στο $(1,3)$
+%
+%  \hyperlink{Άσκηση3}{\beamerbutton{Πίσω στην άσκηση}}
+% \end{frame}
+%
+% \subsection{Άσκηση 4}
+% \begin{frame}[label=Λύση4]
+%  Η συνάρτηση `απόστασης` $f(x)-x$ είναι ορισμένη στο κλειστό διάστημα και έχει σίγουρα μέγιστο
+%
+%  \hyperlink{Άσκηση4}{\beamerbutton{Πίσω στην άσκηση}}
+% \end{frame}
+%
+% \subsection{Άσκηση 5}
+% \begin{frame}[label=Λύση5]
+%  Όμοια με την Άσκηση 2
+%
+%  \hyperlink{Άσκηση5}{\beamerbutton{Πίσω στην άσκηση}}
+% \end{frame}
+%
+% \subsection{Άσκηση 6}
+% \begin{frame}[label=Λύση6]
+%  \begin{enumerate}
+%   \item Είναι γνησίως αύξουσα άρα $(f(+\infty),f(-\infty))$
+%   \item Προφανώς $[f(0),f(1)]$...
+%  \end{enumerate}
+%
+%  \hyperlink{Άσκηση6}{\beamerbutton{Πίσω στην άσκηση}}
+% \end{frame}
+
+\end{document}
