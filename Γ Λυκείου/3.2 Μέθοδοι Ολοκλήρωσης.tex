@@ -1,0 +1,341 @@
+\documentclass[greek]{beamer}
+%\usepackage{fontspec}
+\usepackage{amsmath,amsthm}
+\usepackage{unicode-math}
+\usepackage{xltxtra}
+\usepackage{graphicx}
+\usetheme{CambridgeUS}
+\usecolortheme{seagull}
+\usepackage{hyperref}
+\usepackage{ulem}
+\usepackage{xgreek}
+
+\usepackage{pgfpages}
+\usepackage{tikz}
+\usepackage{tkz-tab}
+%\setbeameroption{show notes on second screen}
+%\setbeameroption{show only notes}
+
+\setsansfont{Noto Serif}
+
+\usepackage{multicol}
+
+\usepackage{appendixnumberbeamer}
+
+\setbeamercovered{transparent}
+\beamertemplatenavigationsymbolsempty
+
+\title{Συναρτήσεις}
+\subtitle{Μέθοδοι Ολοκλήρωσης}
+\author[Λόλας]{Κωνσταντίνος Λόλας}
+\date{}
+
+\begin{document}
+
+\begin{frame}
+ \titlepage
+\end{frame}
+
+\section{Θεωρία}
+\begin{frame}{Σιγά τα ολοκληρώματα!}
+ Τι μπορούμε να ολοκληρώσουμε
+ \begin{enumerate}
+  \item Πολυώνυμα
+  \item Εκθετικές
+  \item Τριγωνομετρικές
+  \item Ρητές με πρωτοβάθμιο διαιρέτη
+  \item Πρωτοβάθμιες άρρητες
+  \item Έτοιμες από σύνθεση και φυσικά
+  \item κάθε πρόσθεση ή αφαίρεση αυτών ΜΟΝΟ
+ \end{enumerate}
+ Τι γίνεται με τον πολλαπλασιασμό? Διαίρεση? Ακόμα και την απλή $\ln x$?
+\end{frame}
+
+\begin{frame}{Ιστορία}
+ Ξέρουμε να παραγωγίζουμε γινόμενο
+ \begin{align*}
+  (f\cdot g)' & =f'g+fg'         \\
+  f'g         & =(f\cdot g)'-fg'
+ \end{align*}
+ Άρα
+ $$\int f'g\, dx=\int (f\cdot g)'\,dx - \int fg'\, dx$$
+ $$\int f'g\, dx=f\cdot g - \int fg'\, dx$$
+\end{frame}
+
+\begin{frame}{Έ και?}
+ $$\int f'g\, dx=f\cdot g - \int fg'\, dx$$
+ Βρείτε λόγους για να περάσουμε την παράγωγο από την μία συνάρτηση στην άλλη
+ \begin{itemize}
+  \item<2-> Γιατί τελικά... εξαφανίζεται
+  \item<3-> Γιατί δεν ξέρουμε να την ολοκληρώνουμε
+  \item<4-> Γιατί μπορούμε να ξαναφτάσουμε στον ίδιο τύπο!!!!!!
+ \end{itemize}
+\end{frame}
+
+\begin{frame}{Παραδείγματα}
+ \begin{enumerate}
+  \item<1-> $\int xe^x\,dx$
+  \item<2-> $\int x^3e^x\,dx$
+  \item<3-> $\int x\ln x\,dx$
+  \item<4-> $\int e^{2x}ημ(3x+1)\,dx$
+ \end{enumerate}
+\end{frame}
+
+\begin{frame}{Και στα εντός ύλης!}
+ \begin{block}{Κατά παράγοντες}
+  $$\int_a^b f'(x)g(x)\,dx=\left[ f(x)g(x) \right]_a^b -\int_a^b f(x)g'(x)\,dx$$
+ \end{block}
+\end{frame}
+
+\begin{frame}{Hold your horses}
+
+ Δεν θα μάθουμε \emph{ΠΟΤΕ} να ολοκληρώνουμε όλες τις συναρτήσεις! Μαθηματικό...!
+
+ Μεθόδους για "όμορφες"
+
+ \begin{itemize}
+  \item<2-> ρητές
+  \item<3-> άρρητες
+  \item<4-> τριγωνομετρικές
+  \item<5-> από σύνθεση?????
+ \end{itemize}
+
+\end{frame}
+
+\begin{frame}{Δοκιμές σύνθεσης}
+ \begin{enumerate}
+  \item<1-> $\int \dfrac{x}{x^2+1}\,dx$
+  \item<2-> $\int \dfrac{\ln x}{x}\, dx$
+  \item<3-> $\int 4xεφ(x^2)\ln (ημ(x^2))\, dx$
+ \end{enumerate}
+
+\end{frame}
+
+\begin{frame}{Ναι, αλλά... τύπο έχουμε?}
+ \begin{block}{Μέθοδος Αντικατάστασης}
+   $$\int_a^b f(g(x))\, dx$$
+   Θέτω $u=g(x)$, άρα
+   \begin{itemize}
+     \item για $x=a\implies u=g(a)$
+     \item για $x=b\implies u=g(b)$
+     \item $du=g'(x)dx$
+   \end{itemize}
+   $$\int_a^b f(x)\, dx=\int_k^l f(g(u))g'(u)\,du$$
+ \end{block}
+
+\end{frame}
+
+\section{Ασκήσεις}
+\subsection{Άσκηση 1}
+\begin{frame}[label=Άσκηση1,t]{Εξάσκηση 1}
+ Να μελετήσετε τις παρακάτω συναρτήσεις ως προς την κυρτότητα
+ \begin{enumerate}
+  \item<1-> $f(x)=x^2-\ln x$
+  \item<2-> $f(x)=\sqrt{x}-e^x$
+  \item<3-> $f(x)=x^4-2x+1$
+  \item<4-> $f(x)=x\ln x-e^{-x}$
+ \end{enumerate}
+
+ % \hyperlink{Λύση1}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 2}
+\begin{frame}[label=Άσκηση2,t]{Εξάσκηση 2}
+ Δίνεται η συνάρτηση $f(x)=e^x-x$.
+ \begin{enumerate}
+  \item<1-> Να μελετήσετε τη συνάρτηση $f$ ως προς τη μονοτονία, τα ακρότατα και την κυρτότητα
+  \item<2-> Να βρείτε τις οριακές τιμές της $f$ στα άκρα του πεδίου ορισμού της, να κάνετε τον πίνακα μεταβολών της $f$ και να σχεδιάσετε τη $C_f$
+  \item<3-> Να λύσετε την εξίσωση $f(x)=συνx$
+ \end{enumerate}
+
+ % \hyperlink{Λύση2}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 3}
+\begin{frame}[label=Άσκηση3,t]{Εξάσκηση 3}
+ Να βρείτε τα διαστήματα στα οποία οι παρακάτω συναρτήσεις είναι κυρτές ή κοίλες και να προσδιορίσετε (αν υπάρχουν) τα σημεία καμπής
+ \begin{enumerate}
+  \item<1-> $f(x)=x^3-3x^2+5$
+  \item<2-> $f(x)=3x^5-5x^4$
+ \end{enumerate}
+
+ % \hyperlink{Λύση3}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 4}
+\begin{frame}[label=Άσκηση4,t]{Εξάσκηση 4}
+ Να βρείτε τα διαστήματα στα οποία οι παρακάτω συναρτήσεις είναι κυρτές ή κοίλες και να προσδιορίσετε (αν υπάρχουν) τα σημεία καμπής
+ \begin{enumerate}
+  \item<1-> $f(x)=\dfrac{1}{x^2+1}$
+  \item<2-> $f(x)=x+\dfrac{1}{x}$
+ \end{enumerate}
+
+ % \hyperlink{Λύση4}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 5}
+\begin{frame}[label=Άσκηση5,t]{Εξάσκηση 5}
+ Να βρείτε τις θέσεις των σημείων καμπής των συναρτήσεων:
+ \begin{enumerate}
+  \item<1-> $f(x)=συνx-\dfrac{x^2}{3}+\dfrac{x^2}{2}-1$
+  \item<2-> $f(x)=2x(\ln x-1)-\ln^2x$
+ \end{enumerate}
+
+ % \hyperlink{Λύση5}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 6}
+\begin{frame}[label=Άσκηση6,t]{Εξάσκηση 6}
+ Να βρείτε τα διαστήματα στα οποία οι παρακάτω συναρτήσεις είναι κυρτές ή κοίλες και να προσδιορίσετε (αν υπάρχουν) τα σημεία καμπής
+ \begin{enumerate}
+  \item<1-> $f(x)=σφx$, $x\in (0,\pi)$
+  \item<2-> $f(x)=εφx-x+2\ln (συνx)$, $x\in (-\dfrac{\pi}{2},\dfrac{\pi}{2})$
+ \end{enumerate}
+
+ % \hyperlink{Λύση6}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 7}
+\begin{frame}[label=Άσκηση7,t]{Εξάσκηση 7}
+ Δίνεται η συνάρτηση $f(x)=x^3-3x$
+ \begin{enumerate}
+  \item<1-> Να μελετήσετε τη συνάρτηση $f$ ως προς τη μονοτονία, τα ακρότατα, την κυρτότητα και τα σημεία καμπής
+  \item<2-> Να βρείτε τις οριακές τιμές της $f$ στα άκρα του διαστήματος του πεδίου ορισμού της, να κάνετε τον πίνακα μεταβολών της $f$ και με βάση τις απαντήσεις σας στα προηγούμενα ερωτήματα, να σχεδιάσετε τη γραφική παράσταση της $f$
+ \end{enumerate}
+
+ %\hyperlink{Λύση7}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 8}
+\begin{frame}[label=Άσκηση8,t]{Εξάσκηση 8}
+ Δίνεται η συνάρτηση $f(x)=e^x+\ln x$. Να δείξετε ότι:
+ \begin{enumerate}
+  \item<1-> Η $C_f$ έχει μοναδικό σημείο καμπής το $Α(x_0,f(x_0))$
+  \item<2-> $x_0<\dfrac{4}{5}$
+ \end{enumerate}
+
+ %\hyperlink{Λύση8}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 9}
+\begin{frame}[label=Άσκηση9,t]{Εξάσκηση 9}
+ Δίνεται η συνάρτηση $f(x)=6e^x-x^3-4x^2$. Να δείξετε ότι η $f$ έχει ακριβώς δύο σημεία καμπής
+
+ %\hyperlink{Λύση9}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 10}
+\begin{frame}[label=Άσκηση10,t]{Εξάσκηση 10}
+ Δίνεται η συνάρτηση $$f(x)=\dfrac{x^4}{12}-\dfrac{α^2x^3}{3}+\dfrac{αx^2}{2}-3x+1$$
+ Να βρείτε τις τιμές του $α\in\mathbb{R}$ για τις οποίες:
+ \begin{enumerate}
+  \item<1-> Η $f$ παρουσιάζει καμπή στο $x_0=1$
+  \item<2-> Η $C_f$ έχει ακριβώς δύο σημεία καμπής
+ \end{enumerate}
+
+ %\hyperlink{Λύση10}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 11}
+\begin{frame}[label=Άσκηση11,,t]{Εξάσκηση 11}
+ Να αποδείξετε ότι για κάθε $α\in (-2,2)$ η συνάρτηση $f(x)=x^4-2αx^3+6x^2-1$ είναι κυρτή σε όλο το $\mathbb{R}$
+
+ %\hyperlink{Λύση11}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 12}
+\begin{frame}[label=Άσκηση12,t]{Εξάσκηση 12}
+ Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση για την οποία ισχύει
+ $$f''(x)+f(x)\ne 2f'(x)\text{, για κάθε } x\in\mathbb{R}$$
+ Να δείξετε ότι η συνάρτηση $g(x)=e^{-x}f(x)$, $x\in\mathbb{R}$ δεν έχει σημεία καμπής.
+
+ %\hyperlink{Λύση12}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 13}
+\begin{frame}[label=Άσκηση13,t]{Εξάσκηση 13}
+
+ Έστω $f:(1,3)\to\mathbb{R}$ μία συνάρτηση, η οποία είναι δύο φορές παραγωγίσιμη και ισχύει:
+ $$f^2(x)+xf(x)+x^2-3x+1=0\text{, για κάθε } x\in (1,3)$$
+ Να δείξετε ότι η συνάρτηση $f$, δεν παρουσιάζει καμπή
+
+ %\hyperlink{Λύση13}{\beamerbutton{Λύση}}
+\end{frame}
+
+
+\appendix
+
+\section{Αποδείξεις}
+\begin{frame}[label=Απόδειξη1]{Απόδειξη σημείο καμπής}
+ \onslide<1-> Έστω ότι η $f$ έχει σημείο καμπής στο $x_0$ με κυρτή αριστερά και κοίλη δεξιά του σημείου.
+
+ Άρα $f'(x)< f'(x_0)$ για κάθε $x<x_0$ και $f'(x)<f'(x_0)$ για κάθε $x>x_0$
+
+ \onslide<2-> Αφού $f'$ παραγωγίσιμη, θα υπάρχει το όριο
+
+ $$f''(x_0)=\lim\limits_{x \to x_0^-}{ \dfrac{f'(x)-f'(x_0)}{x-x_0} }\ge 0$$
+
+ \onslide<3-> όμοια
+ $$f''(x_0)=\lim\limits_{x \to x_0^+}{ \dfrac{f'(x)-f'(x_0)}{x-x_0} } \le 0$$
+
+ \onslide<4-> Άρα $f''(x_0)=0$ \hyperlink{Θεώρημα1}{\beamerbutton{Πίσω στη θεωρία}}
+\end{frame}
+
+
+% \section{Λύσεις Ασκήσεων}
+% \begin{frame}
+%  \tableofcontents
+% \end{frame}
+%
+% \subsection{Άσκηση 1}
+% \begin{frame}[label=Λύση1]
+%  Με θεώρημα ενδιαμέσων τιμών. Η συνάρτηση είναι συνεχής στο $[10,11]$ με $f(10)=1024$ και $f(11)=2048$. Αφού $2023\in (1024,2048)$ υπάρχει $x_0$...
+%
+%  \hyperlink{Άσκηση1}{\beamerbutton{Πίσω στην άσκηση}}
+% \end{frame}
+%
+% \subsection{Άσκηση 2}
+% \begin{frame}[label=Λύση2]
+%  Με Bolzano ή με μέγιστης ελάχιστης τιμής και ΘΕΤ.
+%
+%  \begin{gather*}
+%   f(3)<f(2)<f(1) \\
+%   3f(3)<f(1)+f(2)+f(3)<3f(1) \\
+%   f(3)<\dfrac{f(1)+f(2)+f(3)}{3}<f(1)
+%  \end{gather*}
+%
+%  \hyperlink{Άσκηση2}{\beamerbutton{Πίσω στην άσκηση}}
+% \end{frame}
+%
+% \subsection{Άσκηση 3}
+% \begin{frame}[label=Λύση3]
+%  Προφανές ελάχιστο στα $x_1=1$ και $x_2=3$. Ως συνεχής στο $[1,3]$ έχει σίγουρα ΚΑΙ μέγιστο στο $(1,3)$
+%
+%  \hyperlink{Άσκηση3}{\beamerbutton{Πίσω στην άσκηση}}
+% \end{frame}
+%
+% \subsection{Άσκηση 4}
+% \begin{frame}[label=Λύση4]
+%  Η συνάρτηση `απόστασης` $f(x)-x$ είναι ορισμένη στο κλειστό διάστημα και έχει σίγουρα μέγιστο
+%
+%  \hyperlink{Άσκηση4}{\beamerbutton{Πίσω στην άσκηση}}
+% \end{frame}
+%
+% \subsection{Άσκηση 5}
+% \begin{frame}[label=Λύση5]
+%  Όμοια με την Άσκηση 2
+%
+%  \hyperlink{Άσκηση5}{\beamerbutton{Πίσω στην άσκηση}}
+% \end{frame}
+%
+% \subsection{Άσκηση 6}
+% \begin{frame}[label=Λύση6]
+%  \begin{enumerate}
+%   \item Είναι γνησίως αύξουσα άρα $(f(+\infty),f(-\infty))$
+%   \item Προφανώς $[f(0),f(1)]$...
+%  \end{enumerate}
+%
+%  \hyperlink{Άσκηση6}{\beamerbutton{Πίσω στην άσκηση}}
+% \end{frame}
+
+\end{document}

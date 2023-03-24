@@ -1,0 +1,463 @@
+\documentclass[greek]{beamer}
+%\usepackage{fontspec}
+\usepackage{amsmath,amsthm}
+\usepackage{unicode-math}
+\usepackage{xltxtra}
+\usepackage{graphicx}
+\usetheme{CambridgeUS}
+\usecolortheme{seagull}
+\usepackage{hyperref}
+\usepackage{ulem}
+\usepackage{xgreek}
+
+\usepackage{pgfpages}
+\usepackage{tikz}
+\usetikzlibrary{mindmap,trees}\usetikzlibrary{shapes.geometric, arrows}
+
+  \tikzstyle{startstop} = [rectangle, rounded corners,
+  minimum width=3cm,
+  minimum height=1cm,
+  text centered,
+  draw=black,
+  fill=red!30]
+  \tikzstyle{decision} = [diamond,
+  minimum width=3cm,
+  minimum height=1cm,
+  text centered,
+  draw=black,
+  fill=green!30]
+  \tikzstyle{arrow} = [thick,->,>=stealth]
+  \tikzstyle{process} = [rectangle,
+  minimum width=3cm,
+  minimum height=1cm,
+  text centered,
+  text width=3cm,
+  draw=black,
+  fill=orange!30]
+\usepackage{tkz-tab}
+%\setbeameroption{show notes on second screen}
+%\setbeameroption{show only notes}
+
+\setsansfont{Noto Serif}
+
+\usepackage{multicol}
+
+\usepackage{appendixnumberbeamer}
+
+\usepackage{polynom}
+
+\usepackage{pgffor}
+
+\setbeamercovered{transparent}
+\beamertemplatenavigationsymbolsempty
+
+\title{Εκθετική και Λογαριθμική Συνάρτηση}
+\subtitle{Εκθετική Συνάρτηση}
+\author[Λόλας]{Κωνσταντίνος Λόλας}
+\date{}
+
+\begin{document}
+
+\begin{frame}
+ \titlepage
+\end{frame}
+
+\section{Θεωρία}
+\begin{frame}{Ώρα ιστορίας}
+ Ξέρουμε όλοι τι σημαίνει
+ \begin{itemize}
+  \item<1-> αριθμός υψωμένος σε φυσικό αριθμό
+  \item<2-> αριθμός υψωμένος σε ακέραιο αριθμό
+  \item<3-> μάθαμε στην Α Λυκείου, αριθμό υψωμένο σε ρητό
+  \item<4-> πάμε για αριθμό υψωμένο σε πραγματικό!
+ \end{itemize}
+ \onslide<5> και επειδή σίγουρα δεν θυμάστε...
+\end{frame}
+
+\begin{frame}{Βασική επανάληψη}
+ Ιδιότητες δυνάμεων με $α\in \mathbb{R}$ και $κ$, $λ\in\mathbb{N}$
+ \begin{itemize}
+  \item<1-> $α^{κ+λ}=α^κ\cdot α^λ$
+  \item<2-> $α^{κ-λ}=\dfrac{α^κ}{α^λ}$
+  \item<3-> $\left( α^κ \right)^λ=α^{κ\cdot λ}$
+  \item<4-> $α^κ\cdot β^κ=(α\cdot β)^κ$
+  \item<5-> $\dfrac{α^κ}{β^κ}=\left(   \dfrac{α}{β}\right)^κ$
+ \end{itemize}
+ \begin{block}{Ορισμός}
+  Για κάθε $α\ge 0$ και $κ$, $λ\in\mathbb{N}$
+  $$α^{\frac{κ}{λ}}=\sqrt[λ]{α^κ}$$
+ \end{block}
+\end{frame}
+
+\begin{frame}{Πώς υπολογίζουμε λοιπόν}
+ \begin{itemize}
+  \item<1-> Φυσικός: $α^x=\overbrace{α\cdot α \cdots α}^{\text{x φορές}}$
+  \item<2-> Ακέραιος: $α^{-x}=\dfrac{1}{a^x}$
+  \item<3-> Ρητός: $α^{\frac{x}{y}}=\sqrt[y]{α^x}$, μόνο για $α\ge 0$
+  \item<4-> Άρρητος: ΤΣΟΥΚ! Μόνο με υπολογιστή, προσεγγιστικά!
+ \end{itemize}
+\end{frame}
+
+\begin{frame}{Επιστροφή στο σήμερα}
+ Ιδιότητες δυνάμεων με $α$, $β$ \emph{θετικοί πραγματικοί} και $x$, $x_1$, $x_2\in\mathbb{N}$
+ \begin{itemize}
+  \item $α^{x_1+x_2}=α^{x_1}\cdot α^{x_2}$
+  \item $α^{x_1-x_2}=\dfrac{α^{x_1}}{α^{x_2}}$
+  \item $\left( α^{x_1} \right)^{x_2}=α^{x_1\cdot x_2}$
+  \item $α^x\cdot β^x=(α\cdot β)^x$
+  \item $\dfrac{α^x}{β^x}=\left(   \dfrac{α}{β}\right)^x$
+ \end{itemize}
+\end{frame}
+
+\begin{frame}{Με τι θα ασχοληθούμε}
+ Συνάρτησεις $f(x)=a^x$ και εξισώσεις με άγνωστους εκθέτες!!!!
+\end{frame}
+
+\begin{frame}{Πάμε!}
+ \begin{block}{Ορισμός}
+  Εκθετική συνάρτηση ονομάζεται κάθε $f:\mathbb{R}\to\mathbb{R}$ με $f(x)=a^x$, $α>0$, $a\ne 1$
+ \end{block}
+\end{frame}
+
+\begin{frame}{Παιχνίδι Geogebra}
+ Ας μελετήσουμε την εκθετική συνάρτηση $f(x)=a^x$ για κάθε $a$ \href{https://www.geogebra.org/m/tuzgusfm}{\beamergotobutton{Geogebra}}
+ \begin{itemize}
+  \item<1-> Για ποιά $a$ ορίζεται ως εκθετική?
+  \item<2-> Τι γίνεται με την μονοτονία
+  \item<3-> Τι γίνεται με τα ακρότατα
+  \item<4-> Τι γίνεται με τα $-\infty$ και $+\infty$
+  \item<5-> Υπάρχει ένα σταθερό σημείο για όλες?
+  \item<6-> Σύνολο τιμών?
+ \end{itemize}
+\end{frame}
+
+\begin{frame}{Ταξίδι στο μέλλον}
+ \begin{enumerate}
+  \item<1-> Μια γνησίως μονότονη συνάρτηση πιάνει οποιαδήποτε πραγματική τιμή, το πολύ μία φορά!
+  \item<2-> Αν $x_1\ne x_2$ τότε $f(x_1)\ne f(x_2)$
+  \item<3-> Αν $f(x_1)=f(x_2)$ τότε $x_1=x_2$
+ \end{enumerate}
+ \onslide<4-> Μια τέτοια συνάρτηση θα ονομάζεται \emph{ένα προς ένα}.
+\end{frame}
+
+\begin{frame}{Άρα για εξισώσεις!}
+ \begin{itemize}
+  \item<1-> Αν μπορούμε να έχουμε $a^x=a^y$ τότε $x=y$
+  \item<2-> Αν δεν μπορούμε, ίσως δεν μπορούμε να λύσουμε άμεσα ως προς $x$. Ίσως
+   \begin{itemize}
+    \item<3-> Θέτουμε
+    \item<4-> Μετασχηματίζουμε
+    \item<4-> ...
+   \end{itemize}
+ \end{itemize}
+\end{frame}
+
+\section{Ασκήσεις}
+\subsection{Άσκηση 1}
+\begin{frame}[label=Άσκηση1,t]{Εξάσκηση 1}
+ Να απλοποιήσετε τις παραστάσεις
+ \begin{enumerate}
+  \item<1-> $\dfrac{2}{\sqrt[3]{4}}$
+  \item<2-> $\dfrac{x}{\sqrt[4]{x^3}}$, $x>0$
+ \end{enumerate}
+
+ % \hyperlink{Λύση1}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 2}
+\begin{frame}[label=Άσκηση2,t]{Εξάσκηση 2}
+ Να παραστήσετε γραφικά τις συναρτήσεις:
+ \begin{enumerate}
+  \item<1-> $f(x)=e^x+1$
+  \item<2-> $f(x)=e^{x-1}$
+  \item<3-> $f(x)=e^{|x|}$
+ \end{enumerate}
+
+ % \hyperlink{Λύση2}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 3}
+\begin{frame}[label=Άσκηση3,t]{Εξάσκηση 3}
+ Έστω η συνάρτηση $f(x)=(a-1)^x$. Να βρείτε τις τιμές του $α$ για τις οποίες η συνάρτηση $f$:
+ \begin{enumerate}
+  \item<1-> ορίζεται σε όλο το $\mathbb{R}$
+  \item<2-> είναι γνησίως αύξουσα στο $\mathbb{R}$
+  \item<3-> είναι γνησίως φθίνουσα στο $\mathbb{R}$
+ \end{enumerate}
+
+ % \hyperlink{Λύση3}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 4}
+\begin{frame}[label=Άσκηση4,t]{Εξάσκηση 4}
+ Έστω η συνάρτηση $f(x)=e^x+x-1$.
+ \begin{enumerate}
+  \item<1-> Να εξετάσετε τη συνάρτηση $f$ ως προς τη μονοτονία
+  \item<2-> Να βρείτε τη τιμή $f(0)$ και στη συνέχεια να λύσετε την εξίσωση $f(x)=0$
+  \item<3-> Να λύσετε την ανίσωση $e^x+x<1$
+  \item<4-> Αν $α<β$, να δείξετε ότι $e^α-e^β<β-α$
+ \end{enumerate}
+
+ % \hyperlink{Λύση4}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 5}
+\begin{frame}[label=Άσκηση5,t]{Εξάσκηση 5}
+ Να κάνετε το πίνακα προσήμων της συνάρτησης $f(x)=e^x-1+\dfrac{x}{x^2+1}$
+
+ % \hyperlink{Λύση5}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 6}
+\begin{frame}[label=Άσκηση6,t]{Εξάσκηση 6}
+ Δίνονται οι συναρτήσεις $f(x)=x^{\frac{2}{3}}$ και $g(x)=\sqrt[3]{x^2}$
+ \begin{enumerate}
+  \item<1-> Να βρείτε το πεδίο ορισμού των συναρτήσεων
+  \item<2-> Να βρείτε το ευρύτερο δυνατό υποσύνολο του $\mathbb{R}$ στο οποίο ισχύει $f(x)=g(x)$
+  \item<3-> Να γράψετε τη συνάρτηση $g$ σε μορφή δύναμης
+  \item<4-> Έστω η συνάρτηση $h(x)=\dfrac{g(x)}{x}$, $x\ne 0$. Να δείξετε ότι:
+   $$h(x)=\begin{cases}
+     \dfrac{1}{\sqrt[3]{x}},   & x>0 \\
+     -\dfrac{1}{\sqrt[3]{-x}}, & x<0
+    \end{cases}$$
+ \end{enumerate}
+
+ % \hyperlink{Λύση6}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 7}
+\begin{frame}[label=Άσκηση7,t]{Εξάσκηση 7}
+ Να λύσετε τις εξισώσεις
+ \begin{enumerate}
+  \item<1-> $3^x=9$
+  \item<2-> $2^{x-1}=\dfrac{1}{8}$
+  \item<3-> $3^x=\sqrt{3}$
+  \item<4-> $\left( \dfrac{3}{2} \right)^{2x-1}=\dfrac{8}{27}$
+ \end{enumerate}
+
+ %\hyperlink{Λύση7}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 8}
+\begin{frame}[label=Άσκηση8,t]{Εξάσκηση 8}
+
+ Να λύσετε τις εξισώσεις
+ \begin{enumerate}
+  \item<1-> $e^x-e=0$
+  \item<2-> $e^{3x-2}=1$
+  \item<3-> $e^{-x}-\sqrt{e}=0$
+  \item<4-> $e^x-e^{-x}=0$
+  \item<5-> $e^x+1=0$
+ \end{enumerate}
+
+ %\hyperlink{Λύση8}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 9}
+\begin{frame}[label=Άσκηση9,t]{Εξάσκηση 9}
+ Να λύσετε τις εξισώσεις
+ \begin{enumerate}
+  \item<1-> $2^{x+1}+4\cdot 2^{x-1}=4$
+  \item<2-> $9^x+3^{x+1}-4=0$
+ \end{enumerate}
+
+ %\hyperlink{Λύση9}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 10}
+\begin{frame}[label=Άσκηση10,t]{Εξάσκηση 10}
+ Να λύσετε τις εξισώσεις
+ \begin{enumerate}
+  \item<1-> $e^x-2\cdot e^{-x}+1=0$
+  \item<2-> $3\cdot 2^x-2\cdot 3^x=0$
+ \end{enumerate}
+
+ %\hyperlink{Λύση10}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 11}
+\begin{frame}[label=Άσκηση11,t]{Εξάσκηση 11}
+ Να λύσετε τις ανισώσεις
+ \begin{enumerate}
+  \item<1-> $3^x<9$
+  \item<2-> $\left( \dfrac{2}{3} \right)^x > \dfrac{8}{27} $
+  \item<3-> $e^x-1<0$
+ \end{enumerate}
+
+ %\hyperlink{Λύση11}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 12}
+\begin{frame}[label=Άσκηση12,t]{Εξάσκηση 12}
+ Να λύσετε την ανίσωση $5^x+5^{1-x}<6$
+
+ %\hyperlink{Λύση12}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 13}
+\begin{frame}[label=Άσκηση13,t]{Εξάσκηση 13}
+
+ Να αποδείξετε ότι:
+ \begin{enumerate}
+  \item<1-> $e^x+e^{-x}-2\ge 0$, για κάθε $x\in \mathbb{R}$
+  \item<2-> $e^{x^2}-1\ge 0$ για κάθε $x\in\mathbb{R}$
+  \item<3-> $e^x-1>0$ για κάθε $x>0$
+  \item<4-> $e^{-x}-1<0$ για κάθε $x>0$
+ \end{enumerate}
+
+ %\hyperlink{Λύση13}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 14}
+\begin{frame}[label=Άσκηση14,t]{Εξάσκηση 14}
+ Να κάνετε τον πίνακα προσήμων των συναρτήσεων
+ \begin{enumerate}
+  \item<1-> $f(x)=e-e^x$
+  \item<2-> $f(x)=\dfrac{e^x-e^2}{x-1}$
+ \end{enumerate}
+
+ %\hyperlink{Λύση14}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 15}
+\begin{frame}[label=Άσκηση15,t]{Εξάσκηση 15}
+ Να λύσετε τα συστήματα
+ \begin{enumerate}
+  \item<1-> $\begin{cases}
+     4^{x-1}\cdot 2^{y-2}=8 \\
+     3^{x-1}\cdot 3^{y-3}=1
+    \end{cases}$
+  \item<2-> $\begin{cases}
+     3^{x}- 5^{y}=4 \\
+     9\cdot 3^{-x}+ 5^{y}=6
+    \end{cases}$
+ \end{enumerate}
+
+ %\hyperlink{Λύση15}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 16}
+\begin{frame}[label=Άσκηση16,t]{Εξάσκηση 16}
+ Να λύσετε τις εξισώσεις
+ \begin{enumerate}
+  \item<1-> $2^x+\sqrt{2^{x+4}}-5=0$
+  \item<2-> $2\cdot 5^{x-2}+2^x-12\cdot 5^{x-3}-3\cdot 2^{x-3}=0$
+ \end{enumerate}
+
+ %\hyperlink{Λύση16}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 17}
+\begin{frame}[label=Άσκηση17,t]{Εξάσκηση 17}
+  Να λύσετε την ανίσωση $8^x+4^x-2<0$
+
+  %\hyperlink{Λύση17}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 17}
+\begin{frame}[label=Άσκηση17,t]{Εξάσκηση 17}
+  \begin{enumerate}
+    \item<1-> Να αποδείξετε ότι $e^x>ημx$ για κάθε $x>0$
+    \item<2-> Να λύσετε την εξίσωση $e^x=συνx$ στο διάστημα $[0,+\infty)$
+  \end{enumerate}
+
+  %\hyperlink{Λύση17}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 18}
+\begin{frame}[label=Άσκηση18,t]{Εξάσκηση 18}
+  Αν η ημιζωή ενός ραδιενεργού υλικού είναι $t_0$ χρόνια, να δείξετε ότι η συνάρτηση που εκφράζει την εκθετική απόσβεση αυτού είναι $Q(t)=Q_0\cdot 2^{-\frac{t}{t_0}}$
+
+  %\hyperlink{Λύση18}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 19}
+\begin{frame}[label=Άσκηση19,t]{Εξάσκηση 19}
+  Αν η ημιζωή ενός ραδιενεργού υλικού είναι 10 χρόνια και η αρχική ποσότητα είναι $20$ γραμμάρια, τότε:
+  \begin{enumerate}
+    \item<1-> Να βρείτε τη συνάρτηση που εκφράζει την εκθετική απόσβεση αυτού
+    \item<2-> Να υπολογίσετε την ποσότητ που θα έχει απομείνει μετά από $20$ χρόνια
+    \item<3-> Να βρείτε μετά από πόσα χρόνια θα έχουν απομείνει $\dfrac{5}{256}$ γραμμάρια του ραδιενεργού υλικού
+  \end{enumerate}
+
+  %\hyperlink{Λύση19}{\beamerbutton{Λύση}}
+\end{frame}
+
+
+% \appendix
+%
+% \section{Αποδείξεις}
+% \begin{frame}[label=Απόδειξη1]{Απόδειξη μονοτονίας συνάρτησης}
+%  Θα δείξουμε ότι για κάθε $x_1<x_2\in Δ \implies f(x_1)<f(x_2)$.
+%
+%  \onslide<1-> Στο $[x_1,x_2]$ είναι παραγωγίσιμη, άρα θα ισχύει το ΘΜΤ
+%
+%  \onslide<2-> Υπάρχει $ξ\in Δ$ ώστε $f'(ξ)=\dfrac{f(x_2)-f(x_1)}{x_2-x_1}$.
+%
+%  \onslide<3-> Αλλά $f'(x)>0$ για κάθε $x\in Δ$
+%
+%  \onslide<4-> Άρα $f'(ξ)=\dfrac{f(x_2)-f(x_1)}{x_2-x_1}>0$
+%
+%  \onslide<5-> $f(x_2)>f(x_1)$
+%
+%  \hyperlink{Θεώρημα1}{\beamerbutton{Πίσω στη θεωρία}}
+% \end{frame}
+
+
+% \section{Λύσεις Ασκήσεων}
+% \begin{frame}
+%  \tableofcontents
+% \end{frame}
+%
+% \subsection{Άσκηση 1}
+% \begin{frame}[label=Λύση1]
+%  Με θεώρημα ενδιαμέσων τιμών. Η συνάρτηση είναι συνεχής στο $[10,11]$ με $f(10)=1024$ και $f(11)=2048$. Αφού $2023\in (1024,2048)$ υπάρχει $x_0$...
+%
+%  \hyperlink{Άσκηση1}{\beamerbutton{Πίσω στην άσκηση}}
+% \end{frame}
+%
+% \subsection{Άσκηση 2}
+% \begin{frame}[label=Λύση2]
+%  Με Bolzano ή με μέγιστης ελάχιστης τιμής και ΘΕΤ.
+%
+%  \begin{gather*}
+%   f(3)<f(2)<f(1) \\
+%   3f(3)<f(1)+f(2)+f(3)<3f(1) \\
+%   f(3)<\dfrac{f(1)+f(2)+f(3)}{3}<f(1)
+%  \end{gather*}
+%
+%  \hyperlink{Άσκηση2}{\beamerbutton{Πίσω στην άσκηση}}
+% \end{frame}
+%
+% \subsection{Άσκηση 3}
+% \begin{frame}[label=Λύση3]
+%  Προφανές ελάχιστο στα $x_1=1$ και $x_2=3$. Ως συνεχής στο $[1,3]$ έχει σίγουρα ΚΑΙ μέγιστο στο $(1,3)$
+%
+%  \hyperlink{Άσκηση3}{\beamerbutton{Πίσω στην άσκηση}}
+% \end{frame}
+%
+% \subsection{Άσκηση 4}
+% \begin{frame}[label=Λύση4]
+%  Η συνάρτηση `απόστασης` $f(x)-x$ είναι ορισμένη στο κλειστό διάστημα και έχει σίγουρα μέγιστο
+%
+%  \hyperlink{Άσκηση4}{\beamerbutton{Πίσω στην άσκηση}}
+% \end{frame}
+%
+% \subsection{Άσκηση 5}
+% \begin{frame}[label=Λύση5]
+%  Όμοια με την Άσκηση 2
+%
+%  \hyperlink{Άσκηση5}{\beamerbutton{Πίσω στην άσκηση}}
+% \end{frame}
+%
+% \subsection{Άσκηση 6}
+% \begin{frame}[label=Λύση6]
+%  \begin{enumerate}
+%   \item Είναι γνησίως αύξουσα άρα $(f(+\infty),f(-\infty))$
+%   \item Προφανώς $[f(0),f(1)]$...
+%  \end{enumerate}
+%
+%  \hyperlink{Άσκηση6}{\beamerbutton{Πίσω στην άσκηση}}
+% \end{frame}
+
+\end{document}
