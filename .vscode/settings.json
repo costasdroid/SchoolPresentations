@@ -1,0 +1,4 @@
+{
+    "latex-workshop.latex.autoClean.run": "onSucceeded",
+    "latex-workshop.latex.recipe.default": "latexmk (xelatex)"
+}

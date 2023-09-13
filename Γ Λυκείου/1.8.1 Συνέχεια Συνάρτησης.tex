@@ -9,191 +9,200 @@
 \usepackage{hyperref}
 \usepackage{ulem}
 \usepackage{xgreek}
-\usepackage{pgfpages}
+
+\usepackage{pgfpages} 
 \usepackage{tikz}
 %\setbeameroption{show notes on second screen}
 %\setbeameroption{show only notes}
 
-\setsansfont{Noto Serif}
+\setsansfont{Calibri}
 
 \usepackage{multicol}
 
-% \newtheorem{definition}{Ορισμός}
+\usepackage{appendixnumberbeamer}
+
+\usepackage{polynom}
+
+\usepackage{pgffor}
+
+\setbeamercovered{transparent}
+\beamertemplatenavigationsymbolsempty
 
 \title{Συναρτήσεις}
 \subtitle{Συνέχεια Συνάρτησης}
 \author[Λόλας]{Κωνσταντίνος Λόλας}
+\institute[$10^ο$ ΓΕΛ]{$10^ο$ ΓΕΛ Θεσσαλονίκης}
 \date{}
 
 \begin{document}
 
 \begin{frame}
- \titlepage
+        \titlepage
 \end{frame}
 
 \section{Θεωρία}
 \begin{frame}{Όταν εμείς το υπολογίζαμε...}
- Μέχρι στιγμής πλησιάζαμε. Ήρθε ο καιρός να φτάσουμε!
+        Μέχρι στιγμής πλησιάζαμε. Ήρθε ο καιρός να φτάσουμε!
 \end{frame}
 
 \begin{frame}{Συνέχεια 1}
- \begin{block}{Συνέχεια σε σημείο}
-  Μία συνάρτηση είναι συνεχής στο $x_0$ αν $\lim\limits_{x \to x_0}{ f(x) }=f(x_0)$
- \end{block}
+        \begin{block}{Συνέχεια σε σημείο}
+                Μία συνάρτηση είναι συνεχής στο $x_0$ αν $\lim\limits_{x \to x_0}{ f(x) }=f(x_0)$
+        \end{block}
 \end{frame}
 
 \begin{frame}{Συνέχεια 2}
- \begin{block}{Συνέχεια σε διάστημα}
-  Μία συνάρτηση είναι συνεχής στο $[α,β]$ όταν:
-  \begin{itemize}
-   \item $\lim\limits_{x \to x_0}{ f(x) }=f(x_0)$ για κάθε $x\in (α,β)$
-   \item $\lim\limits_{x \to α^+}{ f(x) }=f(α)$
-   \item $\lim\limits_{x \to β^-}{ f(x) }=f(β)$
-  \end{itemize}
- \end{block}
+        \begin{block}{Συνέχεια σε διάστημα}
+                Μία συνάρτηση είναι συνεχής στο $[α,β]$ όταν:
+                \begin{itemize}
+                        \item $\lim\limits_{x \to x_0}{ f(x) }=f(x_0)$ για κάθε $x\in (α,β)$
+                        \item $\lim\limits_{x \to α^+}{ f(x) }=f(α)$
+                        \item $\lim\limits_{x \to β^-}{ f(x) }=f(β)$
+                \end{itemize}
+        \end{block}
 \end{frame}
 
 \begin{frame}{Συνέχεια 3}
- \begin{block}{Συνεχής συνάρτηση}
-  Μία συνάρτηση είναι συνεχής όταν είναι συνεχής σε κάθε σημείο του πεδίου ορισμού της.
- \end{block}
+        \begin{block}{Συνεχής συνάρτηση}
+                Μία συνάρτηση είναι συνεχής όταν είναι συνεχής σε κάθε σημείο του πεδίου ορισμού της.
+        \end{block}
 \end{frame}
 
 \begin{frame}{Ας γνωριστούμε}
- Γνωστές συνεχείς συναρτήσεις:
- \begin{itemize}
-  \item Πολυωνυμικές \pause
-  \item Εκθετικές \pause
-  \item Λογαριθμικές \pause
-  \item Τριγωνομετρικές
- \end{itemize}
+        Γνωστές συνεχείς συναρτήσεις:
+        \begin{itemize}
+                \item Πολυωνυμικές \pause
+                \item Εκθετικές \pause
+                \item Λογαριθμικές \pause
+                \item Τριγωνομετρικές
+        \end{itemize}
 \end{frame}
 
 \begin{frame}{Και πράξεις αυτών}
- Αν $f$ και $g$ συνεχείς τότε συνεχής
- \begin{itemize}
-  \item $f+g$ \pause
-  \item $f-g$ \pause
-  \item $f\cdot g$ \pause
-  \item $\frac{f}{g}$ \pause
-  \item $f\circ g$ \pause
-  \item ΟΛΕΣ ΟΙ ΓΝΩΣΤΕΣ
- \end{itemize}
+        Αν $f$ και $g$ συνεχείς τότε συνεχής
+        \begin{itemize}
+                \item $f+g$ \pause
+                \item $f-g$ \pause
+                \item $f\cdot g$ \pause
+                \item $\frac{f}{g}$ \pause
+                \item $f\circ g$ \pause
+                \item ΟΛΕΣ ΟΙ ΓΝΩΣΤΕΣ
+        \end{itemize}
 \end{frame}
 
 \begin{frame}{Το μέλλον...}
- \begin{itemize}
-  \item Αντί να υπολογίζουμε όρια, θα υπολογίζουμε τιμές \pause
-  \item Αν δεν μπορούμε να υπολογίζουμε τιμές, θα υπολογίζουμε όρια \pause
-  \item Αφού η συνάρτηση δεν "διακόπτεται" βγάζουμε ωραία θεωρήματα
- \end{itemize}
+        \begin{itemize}
+                \item Αντί να υπολογίζουμε όρια, θα υπολογίζουμε τιμές \pause
+                \item Αν δεν μπορούμε να υπολογίζουμε τιμές, θα υπολογίζουμε όρια \pause
+                \item Αφού η συνάρτηση δεν "διακόπτεται" βγάζουμε ωραία θεωρήματα
+        \end{itemize}
 \end{frame}
 
 \section{Ασκήσεις}
 \subsection{Άσκηση 1}
 \begin{frame}[label=Άσκηση1]{Εξάσκηση 1}
- Να εξετάσετε, αν καθεμιά από τις παρακάτω συναρτήσεις είναι συνεχής στο $x_0$:
- \begin{enumerate}
-  \item $f(x)=\begin{cases}
-          \frac{x^2-1}{x-1}, & x\ne 1 \\
-          2,                 & x=1
-         \end{cases}$, $x_0=1$ \pause
-  \item $f(x)=\begin{cases}
-          \frac{ημx}{x}, & x<0    \\
-          2x+1,          & x\ge 0
-         \end{cases}$, $x_0=0$
- \end{enumerate}
+        Να εξετάσετε, αν καθεμιά από τις παρακάτω συναρτήσεις είναι συνεχής στο $x_0$:
+        \begin{enumerate}
+                \item $f(x)=\begin{cases}
+                                      \frac{x^2-1}{x-1}, & x\ne 1 \\
+                                      2,                 & x=1
+                              \end{cases}$, $x_0=1$ \pause
+                \item $f(x)=\begin{cases}
+                                      \frac{ημx}{x}, & x<0    \\
+                                      2x+1,          & x\ge 0
+                              \end{cases}$, $x_0=0$
+        \end{enumerate}
 
- %\hyperlink{Λύση1}{\beamerbutton{Λύση}}
+        %\hyperlink{Λύση1}{\beamerbutton{Λύση}}
 \end{frame}
 
 \subsection{Άσκηση 2}
 \begin{frame}[label=Άσκηση2]{Εξάσκηση 2}
- Να μελετήσετε τη συνάρτηση $f(x)=e^x+\ln (x+1)$ ως προς τη συνέχεια και να βρείτε το $\lim\limits_{x \to 0}{ f(x) }$.
+        Να μελετήσετε τη συνάρτηση $f(x)=e^x+\ln (x+1)$ ως προς τη συνέχεια και να βρείτε το $\lim\limits_{x \to 0}{ f(x) }$.
 
 
- %\hyperlink{Λύση2}{\beamerbutton{Λύση}}
+        %\hyperlink{Λύση2}{\beamerbutton{Λύση}}
 \end{frame}
 
 \subsection{Άσκηση 3}
 \begin{frame}[label=Άσκηση3]{Εξάσκηση 3}
- Δίνεται η συνάρτηση $f(x)=\begin{cases}
-   e^x+ημx,             & x<0 \\
-   1,                   & x=0 \\
-   συνx\cdot \ln (x+1), & x>0
-  \end{cases}$
- \begin{enumerate}
-  \item Να μελετήσετε τη συνάρτηση $f$ ως προς τη συνέχεια.
-  \item Να αποδείξετε ότι η $f$ είναι συνεχής στο διάστημα $[-π,0]$.
- \end{enumerate}
+        Δίνεται η συνάρτηση $f(x)=\begin{cases}
+                        e^x+ημx,             & x<0 \\
+                        1,                   & x=0 \\
+                        συνx\cdot \ln (x+1), & x>0
+                \end{cases}$
+        \begin{enumerate}
+                \item Να μελετήσετε τη συνάρτηση $f$ ως προς τη συνέχεια.
+                \item Να αποδείξετε ότι η $f$ είναι συνεχής στο διάστημα $[-π,0]$.
+        \end{enumerate}
 
- %\hyperlink{Λύση3}{\beamerbutton{Λύση}}
+        %\hyperlink{Λύση3}{\beamerbutton{Λύση}}
 \end{frame}
 
 
 \subsection{Άσκηση 4}
 \begin{frame}[label=Άσκηση4]{Εξάσκηση 4}
- Δίνεται η συνάρτηση $f(x)=\begin{cases}
-   4αe^x+βσυνx, & x<0         \\
-   x+2,         & 0\le x\le 1 \\
-   \ln x+αx-β,  & x>1
-  \end{cases}$
+        Δίνεται η συνάρτηση $f(x)=\begin{cases}
+                        4αe^x+βσυνx, & x<0         \\
+                        x+2,         & 0\le x\le 1 \\
+                        \ln x+αx-β,  & x>1
+                \end{cases}$
 
- Να βρείτε τις τιμές των $α$ και $β$ για τις οποίες η $f$ είναι συνεχής.
+        Να βρείτε τις τιμές των $α$ και $β$ για τις οποίες η $f$ είναι συνεχής.
 
- %\hyperlink{Λύση4}{\beamerbutton{Λύση}}
+        %\hyperlink{Λύση4}{\beamerbutton{Λύση}}
 \end{frame}
 
 \subsection{Άσκηση 5}
 \begin{frame}[label=Άσκηση5]{Εξάσκηση 5}
- Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνεχής συνάρτηση για την οποία ισχύει
- $$xf(x)=x^2+ημx \text{, για κάθε } x\in\mathbb{R}$$
- Να βρείτε τον τύπο της συνάρτησης $f$
+        Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνεχής συνάρτηση για την οποία ισχύει
+        $$xf(x)=x^2+ημx \text{, για κάθε } x\in\mathbb{R}$$
+        Να βρείτε τον τύπο της συνάρτησης $f$
 
- %\hyperlink{Λύση5}{\beamerbutton{Λύση}}
+        %\hyperlink{Λύση5}{\beamerbutton{Λύση}}
 \end{frame}
 
 \subsection{Άσκηση 6}
 \begin{frame}[label=Άσκηση6]{Εξάσκηση 6}
- Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση η οποία είναι συνεχής στο $x_0=1$. Αν $\lim\limits_{x \to 1}{ \frac{f(x)-2}{x-1} }=3$, να δείξετε ότι $f(1)=2$
+        Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση η οποία είναι συνεχής στο $x_0=1$. Αν $\lim\limits_{x \to 1}{ \frac{f(x)-2}{x-1} }=3$, να δείξετε ότι $f(1)=2$
 
- %\hyperlink{Λύση6}{\beamerbutton{Λύση}}
+        %\hyperlink{Λύση6}{\beamerbutton{Λύση}}
 \end{frame}
 
 \subsection{Άσκηση 7}
 \begin{frame}[label=Άσκηση7]{Εξάσκηση 7}
- Έστω $f:(0,+\infty)\to\mathbb{R}$ μία συνάρτηση για την οποία ισχύει
- $$f^3(x)+f(x)=\ln x \text{, για κάθε } x>0$$
- Να δείξετε ότι η $f$ είναι συνεχής στο $x_0=1$
+        Έστω $f:(0,+\infty)\to\mathbb{R}$ μία συνάρτηση για την οποία ισχύει
+        $$f^3(x)+f(x)=\ln x \text{, για κάθε } x>0$$
+        Να δείξετε ότι η $f$ είναι συνεχής στο $x_0=1$
 
- %\hyperlink{Λύση7}{\beamerbutton{Λύση}}
+        %\hyperlink{Λύση7}{\beamerbutton{Λύση}}
 \end{frame}
 
 \subsection{Άσκηση 8}
 \begin{frame}[label=Άσκηση8]{Εξάσκηση 8}
- Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση για την οποία ισχύει
- $$2f(x)=x+ημf(x) \text{, για κάθε } x\in\mathbb{R}$$
- Να δείξετε ότι:
- \begin{enumerate}
-  \item<1-> $|f(x)|\le |x|$, για κάθε $x\in\mathbb{R}$
-  \item<2-> Η $f$ είναι συνεχής στο $x_0=0$
- \end{enumerate}
+        Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση για την οποία ισχύει
+        $$2f(x)=x+ημf(x) \text{, για κάθε } x\in\mathbb{R}$$
+        Να δείξετε ότι:
+        \begin{enumerate}
+                \item<1-> $|f(x)|\le |x|$, για κάθε $x\in\mathbb{R}$
+                \item<2-> Η $f$ είναι συνεχής στο $x_0=0$
+        \end{enumerate}
 
- %\hyperlink{Λύση8}{\beamerbutton{Λύση}}
+        %\hyperlink{Λύση8}{\beamerbutton{Λύση}}
 \end{frame}
 
 \subsection{Άσκηση 9}
 \begin{frame}[label=Άσκηση9]{Εξάσκηση 9}
- Έστω $f:(0,+\infty)\to\mathbb{R}$ μία συνάρτηση για την οποία ισχύει
- $$f(xy)=f(x)+f(y) \text{, για κάθε } x,y\in(0,+\infty)$$
- Να δείξετε ότι αν η $f$ είναι συνεχής στο $x=1$, τότε η συνάρτηση είναι συνεχής στο $(0,+\infty)$
+        Έστω $f:(0,+\infty)\to\mathbb{R}$ μία συνάρτηση για την οποία ισχύει
+        $$f(xy)=f(x)+f(y) \text{, για κάθε } x,y\in(0,+\infty)$$
+        Να δείξετε ότι αν η $f$ είναι συνεχής στο $x=1$, τότε η συνάρτηση είναι συνεχής στο $(0,+\infty)$
 
- %\hyperlink{Λύση9}{\beamerbutton{Λύση}}
+        %\hyperlink{Λύση9}{\beamerbutton{Λύση}}
 \end{frame}
 
 \section{}
 \begin{frame}
- Στο moodle θα βρείτε τις ασκήσεις που πρέπει να κάνετε, όπως και αυτή τη παρουσίαση
+        Στο moodle θα βρείτε τις ασκήσεις που πρέπει να κάνετε, όπως και αυτή τη παρουσίαση
 \end{frame}
 
 \end{document}

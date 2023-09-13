@@ -9,214 +9,223 @@
 \usepackage{hyperref}
 \usepackage{ulem}
 \usepackage{xgreek}
-\usepackage{pgfpages}
+
+\usepackage{pgfpages} 
 \usepackage{tikz}
 %\setbeameroption{show notes on second screen}
 %\setbeameroption{show only notes}
 
-\setsansfont{Noto Serif}
+\setsansfont{Calibri}
 
 \usepackage{multicol}
 
-% \newtheorem{definition}{Ορισμός}
+\usepackage{appendixnumberbeamer}
+
+\usepackage{polynom}
+
+\usepackage{pgffor}
+
+\setbeamercovered{transparent}
+\beamertemplatenavigationsymbolsempty
 
 \title{Συναρτήσεις}
 \subtitle{Μη πεπερασμένο όριο στο $x_0$}
 \author[Λόλας]{Κωνσταντίνος Λόλας}
+\institute[$10^ο$ ΓΕΛ]{$10^ο$ ΓΕΛ Θεσσαλονίκης}
 \date{}
 
 \begin{document}
 
 \begin{frame}
- \titlepage
+  \titlepage
 \end{frame}
 
 \section{Θεωρία}
 \begin{frame}{Στο άπειρο λοιπόν...}
- \centering
- \includegraphics[height=0.6\columnwidth]{images/buzz}
+  \centering
+  \includegraphics[height=0.6\columnwidth]{images/buzz}
 \end{frame}
 
 \begin{frame}{Λάθος συλλογισμός}
- Το άπειρο ΔΕΝ ΕΙΝΑΙ ΑΡΙΘΜΟΣ! \pause
- \begin{block}{Ορισμός απείρου}
-  Αν για κάθε $k\in\mathbb{R}$ μπορώ να βρώ $m\in Α$ ώστε $m>k$, τότε λέμε ότι το $Α$ έχει οσοδήποτε μεγάλους αριθμούς.
- \end{block} \pause
- άρα
- \begin{block}{Ορισμός μη πεπερασμένου ορίου}
-  Έστω συνάρτηση $f:Α\to\mathbb{R}$. Αν για κάθε $k\in\mathbb{R}$ υπάρχει $x_0\in Α$ ώστε για κάθε $x$ σε κατάλληλη περιοχή γύρω από το $x_0$ να ισχύει $f(x)>k$
- \end{block}
+  Το άπειρο ΔΕΝ ΕΙΝΑΙ ΑΡΙΘΜΟΣ! \pause
+  \begin{block}{Ορισμός απείρου}
+    Αν για κάθε $k\in\mathbb{R}$ μπορώ να βρώ $m\in Α$ ώστε $m>k$, τότε λέμε ότι το $Α$ έχει οσοδήποτε μεγάλους αριθμούς.
+  \end{block} \pause
+  άρα
+  \begin{block}{Ορισμός μη πεπερασμένου ορίου}
+    Έστω συνάρτηση $f:Α\to\mathbb{R}$. Αν για κάθε $k\in\mathbb{R}$ υπάρχει $x_0\in Α$ ώστε για κάθε $x$ σε κατάλληλη περιοχή γύρω από το $x_0$ να ισχύει $f(x)>k$
+  \end{block}
 \end{frame}
 
 \begin{frame}{Ελληνικά!}
- \begin{block}{Ορισμός μη πεπερασμένου ορίου}
-  Έστω συνάρτηση $f:Α\to\mathbb{R}$. Θα λέμε ότι τείνει στο άπειρο αν μεγαλώνει συνεχώς όταν πλησιάζουμε στο $x_0$. Τότε θα γράφουμε
-  $$\lim\limits_{x \to x_0}{ f(x) }=+\infty$$
- \end{block} \pause
- ΜΟΝΟ ΕΓΩ θα επιτρέπεται να γράφω σκέτο $\infty$ και θα εννοώ $+\infty$ και εννοείται επειδή ξεχνάω!
+  \begin{block}{Ορισμός μη πεπερασμένου ορίου}
+    Έστω συνάρτηση $f:Α\to\mathbb{R}$. Θα λέμε ότι τείνει στο άπειρο αν μεγαλώνει συνεχώς όταν πλησιάζουμε στο $x_0$. Τότε θα γράφουμε
+    $$\lim\limits_{x \to x_0}{ f(x) }=+\infty$$
+  \end{block} \pause
+  ΜΟΝΟ ΕΓΩ θα επιτρέπεται να γράφω σκέτο $\infty$ και θα εννοώ $+\infty$ και εννοείται επειδή ξεχνάω!
 \end{frame}
 
 \begin{frame}{Το άλλο άπειρο?}
- \begin{block}{Ορισμός μη πεπερασμένου ορίου}
-  Έστω συνάρτηση $f:Α\to\mathbb{R}$. Θα λέμε ότι τείνει στο μείον άπειρο αν μικραίνει συνεχώς όταν πλησιάζουμε στο $x_0$. Τότε θα γράφουμε
-  $$\lim\limits_{x \to x_0}{ f(x) }=-\infty$$
- \end{block} \pause
- Αυτό δεν μπορώ να το παραβλέψω και αναγκαστικά το γράφω και εγώ!
+  \begin{block}{Ορισμός μη πεπερασμένου ορίου}
+    Έστω συνάρτηση $f:Α\to\mathbb{R}$. Θα λέμε ότι τείνει στο μείον άπειρο αν μικραίνει συνεχώς όταν πλησιάζουμε στο $x_0$. Τότε θα γράφουμε
+    $$\lim\limits_{x \to x_0}{ f(x) }=-\infty$$
+  \end{block} \pause
+  Αυτό δεν μπορώ να το παραβλέψω και αναγκαστικά το γράφω και εγώ!
 \end{frame}
 
 \begin{frame}{Πάμε στα γνωστά}
- Συναρτήσεις που πηγαίνουν στο $+\infty$. \pause Πάμε... \pause
- \begin{itemize}
-  \item $\frac{1}{x}$
-  \item $\frac{1}{x^2}$
-  \item $\frac{1}{x^{2k}}$
-  \item $\frac{1}{x^{2k+1}}$
-  \item $\ln{x}$
-  \item $εφ(x)$
- \end{itemize}
+  Συναρτήσεις που πηγαίνουν στο $+\infty$. \pause Πάμε... \pause
+  \begin{itemize}
+    \item $\frac{1}{x}$
+    \item $\frac{1}{x^2}$
+    \item $\frac{1}{x^{2k}}$
+    \item $\frac{1}{x^{2k+1}}$
+    \item $\ln{x}$
+    \item $εφ(x)$
+  \end{itemize}
 \end{frame}
 
 \begin{frame}{Το άπειρο δεν είναι παιχνίδι (part 1)}
- Γρίφος time!
- \begin{itemize}
-  \item Υπάρχει ένα ξενοδοχείο με άπειρα δωμάτια.
-  \item Έρχεται ένας ταλαιπωρημένος οδηπόρος και ζητάει δωμάτιο!!!!!
-  \item Ο ξενοδόχος του λέει ότι όλα τα δωμάτια είναι κατελημένα και δεν έχει ελεύθερο.
-  \item Επειδή ο οδηπόρος είστε εσείς και κάνετε μαθηματικά με τον Λόλα, του δίνετε την λύση και τελικά παίρνετε το δωμάτιο 4.
-  \item Προτείνετε μία λύση
- \end{itemize}
+  Γρίφος time!
+  \begin{itemize}
+    \item Υπάρχει ένα ξενοδοχείο με άπειρα δωμάτια.
+    \item Έρχεται ένας ταλαιπωρημένος οδηπόρος και ζητάει δωμάτιο!!!!!
+    \item Ο ξενοδόχος του λέει ότι όλα τα δωμάτια είναι κατελημένα και δεν έχει ελεύθερο.
+    \item Επειδή ο οδηπόρος είστε εσείς και κάνετε μαθηματικά με τον Λόλα, του δίνετε την λύση και τελικά παίρνετε το δωμάτιο 4.
+    \item Προτείνετε μία λύση
+  \end{itemize}
 \end{frame}
 
 \begin{frame}{Το άπειρο δεν είναι παιχνίδι (part 2)}
- Μπορώ πολύ εύκολα να αποδείξω ότι $1+2+3+4+\cdots = -\frac{1}{12}$
+  Μπορώ πολύ εύκολα να αποδείξω ότι $1+2+3+4+\cdots = -\frac{1}{12}$
 
- \centering
- \includegraphics[height=0.4\columnwidth]{images/qiev6}
+  \centering
+  \includegraphics[height=0.4\columnwidth]{images/qiev6}
 \end{frame}
 
 \begin{frame}{Τι θα ήταν τα μαθηματικά χωρίς πράξεις}
- Μα, μα, μα... Είπαμε δεν είναι αριθμός!\pause, αλλά, αν μπορώ να μεγαλώνω συνέχεια και...
- \begin{itemize}
-  \item προσθέσω έναν αριθμό? \pause
-  \item αφαιρέσω έναν αριθμό? \pause
-  \item πολλαπλασιάσω με αριθμό πάνω από 1? \pause
-  \item διαιρέσω με αριθμό? \pause
-  \item υψώσω σε δύναμη? \pause
-  \item πολλαπλασιάσω με άλλο τόσο? \pause
-  \item αφαιρέσω άλλο τόσο? \pause
-  \item πολλαπλασιάσω με 0? \pause
-  \item διαιρέσω με άλλο τόσο? \pause
- \end{itemize}
- Άρα προσοχή σε όσα δεν ορίζονται!
+  Μα, μα, μα... Είπαμε δεν είναι αριθμός!\pause, αλλά, αν μπορώ να μεγαλώνω συνέχεια και...
+  \begin{itemize}
+    \item προσθέσω έναν αριθμό? \pause
+    \item αφαιρέσω έναν αριθμό? \pause
+    \item πολλαπλασιάσω με αριθμό πάνω από 1? \pause
+    \item διαιρέσω με αριθμό? \pause
+    \item υψώσω σε δύναμη? \pause
+    \item πολλαπλασιάσω με άλλο τόσο? \pause
+    \item αφαιρέσω άλλο τόσο? \pause
+    \item πολλαπλασιάσω με 0? \pause
+    \item διαιρέσω με άλλο τόσο? \pause
+  \end{itemize}
+  Άρα προσοχή σε όσα δεν ορίζονται!
 \end{frame}
 
 \begin{frame}{Ας τα δούμε ΟΛΑ}
- όπου $a\in\mathbb{R}$ και δεν προκύπτει από όριο, δηλαδή είναι αριθμός
- \begin{multicols}{2}
-  \begin{itemize}
-   \item $\pm\infty + a=$ \pause $\pm\infty$ \pause
-   \item $\pm\infty - a=$ \pause $\pm\infty$ \pause
-   \item $\pm\infty \cdot a=$ \pause $\begin{cases} \pm\infty, & a>0 \\ \mp\infty, & a<0 \\ ?, & a=0\end{cases}$ \pause
-   \item $\frac{\pm\infty}{a}=$ \pause $\begin{cases} \pm\infty, & a>0 \\ \mp\infty, & a<0\end{cases}$ \pause
-   \item $\frac{a}{\pm\infty}=$ \pause $0$ \pause
-   \item $(+\infty)^a=$ \pause $\begin{cases} +\infty, & a>0 \\ -\infty, & a<0 \\ ?, & a=0\end{cases}$ \pause
-   \item $a^{+\infty}=$ \pause $\begin{cases} 0, & 0\le a <1 \\ ?, & a=1 \\ +\infty, & a>1\end{cases}$ \pause
-   \item $a^{-\infty}=$ \pause $\begin{cases} +\infty, & 0\le a <1 \\ ?, & a=1 \\ 0, & a>1\end{cases}$ \pause
-  \end{itemize}
- \end{multicols}
- Κρατάμε τα $\infty\cdot 0$, $\infty^0$, $1^{\pm\infty}$
+  όπου $a\in\mathbb{R}$ και δεν προκύπτει από όριο, δηλαδή είναι αριθμός
+  \begin{multicols}{2}
+    \begin{itemize}
+      \item $\pm\infty + a=$ \pause $\pm\infty$ \pause
+      \item $\pm\infty - a=$ \pause $\pm\infty$ \pause
+      \item $\pm\infty \cdot a=$ \pause $\begin{cases} \pm\infty, & a>0 \\ \mp\infty, & a<0 \\ ?, & a=0\end{cases}$ \pause
+      \item $\frac{\pm\infty}{a}=$ \pause $\begin{cases} \pm\infty, & a>0 \\ \mp\infty, & a<0\end{cases}$ \pause
+      \item $\frac{a}{\pm\infty}=$ \pause $0$ \pause
+      \item $(+\infty)^a=$ \pause $\begin{cases} +\infty, & a>0 \\ -\infty, & a<0 \\ ?, & a=0\end{cases}$ \pause
+      \item $a^{+\infty}=$ \pause $\begin{cases} 0, & 0\le a <1 \\ ?, & a=1 \\ +\infty, & a>1\end{cases}$ \pause
+      \item $a^{-\infty}=$ \pause $\begin{cases} +\infty, & 0\le a <1 \\ ?, & a=1 \\ 0, & a>1\end{cases}$ \pause
+    \end{itemize}
+  \end{multicols}
+  Κρατάμε τα $\infty\cdot 0$, $\infty^0$, $1^{\pm\infty}$
 \end{frame}
 
 \begin{frame}{Και παιχνίδι με τα $\pm\infty$}
- \begin{multicols}{2}
-  \begin{itemize}
-   \item $+\infty + +\infty=$ \pause $+\infty$ \pause
-   \item $-\infty + (-\infty)=$ \pause $-\infty$ \pause
-   \item $+\infty + (-\infty)=$ \pause $?$ \pause
-   \item $\pm\infty \cdot \pm\infty=$ \pause $\pm\infty$ \pause
-   \item $\frac{\pm\infty}{\pm\infty}=$ \pause $?$ \pause
-   \item $(+\infty)^{+\infty}=$ \pause $+\infty$ \pause
-   \item $(+\infty)^{-\infty}=$ \pause $0$ \pause
-  \end{itemize}
- \end{multicols}
- Κρατάμε τα $\infty\cdot 0$, $\infty^0$, $1^{\pm\infty}$, $+\infty + (-\infty)$, $\frac{\pm\infty}{\pm\infty}$, $\frac{0}{0}$
+  \begin{multicols}{2}
+    \begin{itemize}
+      \item $+\infty + +\infty=$ \pause $+\infty$ \pause
+      \item $-\infty + (-\infty)=$ \pause $-\infty$ \pause
+      \item $+\infty + (-\infty)=$ \pause $?$ \pause
+      \item $\pm\infty \cdot \pm\infty=$ \pause $\pm\infty$ \pause
+      \item $\frac{\pm\infty}{\pm\infty}=$ \pause $?$ \pause
+      \item $(+\infty)^{+\infty}=$ \pause $+\infty$ \pause
+      \item $(+\infty)^{-\infty}=$ \pause $0$ \pause
+    \end{itemize}
+  \end{multicols}
+  Κρατάμε τα $\infty\cdot 0$, $\infty^0$, $1^{\pm\infty}$, $+\infty + (-\infty)$, $\frac{\pm\infty}{\pm\infty}$, $\frac{0}{0}$
 \end{frame}
 
 \section{Ασκήσεις}
 \begin{frame}{Εξάσκηση}
- Στο σχήμα
- \href{https://www.geogebra.org/m/xzc6usbm}{\beamergotobutton{Geogebra}}
- φαίνεται η γραφική παράσταση μιας συνάρτησης $f(x)$. Να υπολογίσετε τα παρακάτω όρια (εφόσον υπάρχουν):
- \begin{itemize}
-  \item $\lim\limits_{x \to 1}{ f(x) }$, $\lim\limits_{x \to 1}{ |f(x)| }$, $\lim\limits_{x \to 1}{ \sqrt{f(x)} }$ και $\lim\limits_{x \to 1}{ \frac{1}{f(x)} }$ \pause
-  \item $\lim\limits_{x \to 0}{ f(x) }$, $\lim\limits_{x \to 0}{ |f(x)| }$ και $\lim\limits_{x \to 0}{ \frac{1}{f(x)} }$ \pause
-  \item $\lim\limits_{x \to 3}{ f(x) }$, $\lim\limits_{x \to 3}{ |f(x)| }$ και $\lim\limits_{x \to 3}{ \frac{1}{f(x)} }$ \pause
-  \item $\lim\limits_{x \to 4}{ \frac{1}{f(x)} }$, $\lim\limits_{x \to 6}{ \frac{1}{f(x)-3} }$ και $\lim\limits_{x \to 7}{ \frac{1}{f(x)} }$
- \end{itemize}
+  Στο σχήμα
+  \href{https://www.geogebra.org/m/xzc6usbm}{\beamergotobutton{Geogebra}}
+  φαίνεται η γραφική παράσταση μιας συνάρτησης $f(x)$. Να υπολογίσετε τα παρακάτω όρια (εφόσον υπάρχουν):
+  \begin{itemize}
+    \item $\lim\limits_{x \to 1}{ f(x) }$, $\lim\limits_{x \to 1}{ |f(x)| }$, $\lim\limits_{x \to 1}{ \sqrt{f(x)} }$ και $\lim\limits_{x \to 1}{ \frac{1}{f(x)} }$ \pause
+    \item $\lim\limits_{x \to 0}{ f(x) }$, $\lim\limits_{x \to 0}{ |f(x)| }$ και $\lim\limits_{x \to 0}{ \frac{1}{f(x)} }$ \pause
+    \item $\lim\limits_{x \to 3}{ f(x) }$, $\lim\limits_{x \to 3}{ |f(x)| }$ και $\lim\limits_{x \to 3}{ \frac{1}{f(x)} }$ \pause
+    \item $\lim\limits_{x \to 4}{ \frac{1}{f(x)} }$, $\lim\limits_{x \to 6}{ \frac{1}{f(x)-3} }$ και $\lim\limits_{x \to 7}{ \frac{1}{f(x)} }$
+  \end{itemize}
 \end{frame}
 
 \begin{frame}{Εξάσκηση}
- Να βρείτε τα όρια (αν υπάρχουν)
- \begin{enumerate}
-  \item $\lim\limits_{x \to 3}{ \frac{1}{|x-3|} }$ \pause
-  \item $\lim\limits_{x \to 1}{ \frac{x-3}{(x-1)^2} }$ \pause
-  \item $\lim\limits_{x \to 2}{ \frac{2x+1}{x-2} }$ \pause
-  \item $\lim\limits_{x \to 0}{ \frac{1+\sqrt{x}}{x}}$
- \end{enumerate}
+  Να βρείτε τα όρια (αν υπάρχουν)
+  \begin{enumerate}
+    \item $\lim\limits_{x \to 3}{ \frac{1}{|x-3|} }$ \pause
+    \item $\lim\limits_{x \to 1}{ \frac{x-3}{(x-1)^2} }$ \pause
+    \item $\lim\limits_{x \to 2}{ \frac{2x+1}{x-2} }$ \pause
+    \item $\lim\limits_{x \to 0}{ \frac{1+\sqrt{x}}{x}}$
+  \end{enumerate}
 \end{frame}
 
 \begin{frame}{Εξάσκηση}
- Να βρείτε, (αν υπάρχει) το $\lim\limits_{x \to 1}{ \frac{3x+2}{x^2-1} }$
+  Να βρείτε, (αν υπάρχει) το $\lim\limits_{x \to 1}{ \frac{3x+2}{x^2-1} }$
 \end{frame}
 
 \begin{frame}{Εξάσκηση}
- Για τις διάφορες τιμές του $λ$ να βρείτε το $\lim\limits_{x \to 2}{ \frac{x^2-λx+λ}{(x-2)^2} }$
+  Για τις διάφορες τιμές του $λ$ να βρείτε το $\lim\limits_{x \to 2}{ \frac{x^2-λx+λ}{(x-2)^2} }$
 \end{frame}
 
 \begin{frame}{Εξάσκηση}
- Να βρείτε την τιμή του $α\in\mathbb{R}$ για την οποία το $\lim\limits_{x \to 1}{\frac{αx^2+x-2}{x^2-x}  }$ είναι πραγματικός αριθμός
+  Να βρείτε την τιμή του $α\in\mathbb{R}$ για την οποία το $\lim\limits_{x \to 1}{\frac{αx^2+x-2}{x^2-x}  }$ είναι πραγματικός αριθμός
 \end{frame}
 
 \begin{frame}{Εξάσκηση}
- Έστω μια συνάρτηση $f:(0,+\infty)\to\mathbb{R}$ για την οποία ισχύει:
- $$f(x)\le x-\frac{1}{x} \text{ για κάθε } x>0$$
- Να βρείτε τα όρια:
- \begin{enumerate}
-  \item $\lim\limits_{x \to 0}{ f(x) }$ \pause
-  \item $\lim\limits_{x \to 0}{ \frac{|f(x)-3|}{f^2(x)-3f(x)} }$
- \end{enumerate}
+  Έστω μια συνάρτηση $f:(0,+\infty)\to\mathbb{R}$ για την οποία ισχύει:
+  $$f(x)\le x-\frac{1}{x} \text{ για κάθε } x>0$$
+  Να βρείτε τα όρια:
+  \begin{enumerate}
+    \item $\lim\limits_{x \to 0}{ f(x) }$ \pause
+    \item $\lim\limits_{x \to 0}{ \frac{|f(x)-3|}{f^2(x)-3f(x)} }$
+  \end{enumerate}
 \end{frame}
 
 \begin{frame}{Εξάσκηση}
- Αν για μια συνάρτηση ισχύει:
- $$|x-2|f(x)\ge x-1 \text{ για κάθε } x\ne 2$$
- Να βρείτε τα όρια:
- \begin{enumerate}
-  \item $\lim\limits_{x \to 2}{ f(x) }$ \pause
-  \item $\lim\limits_{x \to 2}{ f(x)ημ\frac{1}{f(x)} }$
- \end{enumerate}
+  Αν για μια συνάρτηση ισχύει:
+  $$|x-2|f(x)\ge x-1 \text{ για κάθε } x\ne 2$$
+  Να βρείτε τα όρια:
+  \begin{enumerate}
+    \item $\lim\limits_{x \to 2}{ f(x) }$ \pause
+    \item $\lim\limits_{x \to 2}{ f(x)ημ\frac{1}{f(x)} }$
+  \end{enumerate}
 \end{frame}
 
 \begin{frame}{Εξάσκηση}
- Έστω $f:\mathbb{R}\to\mathbb{R}$ μια συνάρτηση, για την οποία ισχύει $\lim\limits_{x \to 0}{ \left( x^2f(x)  \right)  }=1$.
- Να βρείτε τα όρια
- \begin{enumerate}
-  \item $\lim\limits_{x \to 0}{ f(x) }$ \pause
-  \item $\lim\limits_{x \to 0}{ \frac{x-1}{f(x)} }$
- \end{enumerate}
+  Έστω $f:\mathbb{R}\to\mathbb{R}$ μια συνάρτηση, για την οποία ισχύει $\lim\limits_{x \to 0}{ \left( x^2f(x)  \right)  }=1$.
+  Να βρείτε τα όρια
+  \begin{enumerate}
+    \item $\lim\limits_{x \to 0}{ f(x) }$ \pause
+    \item $\lim\limits_{x \to 0}{ \frac{x-1}{f(x)} }$
+  \end{enumerate}
 \end{frame}
 
 \begin{frame}{Εξάσκηση}
- Να βρείτε (αν υπάρχουν) τα παρακάτω όρια.
- \begin{enumerate}
-   \item $\lim\limits_{x \to 0}{ \frac{3x+2}{|ημx|-|x|} }$ \pause
-   \item $\lim\limits_{x \to 0}{ \left( \frac{1}{|x|}-\frac{1}{x}  \right)  }$
- \end{enumerate}
+  Να βρείτε (αν υπάρχουν) τα παρακάτω όρια.
+  \begin{enumerate}
+    \item $\lim\limits_{x \to 0}{ \frac{3x+2}{|ημx|-|x|} }$ \pause
+    \item $\lim\limits_{x \to 0}{ \left( \frac{1}{|x|}-\frac{1}{x}  \right)  }$
+  \end{enumerate}
 \end{frame}
 
 \section{}
 \begin{frame}
- Στο moodle θα βρείτε τις ασκήσεις που πρέπει να κάνετε, όπως και αυτή τη παρουσίαση
+  Στο moodle θα βρείτε τις ασκήσεις που πρέπει να κάνετε, όπως και αυτή τη παρουσίαση
 \end{frame}
 
 \end{document}
