@@ -9,281 +9,290 @@
 \usepackage{hyperref}
 \usepackage{ulem}
 \usepackage{xgreek}
-\usepackage{pgfpages}
+
+\usepackage{pgfpages} 
 \usepackage{tikz}
 %\setbeameroption{show notes on second screen}
 %\setbeameroption{show only notes}
 
-\setsansfont{Noto Serif}
+\setsansfont{Calibri}
 
 \usepackage{multicol}
 
-% \newtheorem{definition}{Ορισμός}
+\usepackage{appendixnumberbeamer}
+
+\usepackage{polynom}
+
+\usepackage{pgffor}
+
+\setbeamercovered{transparent}
+\beamertemplatenavigationsymbolsempty
 
 \title{Συναρτήσεις}
 \subtitle{Όρια συνάρτησης στο άπειρο}
 \author[Λόλας]{Κωνσταντίνος Λόλας}
+\institute[$10^ο$ ΓΕΛ]{$10^ο$ ΓΕΛ Θεσσαλονίκης}
 \date{}
 
 \begin{document}
 
 \begin{frame}
- \titlepage
+      \titlepage
 \end{frame}
 
 \section{Θεωρία}
 \begin{frame}{Όταν πάμε εμείς στο άπειρο λοιπόν!}
- \centering
- \includegraphics[height=0.6\columnwidth]{images/buzz}
+      \centering
+      \includegraphics[height=0.6\columnwidth]{images/buzz}
 \end{frame}
 
 \begin{frame}{Στο προηγούμενο επεισόδιο...}
- \begin{enumerate}
-  \item $\lim\limits_{x \to 0^+}{ \frac{1}{x} } = +\infty\implies$ \pause $\lim\limits_{x \to +\infty}{ \frac{1}{x} }=0$ \pause
-  \item $\lim\limits_{x \to +\infty}{ x^n } = +\infty$ \pause
-  \item $\lim\limits_{x \to +\infty}{ \frac{1}{x^n} } = 0$ \pause
-  \item $\lim\limits_{x \to -\infty}{ x^n } = \begin{cases}
-          +\infty & n \text{ άρτιος}   \\
-          -\infty & n \text{ περιττός} \\
-         \end{cases}$ \pause
-  \item $\lim\limits_{x \to -\infty}{ \frac{1}{x^n} } = 0$ \pause
-  \item με $a>1$, $\lim\limits_{x \to +\infty}{ a^x } = +\infty$ \pause
-  \item με $a>1$, $\lim\limits_{x \to -\infty}{ a^x } = 0$ \pause
-  \item με $0<a<1$, $\lim\limits_{x \to +\infty}{ a^x } = 0$ \pause
-  \item με $0<a<1$, $\lim\limits_{x \to -\infty}{ a^x } = +\infty$ \pause
-  \item με $\lim\limits_{x \to +\infty}{ lnx } = +\infty$
- \end{enumerate}
+      \begin{enumerate}
+            \item $\lim\limits_{x \to 0^+}{ \frac{1}{x} } = +\infty\implies$ \pause $\lim\limits_{x \to +\infty}{ \frac{1}{x} }=0$ \pause
+            \item $\lim\limits_{x \to +\infty}{ x^n } = +\infty$ \pause
+            \item $\lim\limits_{x \to +\infty}{ \frac{1}{x^n} } = 0$ \pause
+            \item $\lim\limits_{x \to -\infty}{ x^n } = \begin{cases}
+                              +\infty & n \text{ άρτιος}   \\
+                              -\infty & n \text{ περιττός} \\
+                        \end{cases}$ \pause
+            \item $\lim\limits_{x \to -\infty}{ \frac{1}{x^n} } = 0$ \pause
+            \item με $a>1$, $\lim\limits_{x \to +\infty}{ a^x } = +\infty$ \pause
+            \item με $a>1$, $\lim\limits_{x \to -\infty}{ a^x } = 0$ \pause
+            \item με $0<a<1$, $\lim\limits_{x \to +\infty}{ a^x } = 0$ \pause
+            \item με $0<a<1$, $\lim\limits_{x \to -\infty}{ a^x } = +\infty$ \pause
+            \item με $\lim\limits_{x \to +\infty}{ lnx } = +\infty$
+      \end{enumerate}
 \end{frame}
 
 \begin{frame}{Συμπέρασμα}
- Όπως και με τα κανονικά όρια:
- \begin{enumerate}
-  \item $\lim\limits_{x \to \pm\infty}{ f(x) }=k\in\mathbb{R}$ ή
-  \item $\lim\limits_{x \to \pm\infty}{ f(x) }=\pm\infty$ ή
-  \item $\lim\limits_{x \to \pm\infty}{ f(x) }$ δεν θα υπάρχει
- \end{enumerate}
+      Όπως και με τα κανονικά όρια:
+      \begin{enumerate}
+            \item $\lim\limits_{x \to \pm\infty}{ f(x) }=k\in\mathbb{R}$ ή
+            \item $\lim\limits_{x \to \pm\infty}{ f(x) }=\pm\infty$ ή
+            \item $\lim\limits_{x \to \pm\infty}{ f(x) }$ δεν θα υπάρχει
+      \end{enumerate}
 \end{frame}
 
 \begin{frame}{Μόνο 2 περιπτώσεις}
- Ασχολούμαστε μόνο με
- \begin{enumerate}
-  \item $\frac{\pm\infty}{\pm\infty}$
-  \item $+\infty-\infty$
- \end{enumerate}
+      Ασχολούμαστε μόνο με
+      \begin{enumerate}
+            \item $\frac{\pm\infty}{\pm\infty}$
+            \item $+\infty-\infty$
+      \end{enumerate}
 \end{frame}
 
 \begin{frame}{Δεν είναι όλα τα άπειρα ίδια}
- \begin{itemize}
-  \item $x$ vs $x^2$ \pause
-  \item $x^2$ vs $x^5$ \pause
-  \item Πολυώνυμο vs εκθετική \pause
-  \item Πολυώνυμο vs λογαριθμική
- \end{itemize}
+      \begin{itemize}
+            \item $x$ vs $x^2$ \pause
+            \item $x^2$ vs $x^5$ \pause
+            \item Πολυώνυμο vs εκθετική \pause
+            \item Πολυώνυμο vs λογαριθμική
+      \end{itemize}
 \end{frame}
 
 \begin{frame}{Πιο άπειρο είναι μεγαλύτερο κάνει κουμάντο}
- \begin{itemize}
-  \item Υπάρχει μεγαλύτερο? το βγάζω κοινό παράγοντα
-  \item Είναι ίσα? κάνω πράξεις και τα διώχνω
- \end{itemize}
+      \begin{itemize}
+            \item Υπάρχει μεγαλύτερο? το βγάζω κοινό παράγοντα
+            \item Είναι ίσα? κάνω πράξεις και τα διώχνω
+      \end{itemize}
 \end{frame}
 
 \begin{frame}{Δύο έτοιμα όρια}
- Έστω $P(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots +a_1x+a_0$ και $Q(x)=b_kx^k+b_{k-1}x^{k-1}+\cdots +b_1x+b_0$
- \begin{itemize}
-  \item $\lim\limits_{x \to \pm\infty}{ P(x) }=\lim\limits_{x \to \pm\infty}{ a_nx^n }$
-  \item $\lim\limits_{x \to \pm\infty}{ \frac{P(x)}{Q(x)} }=\lim\limits_{x \to \pm\infty}{ \frac{a_nx^n}{b_kx^k} }$
- \end{itemize}
+      Έστω $P(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots +a_1x+a_0$ και $Q(x)=b_kx^k+b_{k-1}x^{k-1}+\cdots +b_1x+b_0$
+      \begin{itemize}
+            \item $\lim\limits_{x \to \pm\infty}{ P(x) }=\lim\limits_{x \to \pm\infty}{ a_nx^n }$
+            \item $\lim\limits_{x \to \pm\infty}{ \frac{P(x)}{Q(x)} }=\lim\limits_{x \to \pm\infty}{ \frac{a_nx^n}{b_kx^k} }$
+      \end{itemize}
 \end{frame}
 
 \section{Ασκήσεις}
 \begin{frame}{Εξάσκηση}
- Στο σχήμα
- \href{https://www.geogebra.org/m/p9xmedm8}{\beamergotobutton{Geogebra}}
- φαίνεται η γραφική παράσταση μιας συνάρτησης $f(x)$. Να υπολογίσετε τα παρακάτω όρια (εφόσον υπάρχουν):
- \begin{itemize}
-  \item $\lim\limits_{x \to -\infty}{ f(x) }$ \pause
-  \item $\lim\limits_{x \to +\infty}{ f(x) }$ \pause
-  \item $\lim\limits_{x \to -\infty}{ \frac{1}{f(x)-1} }$ \pause
-  \item $\lim\limits_{x \to +\infty}{ \frac{1}{f(x)} }$
- \end{itemize}
+      Στο σχήμα
+      \href{https://www.geogebra.org/m/p9xmedm8}{\beamergotobutton{Geogebra}}
+      φαίνεται η γραφική παράσταση μιας συνάρτησης $f(x)$. Να υπολογίσετε τα παρακάτω όρια (εφόσον υπάρχουν):
+      \begin{itemize}
+            \item $\lim\limits_{x \to -\infty}{ f(x) }$ \pause
+            \item $\lim\limits_{x \to +\infty}{ f(x) }$ \pause
+            \item $\lim\limits_{x \to -\infty}{ \frac{1}{f(x)-1} }$ \pause
+            \item $\lim\limits_{x \to +\infty}{ \frac{1}{f(x)} }$
+      \end{itemize}
 \end{frame}
 
 \begin{frame}{Εξάσκηση}
- Να βρείτε τα όρια:
- \begin{itemize}
-  \item $\lim\limits_{x \to +\infty}{ 3x^2-x-1 }$ \pause
-  \item $\lim\limits_{x \to +\infty}{ -2x^2+3x-1 }$ \pause
-  \item $\lim\limits_{x \to -\infty}{ -3x^2+5x-1 }$ \pause
-  \item $\lim\limits_{x \to -\infty}{ -2x^3+1 }$
- \end{itemize}
+      Να βρείτε τα όρια:
+      \begin{itemize}
+            \item $\lim\limits_{x \to +\infty}{ 3x^2-x-1 }$ \pause
+            \item $\lim\limits_{x \to +\infty}{ -2x^2+3x-1 }$ \pause
+            \item $\lim\limits_{x \to -\infty}{ -3x^2+5x-1 }$ \pause
+            \item $\lim\limits_{x \to -\infty}{ -2x^3+1 }$
+      \end{itemize}
 \end{frame}
 
 \begin{frame}{Εξάσκηση}
- Να βρείτε τα όρια:
- \begin{itemize}
-  \item $\lim\limits_{x \to +\infty}{ \frac{2x^3-x+1}{3x^3+x^2+1} }$ \pause
-  \item $\lim\limits_{x \to -\infty}{ \frac{x^2-x+2}{2x^3+x+1} }$ \pause
-  \item $\lim\limits_{x \to +\infty}{ \left( \frac{x^2}{x-1}+x  \right)  }$
- \end{itemize}
+      Να βρείτε τα όρια:
+      \begin{itemize}
+            \item $\lim\limits_{x \to +\infty}{ \frac{2x^3-x+1}{3x^3+x^2+1} }$ \pause
+            \item $\lim\limits_{x \to -\infty}{ \frac{x^2-x+2}{2x^3+x+1} }$ \pause
+            \item $\lim\limits_{x \to +\infty}{ \left( \frac{x^2}{x-1}+x  \right)  }$
+      \end{itemize}
 \end{frame}
 
 \begin{frame}{Εξάσκηση}
- Να βρείτε το όριο $\lim\limits_{x \to +\infty}{ \left( 2x-|x^3-x-1| \right)  }$
+      Να βρείτε το όριο $\lim\limits_{x \to +\infty}{ \left( 2x-|x^3-x-1| \right)  }$
 \end{frame}
 
 \begin{frame}{Εξάσκηση}
- Να βρείτε τα όρια:
- \begin{itemize}
-  \item $\lim\limits_{x \to +\infty}{ \sqrt{4x^2-2x+1} }$ \pause
-  \item $\lim\limits_{x \to -\infty}{ \left( \sqrt{x^2+5} -x \right)  }$
- \end{itemize}
+      Να βρείτε τα όρια:
+      \begin{itemize}
+            \item $\lim\limits_{x \to +\infty}{ \sqrt{4x^2-2x+1} }$ \pause
+            \item $\lim\limits_{x \to -\infty}{ \left( \sqrt{x^2+5} -x \right)  }$
+      \end{itemize}
 \end{frame}
 
 \begin{frame}{Εξάσκηση}
- Να βρείτε τα όρια:
- \begin{itemize}
-  \item $\lim\limits_{x \to +\infty}{ \left( \sqrt{4x^2+2x+1}-2x \right)  }$ \pause
-  \item $\lim\limits_{x \to -\infty}{ \left( x+ \sqrt{x^2+1} \right)  }$
- \end{itemize}
+      Να βρείτε τα όρια:
+      \begin{itemize}
+            \item $\lim\limits_{x \to +\infty}{ \left( \sqrt{4x^2+2x+1}-2x \right)  }$ \pause
+            \item $\lim\limits_{x \to -\infty}{ \left( x+ \sqrt{x^2+1} \right)  }$
+      \end{itemize}
 \end{frame}
 
 \begin{frame}{Εξάσκηση}
- Να βρείτε το όριο $\lim\limits_{x \to +\infty}{ \left( (a-1)x^3-2x+1 \right)  }$, για τις διάφορες τιμές του $a\in\mathbb{R}$
+      Να βρείτε το όριο $\lim\limits_{x \to +\infty}{ \left( (a-1)x^3-2x+1 \right)  }$, για τις διάφορες τιμές του $a\in\mathbb{R}$
 \end{frame}
 
 \begin{frame}{Εξάσκηση}
- Να βρείτε τις τιμές του $μ\in\mathbb{R}$, για τις οποίες το $\lim\limits_{x \to +\infty}{ \frac{(μ-1)x^3+μx^2-2}{(μ-2)x^2+3x+1}  }$, είναι πραγματικός αριθμός
+      Να βρείτε τις τιμές του $μ\in\mathbb{R}$, για τις οποίες το $\lim\limits_{x \to +\infty}{ \frac{(μ-1)x^3+μx^2-2}{(μ-2)x^2+3x+1}  }$, είναι πραγματικός αριθμός
 \end{frame}
 
 \begin{frame}{Εξάσκηση}
- Για τις διάφορες πραγματικές τιμές του $μ$, να υπολογίσετε το $\lim\limits_{x \to -\infty}{ \left( \sqrt{4x^2+1}+μx \right)  }$
+      Για τις διάφορες πραγματικές τιμές του $μ$, να υπολογίσετε το $\lim\limits_{x \to -\infty}{ \left( \sqrt{4x^2+1}+μx \right)  }$
 \end{frame}
 
 \begin{frame}{Εξάσκηση}
- Δίνεται η συνάρτηση $f(x)=\frac{x^n+x-1}{x^2+1}$, $n\in\mathbb{N}^*$. Να βρείτε το $\lim\limits_{x \to +\infty}{ f(x) } $ για τις διάφορες τιμές του $n\in\mathbb{N}^*$.
+      Δίνεται η συνάρτηση $f(x)=\frac{x^n+x-1}{x^2+1}$, $n\in\mathbb{N}^*$. Να βρείτε το $\lim\limits_{x \to +\infty}{ f(x) } $ για τις διάφορες τιμές του $n\in\mathbb{N}^*$.
 \end{frame}
 
 \begin{frame}{Εξάσκηση}
- Έστω $f:\mathbb{R}\to\mathbb{R}$ μια συνάρτηση, για την οποία ισχύει $\lim\limits_{x \to +\infty}{ \left( xf\left( \frac{x-1}{x} \right)  \right)  }=2$, να υπολογίσετε το $\lim\limits_{x \to 1}{ \frac{f(x)}{x-1} }$.
+      Έστω $f:\mathbb{R}\to\mathbb{R}$ μια συνάρτηση, για την οποία ισχύει $\lim\limits_{x \to +\infty}{ \left( xf\left( \frac{x-1}{x} \right)  \right)  }=2$, να υπολογίσετε το $\lim\limits_{x \to 1}{ \frac{f(x)}{x-1} }$.
 \end{frame}
 
 \begin{frame}{Εξάσκηση}
- Έστω $f:\mathbb{R}\to\mathbb{R}$ μια συνάρτηση, για την οποία ισχύει $\lim\limits_{x \to 1}{ f(x)  }=-\infty$, να υπολογίσετε τα όρια
- \begin{enumerate}
-  \item $\lim\limits_{x \to 1}{ \frac{2f^2(x)+f(x)-1}{f^3(x)-f(x)-2} }$ \pause
-  \item $\lim\limits_{x \to 1}{ \left( \sqrt{f^2(x)+1}-f(x) \right)  }$
- \end{enumerate}
+      Έστω $f:\mathbb{R}\to\mathbb{R}$ μια συνάρτηση, για την οποία ισχύει $\lim\limits_{x \to 1}{ f(x)  }=-\infty$, να υπολογίσετε τα όρια
+      \begin{enumerate}
+            \item $\lim\limits_{x \to 1}{ \frac{2f^2(x)+f(x)-1}{f^3(x)-f(x)-2} }$ \pause
+            \item $\lim\limits_{x \to 1}{ \left( \sqrt{f^2(x)+1}-f(x) \right)  }$
+      \end{enumerate}
 \end{frame}
 
 \begin{frame}{Εξάσκηση}
- Έστω $f:(-\infty,0)\to\mathbb{R}$ μια συνάρτηση, για την οποία ισχύει $\lim\limits_{x \to -\infty}{ \frac{xf(x)-2x+3}{x+2}  }=1$
- \begin{enumerate}
-  \item να βρείτε τα όρια:
-        \begin{enumerate}
-         \item $\lim\limits_{x \to -\infty}{ f(x) }$ \pause
-         \item $\lim\limits_{x \to -\infty}{ \frac{3x^2f(x)-x^2+1}{xf(x)+3}  }$
-        \end{enumerate}
-  \item Αν επιπλέον ισχύει $f\left( (-\infty,0) \right)=(3,+\infty) $, να βρείτε το $\lim\limits_{x \to -\infty}{ \frac{x}{f(x)-3} }$
- \end{enumerate}
+      Έστω $f:(-\infty,0)\to\mathbb{R}$ μια συνάρτηση, για την οποία ισχύει $\lim\limits_{x \to -\infty}{ \frac{xf(x)-2x+3}{x+2}  }=1$
+      \begin{enumerate}
+            \item να βρείτε τα όρια:
+                  \begin{enumerate}
+                        \item $\lim\limits_{x \to -\infty}{ f(x) }$ \pause
+                        \item $\lim\limits_{x \to -\infty}{ \frac{3x^2f(x)-x^2+1}{xf(x)+3}  }$
+                  \end{enumerate}
+            \item Αν επιπλέον ισχύει $f\left( (-\infty,0) \right)=(3,+\infty) $, να βρείτε το $\lim\limits_{x \to -\infty}{ \frac{x}{f(x)-3} }$
+      \end{enumerate}
 \end{frame}
 
 \begin{frame}{Εξάσκηση}
- Έστω $f:(0,+\infty)\to\mathbb{R}$ μια συνάρτηση, για την οποία ισχύουν
- $$\lim\limits_{x \to +\infty}{ \frac{f(x)}{x} }=5 \text{ και } \lim\limits_{x \to +\infty}{ (f(x)-5x) }=2$$
- Να βρείτε το $λ\in\mathbb{R}$, ώστε
- $$\lim\limits_{x \to +\infty}{ \frac{3f(x)+λx-2}{xf(x)-5x^2+1} }=3$$
+      Έστω $f:(0,+\infty)\to\mathbb{R}$ μια συνάρτηση, για την οποία ισχύουν
+      $$\lim\limits_{x \to +\infty}{ \frac{f(x)}{x} }=5 \text{ και } \lim\limits_{x \to +\infty}{ (f(x)-5x) }=2$$
+      Να βρείτε το $λ\in\mathbb{R}$, ώστε
+      $$\lim\limits_{x \to +\infty}{ \frac{3f(x)+λx-2}{xf(x)-5x^2+1} }=3$$
 \end{frame}
 
 \begin{frame}{Εξάσκηση}
- Να βρείτε τα όρια:
- \begin{enumerate}
-  \item $\lim\limits_{x \to +\infty}{ ημ\frac{2x-1}{x^2+1} }$ \pause
-  \item $\lim\limits_{x \to +\infty}{ \frac{x}{x^2+1}συνx  }$
- \end{enumerate}
+      Να βρείτε τα όρια:
+      \begin{enumerate}
+            \item $\lim\limits_{x \to +\infty}{ ημ\frac{2x-1}{x^2+1} }$ \pause
+            \item $\lim\limits_{x \to +\infty}{ \frac{x}{x^2+1}συνx  }$
+      \end{enumerate}
 \end{frame}
 
 \begin{frame}{Εξάσκηση}
- Να αποδείξετε ότι:
- \begin{enumerate}
-  \item $\lim\limits_{x \to -\infty}{ xημ\frac{1}{x} }=1$ \pause
-  \item $\lim\limits_{x \to +\infty}{ \frac{ημx}{x}  }=0$  \pause
-  \item $\lim\limits_{x \to +\infty}{ ημx\cdot ημ\frac{1}{x}  }=0$  \pause
-  \item $\lim\limits_{x \to +\infty}{ \frac{x-ημx}{x-1}  }=1$
- \end{enumerate}
+      Να αποδείξετε ότι:
+      \begin{enumerate}
+            \item $\lim\limits_{x \to -\infty}{ xημ\frac{1}{x} }=1$ \pause
+            \item $\lim\limits_{x \to +\infty}{ \frac{ημx}{x}  }=0$  \pause
+            \item $\lim\limits_{x \to +\infty}{ ημx\cdot ημ\frac{1}{x}  }=0$  \pause
+            \item $\lim\limits_{x \to +\infty}{ \frac{x-ημx}{x-1}  }=1$
+      \end{enumerate}
 \end{frame}
 
 \begin{frame}{Εξάσκηση}
- Να βρείτε τα όρια:
- \begin{enumerate}
-  \item $\lim\limits_{x \to +\infty}{ (x+ημx) }$ \pause
-  \item $\lim\limits_{x \to +\infty}{ \frac{x}{2-ημx}  }$
- \end{enumerate}
+      Να βρείτε τα όρια:
+      \begin{enumerate}
+            \item $\lim\limits_{x \to +\infty}{ (x+ημx) }$ \pause
+            \item $\lim\limits_{x \to +\infty}{ \frac{x}{2-ημx}  }$
+      \end{enumerate}
 \end{frame}
 
 \begin{frame}{Εξάσκηση}
- Να βρείτε τα όρια:
- \begin{enumerate}
-  \item $\lim\limits_{x \to +\infty}{ \frac{e^x-2^x+1}{3^x-5^x-2} }$ \pause
-  \item $\lim\limits_{x \to -\infty}{ \frac{3^x-5^x}{3^x-2^x}  }$
- \end{enumerate}
+      Να βρείτε τα όρια:
+      \begin{enumerate}
+            \item $\lim\limits_{x \to +\infty}{ \frac{e^x-2^x+1}{3^x-5^x-2} }$ \pause
+            \item $\lim\limits_{x \to -\infty}{ \frac{3^x-5^x}{3^x-2^x}  }$
+      \end{enumerate}
 \end{frame}
 
 \begin{frame}{Εξάσκηση}
- Να βρείτε το $\lim\limits_{x \to +\infty}{ \frac{2^x-a^x}{2^x+3a^x}  }$, $a>0$
+      Να βρείτε το $\lim\limits_{x \to +\infty}{ \frac{2^x-a^x}{2^x+3a^x}  }$, $a>0$
 \end{frame}
 
 \begin{frame}{Εξάσκηση}
- Να βρείτε τα όρια:
- \begin{enumerate}
-  \item $\lim\limits_{x \to +\infty}{ e^{-x^2+1} }$ \pause
-  \item $\lim\limits_{x \to 0^-}{ e^{-\frac{1}{x}} }$\pause
-  \item $\lim\limits_{x \to 0}{ \frac{1}{e^{x^2}-1}}$
- \end{enumerate}
+      Να βρείτε τα όρια:
+      \begin{enumerate}
+            \item $\lim\limits_{x \to +\infty}{ e^{-x^2+1} }$ \pause
+            \item $\lim\limits_{x \to 0^-}{ e^{-\frac{1}{x}} }$\pause
+            \item $\lim\limits_{x \to 0}{ \frac{1}{e^{x^2}-1}}$
+      \end{enumerate}
 \end{frame}
 
 \begin{frame}{Εξάσκηση}
- Να βρείτε τα όρια:
- \begin{enumerate}
-  \item $\lim\limits_{x \to 0}{ \frac{1}{x}-\ln x }$ \pause
-  \item $\lim\limits_{x \to 0}{ \frac{x}{\ln x} }$\pause
-  \item $\lim\limits_{x \to 1}{ \frac{1+\sqrt{x-1}}{\ln x}}$\pause
-  \item $\lim\limits_{x \to 0}{ \frac{\ln x}{ημx}}$
- \end{enumerate}
+      Να βρείτε τα όρια:
+      \begin{enumerate}
+            \item $\lim\limits_{x \to 0}{ \frac{1}{x}-\ln x }$ \pause
+            \item $\lim\limits_{x \to 0}{ \frac{x}{\ln x} }$\pause
+            \item $\lim\limits_{x \to 1}{ \frac{1+\sqrt{x-1}}{\ln x}}$\pause
+            \item $\lim\limits_{x \to 0}{ \frac{\ln x}{ημx}}$
+      \end{enumerate}
 \end{frame}
 
 \begin{frame}{Εξάσκηση}
- Να βρείτε τα όρια:
- \begin{enumerate}
-  \item $\lim\limits_{x \to +\infty}{\left(    \ln x + e^{-\frac{1}{x}} \right)}$ \pause
-  \item $\lim\limits_{x \to 1}{ \ln\frac{x}{x-1} }$\pause
-  \item $\lim\limits_{x \to +\infty}{\left( \ln (1+e^{2x})-x \right)}$
- \end{enumerate}
+      Να βρείτε τα όρια:
+      \begin{enumerate}
+            \item $\lim\limits_{x \to +\infty}{\left(    \ln x + e^{-\frac{1}{x}} \right)}$ \pause
+            \item $\lim\limits_{x \to 1}{ \ln\frac{x}{x-1} }$\pause
+            \item $\lim\limits_{x \to +\infty}{\left( \ln (1+e^{2x})-x \right)}$
+      \end{enumerate}
 \end{frame}
 
 \begin{frame}{Εξάσκηση}
- Να βρείτε τα όρια:
- \begin{enumerate}
-  \item $\lim\limits_{x \to +\infty}{\left( \ln x+συνx \right)}$ \pause
-  \item $\lim\limits_{x \to +\infty}{ \frac{συνx}{\ln x} }$
- \end{enumerate}
+      Να βρείτε τα όρια:
+      \begin{enumerate}
+            \item $\lim\limits_{x \to +\infty}{\left( \ln x+συνx \right)}$ \pause
+            \item $\lim\limits_{x \to +\infty}{ \frac{συνx}{\ln x} }$
+      \end{enumerate}
 \end{frame}
 
 \begin{frame}{Εξάσκηση}
- Δίνεται η συνάρτηση $f(x)=\ln x + \sqrt{x-1}$ με σύνολο τιμών το $[0,+\infty)$
- \begin{enumerate}
-  \item Να δείξετε ότι η $f$ αντιστρέφεται \pause
-  \item Να βρείτε το $\lim\limits_{x \to +\infty}{ \left( x^2f^{-1}(x) \right)  }$
- \end{enumerate}
+      Δίνεται η συνάρτηση $f(x)=\ln x + \sqrt{x-1}$ με σύνολο τιμών το $[0,+\infty)$
+      \begin{enumerate}
+            \item Να δείξετε ότι η $f$ αντιστρέφεται \pause
+            \item Να βρείτε το $\lim\limits_{x \to +\infty}{ \left( x^2f^{-1}(x) \right)  }$
+      \end{enumerate}
 \end{frame}
 
 \begin{frame}{Εξάσκηση}
- Δίνεται η συνάρτηση $f(x)=x^x$, $x>0$. Να βρείτε το $\lim\limits_{x \to +\infty}{ f(x)  }$
+      Δίνεται η συνάρτηση $f(x)=x^x$, $x>0$. Να βρείτε το $\lim\limits_{x \to +\infty}{ f(x)  }$
 \end{frame}
 
 \section{}
 \begin{frame}
- Στο moodle θα βρείτε τις ασκήσεις που πρέπει να κάνετε, όπως και αυτή τη παρουσίαση
+      Στο moodle θα βρείτε τις ασκήσεις που πρέπει να κάνετε, όπως και αυτή τη παρουσίαση
 \end{frame}
 
 \end{document}

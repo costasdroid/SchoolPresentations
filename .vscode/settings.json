@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "latex-workshop.latex.recipes": [
 
         {
@@ -206,4 +207,8 @@
         }
     ],
     "editor.formatOnSave": true
+=======
+    "latex-workshop.latex.autoClean.run": "onSucceeded",
+    "latex-workshop.latex.recipe.default": "latexmk (xelatex)"
+>>>>>>> 27c7d4e96a98e5c36081521bff033b9d061ddf57
 }
