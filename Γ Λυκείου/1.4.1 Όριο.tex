@@ -49,33 +49,33 @@
 \begin{frame}{Όριο}
       \begin{block}{Το αστέρι μας}
             \centering
-            $\lim\limits_{x \to x_0}{ f(x) }$ \pause
+            $\lim\limits_{x \to x_0}{ f(x) }$
       \end{block}
 
-      Διαβάζεται ως:
+      \onslide<2->Διαβάζεται ως:
       \begin{itemize}
-            \item Το όριο της εφ όταν το χι τείνει στο χιμηδεν \pause
-            \item Το όριο της $f$ στο $x_0$ \pause
-            \item Όταν το $x$ πάει στο $x_0$, πού πάει η $f$...
+            \item<2-> Το όριο της εφ όταν το χι τείνει στο χιμηδεν
+            \item<3-> Το όριο της $f$ στο $x_0$
+            \item<4-> Όταν το $x$ πάει στο $x_0$, πού πάει η $f$...
       \end{itemize}
 \end{frame}
 
 \begin{frame}{Ξεπηδούν οι απορίες}
       \begin{itemize}
-            \item Τι σημαίνει πλησιάζω στο $x_0$ \pause
+            \item<1-> Τι σημαίνει πλησιάζω στο $x_0$
                   \begin{itemize}
-                        \item Δημιουργήστε την γραμμή των πραγματικών αριθμών και πλησιάστε στο $x=2$ \pause
-                        \item Με πόσους τρόπους μπορείτε να πλησιάσετε
+                        \item<2-> Δημιουργήστε την γραμμή των πραγματικών αριθμών και πλησιάστε στο $x=2$
+                        \item<3-> Με πόσους τρόπους μπορείτε να πλησιάσετε
                   \end{itemize}
-            \item Τι σημαίνει η $f$ πλησιάζει στο $l$ \pause
-            \item Τι σημαίνει οσοδήποτε κοντά
+            \item<4-> Τι σημαίνει η $f$ πλησιάζει στο $l$
+            \item<5-> Τι σημαίνει οσοδήποτε κοντά
       \end{itemize}
 \end{frame}
 
 \begin{frame}{Ας γίνουμε νονοί}
       \begin{block}{Αριστερό πλευρικό όριο}
             \begin{center}
-                  $\lim\limits_{x \to x_0^-}{ f(x) }$ \pause
+                  $\lim\limits_{x \to x_0^-}{ f(x) }$
             \end{center}
 
             Για μια συνάρτηση που ορίζεται σε διάστημα της μορφής $(α,x_0)$ για κατάλληλο $α$
@@ -85,12 +85,12 @@
 \begin{frame}{Ας γίνουμε νονοί}
       \begin{block}{Αριστερό πλευρικό όριο}
             \begin{center}
-                  $\lim\limits_{x \to x_0^-}{ f(x) }$ \pause
+                  $\lim\limits_{x \to x_0^-}{ f(x) }$
             \end{center}
       \end{block}
       \begin{block}{Δεξί πλευρικό όριο}
             \begin{center}
-                  $\lim\limits_{x \to x_0^+}{ f(x) }$ \pause
+                  $\lim\limits_{x \to x_0^+}{ f(x) }$
             \end{center}
 
             Για μια συνάρτηση που ορίζεται σε διάστημα της μορφής $(x_0,α)$ για κατάλληλο $α$
@@ -100,7 +100,7 @@
 \begin{frame}{Άρα}
       \begin{block}{Ύπαρξη ορίου}
             \begin{equation*}
-                  \lim\limits_{x \to x_0^-}{ f(x) }=λ\iff
+                  \lim\limits_{x \to x_0}{ f(x) }=λ\iff
                   \begin{cases}
                         \lim\limits_{x \to x_0^-}{ f(x) }=λ\in\mathbb{R} \\
                         \lim\limits_{x \to x_0^+}{ f(x) }=λ\in\mathbb{R} \\
@@ -111,10 +111,10 @@
 \end{frame}
 
 \begin{frame}{Περιπτωσάρα}
-      Αν $f(x)=\sqrt{x}$?, ή $f(x)=\ln (-x)$? \pause
+      Αν $f(x)=\sqrt{x}$?, ή $f(x)=\ln (-x)$?\pause
       \begin{block}{ }
             Αν μια συνάρτηση ορίζεται μόνο σε διάστημα της μορφής $(α,x_0)$ τότε $\lim\limits_{x \to x_0}{ f(x) }=\lim\limits_{x \to x_0^-}{ f(x) }$
-      \end{block} \pause
+      \end{block}\pause
       Όμοια για $\lim\limits_{x \to x_0}{ f(x) }=\lim\limits_{x \to x_0^+}{ f(x) }$
 \end{frame}
 
@@ -125,27 +125,28 @@
             \item $\lim\limits_{x \to x_0}{ f(x) }=k\iff\lim\limits_{h \to 0}{ f(h+x_0) }=k$
       \end{itemize}
 \end{frame}
+
 \begin{frame}{Άρα τι θα κάνουμε?}
       \begin{itemize}
-            \item Θα περιγράφουμε \pause
-            \item Θα υπολογίζουμε (χωρίς να ξέρουμε γιατί) \pause
-            \item Θα χρησιμοποιούμε ιδιότητες και τεχνικές \pause
-            \item αλλά και πάλι δεν θα καταλαβαίνουμε
+            \item Θα περιγράφουμε
+                  \item<2->Θα υπολογίζουμε (χωρίς να ξέρουμε γιατί)
+            \item<3-> Θα χρησιμοποιούμε ιδιότητες και τεχνικές
+            \item<4-> αλλά και πάλι δεν θα καταλαβαίνουμε
       \end{itemize}
-      Ουσιαστικά τα όρια θα τα υπολογίζουμε εντελώς μηχανικά
+      \onslide<5->Ουσιαστικά τα όρια θα τα υπολογίζουμε εντελώς μηχανικά
 \end{frame}
 
 \begin{frame}{Επίδειξη}
-      Στο διάλλειμα όποιος θέλει μπορεί να μάθει τον υπέρτατο ορισμό του ορίου\pause. Ιδού:
+      Στο διάλλειμα όποιος θέλει μπορεί να μάθει τον υπέρτατο ορισμό του ορίου. Ιδού:
       \begin{block}{Ορισμός ορίου}
-            Έστω μια συνάρτηση ορισμένη σε διάστημα της μορφής $(α,x_0)\cup (x_0,β)$. Λέμε ότι η συνάρτηση τείνει στο $λ\in\mathbb{R}$ καθώς το $x$ τείνει στο $x_0$ όταν: \pause
+            Έστω μια συνάρτηση ορισμένη σε διάστημα της μορφής $(α,x_0)\cup (x_0,β)$. Λέμε ότι η συνάρτηση τείνει στο $λ\in\mathbb{R}$ καθώς το $x$ τείνει στο $x_0$ όταν:
             \newline
             \newline
             Για κάθε $\epsilon>0$ υπάρχει $δ>0$ ώστε, για κάθε $x\in (α,x_0)\cup (x_0,β)$ με $0<|x-x_0|<δ$ να ισχύει $|f(x)-λ|<\epsilon$
       \end{block}
 
       \begin{tikzpicture}[remember picture, overlay]
-            \draw node at (current page.center) {\includegraphics[width=.8\textwidth]{images/6r7k74}};
+            \node[yshift=-2cm,opacity=0.7] at (current page.center) {\includegraphics[width=.8\textwidth]{images/6r7k74}};
       \end{tikzpicture}
 \end{frame}
 

@@ -1,6 +1,6 @@
 {
-<<<<<<< HEAD
     "latex-workshop.latex.recipes": [
+
 
         {
             "name": "xelatex",
@@ -73,6 +73,19 @@
     "latex-workshop.latex.autoClean.run": "onSucceeded",
     "latex-workshop.latex.tools": [
 
+        {
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": [
+                // "-synctex=1",
+                // "-interaction=nonstopmode",
+                // "-file-line-error",
+                "-pdf",
+                "-outdir=%OUTDIR%",
+                "%DOC%"
+            ],
+            "env": {}
+        }, 
         {
             "name": "latexmk",
             "command": "latexmk",
@@ -206,9 +219,6 @@
             "env": {}
         }
     ],
-    "editor.formatOnSave": true
-=======
-    "latex-workshop.latex.autoClean.run": "onSucceeded",
-    "latex-workshop.latex.recipe.default": "latexmk (xelatex)"
->>>>>>> 27c7d4e96a98e5c36081521bff033b9d061ddf57
+    "editor.formatOnSave": true,
+    "latex-workshop.latex.recipe.default": "xelatex"
 }
