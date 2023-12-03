@@ -49,10 +49,10 @@
       "command": "xelatex",
       "args": [
         // "-synctex=1",
-        // "-interaction=nonstopmode",
-        // "-file-line-error",
+        "-interaction=nonstopmode",
+        "-file-line-error",
         "-pdf",
-        "-outdir=%OUTDIR%",
+        // "-outdir=%OUTDIR%",
         "%DOC%"
       ],
       "env": {}
@@ -169,5 +169,6 @@
     }
   ],
   "editor.formatOnSave": true,
-  "latex-workshop.latex.recipe.default": "xelatex"
+  "latex-workshop.latex.recipe.default": "xelatex",
+  "latex-workshop.latex.clean.subfolder.enabled": true
 }
