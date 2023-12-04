@@ -33,150 +33,150 @@
 \begin{document}
 
 \begin{frame}
- \titlepage
+    \titlepage
 \end{frame}
 
 \section{Θεωρία}
 \begin{frame}{Ας τελειώσουμε με τα όρια ΕΠΙΤΕΛΟΥΣ}
- Αφήσαμε κάποια όρια
- \begin{itemize}
-  \item $\dfrac{0}{0}$
-  \item $\dfrac{\pm\infty}{\pm\infty}$
-  \item $0\cdot \infty$
-  \item $1^{+\infty}$
-  \item $(+\infty)^0$
-  \item $0^0$
- \end{itemize}
+    Αφήσαμε κάποια όρια
+    \begin{itemize}
+        \item $\dfrac{0}{0}$
+        \item $\dfrac{\pm\infty}{\pm\infty}$
+        \item $0\cdot \infty$
+        \item $1^{+\infty}$
+        \item $(+\infty)^0$
+        \item $0^0$
+    \end{itemize}
 \end{frame}
 
 \begin{frame}{Ένας για όλους και όλοι για έναν}
- Θα ήταν τέλεια αν κατέληγαν όλες οι περιπτώσεις σε μία!!!!
- \begin{itemize}
-  \item<1-> $0\cdot \infty$ \onslide<2->$\implies \dfrac{0}{0}$ ή $\dfrac{\pm\infty}{\pm\infty}$
-  \item<3-> $1^{+\infty}$ \onslide<4-> $\implies e^{+\infty\ln 1}=e^{+\infty\cdot 0}$
-  \item<5-> $(+\infty)^0$ \onslide<6-> $\implies e^{0\ln\infty}=e^{+\infty\cdot 0}$
-  \item<7-> $0^0$ \onslide<8-> $\implies e^{0\ln 0}=e^{+\infty\cdot 0}$
- \end{itemize}
+    Θα ήταν τέλεια αν κατέληγαν όλες οι περιπτώσεις σε μία!!!!
+    \begin{itemize}
+        \item<1-> $0\cdot \infty$ \onslide<2->$\implies \dfrac{0}{0}$ ή $\dfrac{\pm\infty}{\pm\infty}$
+        \item<3-> $1^{+\infty}$ \onslide<4-> $\implies e^{+\infty\ln 1}=e^{+\infty\cdot 0}$
+        \item<5-> $(+\infty)^0$ \onslide<6-> $\implies e^{0\ln\infty}=e^{+\infty\cdot 0}$
+        \item<7-> $0^0$ \onslide<8-> $\implies e^{0\ln 0}=e^{+\infty\cdot 0}$
+    \end{itemize}
 \end{frame}
 
 \begin{frame}{Ορισμός}
- \begin{block}{Κανόνας De L' Hospital}
-  Αν $\lim\limits_{x \to x_0}{ \dfrac{f(x)}{g(x)} }=\dfrac{\pm\infty}{\pm\infty}$ ή $\dfrac{0}{0}$, με $x_0\in\bar{\mathbb{R}}$ τότε αν
-  $$\lim\limits_{x \to x_0}{ \dfrac{f'(x)}{g'(x)} }=k\in\bar{\mathbb{R}}$$
-  όπου $\bar{\mathbb{R}}=\mathbb{R}\cup \{-\infty,+\infty\}$ τότε
-  $$\lim\limits_{x \to x_0}{ \dfrac{f(x)}{g(x)} }=k$$
- \end{block}
+    \begin{block}{Κανόνας De L' Hospital}
+        Αν $\lim\limits_{x \to x_0}{ \dfrac{f(x)}{g(x)} }=\dfrac{\pm\infty}{\pm\infty}$ ή $\dfrac{0}{0}$, με $x_0\in\bar{\mathbb{R}}$ τότε αν
+        $$\lim\limits_{x \to x_0}{ \dfrac{f'(x)}{g'(x)} }=k\in\bar{\mathbb{R}}$$
+        όπου $\bar{\mathbb{R}}=\mathbb{R}\cup \{-\infty,+\infty\}$ τότε
+        $$\lim\limits_{x \to x_0}{ \dfrac{f(x)}{g(x)} }=k$$
+    \end{block}
 \end{frame}
 
 \begin{frame}{Παρατηρήσεις}
 
- Ο κανόνας De L' Hospital δεν είναι απλό παιχνίδι!
+    Ο κανόνας De L' Hospital δεν είναι απλό παιχνίδι!
 
- \begin{itemize}
-  \item<1-> Έχει προϋποθέσεις που απλά
-  \item<2-> Τι πρέπει να ισχύει για τις ρητές συναρτήσεις ώστε να έχουν πλάγιες ασύμπτωτες?
-  \item<3-> Ποιές συναρτήσεις έχουν κατακόρυφες ασύμπτωτες?
-  \item<4-> Πού ψάχνουμε κατακόρυφες ασύμπτωτες?
- \end{itemize}
+    \begin{itemize}
+        \item<1-> Έχει προϋποθέσεις που απλά
+        \item<2-> Τι πρέπει να ισχύει για τις ρητές συναρτήσεις ώστε να έχουν πλάγιες ασύμπτωτες?
+        \item<3-> Ποιές συναρτήσεις έχουν κατακόρυφες ασύμπτωτες?
+        \item<4-> Πού ψάχνουμε κατακόρυφες ασύμπτωτες?
+    \end{itemize}
 
 \end{frame}
 
 \section{Ασκήσεις}
 \subsection{Άσκηση 1}
 \begin{frame}[label=Άσκηση1,t]{Εξάσκηση 1}
- Να υπολογιστούν τα παρακάτω όρια:
- \begin{enumerate}
-  \item<1-> $\lim\limits_{x \to 1}{ \dfrac{x^7+x-2}{x^2-x} }$
-  \item<2-> $\lim\limits_{x \to 0}{ \dfrac{e^x-1}{x} }$
-  \item<3-> $\lim\limits_{x \to 1}{ \dfrac{\ln x}{x-1} }$
-  \item<4-> $\lim\limits_{x \to 0}{ \dfrac{x-ημx}{1-συνx} }$
- \end{enumerate}
+    Να υπολογιστούν τα παρακάτω όρια:
+    \begin{enumerate}
+        \item<1-> $\lim\limits_{x \to 1}{ \dfrac{x^7+x-2}{x^2-x} }$
+        \item<2-> $\lim\limits_{x \to 0}{ \dfrac{e^x-1}{x} }$
+        \item<3-> $\lim\limits_{x \to 1}{ \dfrac{\ln x}{x-1} }$
+        \item<4-> $\lim\limits_{x \to 0}{ \dfrac{x-ημx}{1-συνx} }$
+    \end{enumerate}
 
- % \hyperlink{Λύση1}{\beamerbutton{Λύση}}
+    % \hyperlink{Λύση1}{\beamerbutton{Λύση}}
 \end{frame}
 
 \subsection{Άσκηση 2}
 \begin{frame}[label=Άσκηση2,t]{Εξάσκηση 2}
- Να υπολογίσετε τα παρακάτω όρια:
- \begin{enumerate}
-  \item<1-> $\lim\limits_{x \to +\infty}{ \dfrac{\ln x}{x} }$
-  \item<2-> $\lim\limits_{x \to +\infty}{ \dfrac{e^x}{x^2} }$
- \end{enumerate}
+    Να υπολογίσετε τα παρακάτω όρια:
+    \begin{enumerate}
+        \item<1-> $\lim\limits_{x \to +\infty}{ \dfrac{\ln x}{x} }$
+        \item<2-> $\lim\limits_{x \to +\infty}{ \dfrac{e^x}{x^2} }$
+    \end{enumerate}
 
- % \hyperlink{Λύση2}{\beamerbutton{Λύση}}
+    % \hyperlink{Λύση2}{\beamerbutton{Λύση}}
 \end{frame}
 
 \subsection{Άσκηση 3}
 \begin{frame}[label=Άσκηση3,t]{Εξάσκηση 3}
- Να υπολογίσετε τα παρακάτω όρια:
- \begin{enumerate}
-  \item<1-> $\lim\limits_{x \to +\infty}{ (x-\ln x-e^x) }$
-  \item<2-> $\lim\limits_{x \to +\infty}{ (x-\ln x-1) }$
-  \item<3-> $\lim\limits_{x \to +\infty}{ \dfrac{e^x-3^x}{x-\ln x} }$
- \end{enumerate}
+    Να υπολογίσετε τα παρακάτω όρια:
+    \begin{enumerate}
+        \item<1-> $\lim\limits_{x \to +\infty}{ (x-\ln x-e^x) }$
+        \item<2-> $\lim\limits_{x \to +\infty}{ (x-\ln x-1) }$
+        \item<3-> $\lim\limits_{x \to +\infty}{ \dfrac{e^x-3^x}{x-\ln x} }$
+    \end{enumerate}
 
- % \hyperlink{Λύση3}{\beamerbutton{Λύση}}
+    % \hyperlink{Λύση3}{\beamerbutton{Λύση}}
 \end{frame}
 
 \subsection{Άσκηση 4}
 \begin{frame}[label=Άσκηση4,t]{Εξάσκηση 4}
- Να βρείτε τα όρια:
- \begin{enumerate}
-  \item<1-> $\lim\limits_{x \to +\infty}{ (x-\ln (1+e^x)) }$
-  \item<2-> $\lim\limits_{x \to 1}{ \left( \dfrac{1}{\ln x} - \dfrac{1}{x-1} \right)  }$
- \end{enumerate}
+    Να βρείτε τα όρια:
+    \begin{enumerate}
+        \item<1-> $\lim\limits_{x \to +\infty}{ (x-\ln (1+e^x)) }$
+        \item<2-> $\lim\limits_{x \to 1}{ \left( \dfrac{1}{\ln x} - \dfrac{1}{x-1} \right)  }$
+    \end{enumerate}
 
- % \hyperlink{Λύση4}{\beamerbutton{Λύση}}
+    % \hyperlink{Λύση4}{\beamerbutton{Λύση}}
 \end{frame}
 
 \subsection{Άσκηση 5}
 \begin{frame}[label=Άσκηση5,t]{Εξάσκηση 5}
- Να υπολογίσετε τα παρακάτω όρια:
- \begin{enumerate}
-  \item<1-> $\lim\limits_{x \to -\infty}{ (xe^x) }$
-  \item<2-> $\lim\limits_{x \to -0}{ (x\ln x) }$
-  \item<3-> $\lim\limits_{x \to 0^+}{ \left( xe^{\frac{1}{x}} \right)  }$
-  \item<4-> $\lim\limits_{x \to -\infty}{ \dfrac{1}{xe^{x^3}} }$
- \end{enumerate}
+    Να υπολογίσετε τα παρακάτω όρια:
+    \begin{enumerate}
+        \item<1-> $\lim\limits_{x \to -\infty}{ (xe^x) }$
+        \item<2-> $\lim\limits_{x \to -0}{ (x\ln x) }$
+        \item<3-> $\lim\limits_{x \to 0^+}{ \left( xe^{\frac{1}{x}} \right)  }$
+        \item<4-> $\lim\limits_{x \to -\infty}{ \dfrac{1}{xe^{x^3}} }$
+    \end{enumerate}
 
- % \hyperlink{Λύση5}{\beamerbutton{Λύση}}
+    % \hyperlink{Λύση5}{\beamerbutton{Λύση}}
 \end{frame}
 
 \subsection{Άσκηση 6}
 \begin{frame}[label=Άσκηση6,t]{Εξάσκηση 6}
- Να υπολογίσετε τα παρακάτω όρια:
- \begin{enumerate}
-  \item<1-> $\lim\limits_{x \to 0^-}{ x^x }$
-  \item<2-> $\lim\limits_{x \to +\infty}{ \left( 1+2x \right)^{\frac{1}{x}}  }$
- \end{enumerate}
+    Να υπολογίσετε τα παρακάτω όρια:
+    \begin{enumerate}
+        \item<1-> $\lim\limits_{x \to 0^-}{ x^x }$
+        \item<2-> $\lim\limits_{x \to +\infty}{ \left( 1+2x \right)^{\frac{1}{x}}  }$
+    \end{enumerate}
 
- % \hyperlink{Λύση6}{\beamerbutton{Λύση}}
+    % \hyperlink{Λύση6}{\beamerbutton{Λύση}}
 \end{frame}
 
 \subsection{Άσκηση 7}
 \begin{frame}[label=Άσκηση7,t]{Εξάσκηση 7}
- Έστω η συνάρτηση $f(x)=\dfrac{x^2+x+2a}{x-a^2}$. Να βρείτε τις τιμές του $α\in\mathbb{R}$, για τις οποίες η ευθεία $ε:x=1$ είναι ασύμπτωτη της $C_f$
+    Έστω η συνάρτηση $f(x)=\dfrac{x^2+x+2a}{x-a^2}$. Να βρείτε τις τιμές του $α\in\mathbb{R}$, για τις οποίες η ευθεία $ε:x=1$ είναι ασύμπτωτη της $C_f$
 
- %\hyperlink{Λύση7}{\beamerbutton{Λύση}}
+    %\hyperlink{Λύση7}{\beamerbutton{Λύση}}
 \end{frame}
 
 \subsection{Άσκηση 8}
 \begin{frame}[label=Άσκηση8,t]{Εξάσκηση 8}
- Δίνεται η συνάρτηση $f(x)=\dfrac{a^2x^n+5x+1}{x^2+1}$. Να βρείτε τις τιμές των $a\in\mathbb{R}^*$ και $n\in\mathbb{N}-{0,1}$ για τις οποίες η ευθεία $ε:y=1$ είναι οριζόντια ασύμπτωτη της $C_f$ στο $+\infty$
+    Δίνεται η συνάρτηση $f(x)=\dfrac{a^2x^n+5x+1}{x^2+1}$. Να βρείτε τις τιμές των $a\in\mathbb{R}^*$ και $n\in\mathbb{N}-{0,1}$ για τις οποίες η ευθεία $ε:y=1$ είναι οριζόντια ασύμπτωτη της $C_f$ στο $+\infty$
 
- %\hyperlink{Λύση8}{\beamerbutton{Λύση}}
+    %\hyperlink{Λύση8}{\beamerbutton{Λύση}}
 \end{frame}
 
 \subsection{Άσκηση 9}
 \begin{frame}[label=Άσκηση9,t]{Εξάσκηση 9}
- Να βρείτε τις τιμές των $α$ και $β\in\mathbb{R}$, ώστε
- $$\lim\limits_{x \to +\infty}{ \left(   \dfrac{αx^2+βx+3}{x-1}-x \right)}=2$$
+    Να βρείτε τις τιμές των $α$ και $β\in\mathbb{R}$, ώστε
+    $$\lim\limits_{x \to +\infty}{ \left(   \dfrac{αx^2+βx+3}{x-1}-x \right)}=2$$
 
- %\hyperlink{Λύση9}{\beamerbutton{Λύση}}
+    %\hyperlink{Λύση9}{\beamerbutton{Λύση}}
 \end{frame}
 
 \begin{frame}
- Στο moodle θα βρείτε τις ασκήσεις που πρέπει να κάνετε, όπως και αυτή τη παρουσίαση
+    Στο moodle θα βρείτε τις ασκήσεις που πρέπει να κάνετε, όπως και αυτή τη παρουσίαση
 \end{frame}
 
 
@@ -184,18 +184,18 @@
 
 \section{Αποδείξεις}
 \begin{frame}[label=Απόδειξη1]{Απόδειξη σημείο καμπής}
- \onslide<1-> Έστω ότι η $f$ έχει σημείο καμπής στο $x_0$ με κυρτή αριστερά και κοίλη δεξιά του σημείου.
+    \onslide<1-> Έστω ότι η $f$ έχει σημείο καμπής στο $x_0$ με κυρτή αριστερά και κοίλη δεξιά του σημείου.
 
- Άρα $f'(x)< f'(x_0)$ για κάθε $x<x_0$ και $f'(x)<f'(x_0)$ για κάθε $x>x_0$
+    Άρα $f'(x)< f'(x_0)$ για κάθε $x<x_0$ και $f'(x)<f'(x_0)$ για κάθε $x>x_0$
 
- \onslide<2-> Αφού $f'$ παραγωγίσιμη, θα υπάρχει το όριο
+    \onslide<2-> Αφού $f'$ παραγωγίσιμη, θα υπάρχει το όριο
 
- $$f''(x_0)=\lim\limits_{x \to x_0^-}{ \dfrac{f'(x)-f'(x_0)}{x-x_0} }\ge 0$$
+    $$f''(x_0)=\lim\limits_{x \to x_0^-}{ \dfrac{f'(x)-f'(x_0)}{x-x_0} }\ge 0$$
 
- \onslide<3-> όμοια
- $$f''(x_0)=\lim\limits_{x \to x_0^+}{ \dfrac{f'(x)-f'(x_0)}{x-x_0} } \le 0$$
+    \onslide<3-> όμοια
+    $$f''(x_0)=\lim\limits_{x \to x_0^+}{ \dfrac{f'(x)-f'(x_0)}{x-x_0} } \le 0$$
 
- \onslide<4-> Άρα $f''(x_0)=0$ \hyperlink{Θεώρημα1}{\beamerbutton{Πίσω στη θεωρία}}
+    \onslide<4-> Άρα $f''(x_0)=0$ \hyperlink{Θεώρημα1}{\beamerbutton{Πίσω στη θεωρία}}
 \end{frame}
 
 
