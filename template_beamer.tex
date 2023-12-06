@@ -1,0 +1,110 @@
+\documentclass[greek]{beamer}
+\usepackage{amsmath,amsthm} % needed for mathematics
+\usepackage{unicode-math}
+\usepackage{xltxtra}
+\usepackage{graphicx}
+\usetheme{CambridgeUS}
+\usecolortheme{seagull}
+\usepackage{hyperref}
+\usepackage{ulem} % underline words package
+\usepackage{xgreek}
+
+\usepackage{pgfpages} 
+\usepackage{tikz} % package for shapes and more
+%\setbeameroption{show notes on second screen}
+%\setbeameroption{show only notes}
+
+\setsansfont{Calibri} % it is said that Calibri is the proper font for reading difficulties
+
+\usepackage{multicol} % package for two or more columns
+
+\usepackage{appendixnumberbeamer} % remove page numbering in appendix
+
+\usepackage{polynom} % polynomial divisions package
+
+\usepackage{pgffor} % macros
+
+\setbeamercovered{highly dynamic}
+\setbeamertemplate{navigation symbols}{}
+
+\newcounter{askisi} % enviroment for exercises
+\newenvironment{askisi}
+{
+  \refstepcounter{askisi}\par
+  \subsection{Άσκηση \theaskisi}
+  \begin{frame}[label=Άσκηση\theaskisi,t]{Εξάσκηση \theaskisi}
+}{
+  \end{frame}
+}
+
+\newcounter{lisi} % enviroment for solutions
+\newenvironment{lisi}
+{
+  \refstepcounter{lisi}\par
+  \subsection{Άσκηση \thelisi}
+  \begin{frame}[label=Λύση\thelisi,t]{Λύση \thelisi}
+}{
+  \end{frame}
+}
+
+\title{Τίτλος}
+\subtitle{Υπότιτλος}
+\author[Λόλας]{Κωνσταντίνος Λόλας}
+\date{}
+
+\begin{document}
+
+\begin{frame}
+        \titlepage
+\end{frame}
+
+\section{Θεωρία}
+\begin{frame}{Το μεγάλο ταξίδι}
+        \begin{itemize}
+                \item<1-> Ορισμός
+                \item<2-> Εξίσωση
+                \item<3-> Γενική Εξίσωση, to rule them all!
+                \item<4-> Ελάχιστος συνδυασμός με διανύσματα, shame!
+                \item<5-> Εύρεση εξίσωσης από κάθε περίπτωση, brace yourselfs!
+                \item<6-> 2 νέοι τύποι (απόστασης και εμβαδού)
+        \end{itemize}
+\end{frame}
+
+\begin{frame}[noframenumbering]
+        Στο moodle θα βρείτε τις ασκήσεις που πρέπει να κάνετε, όπως και αυτή τη παρουσίαση
+\end{frame}
+
+\section{Ασκήσεις}
+
+\begin{frame}[noframenumbering]
+        \vfill
+        \centering
+        \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+                \usebeamerfont{title}Ασκήσεις
+        \end{beamercolorbox}
+        \vfill
+\end{frame}
+
+\begin{askisi}
+
+\end{askisi}
+
+% \appendix
+% \section{Λύσεις Ασκήσεων}
+% \begin{frame}
+%   \tableofcontents
+% \end{frame}
+
+% \begin{lisi} Με θεώρημα ενδιαμέσων τιμών. Η συνάρτηση είναι συνεχής στο $[10,11]$ με $f(10)=1024$ και $f(11)=2048$. Αφού $2023\in (1024,2048)$ υπάρχει $x_0$...
+
+%   \hyperlink{Άσκηση1}{\beamerbutton{Πίσω στην άσκηση}}
+% \end{lisi}
+
+
+% regex
+% (\\subsection\{Άσκηση)().*\n.*
+% \begin{askisi}
+%   \end{frame}
+% \end{askisi}
+
+\end{document}

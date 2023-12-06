@@ -42,17 +42,17 @@
     }
   ],
   "latex-workshop.latex.autoBuild.run": "onSave",
-  "latex-workshop.latex.autoClean.run": "onBuilt",
+  "latex-workshop.latex.autoClean.run": "onSucceeded",
   "latex-workshop.latex.tools": [
     {
       "name": "xelatex",
       "command": "xelatex",
       "args": [
         // "-synctex=1",
-        // "-interaction=nonstopmode",
-        // "-file-line-error",
+        "-interaction=nonstopmode",
+        "-file-line-error",
         "-pdf",
-        "-outdir=%OUTDIR%",
+        // "-outdir=%OUTDIR%",
         "%DOC%"
       ],
       "env": {}
@@ -169,5 +169,17 @@
     }
   ],
   "editor.formatOnSave": true,
-  "latex-workshop.latex.recipe.default": "xelatex"
+  "latex-workshop.latex.recipe.default": "xelatex",
+  "latex-workshop.latex.clean.subfolder.enabled": true,
+  "editor.wordWrap": "on",
+  "latex-workshop.mathpreviewpanel.cursor.enabled": false,
+  "latex-workshop.view.outline.sections": [
+    "part",
+    "chapter",
+    "section",
+    "subsection",
+    "subsubsection",
+    "askisi"
+  ]
+  // "editor.indentSize": "tabSize"
 }

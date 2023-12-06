@@ -1,29 +1,51 @@
 \documentclass[greek]{beamer}
-%\usepackage{fontspec}
-\usepackage{amsmath,amsthm}
+\usepackage{amsmath,amsthm} % needed for mathematics
 \usepackage{unicode-math}
 \usepackage{xltxtra}
 \usepackage{graphicx}
 \usetheme{CambridgeUS}
 \usecolortheme{seagull}
 \usepackage{hyperref}
-\usepackage{ulem}
+\usepackage{ulem} % underline words package
 \usepackage{xgreek}
 
-\usepackage{pgfpages}
-\usepackage{tikz}
-\usepackage{tkz-tab}
+\usepackage{pgfpages} 
+\usepackage{tikz} % package for shapes and more
 %\setbeameroption{show notes on second screen}
 %\setbeameroption{show only notes}
 
-\setsansfont{Noto Serif}
+\setsansfont{Calibri} % it is said that Calibri is the proper font for reading difficulties
 
-\usepackage{multicol}
+\usepackage{multicol} % package for two or more columns
 
-\usepackage{appendixnumberbeamer}
+\usepackage{appendixnumberbeamer} % remove page numbering in appendix
 
-\setbeamercovered{transparent}
-\beamertemplatenavigationsymbolsempty
+\usepackage{polynom} % polynomial divisions package
+
+\usepackage{pgffor} % macros
+
+\setbeamercovered{highly dynamic}
+\setbeamertemplate{navigation symbols}{}
+
+\newcounter{askisi} % enviroment for exercises
+\newenvironment{askisi}
+{
+ \refstepcounter{askisi}\par
+ \subsection{Άσκηση \theaskisi}
+ \begin{frame}[label=Άσκηση\theaskisi,t]{Εξάσκηση \theaskisi}
+}{
+ \end{frame}
+}
+ 
+\newcounter{lisi} % enviroment for solutions
+\newenvironment{lisi}
+{
+ \refstepcounter{lisi}\par
+ \subsection{Άσκηση \thelisi}
+ \begin{frame}[label=Λύση\thelisi,t]{Λύση \thelisi}
+}{
+ \end{frame} 
+}
 
 \title{Ευθεία}
 \subtitle{Εξίσωση Ευθείας}
@@ -33,436 +55,310 @@
 \begin{document}
 
 \begin{frame}
- \titlepage
+  \titlepage
 \end{frame}
 
 \section{Θεωρία}
+
 \begin{frame}{Το μεγάλο ταξίδι}
- \begin{itemize}
-  \item<1-> Ορισμός
-  \item<2-> Εξίσωση
-  \item<3-> Γενική Εξίσωση, to rule them all!
-  \item<4-> Ελάχιστος συνδυασμός με διανύσματα, shame!
-  \item<5-> Εύρεση εξίσωσης από κάθε περίπτωση, brace yourselfs!
-  \item<6-> 2 νέοι τύποι (απόστασης και εμβαδού)
- \end{itemize}
+  \begin{itemize}[<+->]
+    \item Ορισμός
+    \item Εξίσωση
+    \item Γενική Εξίσωση, to rule them all!
+    \item Ελάχιστος συνδυασμός με διανύσματα, shame!
+    \item Εύρεση εξίσωσης από κάθε περίπτωση, brace yourselfs!
+    \item 2 νέοι τύποι (απόστασης και εμβαδού)
+  \end{itemize}
 \end{frame}
 
 \begin{frame}{Γνωστά ή Άγνωστα νερά?}
- Λέξεις κλειδιά
- \begin{itemize}
-  \item Κλίση
-  \item Συντελεστής διεύθυνσης
-  \item $εφθ$
-  \item $α$
-  \item Σημεία
-  \item Παραλληλία
-  \item Καθετότητα
-  \item Σημεία τομής...
- \end{itemize}
- είναι μερικά που θυμάμαι!
+  Λέξεις κλειδιά
+  \begin{itemize}
+    \item Κλίση
+    \item Συντελεστής διεύθυνσης
+    \item $εφθ$
+    \item $α$
+    \item Σημεία
+    \item Παραλληλία
+    \item Καθετότητα
+    \item Σημεία τομής...
+  \end{itemize}
+  είναι μερικά που θυμάμαι!
 \end{frame}
 
 \begin{frame}{Γραμμές, γραμμές παντού}
- \begin{itemize}
-  \item<1-> Τι είναι γραμμή?
-  \item<2-> Γραφικά ή Αλγεβρικά?
- \end{itemize}
+  \begin{itemize}[<+->]
+    \item Τι είναι γραμμή?
+    \item Γραφικά ή Αλγεβρικά?
+  \end{itemize}
 \end{frame}
 
 \begin{frame}{Γραφικά}
- Εύκολο!
+  Εύκολο!
 \end{frame}
 
 \begin{frame}{Αλγεβρικά}
- \begin{block}{Ορισμός γραμμής}
-  Μία εξίσωση με τουλάχιστον έναν άγνωστο
- \end{block}
- \begin{block}{Σημείο στη γραμμή}
-  Κάθε σημείο που επαληθεύει την εξίσωση
- \end{block}
+  \begin{block}{Ορισμός γραμμής}
+    Μία εξίσωση με τουλάχιστον έναν άγνωστο
+  \end{block}
+  \begin{block}{Σημείο στη γραμμή}
+    Κάθε σημείο που επαληθεύει την εξίσωση
+  \end{block}
 \end{frame}
 
 \begin{frame}{Ας φτιάξουμε απλές γραμμές}
- \begin{itemize}
-  \item<1-> $y=2$
-  \item<2-> $x=1$
-  \item<3-> $x-y=0$
-  \item<4-> $y=2x$
- \end{itemize}
+  \begin{itemize}[<+->]
+    \item $y=2$
+    \item $x=1$
+    \item $x-y=0$
+    \item $y=2x$
+  \end{itemize}
 \end{frame}
 
 \begin{frame}{Ορισμοί}
- \begin{block}{Γωνία Ευθείας}
-  Ονομάζουμε \emph{γωνία της ευθείας με τον άξονα $x'x$}, την γωνία που σχηματίζει ο $x'x$ όταν στραφεί αντίστροφα με τους δείκτες του ρολογιού έως ότου συμπέσει με την ευθεία
- \end{block}
- \begin{block}{Συντελεστής Διεύθυνσης Ευθείας}
-  Ονομάζουμε \emph{συντελεστή διεύθυνσης} (ή κλίση) της ευθείας την εφαπτομένη της γωνίας της ευθείας με τον $x'x$
- \end{block}
+  \begin{block}{Γωνία Ευθείας}
+    Ονομάζουμε \emph{γωνία της ευθείας με τον άξονα $x'x$}, την γωνία που σχηματίζει ο $x'x$ όταν στραφεί αντίστροφα με τους δείκτες του ρολογιού έως ότου συμπέσει με την ευθεία
+  \end{block}
+  \begin{block}{Συντελεστής Διεύθυνσης Ευθείας}
+    Ονομάζουμε \emph{συντελεστή διεύθυνσης} (ή κλίση) της ευθείας την εφαπτομένη της γωνίας της ευθείας με τον $x'x$
+  \end{block}
 \end{frame}
 
 \begin{frame}{Ξεπηδούν οι απορίες}
- \begin{itemize}
-  \item<2-> Τι τιμές παίρνει μία γωνία
-  \item<3-> Τι τιμές παίρνει η κλίση
-  \item<4-> Πότε είναι παράλληλες δύο ευθείες
-  \item<5-> Πότε είναι παράλληλη μία ευθεία με ένα διάνυσμα
-  \item<6-> Ποιά άλλα διανύσματα είναι παράλληλα με την ευθεία?
-  \item<7-> Πότε είναι κάθετες δύο ευθείες? \pause μην βιάζεστε!!!!!
- \end{itemize}
+  \begin{itemize}[<+->]
+    \item Τι τιμές παίρνει μία γωνία
+    \item Τι τιμές παίρνει η κλίση
+    \item Πότε είναι παράλληλες δύο ευθείες
+    \item Πότε είναι παράλληλη μία ευθεία με ένα διάνυσμα
+    \item Ποιά άλλα διανύσματα είναι παράλληλα με την ευθεία?
+    \item Πότε είναι κάθετες δύο ευθείες? μην βιάζεστε!!!!!
+  \end{itemize}
 \end{frame}
 
 \begin{frame}{Λίγη ιστορία}
- \begin{block}{Κλίση διανύσματος}
-  $λ=\frac{y_2-y_1}{x_2-x_1}$
- \end{block}
+  \begin{block}{Κλίση διανύσματος}
+    $λ=\frac{y_2-y_1}{x_2-x_1}$
+  \end{block}
 \end{frame}
 
 \begin{frame}{Εξισώση ευθείας 1 (από κλίση και σημείο)}
- Ας θεωρήσουμε ότι \emph{υπάρχει συντελεστής διεύθυνσης $λ$} και ας έχουμε γνωστό \emph{ένα σημείο} $(x_0,y_0)$. Κάθε σημείο $(x,y)$ που ανήκει στην ευθεία θα έχει με το γνωστό σημείο κλίση $λ$. Άρα
- \begin{align*}
-  \frac{y-y_0}{x-x_0}=λ \\
-  \pause y-y_0=λ(x-x_0)
- \end{align*}
+  Ας θεωρήσουμε ότι \emph{υπάρχει συντελεστής διεύθυνσης $λ$} και ας έχουμε γνωστό \emph{ένα σημείο} $B(x_0,y_0)$. Κάθε σημείο $A(x,y)$ που ανήκει στην ευθεία θα έχει με το γνωστό σημείο κλίση $λ$. Άρα
+  \begin{align*}
+    λ_{\overrightarrow{AB}} & =λ        \\
+    \frac{y-y_0}{x-x_0}     & =λ        \\
+    y-y_0                   & =λ(x-x_0)
+  \end{align*}
 \end{frame}
 
 \begin{frame}{Εξισώση ευθείας 2 (από δύο σημεία)}
- Ας είναι δύο σημεία $(x_1,y_1)$ και $(x_2,y_2)$. Αν $x_1\ne x_2$... \pause
+  Ας είναι δύο σημεία $(x_1,y_1)$ και $(x_2,y_2)$. Αν $x_1\ne x_2$... \pause
 
- $λ=\frac{y_2-y_1}{x_2-x_1}$... \pause
+  $λ=\frac{y_2-y_1}{x_2-x_1}$... \pause
 
- και έχουμε κλίση και σημείο (κοίτα προηγούμενη διαφάνεια)
+  και έχουμε κλίση και σημείο (κοίτα προηγούμενη διαφάνεια) \pause
+
+  Άρα
+
+  $$y-y_0=\frac{y_2-y_1}{x_2-x_1}(x-x_0)$$
 \end{frame}
 
 \begin{frame}{Εξισώση ευθείας 3 (δεν έχει κλίση)}
- Εύκολο?
+  Εύκολο?
+\end{frame}
+
+\begin{frame}[noframenumbering]
+  Στο moodle θα βρείτε τις ασκήσεις που πρέπει να κάνετε, όπως και αυτή τη παρουσίαση
 \end{frame}
 
 \section{Ασκήσεις}
 
-\begin{frame}
- \vfill
- \centering
- \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
-  \usebeamerfont{title}Ασκήσεις
- \end{beamercolorbox}
- \vfill
+\begin{frame}[noframenumbering]
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+    \usebeamerfont{title}Ασκήσεις
+  \end{beamercolorbox}
+  \vfill
 \end{frame}
 
-\subsection{Άσκηση 1}
-\begin{frame}[label=Άσκηση1]{Εξάσκηση 1}
- Να βρείτε το συντελεστή διαύθυνσης $λ$ μιας ευθείας η οποία:
- \begin{enumerate}
-  \item<1-> σχηματίζει με τον άξονα $x'x$ γωνία $ω=\frac{π}{3}$
-  \item<2-> είναι παράλληλη στο διάνυσμα $\vec{α}=(2,-4)$
-  \item<3-> διέρχεται από τα σημεία $Α(1,3)$ και $Β(3,6)$
- \end{enumerate}
+\begin{askisi}
+  Να βρείτε το συντελεστή διεύθυνσης $λ$ μιας ευθείας η οποία:
+  \begin{enumerate}[<+->]
+    \item σχηματίζει με τον άξονα $x'x$ γωνία $ω=\frac{π}{3}$
+    \item είναι παράλληλη στο διάνυσμα $\vec{α}=(2,-4)$
+    \item διέρχεται από τα σημεία $Α(1,3)$ και $Β(3,6)$
+  \end{enumerate}
+\end{askisi}
 
- % \hyperlink{Λύση1}{\beamerbutton{Λύση}}
-\end{frame}
+\begin{askisi}
+  Να βρείτε τη γωνία που σχηματίζουν με τον άξονα $x'x$ οι ευθείες που διέρχονται από τα σημεία
+  \begin{enumerate}[<+->]
+    \item $Α(1,0)$ και $Β(2,\sqrt{3})$
+    \item $Α(2,3)$ και $Β(1,3)$
+  \end{enumerate}
+\end{askisi}
 
-\subsection{Άσκηση 2}
-\begin{frame}[label=Άσκηση2]{Εξάσκηση 2}
- Να βρείτε τη γωνία που σχηματίζουν με τον άξονα $x'x$ οι ευθείες που διέρχονται από τα σημεία
- \begin{enumerate}
-  \item<1-> $Α(1,0)$ και $Β(2,\sqrt{3})$
-  \item<2-> $Α(2,3)$ και $Β(1,3)$
- \end{enumerate}
+\begin{askisi}
+  Να βρείτε τον συντελεστή διεύθυνσης $λ$ μιας ευθείας $ε$, η οποία:
+  \begin{enumerate}[<+->]
+    \item είναι παράλληλη στην ευθεία $ε_1$ που σχηματίζει με τον άξονα $x'x$ γωνία $ω=120^{\circ}$
+    \item είναι κάθετη στην ευθεία $ε_2$ που διέρχεται από τα σημεία $Α(2,3)$ και $Β(3,5)$
+  \end{enumerate}
+\end{askisi}
 
- % \hyperlink{Λύση2}{\beamerbutton{Λύση}}
-\end{frame}
+\begin{askisi}
+  Έστω η ευθεία $ε$ που σχηματίζει με τον άξονα $x'x$ γωνία $ω=45^{\circ}$ και η ευθεία $ζ$ που διέρχεται από τα σημεία $Α(3,α)$ και $Β(5,3α-2)$. Να βρείτε την τιμή του $α$, ώστε:
+  \begin{enumerate}[<+->]
+    \item Οι ευθείες $ε$ και $ζ$ να είναι παράλληλες
+    \item Οι ευθείες $ε$ και $ζ$ να είναι κάθετες
+  \end{enumerate}
+\end{askisi}
 
-\subsection{Άσκηση 3}
-\begin{frame}[label=Άσκηση3]{Εξάσκηση 3}
- Να βρείτε τον συντελεστή διεύθυνσης $λ$ μιας ευθείας $ε$, η οποία:
- \begin{enumerate}
-  \item<1-> είναι παράλληλη στην ευθεία $ε_1$ που σχηματίζει με τον άξονα $x'x$ γωνία $ω=120^{\circ}$
-  \item<2-> είναι κάθετη στην ευθεία $ε_2$ που διέρχεται από τα σημεία $Α(2,3)$ και $Β(3,5)$
- \end{enumerate}
+\begin{askisi}
+  Θεωρούμε την ευθεία $ε$ που διέρχεται από το σημείο $Α(1,2)$ και έχει συντελεστή διεύθυνσης $λ=3$. Να βρείτε:
+  \begin{enumerate}[<+->]
+    \item Την εξίσωση της ευθείας $ε$
+    \item Την τιμή του $λ$, για την οποία το σημείο $Μ(λ-1,2λ)$ ανήκει στην ευθεία $ε$.
+  \end{enumerate}
+\end{askisi}
 
- % \hyperlink{Λύση3}{\beamerbutton{Λύση}}
-\end{frame}
+\begin{askisi}
+  Να βρείτε την εξίσωση της ευθείας $ε$ που διέρχεται από το σημείο $Α(3,2)$ και:
+  \begin{enumerate}[<+->]
+    \item σχηματίζει με τον άξονα $x'x$ γωνία $ω=45^{\circ}$
+    \item είναι παράλληλη στο διάνυσμα $\vec{α}=(2,-4)$
+    \item είναι κάθετη στην ευθεία $ζ$ με συντελεστή διεύθυνσης $-\frac{1}{2}$
+  \end{enumerate}
+\end{askisi}
 
-\subsection{Άσκηση 4}
-\begin{frame}[label=Άσκηση4]{Εξάσκηση 4}
- Έστω η ευθεία $ε$ που σχηματίζει με τον άξονα $x'x$ γωνία $ω=45^{\circ}$ και η ευθεία $ζ$ που διέρχεται από τα σημεία $Α(3,α)$ και $Β(5,3α-2)$. Να βρείτε την τιμή του $α$, ώστε:
- \begin{enumerate}
-  \item<1-> Οι ευθείες $ε$ και $ζ$ να είναι παράλληλες
-  \item<2-> Οι ευθείες $ε$ και $ζ$ να είναι κάθετες
- \end{enumerate}
+\begin{askisi}
+  Έστω μία ευθεία $ε$ που διέρχεται από το σημείο $Μ(α,2α+1)$ και έχει συντελεστή διεύθυνσης $λ=1$.
+  \begin{enumerate}[<+->]
+    \item Να βρείτε την εξίσωση της ευθείας $ε$
+    \item Αν επιπλέον η ευθεία $ε$ διέρχεται από το σημείο $Ν(1,-2)$, να βρείτε:
+          \begin{enumerate}[<+(-1)->]
+            \item την τιμή του $α$
+            \item τα σημεία τομής της ευθείας $ε$ με τους άξονες και στη συνέχεια να τη σχεδιάσετε
+            \item το εμβαδό του τριγώνου που σχηματίζεται από την ευθεία $ε$ και τους άξονες
+          \end{enumerate}
+  \end{enumerate}
+\end{askisi}
 
- % \hyperlink{Λύση4}{\beamerbutton{Λύση}}
-\end{frame}
+\begin{askisi}
+  Δίνεται τρίγωνο $ΑΒΓ$ με $Α(2,-3)$, $Β(1,5)$ και $Γ(2,3)$. Να βρείτε την εξίσωση:
+  \begin{enumerate}[<+->]
+    \item της ευθείας $ε$ που διέρχεται από το σημείο $Α$ και είναι παράλληλη στην ευθεία $ΒΓ$
+    \item του ύψους $ΑΔ$
+    \item της διαμέσου $ΒΜ$
+  \end{enumerate}
+\end{askisi}
 
-\subsection{Άσκηση 5}
-\begin{frame}[label=Άσκηση5]{Εξάσκηση 5}
- Θεωρούμε την ευθεία $ε$ που διέρχεται από το σημείο $Α(1,2)$ και έχει συντελεστή διεύθυνσης $λ=3$. Να βρείτε:
- \begin{enumerate}
-  \item<1-> Την εξίσωση της ευθείας $ε$
-  \item<2-> Την τιμή του $λ$, για την οποία το σημείο $Μ(λ-1,2λ)$ ανήκει στην ευθεία $ε$.
- \end{enumerate}
+\begin{askisi}
+  Δίνονται τα σημεία $Α(1,4)$ και $Β(3,-6)$. Να βρείτε την εξίσωση της μεσοκαθέτου $ε$ του τμήματος $ΑΒ$
+\end{askisi}
 
- % \hyperlink{Λύση5}{\beamerbutton{Λύση}}
-\end{frame}
+\begin{askisi}
+  Να βρείτε την εξίσωση της ευθείας που διέρχεται από τα σημεία:
+  \begin{enumerate}[<+->]
+    \item $Α(3,2)$ και $Β(-1,6)$
+    \item $Γ(5,-3)$ και $Δ(5,-4)$
+  \end{enumerate}
+\end{askisi}
 
-\subsection{Άσκηση 6}
-\begin{frame}[label=Άσκηση6]{Εξάσκηση 6}
- Να βρείτε την εξίσωση της ευθείας $ε$ που διέρχεται από το σημείο $Α(3,2)$ και:
- \begin{enumerate}
-  \item<1-> σχηματίζει με τον άξονα $x'x$ γωνία $ω=45^{\circ}$
-  \item<2-> είναι παράλληλη στο διάνυσμα $\vec{α}=(2,-4)$
-  \item<3-> είναι κάθετη στην ευθεία $ζ$ με συντελεστή διεύθυνσης $-\frac{1}{2}$
- \end{enumerate}
+\begin{askisi}
+  Δίνεται παραλληλόγραμμο $ΑΒΓΔ$ με $Α(2,5)$, $Β(1,7)$ και $Γ(4,1)$. Να βρείτε την εξίσωση της διαγωνίου $ΒΔ$.
+\end{askisi}
 
- % \hyperlink{Λύση6}{\beamerbutton{Λύση}}
-\end{frame}
+\begin{askisi}
+  Να βρείτε την εξίσωση της ευθείας $ε$ όταν:
+  \begin{enumerate}[<+->]
+    \item η ευθεία $ε$ τέμνει τον άξονα $y'y$ στο σημείο $Α(0,-3)$ και έχει συντελεστή διεύθυνσης $λ=2$
+    \item η ευθεία $ε$ διέρχεται από την αρχή των αξόνων και έχει συντελεστή διεύθυνσης $λ=-\frac{2}{3}$
+    \item η ευθεία $ε$ διέρχεται από τα σημεία $Α(-1,4)$ και $Β(λ^2,4)$
+  \end{enumerate}
+\end{askisi}
 
-\subsection{Άσκηση 7}
-\begin{frame}[label=Άσκηση7]{Εξάσκηση 7}
- Έστω μία ευθεία $ε$ που διέρχεται από το σημείο $Μ(α,2α+1)$ και έχει συντελεστή διεύθυνσης $λ=1$.
- \begin{enumerate}
-  \item<1-> Να βρείτε την εξίσωση της ευθείας $ε$
-  \item<2-> Αν επιπλέον η ευθεία $ε$ διέρχεται από το σημείο $Ν(1,-2)$, να βρείτε:
-   \begin{enumerate}
-    \item<2-> την τιμή του $α$
-    \item<3-> τα σημεία τομής της ευθείας $ε$ με τους άξονες και στη συνέχεια να τη σχεδιάσετε
-    \item<4-> το εμβαδό του τριγώνου που σχηματίζεται από την ευθεία $ε$ και τους άξονες
-   \end{enumerate}
- \end{enumerate}
+\begin{askisi}
+  Δίνονται οι ευθείες $ε:y=\frac{x}{2}-1$ και $ζ:(|μ|-2)x-5$. Να βρείτε τις τιμές του $μ$ ώστε η ευθεία να είναι:
+  \begin{enumerate}[<+->]
+    \item παράλληλη στην ευθεία $ζ$
+    \item κάθετη στην ευθεία $ζ$
+  \end{enumerate}
+\end{askisi}
 
- %\hyperlink{Λύση7}{\beamerbutton{Λύση}}
-\end{frame}
+\begin{askisi}
+  Να βρείτε την εξίσωση της ευθείας $ζ$ που διέρχεται από το σημείο $Α(-1,2)$ και:
+  \begin{enumerate}[<+->]
+    \item είναι παράλληλη στην ευθεία $ε_1:y=3x+1$
+    \item είναι κάθετη στην ευθεία $ε_2:y=-2x+3$
+  \end{enumerate}
+\end{askisi}
 
-\subsection{Άσκηση 8}
-\begin{frame}[label=Άσκηση8]{Εξάσκηση 8}
- Δίνεται τρίγωνο $ΑΒΓ$ με $Α(2,-3)$, $Β(1,5)$ και $Γ(2,3)$. Να βρείτε την εξίσωση:
- \begin{enumerate}
-  \item<1-> της ευθείας $ε$ που διέρχεται από το σημείο $Α$ και είναι παράλληλη στην ευθεία $ΒΓ$
-  \item<2-> του ύψους $ΑΔ$
-  \item<3-> της διαμέσου $ΒΜ$
- \end{enumerate}
+\begin{askisi}
+  Δίνονται οι ευθείες $ε_1:y=2x-1$ και $ε_2:y=x+1$.
+  \begin{enumerate}[<+->]
+    \item Να βρείτε το σημείο τομής $Μ$ των ευθειών $ε_1$ και $ε_2$
+    \item Να βρείτε την εξίσωση της ευθείας $ε$ που διέρχεται από το σημείο τομής των ευθειών $ε_1$ και $ε_2$ και σχηματίζει με τον άξονα $x'x$ γωνία $ω=135^{\circ}$
+    \item Να δείξετε ότι οι ευθείες $ε_1$, $ε_2$ και $ζ:y=5x-7$ συντρέχουν
+  \end{enumerate}
+\end{askisi}
 
- %\hyperlink{Λύση8}{\beamerbutton{Λύση}}
-\end{frame}
+\begin{askisi}
+  Δίνεται τρίγωνο $ΑΒΓ$ με $Γ(4,3)$. Αν η εξίσωση της ευθείας $ΑΒ$ είναι $y=2x+1$ και του ύψους $ΑΔ$ είναι $y=x-1$, να βρείτε τις συντεταγμένες των σημείων $Α$ και $Β$
+\end{askisi}
 
-\subsection{Άσκηση 9}
-\begin{frame}[label=Άσκηση9]{Εξάσκηση 9}
- Δίνονται τα σημεία $Α(1,4)$ και $Β(3,-6)$. Να βρείτε την εξίσωση της μεσοκαθέτου $ε$ του τμήματος $ΑΒ$
+\begin{askisi}
+  Να βρείτε το πλησιέστερο σημείο της ευθείας $ε:y=-2x+1$ από την αρχή των αξόνων και στη συνέχεια την ελάχιστη απόσταση του σημείο $Ο$ από τα σημεία της ευθείας $ε$
+\end{askisi}
 
- %\hyperlink{Λύση9}{\beamerbutton{Λύση}}
-\end{frame}
+\begin{askisi}
+  Να βρείτε το συμμετρικό σημείο του σημείου $Α(5,4)$ ως προς την ευθεία $ε:y=-4x+7$
+\end{askisi}
 
-\subsection{Άσκηση 10}
-\begin{frame}[label=Άσκηση10]{Εξάσκηση 10}
- Να βρείτε την εξίσωση της ευθείας που διέρχεται από τα σημεία:
- \begin{enumerate}
-  \item<1-> $Α(3,2)$ και $Β(-1,6)$
-  \item<2-> $Γ(5,-3)$ και $Δ(5,-4)$
- \end{enumerate}
+\begin{askisi}
+  Δίνεται τρίγωνο $ΑΒΓ$ με $Β(1,2)$. Το ύψος και η διάμεσος από μία κορυφή του τριγώνου έχουν εξισώσεις $y=\frac{1}{2}x+\frac{1}{2}$ και $y=x$. Να βρείτε τις άλλες κορυφές και το βαρύκεντρο του τριγώνου
+\end{askisi}
 
- %\hyperlink{Λύση10}{\beamerbutton{Λύση}}
-\end{frame}
+\begin{askisi}
+  Δίνεται τρίγωνο $ΑΒΓ$ με $Α(1,2)$, $ΒΓ:y=2x+5$ και η διάμεσος $ΒΜ$ έχει εξίσωση $y=\frac{1}{2}x-\frac{1}{2}$. Να βρείτε:
+  \begin{enumerate}[<+->]
+    \item τις συντεταγμένες του σημείου $Γ$
+    \item την εξίσωση του ύψους $ΓΔ$
+  \end{enumerate}
+\end{askisi}
 
-\subsection{Άσκηση 11}
-\begin{frame}[label=Άσκηση11]{Εξάσκηση 11}
- Δίνεται παραλληλόγραμμο $ΑΒΓΔ$ με $Α(2,5)$, $Β(1,7)$ και $Γ(4,1)$. Να βρείτε την εξίσωση της διαγωνίου $ΒΔ$.
+\begin{askisi}
+  Δίνονται τα σημεία $Α(-2,2)$ και $Β(3,1)$. Να βρείτε το σημείο $Μ$ της ευθείας $ε:y=x+3$, τέτοιο ώστε το τρίγωνο $ΑΜΒ$ να είναι ορθογώνιο στην κορυφή $Μ$
+\end{askisi}
 
- %\hyperlink{Λύση11}{\beamerbutton{Λύση}}
-\end{frame}
+\begin{askisi}
+  Δίνεται τρίγωνο $ΑΒΓ$ με $ΑΒ:y=2x$ και $ΑΓ:y=3x-1$. Αν το σημείο $Μ(1,0)$ είναι μέσον της πλευράς $ΒΓ$
+\end{askisi}
 
-\subsection{Άσκηση 12}
-\begin{frame}[label=Άσκηση12]{Εξάσκηση 12}
- Να βρείτε την εξίσωση της ευθείας $ε$ όταν:
- \begin{enumerate}
-  \item<1-> η ευθεία $ε$ τέμνει τον άξονα $y'y$ στο σημείο $Α(0,-3)$ και έχει συντελεστή διεύθυνσης $λ=2$
-  \item<2-> η ευθεία $ε$ διέρχεται από την αρχή των αξόνων και έχει συντελεστή διεύθυνσης $λ=-\frac{2}{3}$
-  \item<3-> η ευθεία $ε$ διέρχεται από τα σημεία $Α(-1,4)$ και $Β(λ^2,4)$
- \end{enumerate}
+\begin{askisi}
+  Θεωρούμε το σημείο $Α(2,1)$ και το συμμετρικό του $Α'$ ως προς τον άξονα $x'x$. Να βρείτε το γεωμετρικό τόπο των σημείων $Μ$ για τα οποία ισχύει
 
- %\hyperlink{Λύση12}{\beamerbutton{Λύση}}
-\end{frame}
+  $$\overrightarrow{ΟΜ}\cdot\overrightarrow{ΟΑ}+\overrightarrow{ΟΜ'}\cdot\overrightarrow{ΟΑ'}=2$$
 
-\subsection{Άσκηση 13}
-\begin{frame}[label=Άσκηση13]{Εξάσκηση 13}
- Δίνονται οι ευθείες $ε:y=\frac{x}{2}-1$ και $ζ:(|μ|-2)x-5$. Να βρείτε τις τιμές του $μ$ ώστε η ευθεία να είναι:
- \begin{enumerate}
-  \item<1-> παράλληλη στην ευθεία $ζ$
-  \item<2-> κάθετη στην ευθεία $ζ$
- \end{enumerate}
+  όπου $Μ'$ το συμμετρικό του $Μ$ ως προς τον άξονα $x'x$
+\end{askisi}
 
- %\hyperlink{Λύση13}{\beamerbutton{Λύση}}
-\end{frame}
+\begin{askisi}
+  Να βρείτε το γεωμετρικό τόπο των σημείων $Μ(x,y)$ όταν:
+  \begin{enumerate}[<+->]
+    \item $Μ(λ-1,2λ-3)$, $λ\in\mathbb{R}$
+    \item $Μ(-3,λ+1)$, $λ\in\mathbb{R}$
+    \item $Μ(λ^2+1,2)$, $λ\in\mathbb{R}$
+    \item $Μ(-3,ημλ)$, $λ\in\mathbb{R}$
+  \end{enumerate}
+\end{askisi}
 
-\subsection{Άσκηση 14}
-\begin{frame}[label=Άσκηση14]{Εξάσκηση 14}
- Να βρείτε την εξίσωση της ευθείας $ζ$ που διέρχεται από το σημείο $Α(-1,2)$ και:
- \begin{enumerate}
-  \item<1-> είναι παράλληλη στην ευθεία $ε_1:y=3x+1$
-  \item<2-> είναι κάθετη στην ευθεία $ε_2:y=-2x+3$
- \end{enumerate}
+\begin{askisi}
+  Αν το σημείο $Μ(α,β)$ κινείται στην ευθεία $ε:y=2x-4$, να βρείτε πού κινείται το σημείο $Ν\left(  \frac{α}{2},\frac{β}{2}\right)$
+\end{askisi}
 
- %\hyperlink{Λύση14}{\beamerbutton{Λύση}}
-\end{frame}
+\begin{askisi}
+  Να αποδείξετε ότι το σημείο $Μ(3-συν^2θ,1-ημ^2θ)$, $θ\in\mathbb{R}$, κινείται σε σταθερή ευθεία.
+\end{askisi}
 
-\subsection{Άσκηση 15}
-\begin{frame}[label=Άσκηση15]{Εξάσκηση 15}
- Δίνονται οι ευθείες $ε_1:y=2x-1$ και $ε_2:y=x+1$.
- \begin{enumerate}
-  \item<1-> Να βρείτε το σημείο τομής $Μ$ των ευθειών $ε_1$ και $ε_2$
-  \item<2-> Να βρείτε την εξίσωση της ευθείας $ε$ που διέρχεται από το σημείο τομής των ευθειών $ε_1$ και $ε_2$ και σχηματίζει με τον άξονα $x'x$ γωνία $ω=135^{\circ}$
-  \item<3-> Να δείξετε ότι οι ευθείες $ε_1$, $ε_2$ και $ζ:y=5x-7$ συντρέχουν
- \end{enumerate}
-
- %\hyperlink{Λύση15}{\beamerbutton{Λύση}}
-\end{frame}
-
-\subsection{Άσκηση 16}
-\begin{frame}[label=Άσκηση16]{Εξάσκηση 16}
- Δίνεται τρίγωνο $ΑΒΓ$ με $Γ(4,3)$. Αν η εξίσωση της ευθείας $ΑΒ$ είναι $y=2x+1$ και του ύψους $ΑΔ$ είναι $y=x-1$, να βρείτε τις συντεταγμένες των σημείων $Α$ και $Β$
-
- %\hyperlink{Λύση16}{\beamerbutton{Λύση}}
-\end{frame}
-
-\subsection{Άσκηση 17}
-\begin{frame}[label=Άσκηση17]{Εξάσκηση 17}
- Να βρείτε το πλησιέστερο σημείο της ευθείας $ε:y=-2x+1$ από την αρχή των αξόνων και στη συνέχεια την ελάχιστη απόσταση του σημείο $Ο$ από τα σημεία της ευθείας $ε$
-
- %\hyperlink{Λύση17}{\beamerbutton{Λύση}}
-\end{frame}
-
-\subsection{Άσκηση 18}
-\begin{frame}[label=Άσκηση18]{Εξάσκηση 18}
- Να βρείτε το συμμετρικό σημείο του σημείου $Α(5,4)$ ως προς την ευθεία $ε:y=-4x+7$
-
- %\hyperlink{Λύση18}{\beamerbutton{Λύση}}
-\end{frame}
-
-\subsection{Άσκηση 19}
-\begin{frame}[label=Άσκηση19]{Εξάσκηση 19}
- Δίνεται τρίγωνο $ΑΒΓ$ με $Β(1,2)$. Το ύψος και η διάμεσος από μία κορυφή του τριγώνου έχουν εξισώσεις $y=\frac{1}{2}x+\frac{1}{2}$ και $y=x$. Να βρείτε τις άλλες κορυφές και το βαρύκεντρο του τριγώνου
-
- %\hyperlink{Λύση19}{\beamerbutton{Λύση}}
-\end{frame}
-
-\subsection{Άσκηση 20}
-\begin{frame}[label=Άσκηση20 ]{Εξάσκηση 20}
- Δίνεται τρίγωνο $ΑΒΓ$ με $Α(1,2)$, $ΒΓ:y=2x+5$ και η διάμεσος $ΒΜ$ έχει εξίσωση $y=\frac{1}{2}x-\frac{1}{2}$. Να βρείτε:
- \begin{enumerate}
-  \item<1-> τις συντεταγμένες του σημείου $Γ$
-  \item<2-> την εξίσωση του ύψους $ΓΔ$
- \end{enumerate}
-
- %\hyperlink{Λύση20 }{\beamerbutton{Λύση}}
-\end{frame}
-
-\subsection{Άσκηση 21}
-\begin{frame}[label=Άσκηση21]{Εξάσκηση 21}
- Δίνονται τα σημεία $Α(-2,2)$ και $Β(3,1)$. Να βρείτε το σημείο $Μ$ της ευθείας $ε:y=x+3$, τέτοιο ώστε το τρίγωνο $ΑΜΒ$ να είναι ορθογώνιο στην κορυφή $Μ$
-
- %\hyperlink{Λύση21}{\beamerbutton{Λύση}}
-\end{frame}
-
-\subsection{Άσκηση 22}
-\begin{frame}[label=Άσκηση22]{Εξάσκηση 22}
- Δίνεται τρίγωνο $ΑΒΓ$ με $ΑΒ:y=2x$ και $ΑΓ:y=3x-1$. Αν το σημείο $Μ(1,0)$ είναι μέσον της πλευράς $ΒΓ$
-
- %\hyperlink{Λύση22}{\beamerbutton{Λύση}}
-\end{frame}
-
-\subsection{Άσκηση 23}
-\begin{frame}[label=Άσκηση23]{Εξάσκηση 23}
- Θεωρούμε το σημείο $Α(2,1)$ και το συμμετρικό του $Α'$ ως προς τον άξονα $x'x$. Να βρείτε το γεωμετρικό τόπο των σημείων $Μ$ για τα οποία ισχύει
-
- $$\overrightarrow{ΟΜ}\cdot\overrightarrow{ΟΑ}+\overrightarrow{ΟΜ'}\cdot\overrightarrow{ΟΑ'}=2$$
-
- όπου $Μ'$ το συμμετρικό του $Μ$ ως προς τον άξονα $x'x$
-
- %\hyperlink{Λύση23}{\beamerbutton{Λύση}}
-\end{frame}
-
-\subsection{Άσκηση 24}
-\begin{frame}[label=Άσκηση24]{Εξάσκηση 24}
- Να βρείτε το γεωμετρικό τόπο των σημείων $Μ(x,y)$ όταν:
- \begin{enumerate}
-  \item<1-> $Μ(λ-1,2λ-3)$, $λ\in\mathbb{R}$
-  \item<2-> $Μ(-3,λ+1)$, $λ\in\mathbb{R}$
-  \item<3-> $Μ(λ^2+1,2)$, $λ\in\mathbb{R}$
-  \item<4-> $Μ(-3,ημλ)$, $λ\in\mathbb{R}$
- \end{enumerate}
-
- %\hyperlink{Λύση24}{\beamerbutton{Λύση}}
-\end{frame}
-
-\subsection{Άσκηση 25}
-\begin{frame}[label=Άσκηση25]{Εξάσκηση 25}
- Αν το σημείο $Μ(α,β)$ κινείται στην ευθεία $ε:y=2x-4$, να βρείτε πού κινείται το σημείο $Ν\left(   \frac{α}{2},\frac{β}{2}\right)$
-
- %\hyperlink{Λύση25}{\beamerbutton{Λύση}}
-\end{frame}
-
-\subsection{Άσκηση 26}
-\begin{frame}[label=Άσκηση26]{Εξάσκηση 26}
- Να αποδείξετε ότι το σημείο $Μ(3-συν^2θ,1-ημ^2θ)$, $θ\in\mathbb{R}$, κινείται σε σταθερή ευθεία.
-
- %\hyperlink{Λύση26}{\beamerbutton{Λύση}}
-\end{frame}
-
-%
-% \appendix
-% \section{Λύσεις Ασκήσεων}
-% \begin{frame}
-%  \tableofcontents
-% \end{frame}
-%
-% \subsection{Άσκηση 1}
-% \begin{frame}[label=Λύση1]
-%  Με θεώρημα ενδιαμέσων τιμών. Η συνάρτηση είναι συνεχής στο $[10,11]$ με $f(10)=1024$ και $f(11)=2048$. Αφού $2023\in (1024,2048)$ υπάρχει $x_0$...
-%
-%  \hyperlink{Άσκηση1}{\beamerbutton{Πίσω στην άσκηση}}
-% \end{frame}
-%
-% \subsection{Άσκηση 2}
-% \begin{frame}[label=Λύση2]
-%  Με Bolzano ή με μέγιστης ελάχιστης τιμής και ΘΕΤ.
-%
-%  \begin{gather*}
-%   f(3)<f(2)<f(1) \\
-%   3f(3)<f(1)+f(2)+f(3)<3f(1) \\
-%   f(3)<\frac{f(1)+f(2)+f(3)}{3}<f(1)
-%  \end{gather*}
-%
-%  \hyperlink{Άσκηση2}{\beamerbutton{Πίσω στην άσκηση}}
-% \end{frame}
-%
-% \subsection{Άσκηση 3}
-% \begin{frame}[label=Λύση3]
-%  Προφανές ελάχιστο στα $x_1=1$ και $x_2=3$. Ως συνεχής στο $[1,3]$ έχει σίγουρα ΚΑΙ μέγιστο στο $(1,3)$
-%
-%  \hyperlink{Άσκηση3}{\beamerbutton{Πίσω στην άσκηση}}
-% \end{frame}
-%
-% \subsection{Άσκηση 4}
-% \begin{frame}[label=Λύση4]
-%  Η συνάρτηση `απόστασης` $f(x)-x$ είναι ορισμένη στο κλειστό διάστημα και έχει σίγουρα μέγιστο
-%
-%  \hyperlink{Άσκηση4}{\beamerbutton{Πίσω στην άσκηση}}
-% \end{frame}
-%
-% \subsection{Άσκηση 5}
-% \begin{frame}[label=Λύση5]
-%  Όμοια με την Άσκηση 2
-%
-%  \hyperlink{Άσκηση5}{\beamerbutton{Πίσω στην άσκηση}}
-% \end{frame}
-%
-% \subsection{Άσκηση 6}
-% \begin{frame}[label=Λύση6]
-%  \begin{enumerate}
-%   \item Είναι γνησίως αύξουσα άρα $(f(+\infty),f(-\infty))$
-%   \item Προφανώς $[f(0),f(1)]$...
-%  \end{enumerate}
-%
-%  \hyperlink{Άσκηση6}{\beamerbutton{Πίσω στην άσκηση}}
-% \end{frame}
-%
 \end{document}
