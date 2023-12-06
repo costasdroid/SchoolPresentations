@@ -1,32 +1,51 @@
 \documentclass[greek]{beamer}
-%\usepackage{fontspec}
-\usepackage{amsmath,amsthm}
+\usepackage{amsmath,amsthm} % needed for mathematics
 \usepackage{unicode-math}
 \usepackage{xltxtra}
 \usepackage{graphicx}
 \usetheme{CambridgeUS}
 \usecolortheme{seagull}
 \usepackage{hyperref}
-\usepackage{ulem}
+\usepackage{ulem} % underline words package
 \usepackage{xgreek}
 
 \usepackage{pgfpages} 
-\usepackage{tikz}
+\usepackage{tikz} % package for shapes and more
 %\setbeameroption{show notes on second screen}
 %\setbeameroption{show only notes}
 
-\setsansfont{Calibri}
+\setsansfont{Calibri} % it is said that Calibri is the proper font for reading difficulties
 
-\usepackage{multicol}
+\usepackage{multicol} % package for two or more columns
 
-\usepackage{appendixnumberbeamer}
+\usepackage{appendixnumberbeamer} % remove page numbering in appendix
 
-\usepackage{polynom}
+\usepackage{polynom} % polynomial divisions package
 
-\usepackage{pgffor}
+\usepackage{pgffor} % macros
 
-\setbeamercovered{transparent}
-\beamertemplatenavigationsymbolsempty
+\setbeamercovered{highly dynamic}
+\setbeamertemplate{navigation symbols}{}
+
+\newcounter{askisi} % enviroment for exercises
+\newenvironment{askisi}
+{
+  \refstepcounter{askisi}\par
+  \subsection{Άσκηση \theaskisi}
+  \begin{frame}[label=Άσκηση\theaskisi,t]{Εξάσκηση \theaskisi}
+}{
+  \end{frame}
+}
+
+\newcounter{lisi} % enviroment for solutions
+\newenvironment{lisi}
+{
+  \refstepcounter{lisi}\par
+  \subsection{Άσκηση \thelisi}
+  \begin{frame}[label=Λύση\thelisi,t]{Λύση \thelisi}
+}{
+  \end{frame}
+}
 
 \title{Συναρτήσεις}
 \subtitle{Συνέπειες Bolzano 2 (the rest)}
@@ -99,46 +118,54 @@
       Ή φτάνουμε την τιμή Ή πλησιάζουμε συνεχώς
 \end{frame}
 
+\begin{frame}[noframenumbering]
+      Στο moodle θα βρείτε τις ασκήσεις που πρέπει να κάνετε, όπως και αυτή τη παρουσίαση
+\end{frame}
+
 \section{Ασκήσεις}
-\subsection{Άσκηση 1}
-\begin{frame}[label=Άσκηση1]{Εξάσκηση 1}
+
+\begin{frame}[noframenumbering]
+      \vfill
+      \centering
+      \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+            \usebeamerfont{title}Ασκήσεις
+      \end{beamercolorbox}
+      \vfill
+\end{frame}
+
+\begin{askisi}
       Δίνεται η συνάρτηση $f(x)=2^x$. Να δείξετε ότι υπάρχει $ξ\in (10,11)$ ώστε $f(ξ)=2023$.
 
       \hyperlink{Λύση1}{\beamerbutton{Λύση}}
-\end{frame}
+\end{askisi}
 
-\subsection{Άσκηση 2}
-\begin{frame}[label=Άσκηση2]{Εξάσκηση 2}
+\begin{askisi}
       Έστω η συνεχής και γνησίως φθίνουσα συνάρτηση $f:[1,3]\to\mathbb{R}$. Να δείξετε ότι υπάρχει ακριβώς ένα $x_0\in (1,3)$ ώστε
       $$f(x_0)=\frac{f(1)+f(2)+f(3)}{3}$$
 
       \hyperlink{Λύση2}{\beamerbutton{Λύση}}
-\end{frame}
+\end{askisi}
 
-\subsection{Άσκηση 3}
-\begin{frame}[label=Άσκηση3]{Εξάσκηση 3}
+\begin{askisi}
       Δίνεται η συνάρτηση $f(x)=(x-1)^4(x-3)^2$, $x\in \mathbb{R}$. Να αποδείξετε ότι η $f$ έχει δύο θέσεις ελαχίστων $x_1$, $x_2$ με $x_1<x_2$. Στη συνέχεια να δείξετε ότι υπάρχει ένα τουλάχιστον $x_0\in (x_1,x_2)$ που η συνάρτηση παρουσιάζει μέγιστο στο $[x_1,x_2]$.
 
       \hyperlink{Λύση3}{\beamerbutton{Λύση}}
-\end{frame}
+\end{askisi}
 
-\subsection{Άσκηση 4}
-\begin{frame}[label=Άσκηση4]{Εξάσκηση 4}
+\begin{askisi}
       Έστω $f:[1,2]\to\mathbb{R}$ μία συνεχής συνάρτηση της οποίας η γραφική παράσταση βρίσκεται πάνω από την ευθεία $ε:y=x$. Να δείξετε ότι υπάρχει ένα τουλάχιστον σημείο της $C_f$ που απέχει από την ευθεία $ε$ περισσότερο από ότι απέχουν τα υπόλοιπα σημεία της $C_f$.
 
       \hyperlink{Λύση4}{\beamerbutton{Λύση}}
-\end{frame}
+\end{askisi}
 
-\subsection{Άσκηση 5}
-\begin{frame}[label=Άσκηση5]{Εξάσκηση 5}
+\begin{askisi}
       Έστω η συνεχής συνάρτηση $f:[2,4]\to\mathbb{R}$. Να δείξετε ότι υπάρχει ενα τουλάχιστον $x_0\in (2,4)$ ώστε
       $$f(x_0)=\frac{f(2)+2f(3)+3f(4)}{6}$$
 
       \hyperlink{Λύση5}{\beamerbutton{Λύση}}
-\end{frame}
+\end{askisi}
 
-\subsection{Άσκηση 6}
-\begin{frame}[label=Άσκηση6]{Εξάσκηση 6}
+\begin{askisi}
       Δίνεται η συνάρτηση $f(x)=e^x+x$
       \begin{itemize}
             \item<1-> Να βρείτε το σύνολο τιμών της $f$
@@ -152,22 +179,20 @@
       \end{itemize}
 
       \hyperlink{Λύση6}{\beamerbutton{Λύση}}
-\end{frame}
+\end{askisi}
 
-\subsection{Άσκηση 7}
-\begin{frame}{Εξάσκηση 7}
-      Δίνεται η συνάρτηση $f(x)=\frac{1}{x}-\ln x$
+\begin{askisi}
+      Δίνεται η συνάρτηση $f(x)=\dfrac{1}{x}-\ln x$
       \begin{enumerate}
             \item<1-> Να δείξετε ότι η $f$ αντιστρέφεται και να βρείτε το πεδίο ορισμού της $f^{-1}$
             \item<2-> Να δείξετε ότι η εξίσωση $f(x)=2023$ έχει ακριβώς μία ρίζα
             \item<3-> Να εξετάσετε αν υπάρχει $x_0\in (0,1]$ τέτοιο ώστε $f(x_0)=e^{x_0}-2$
       \end{enumerate}
-\end{frame}
+\end{askisi}
 
 
 
-\subsection{Άσκηση 9}
-\begin{frame}{Εξάσκηση 9}
+\begin{askisi}
       Δίνεται η συνάρτηση $f(x)=\begin{cases}
                   e^x+x,       & x\le 0 \\
                   1-\ln (x+1), & x>0
@@ -180,44 +205,40 @@
                   έχει τουλάχιστον μία ρίζα στο διάστημα $(x_1,x_2)$ για κάθε $α$, $β\in\mathbb{R}-{0}$
             \item<4-> Αν $κ\le 0\le λ$ και ισχύει $e^κ-1=\ln (λ+1)-κ$, να βρείτε τις τιμές $κ$ και $λ$.
       \end{enumerate}
-\end{frame}
+\end{askisi}
 
-\subsection{Άσκηση 10}
-\begin{frame}{Εξάσκηση 10}
+\begin{askisi}
       Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση η οποία είναι συνεχής, γνησίως φθίνουσα και έχει σύνολο τιμών το $f(\mathbb{R})=(0,+\infty)$. Να βρείτε τα όρια:
       \begin{enumerate}
-            \item<1-> $\lim\limits_{x \to +\infty}{ \frac{f(x)-x}{x+f(x)} }$
-            \item<2-> $\lim\limits_{x \to -\infty}{ \frac{e^x}{f(x)} }$
-            \item<3-> $\lim\limits_{x \to +\infty}{ \frac{\ln f(x)}{f(x)} }$
+            \item<1-> $\lim\limits_{x \to +\infty}{ \dfrac{f(x)-x}{x+f(x)} }$
+            \item<2-> $\lim\limits_{x \to -\infty}{ \dfrac{e^x}{f(x)} }$
+            \item<3-> $\lim\limits_{x \to +\infty}{ \dfrac{\ln f(x)}{f(x)} }$
       \end{enumerate}
-\end{frame}
+\end{askisi}
 
-\subsection{Άσκηση 11}
-\begin{frame}{Εξάσκηση 11}
-      Έστω $f:Α\to\mathbb{R}$ μία συνάρτηση με $Α=(0,+\infty)$ με $f(x)=\frac{1}{x}-x+1$.
+\begin{askisi}
+      Έστω $f:Α\to\mathbb{R}$ μία συνάρτηση με $Α=(0,+\infty)$ με $f(x)=\dfrac{1}{x}-x+1$.
       \begin{enumerate}
             \item<1-> Να βρείτε το σύνολο τιμών της
             \item<2-> Να δείξετε ότι υπάρχει η αντίστροφη συνάρτηση $f^{-1}$ και ότι είναι γνησίως φθίνουσα
             \item<3-> Αν θεωρήσουμε γνωστό ότι η $f^{-1}$ είναι συνεχής, να βρείτε τα όρια:
                   \begin{itemize}
-                        \item $\lim\limits_{x \to +\infty}{ \frac{1}{f^{-1}(x)} }$
-                        \item<4-> $\lim\limits_{x \to +\infty}{ \frac{f^{-1}(x)-x}{x+f^{-1}(x)} }$
-                        \item<5-> $\lim\limits_{x \to -\infty}{ \frac{1}{f^{-1}(x)} }$
+                        \item $\lim\limits_{x \to +\infty}{ \dfrac{1}{f^{-1}(x)} }$
+                        \item<4-> $\lim\limits_{x \to +\infty}{ \dfrac{f^{-1}(x)-x}{x+f^{-1}(x)} }$
+                        \item<5-> $\lim\limits_{x \to -\infty}{ \dfrac{1}{f^{-1}(x)} }$
                   \end{itemize}
       \end{enumerate}
-\end{frame}
+\end{askisi}
 
-\subsection{Άσκηση 12}
-\begin{frame}{Εξάσκηση 12}
+\begin{askisi}
       Έστω $f:[0,1]\to\mathbb{R}$ μία συνάρτηση η οποία είναι $1-1$, συνεχής και ισχύει
       $$0<f(0)<f(1)$$
       Να δείξετε ότι $f(x)\ne 0$ για κάθε $x\in [0,1]$
-\end{frame}
+\end{askisi}
 
-\subsection{Άσκηση 13}
-\begin{frame}{Εξάσκηση 13}
+\begin{askisi}
       Να βρείτε όλες τις συνεχείς συναρτήσεις $f:\mathbb{R}\to\mathbb{R}$, για τις οποίες ισχύει $f^3(x)=f(x)$ για κάθε $x\in\mathbb{R}$
-\end{frame}
+\end{askisi}
 
 \section{}
 \begin{frame}
@@ -230,15 +251,13 @@
       \tableofcontents
 \end{frame}
 
-\subsection{Άσκηση 1}
-\begin{frame}[label=Λύση1]
+\begin{lisi}
       Με θεώρημα ενδιαμέσων τιμών. Η συνάρτηση είναι συνεχής στο $[10,11]$ με $f(10)=1024$ και $f(11)=2048$. Αφού $2023\in (1024,2048)$ υπάρχει $x_0$...
 
       \hyperlink{Άσκηση1}{\beamerbutton{Πίσω στην άσκηση}}
-\end{frame}
+\end{lisi}
 
-\subsection{Άσκηση 2}
-\begin{frame}[label=Λύση2]
+\begin{lisi}
       Με Bolzano ή με μέγιστης ελάχιστης τιμής και ΘΕΤ.
 
       \begin{gather*}
@@ -248,37 +267,33 @@
       \end{gather*}
 
       \hyperlink{Άσκηση2}{\beamerbutton{Πίσω στην άσκηση}}
-\end{frame}
+\end{lisi}
 
-\subsection{Άσκηση 3}
-\begin{frame}[label=Λύση3]
+\begin{lisi}
       Προφανές ελάχιστο στα $x_1=1$ και $x_2=3$. Ως συνεχής στο $[1,3]$ έχει σίγουρα ΚΑΙ μέγιστο στο $(1,3)$
 
       \hyperlink{Άσκηση3}{\beamerbutton{Πίσω στην άσκηση}}
-\end{frame}
+\end{lisi}
 
-\subsection{Άσκηση 4}
-\begin{frame}[label=Λύση4]
+\begin{lisi}
       Η συνάρτηση `απόστασης` $f(x)-x$ είναι ορισμένη στο κλειστό διάστημα και έχει σίγουρα μέγιστο
 
       \hyperlink{Άσκηση4}{\beamerbutton{Πίσω στην άσκηση}}
-\end{frame}
+\end{lisi}
 
-\subsection{Άσκηση 5}
-\begin{frame}[label=Λύση5]
+\begin{lisi}
       Όμοια με την Άσκηση 2
 
       \hyperlink{Άσκηση5}{\beamerbutton{Πίσω στην άσκηση}}
-\end{frame}
+\end{lisi}
 
-\subsection{Άσκηση 6}
-\begin{frame}[label=Λύση6]
+\begin{lisi}
       \begin{enumerate}
             \item Είναι γνησίως αύξουσα άρα $(f(+\infty),f(-\infty))$
             \item Προφανώς $[f(0),f(1)]$...
       \end{enumerate}
 
       \hyperlink{Άσκηση6}{\beamerbutton{Πίσω στην άσκηση}}
-\end{frame}
+\end{lisi}
 
 \end{document}

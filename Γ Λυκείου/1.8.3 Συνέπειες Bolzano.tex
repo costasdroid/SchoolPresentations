@@ -1,32 +1,51 @@
 \documentclass[greek]{beamer}
-%\usepackage{fontspec}
-\usepackage{amsmath,amsthm}
+\usepackage{amsmath,amsthm} % needed for mathematics
 \usepackage{unicode-math}
 \usepackage{xltxtra}
 \usepackage{graphicx}
 \usetheme{CambridgeUS}
 \usecolortheme{seagull}
 \usepackage{hyperref}
-\usepackage{ulem}
+\usepackage{ulem} % underline words package
 \usepackage{xgreek}
 
 \usepackage{pgfpages} 
-\usepackage{tikz}
+\usepackage{tikz} % package for shapes and more
 %\setbeameroption{show notes on second screen}
 %\setbeameroption{show only notes}
 
-\setsansfont{Calibri}
+\setsansfont{Calibri} % it is said that Calibri is the proper font for reading difficulties
 
-\usepackage{multicol}
+\usepackage{multicol} % package for two or more columns
 
-\usepackage{appendixnumberbeamer}
+\usepackage{appendixnumberbeamer} % remove page numbering in appendix
 
-\usepackage{polynom}
+\usepackage{polynom} % polynomial divisions package
 
-\usepackage{pgffor}
+\usepackage{pgffor} % macros
 
-\setbeamercovered{transparent}
-\beamertemplatenavigationsymbolsempty
+\setbeamercovered{highly dynamic}
+\setbeamertemplate{navigation symbols}{}
+
+\newcounter{askisi} % enviroment for exercises
+\newenvironment{askisi}
+{
+  \refstepcounter{askisi}\par
+  \subsection{Άσκηση \theaskisi}
+  \begin{frame}[label=Άσκηση\theaskisi,t]{Εξάσκηση \theaskisi}
+}{
+  \end{frame}
+}
+
+\newcounter{lisi} % enviroment for solutions
+\newenvironment{lisi}
+{
+  \refstepcounter{lisi}\par
+  \subsection{Άσκηση \thelisi}
+  \begin{frame}[label=Λύση\thelisi,t]{Λύση \thelisi}
+}{
+  \end{frame}
+}
 
 \title{Συναρτήσεις}
 \subtitle{Συνέπειες Bolzano 1 (Διατήρηση Προσήμου)}
@@ -42,19 +61,19 @@
 
 \section{Θεωρία}
 \begin{frame}{Ένα μάθημα μόνο για το πρόσημο?}
-  \begin{itemize}
-    \item Φτιάξτε άξονες \pause
-    \item Σχεδιάστε όσες συναρτήσεις μπορείτε που ισχύει $f^2(x)=1$ για κάθε $x\in \mathbb{R}$ \pause
+  \begin{itemize}[<+->]
+    \item Φτιάξτε άξονες
+    \item Σχεδιάστε όσες συναρτήσεις μπορείτε που ισχύει $f^2(x)=1$ για κάθε $x\in \mathbb{R}$
   \end{itemize}
-  Συμπέρασμα...
+  \onslide<3>Συμπέρασμα...
 \end{frame}
 
 \begin{frame}{Ένα μάθημα μόνο για το πρόσημο?}
-  \begin{itemize}
-    \item Φτιάξτε άξονες \pause
-    \item Σχεδιάστε όσες συνεχείς στο $\mathbb{R}$ συναρτήσεις μπορείτε που ισχύει $f^2(x)=1$ για κάθε $x\in \mathbb{R}$ \pause
+  \begin{itemize}[<+->]
+    \item Φτιάξτε άξονες
+    \item Σχεδιάστε όσες συνεχείς στο $\mathbb{R}$ συναρτήσεις μπορείτε που ισχύει $f^2(x)=1$ για κάθε $x\in \mathbb{R}$
   \end{itemize}
-  Συμπέρασμα...
+  \onslide<3>Συμπέρασμα...
 \end{frame}
 
 \begin{frame}{Θεώρημα 1}
@@ -69,77 +88,86 @@
   \end{block}
 \end{frame}
 
-\section{Ασκήσεις}
-\begin{frame}{Εξάσκηση}
-  Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση με $f(0)=1$ η οποία είναι συνεχής και ισχύει $f(x)\ne 0$ για κάθε $x\in\mathbb{R}$. Να βρείτε το πεδίο ορισμού της συνάρτησης $g(x)=\ln f(x)$
+\begin{frame}[noframenumbering]
+  Στο moodle θα βρείτε τις ασκήσεις που πρέπει να κάνετε, όπως και αυτή τη παρουσίαση
 \end{frame}
 
-\begin{frame}{Εξάσκηση}
+\section{Ασκήσεις}
+
+\begin{frame}[noframenumbering]
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+    \usebeamerfont{title}Ασκήσεις
+  \end{beamercolorbox}
+  \vfill
+\end{frame}
+
+\begin{askisi}
+  Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση με $f(0)=1$ η οποία είναι συνεχής και ισχύει $f(x)\ne 0$ για κάθε $x\in\mathbb{R}$. Να βρείτε το πεδίο ορισμού της συνάρτησης $g(x)=\ln f(x)$
+\end{askisi}
+
+\begin{askisi}
   Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση η οποία είναι συνεχής και ισχύει $f^2(x)>0$ για κάθε $x\in\mathbb{R}$. Να βρείτε το
   $$\lim\limits_{x \to +\infty}{ \frac{f(1)x^2+1}{f(0)x+2} }$$
-\end{frame}
+\end{askisi}
 
-\begin{frame}{Εξάσκηση}
+\begin{askisi}
   Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση η οποία είναι συνεχής. Αν $f(3)=-2$ και $x_1=1$ και $x_2=4$ είναι διαδοχικές ρίζες της εξίσωσης $f(x)=0$, να βρείτε το
   $$\lim\limits_{x \to +\infty}{ f(2)x^3-x+1 }$$
-\end{frame}
+\end{askisi}
 
-\begin{frame}{Εξάσκηση}
+\begin{askisi}
   Να βρείτε το πρόσημο των συναρτήσεων
-  \begin{itemize}
+  \begin{itemize}[<+->]
     \item $f(x)=2x^3-x-1$
     \item $f(x)=x-ημx$
     \item $f(x)=\sqrt{x^2+1}-x$
   \end{itemize}
-\end{frame}
+\end{askisi}
 
-\begin{frame}{Εξάσκηση}
+\begin{askisi}
   Να βρείτε το πρόσημο της συνάρτησης $f(x)=2ημx-1$, $x\in [0,π]$.
-\end{frame}
+\end{askisi}
 
-\begin{frame}{Εξάσκηση}
+\begin{askisi}
   Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση η οποία είναι συνεχής και ισχύει
   $$|f(x)|=e^x \text{ για κάθε } x\in\mathbb{R}$$
-  \begin{itemize}
+  \begin{itemize}[<+->]
     \item Να αποδείξετε ότι $f(x)\ne 0$, για κάθε $x\in\mathbb{R}$
     \item Αν $f(0)=-1$ να βρείτε τον τύπο της $f$
   \end{itemize}
-\end{frame}
+\end{askisi}
 
-\begin{frame}{Εξάσκηση}
+\begin{askisi}
   Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση με $f(0)=1$ η οποία είναι συνεχής και ισχύει $f^2(x)=x^2+1$ για κάθε $x\in\mathbb{R}$. Να βρείτε τον τύπο της $f$.
-\end{frame}
+\end{askisi}
 
-\begin{frame}{Εξάσκηση}
+\begin{askisi}
   Να βρείτε τη συνεχή συνάρτηση $f$ με $f(0)=1$ για την οποία ισχύει $f^2(x)=1+2xf(x)$ για κάθε $x\in\mathbb{R}$
-\end{frame}
+\end{askisi}
 
-\begin{frame}{Εξάσκηση}
+\begin{askisi}
   Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση με $f(2)=2$ η οποία είναι συνεχής και ισχύει $f^2(x)+2=x+2f(x)$ για κάθε $x\in [1,+\infty]$. Να βρείτε τον τύπο της $f$.
-\end{frame}
+\end{askisi}
 
-\begin{frame}{Εξάσκηση}
+\begin{askisi}
   Έστω $f:[-1,1]\to\mathbb{R}$ μία συνάρτηση με $f(0)=-1$ η οποία είναι συνεχής και ισχύει $x^2+f^2(x)=1$, $x\in [-1,1]$. Να βρείτε τον τύπο της $f$.
-\end{frame}
+\end{askisi}
 
-\begin{frame}{Εξάσκηση}
+\begin{askisi}
   Έστω $f:[-1,1]\to\mathbb{R}$ μία συνεχής συνάρτηση για την οποία ισχύει $4x^2+f^2(x)=4$ για κάθε $x\in [-1,1]$
-  \begin{itemize}
+  \begin{itemize}[<+->]
     \item Να βρείτε τις ρίζες της εξίσωσης $f(x)=0$
     \item Να δείξετε ότι η $f$ διατηρεί το πρόσημό της στο $(-1,1)$
     \item Ποιος μπορεί να είναι ο τύπος της $f$;
     \item Αν $f(0)=2$, να βρείτε την $f$
   \end{itemize}
-\end{frame}
+\end{askisi}
 
-\begin{frame}{Εξάσκηση}
+\begin{askisi}
   Να βρείτε όλες τις συνεχείς συναρτήσεις $f:\mathbb{R}\to\mathbb{R}$ που ικανοποιούν τη σχέση
   $$f^2(x)+2x=x^2+1 \text{, } x\in\mathbb{R}$$
-\end{frame}
-
-\section{}
-\begin{frame}
-  Στο moodle θα βρείτε τις ασκήσεις που πρέπει να κάνετε, όπως και αυτή τη παρουσίαση
-\end{frame}
+\end{askisi}
 
 \end{document}
