@@ -1,0 +1,315 @@
+\documentclass[greek]{beamer}
+%\usepackage{fontspec}
+\usepackage{amsmath,amsthm}
+\usepackage{unicode-math}
+\usepackage{xltxtra}
+\usepackage{graphicx}
+\usetheme{CambridgeUS}
+\usecolortheme{seagull}
+\usepackage{hyperref}
+\usepackage{ulem}
+\usepackage{xgreek}
+
+\usepackage{pgfpages} 
+\usepackage{tikz}
+%\setbeameroption{show notes on second screen}
+%\setbeameroption{show only notes}
+
+\setsansfont{Calibri}
+
+\usepackage{multicol}
+
+\usepackage{appendixnumberbeamer}
+
+\usepackage{polynom}
+
+\usepackage{pgffor}
+
+
+\setbeamercovered{transparent}
+\beamertemplatenavigationsymbolsempty
+
+\title{Διανύσματα}
+\subtitle{Εσωτερικό Γινόμενο Διανυσμάτων}
+\author[Λόλας]{Κωνσταντίνος Λόλας}
+\institute[$10^ο$ ΓΕΛ]{$10^ο$ ΓΕΛ Θεσσαλονίκης}
+\date{}
+
+\begin{document}
+
+\begin{frame}
+      \titlepage
+\end{frame}
+\begin{frame}{Τι, δεν τελειώσαμε με τα διανύσματα?}
+      Αν προσέχατε μιλήσαμε για:
+      \begin{enumerate}
+            \item τι είναι
+            \item μέτρο
+            \item άθροισμα - διαφορά
+            \item πολλαπλασιασμό με αριθμό
+            \item ισότητα
+            \item παραλληλία
+                  \only<2>{\item τι έμεινε...}
+                  \only<3>{\item γωνίες, καθετότητα...}
+      \end{enumerate}
+      \only<2>{
+            \begin{figure}
+                  \centering
+                  \includegraphics[width=0.4 \textwidth]{"../images/whatelse"}
+            \end{figure}
+      }
+\end{frame}
+
+\begin{frame}{Νέος κόσμος}
+      Κάθε διανυσματικός χώρος (?), εφοδιάζεται με ένα δικό του εσωτερικό γινόμενο. Για εμάς, να ναι καλά ο Ευκλείδης!
+      \begin{block}{Ευκλείδειο Εσωτερικό Γινόμενο}
+            Έστω $\vec{α}=(x_α,y_α)$ και $\vec{β}=(x_β,y_β)$. Ορίζουμε εσωτερικό γινόμενο την πράξη $\mathbb{R^2}\cdot\mathbb{R^2}\to\mathbb{R}$:
+            $$\vec{α}\cdot\vec{β}=x_αx_β+y_αy_β$$
+      \end{block}
+      Ή απλά για τους noobάδες: \emph{εσωτερικό γινόμενο}
+\end{frame}
+
+\begin{frame}{Ναι αλλά πού είναι η γωνία?}
+      \begin{figure}
+            \centering
+            \includegraphics[width=0.8 \textwidth]{"../images/missing"}
+      \end{figure}
+\end{frame}
+
+\begin{frame}{Για δυνατούς λύτες}
+      Αν μάθατε τον τύπο των συνημιτόνων:
+      \begin{figure}
+            \centering
+            \includegraphics[width=0.35 \textwidth]{"../images/dotproductproof"}
+      \end{figure}
+      \begin{align*}
+            |AB|^2                           & =|OA|^2+|OB|^2-2|OA|\cdot|ΟΒ|\cdot συνθ                             \\
+            \sqrt{(x_2-x_1)^2+(y_2-y_1)^2}^2 & =\sqrt{x_1^2+y_1^2}^2+\sqrt{x_2^2+y_2^2}^2-2|OA|\cdot|ΟΒ|\cdot συνθ \\
+            -2(x_1x_2+y_1y_2)                & =-2|OA|\cdot|ΟΒ|\cdot συνθ                                          \\
+            x_1x_2+y_1y_2                    & =|OA|\cdot|ΟΒ|\cdot συνθ
+      \end{align*}
+\end{frame}
+
+\begin{frame}{Τι, δεύτερος τύπος?}
+      Στο βιβλίο τον μαθαίνετε ως πρώτο (και stick to it)
+      \begin{block}{Ευκλείδειο Εσωτερικό Γινόμενο}
+            Έστω $\vec{α}$ και $\vec{β}$ δύο μη μηδενικά διανύσματα. Ορίζουμε εσωτερικό γινόμενο την πράξη
+            $$\vec{α}\cdot\vec{β} = |\vec{α}|\cdot|\vec{β}|\cdot συνθ$$
+      \end{block}
+      \only<2->{
+            Problems, problems, problems!
+
+            Τι γίνεται αν $\vec{α}=\vec{0}$ ή $\vec{β}=\vec{0}$?
+      }
+
+\end{frame}
+
+\begin{frame}{Και ναι ήρθε η ώρα!}
+      Απλά από τον προηγούμενο τύπο $\vec{α}\cdot\vec{β} = |\vec{α}|\cdot|\vec{β}|\cdot συνθ$
+      \begin{itemize}
+            \item<1-> $\vec{α}\upuparrows\vec{β}\iff \vec{α}\cdot\vec{β} = |\vec{α}|\cdot|\vec{β}|$
+            \item<2-> $\vec{α}\updownarrows\vec{β}\iff \vec{α}\cdot\vec{β} = -|\vec{α}|\cdot|\vec{β}|$
+            \item<3-> $\vec{α}\perp\vec{β}\iff \vec{α}\cdot\vec{β} = 0$
+            \item<4-> $\vec{α}^2=|\vec{α}|^2$
+                  \only<5> {και το αστέρι μας...}
+            \item<6-> $συνθ=\dfrac{\vec{α}\cdot\vec{β}}{|\vec{α}|\cdot|\vec{β}|}$
+      \end{itemize}
+\end{frame}
+
+\begin{frame}{Και λίγο ιδιότητες της νέας πράξης}
+      Η απoδείξεις είναι απλές...
+      \begin{itemize}
+            \item<1-> $\vec{α}(\vec{β}+\vec{γ})=\vec{α}\vec{β}+\vec{α}\vec{γ}$ (Επιμεριστική)
+            \item<2-> $\vec{α}\vec{β}=\vec{β}\vec{α}$ (Αντιμεταθετική)
+            \item<3-> $λ(\vec{α}\vec{β})=\vec{α}(λ\vec{β})=λ\vec{α}\vec{β}$ (Προσεταιριστική με πραγματικό)
+            \item<4-> Γενικά $\vec{α}(\vec{β}\vec{γ})\ne (\vec{α}\vec{β})\vec{γ}$, αλλά γιατί?
+      \end{itemize}
+\end{frame}
+
+\begin{frame}
+      \begin{figure}
+            \centering
+            \includegraphics[width=0.5 \textwidth]{"../images/relief"}
+      \end{figure}
+\end{frame}
+
+\begin{frame}
+      Στο moodle θα βρείτε τις ασκήσεις που πρέπει να κάνετε, όπως και αυτή τη παρουσίαση
+\end{frame}
+
+\section{Ασκήσεις}
+
+\subsection{Άσκηση 1}
+\begin{frame}[label=Άσκηση1,t]{Εξάσκηση 1}
+      Δίνονται δύο διανύσματα $\vec{α}$, $\vec{β}$ για τα οποία ισχύουν $|\vec{α}|=2$, $|\vec{β}|=1$ και $\widehat{(\vec{α }, \vec{β })}=\dfrac{\pi}{3}$. Να υπολογίσετε:
+      \begin{enumerate}
+            \item<1-> $\vec{α}\vec{β}$
+            \item<2-> $\vec{α}^2$
+      \end{enumerate}
+      %\hyperlink{Λύση1}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 2}
+\begin{frame}[label=Άσκηση2,t]{Εξάσκηση 2}
+      Αν $\vec{α}\updownarrows\vec{β}$, $|\vec{α}|=3$ και $\vec{α}\vec{β}=-6$, να βρείτε το $\vec{β}$
+      %\hyperlink{Λύση2}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 3}
+\begin{frame}[label=Άσκηση3,t]{Εξάσκηση 3}
+      Αν $\vec{α}\perp\vec{β}$, $\vec{α}\updownarrows\vec{γ}$ και $|\vec{α}|=|\vec{γ}|=1$, να υπολογίσετε την τιμή της παράστασης
+      $$(\vec{α}\vec{β})^{2023}+|\vec{α}\vec{γ}|$$
+      %\hyperlink{Λύση3}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 4}
+\begin{frame}[label=Άσκηση4,t]{Εξάσκηση 4}
+      Αν $\vec{α}=(2,3)$ και $\vec{β}=(4,5)$ να υπολογίσετε τα:
+      \begin{enumerate}
+            \item<1-> $\vec{α}\vec{β}$
+            \item<2-> $\vec{α}^2$
+      \end{enumerate}
+      %\hyperlink{Λύση4}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 5}
+\begin{frame}[label=Άσκηση5,t]{Εξάσκηση 5}
+      Αν τα διανύσματα $\vec{α}=(x-1,-4)$, $\vec{β}=(6,x)$ είναι κάθετα, να βρείτε το $x$
+
+      %\hyperlink{Λύση5}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 6}
+\begin{frame}[label=Άσκηση6,t]{Εξάσκηση 6}
+      Δίνονται τα διανύσματα $\vec{α}=(1,3)$, $\vec{β}=(1,-2)$ και $\vec{γ}=(4,-3)$. Να βρείτε διάνυσμα $\vec{v}=κ\vec{α}+λ\vec{β}$, ώστε να είναι κάθετο στο $\vec{γ}$ και να έχει μέτρο 5.
+
+      %\hyperlink{Λύση6}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 7}
+\begin{frame}[label=Άσκηση7,t]{Εξάσκηση 7}
+      Δίνονται δύο διανύσματα $\vec{α}$, $\vec{β}$ για τα οποία ισχύουν $|\vec{α}|=2$, $|\vec{β}|=3$ και $\widehat{(\vec{α }, \vec{β })}=\dfrac{2\pi}{3}$. Να υπολογίσετε:
+      \begin{enumerate}
+            \item<1-> $(\vec{α}-2\vec{β})(3\vec{α}+\vec{β})$
+            \item<2-> $(3\vec{α}-\vec{β})^2$
+      \end{enumerate}
+
+      %\hyperlink{Λύση7}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 8}
+\begin{frame}[label=Άσκηση8,t]{Εξάσκηση 8}
+      Δίνονται τα διανύσματα $\vec{α}=(-2,1)$, $\vec{β}=(3,1)$ και $\vec{γ}=(0,-3)$. Να βρείτε τα:
+
+      \begin{enumerate}
+            \item<1-> $(3\vec{α})(-\vec{γ})$
+            \item<2-> $\vec{α}(\vec{β}-2\vec{γ})$
+            \item<3-> $(|\vec{γ}\vec{α}|)\vec{β}$
+      \end{enumerate}
+
+      %\hyperlink{Λύση8}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 9}
+\begin{frame}[label=Άσκηση9,t]{Εξάσκηση 9}
+      Δίνονται δύο κάθετα διανύσματα $\vec{α}$ και $\vec{β}$ με $|\vec{α}|=\sqrt{2}$, $|\vec{β}|=\sqrt{3}$. Να δείξετε ότι τα διανύσματα $\vec{v}=\vec{α}-2\vec{β}$ και $\vec{u}=3\vec{α}+\vec{β}$ είναι κάθετα.
+      %\hyperlink{Λύση9}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 10}
+\begin{frame}[label=Άσκηση10,t]{Εξάσκηση 10}
+      Αν $|\vec{α}|=2$, $|\vec{β}|=3$ και $\widehat{(\vec{α }, \vec{β })}=\dfrac{5\pi}{6}$. Να βρείτε το μέτρο του διανύσματος
+      $$\vec{v}=2\vec{α}-3\vec{β}$$
+      %\hyperlink{Λύση10}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 11}
+\begin{frame}[label=Άσκηση11,t]{Εξάσκηση 11}
+      Δίνονται δύο διανύσματα $\vec{α}$, $\vec{β}$ για τα οποία ισχύουν $|\vec{α}|=1$, $|\vec{β}|=\sqrt{2}$ και $\widehat{(\vec{α }, \vec{β })}=45^{\circ}$ και το παραλληλόγραμμο $ΑΒΓΔ$ με $\widehat{ΑΒ}=λ\vec{α}+\vec{β}$ και $\widehat{ΑΔ}=\vec{α}+\vec{β}$. Να βρείτε το $λ$ ώστε το μήκος της διαγωνίου $ΑΓ$ να είναι $2$.
+      %\hyperlink{Λύση11}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 12}
+\begin{frame}[label=Άσκηση12,t]{Εξάσκηση 12}
+      \begin{enumerate}
+            \item<1-> Αν $\vec{v}$ και $\vec{u}$ δύο διανύσματα, να αποδείξετε ότι
+                  $$|\vec{v}+\vec{u}|^2+|\vec{v}-\vec{u}|^2=2|\vec{v}|^2+2|\vec{u}|^2$$
+            \item<2-> Αν για τα διανύσματα $\vec{v}$ και $\vec{u}$ ισχύουν $|\vec{v}|=1$, $|\vec{u}|=2$ και $|\vec{v}+\vec{u}|=3$, να βρείτε το $|\vec{v}-\vec{u}|=3$
+      \end{enumerate}
+      %\hyperlink{Λύση12}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 13}
+\begin{frame}[label=Άσκηση13,t]{Εξάσκηση 13}
+      Αν $|\vec{α}|=1$, $|\vec{β}|=2$ και $|\vec{α}-\vec{β}|=\sqrt{7}$. Να βρείτε τη γωνία των διανυσμάτων $\widehat{(\vec{α }, \vec{β })}$
+      %\hyperlink{Λύση13}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 14}
+\begin{frame}[label=Άσκηση14,t]{Εξάσκηση 14}
+      Δίνονται τα σημεία $Α(-3,2)$ και $Β(1,-2)$. Να βρείτε σημείο $Μ$ του άξονα $y'y$, ώστε το τρίγωνο $ΜΑΒ$ να είναι ισοσκελές με βάση την $ΑΒ$
+      %\hyperlink{Λύση14}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 15}
+\begin{frame}[label=Άσκηση15,t]{Εξάσκηση 15}
+      Δίνονται τα διανύσματα $\vec{α}$ και $\vec{β}$, όπου το $\vec{α}$ είναι μοναδιαίο, $|\vec{β}|=2$ και η γωνία των διανυσμάτων $\vec{α}$ και $\vec{α}$ είναι $120^{\circ}$. Να βρείτε την γωνία των διανυσμάτων $\vec{δ}$ και $\vec{α}$, όπου $\vec{δ}=2\vec{α}-\vec{β}$.
+      %\hyperlink{Λύση15}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 16}
+\begin{frame}[label=Άσκηση16,t]{Εξάσκηση 16}
+      Αν $|\vec{α}|=2$, $|\vec{β}|=1$ και $\widehat{(\vec{α }, \vec{β })}=\dfrac{2\pi}{3}$ και $\vec{α}+2\vec{β}+\vec{γ}=\vec{0}$, να υπολογίσετε:
+      \begin{enumerate}
+            \item<1-> το μέτρο του $\vec{γ}$
+            \item<2-> την τιμή της παράστασης $\vec{α}\vec{γ}+\vec{β}\vec{γ}$
+      \end{enumerate}
+      %\hyperlink{Λύση16}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 17}
+\begin{frame}[label=Άσκηση17,t]{Εξάσκηση 17}
+      Αν για τα μη μηδενικά διανύσματα $\vec{α}$, $\vec{β}$ και $\vec{γ}$, ισχύουν
+      $$\dfrac{|\vec{α}|}{2}=\dfrac{2|\vec{β}|}{3}=\dfrac{|\vec{γ}|}{5} \text{ και } \vec{α}-2\vec{β}+\vec{γ}=\vec{0}$$
+      να αποδείξετε ότι:
+      \begin{enumerate}
+            \item<1-> $\vec{α}=-\dfrac{4}{3}\vec{β}$
+            \item<2-> $\vec{β}\parallel \vec{γ}$
+      \end{enumerate}
+      %\hyperlink{Λύση17}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 18}
+\begin{frame}[label=Άσκηση18,t]{Εξάσκηση 18}
+      Έστω τα διανύσματα $\vec{α}$, $\vec{β}$ με $|\vec{α}|=2$, $|\vec{β}|=1$ και $\widehat{(\vec{α }, \vec{β })}=\dfrac{2\pi}{3}$
+      \begin{enumerate}
+            \item<1-> Να αποδείξετε ότι: $\vec{α}-2\vec{β}\ne \vec{0}$
+            \item<2-> Να βρείτε διάνυσμα $\vec{x}$, ώστε:
+                  \begin{itemize}
+                        \item $\vec{x}\parallel (\vec{α}-2\vec{β})$ και
+                        \item $\vec{β}\perp (\vec{α}-\vec{x})$
+                  \end{itemize}
+      \end{enumerate}
+      %\hyperlink{Λύση18}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 19}
+\begin{frame}[label=Άσκηση19,t]{Εξάσκηση 19}
+      Αν $\vec{α}=(x,3)$ και $\vec{β}=(1,7)$, να βρείτε την τιμή του $x$ ώστε $\widehat{(\vec{α }, \vec{β })}=\dfrac{\pi}{4}$
+      %\hyperlink{Λύση19}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 20}
+\begin{frame}[label=Άσκηση20,t]{Εξάσκηση 20}
+      Δίνονται τα σταθερά σημεία $Α$ και $Β$. Να βρείτε το γεωμετρικό τόπο των σημείων $Μ$ του επιπέδου, για τα οποία ισχύει $|\overrightarrow{ΜΑ}-2\overrightarrow{ΜΒ}|=\sqrt{\overrightarrow{ΜΑ}^2+4\overrightarrow{ΜΒ}^2}$
+      %\hyperlink{Λύση20}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 21}
+\begin{frame}[label=Άσκηση21,t]{Εξάσκηση 21}
+      Δίνεται τρίγωνο $ΑΒΓ$ με $(ΑΒ)=6$. Να βρείτε το γεωμετρικό τόπο των σημείων $Μ$ του επιπέδου, για τα οποία ισχύει:
+      $$\overrightarrow{ΜΑ}\cdot \overrightarrow{ΜΓ}=7+\overrightarrow{ΜΑ}\cdot \overrightarrow{ΒΓ}$$
+      %\hyperlink{Λύση21}{\beamerbutton{Λύση}}
+\end{frame}
+
+\end{document}
