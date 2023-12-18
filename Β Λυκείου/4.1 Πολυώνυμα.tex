@@ -1,29 +1,51 @@
 \documentclass[greek]{beamer}
-%\usepackage{fontspec}
-\usepackage{amsmath,amsthm}
+\usepackage{amsmath,amsthm} % needed for mathematics
 \usepackage{unicode-math}
 \usepackage{xltxtra}
 \usepackage{graphicx}
 \usetheme{CambridgeUS}
 \usecolortheme{seagull}
 \usepackage{hyperref}
-\usepackage{ulem}
+\usepackage{ulem} % underline words package
 \usepackage{xgreek}
 
-\usepackage{pgfpages}
-\usepackage{tikz}
-\usepackage{tkz-tab}
+\usepackage{pgfpages} 
+\usepackage{tikz} % package for shapes and more
 %\setbeameroption{show notes on second screen}
 %\setbeameroption{show only notes}
 
-\setsansfont{Noto Serif}
+\setsansfont{Calibri} % it is said that Calibri is the proper font for reading difficulties
 
-\usepackage{multicol}
+\usepackage{multicol} % package for two or more columns
 
-\usepackage{appendixnumberbeamer}
+\usepackage{appendixnumberbeamer} % remove page numbering in appendix
 
-\setbeamercovered{transparent}
-\beamertemplatenavigationsymbolsempty
+\usepackage{polynom} % polynomial divisions package
+
+\usepackage{pgffor} % macros
+
+\setbeamercovered{highly dynamic}
+\setbeamertemplate{navigation symbols}{}
+
+\newcounter{askisi} % enviroment for exercises
+\newenvironment{askisi}
+{
+  \refstepcounter{askisi}\par
+  \subsection{Άσκηση \theaskisi}
+  \begin{frame}[label=Άσκηση\theaskisi,t]{Εξάσκηση \theaskisi}
+}{
+  \end{frame}
+}
+
+\newcounter{lisi} % enviroment for solutions
+\newenvironment{lisi}
+{
+  \refstepcounter{lisi}\par
+  \subsection{Άσκηση \thelisi}
+  \begin{frame}[label=Λύση\thelisi,t]{Λύση \thelisi}
+}{
+  \end{frame}
+}
 
 \title{Πολυώνυμα}
 \subtitle{Βασικά}
@@ -33,299 +55,222 @@
 \begin{document}
 
 \begin{frame}
- \titlepage
+    \titlepage
 \end{frame}
 
 \section{Θεωρία}
 \begin{frame}{Πού βρισκόμαστε?}
- Πιάνουμε πολυώνυμα
- \begin{enumerate}
-  \item<1-> Ορισμοί
-  \item<2-> Μορφές
-  \item<3-> Πράξεις
-  \item<4-> Ρίζες
-  \item<5-> Παραγοντοποίηση
-  \item<6-> Πρόσημο
- \end{enumerate}
+    Πιάνουμε πολυώνυμα
+    \begin{enumerate}
+        \item<1-> Ορισμοί
+        \item<2-> Μορφές
+        \item<3-> Πράξεις
+        \item<4-> Ρίζες
+        \item<5-> Παραγοντοποίηση
+        \item<6-> Πρόσημο
+    \end{enumerate}
 \end{frame}
 
 \begin{frame}{Παλιά, Ξινά σταφύλλια}
- \begin{block}{Μονώνυμο του $x$}<1->
-  Καλούμε \emph{μονώνυμο} κάθε παράσταση της μορφής $α\cdot x^ν$, όπου $α\in \mathbb{R}$ και $ν\in \mathbb{N}$
- \end{block}
- \begin{block}{Πολυώνυμο του $x$}<2->
-  Καλούμε \emph{πολυώνυμο} κάθε παράσταση της μορφής
-  $$α_νx^ν+α_{ν-1}x^{ν-1}+\cdots+α_1x+α_0$$
-  με $ν\in\mathbb{N}$ και $α_i\in\mathbb{R}$, $0\le i \le ν$
- \end{block}
+    \begin{block}{Μονώνυμο του $x$}<1->
+        Καλούμε \emph{μονώνυμο} κάθε παράσταση της μορφής $α\cdot x^ν$, όπου $α\in \mathbb{R}$ και $ν\in \mathbb{N}$
+    \end{block}
+    \begin{block}{Πολυώνυμο του $x$}<2->
+        Καλούμε \emph{πολυώνυμο} κάθε παράσταση της μορφής
+        $$α_νx^ν+α_{ν-1}x^{ν-1}+\cdots+α_1x+α_0$$
+        με $ν\in\mathbb{N}$ και $α_i\in\mathbb{R}$, $0\le i \le ν$
+    \end{block}
 \end{frame}
 
 \begin{frame}{Παλιά, Ξινά σταφύλλια}
- \begin{block}{Ορισμοί στα πολυώνυμα}
-  \begin{itemize}
-   \item Όροι: Τα μονώνυμα $α_ix^i$, $0\le i \le ν$
-   \item Συντελεστές: Οι πραγματικοί $α_i$, $0\le i \le ν$
-   \item Σταθερός όρος: Το $α_0$
-   \item Σταθερό πολυώνυμο: το πολυώνυμο $α_0$
-   \item Μηδενικό πολυώνυμο: το πολυώνυμο με όλα τα $α_i=0$, $0\le i \le ν$
-   \item Βαθμός πολυωνύμου: ο μεγαλύτερος εκθέτης από τους μη μηδενικούς όρους
-  \end{itemize}
+    \begin{block}{Ορισμοί στα πολυώνυμα}
+        \begin{itemize}
+            \item Όροι: Τα μονώνυμα $α_ix^i$, $0\le i \le ν$
+            \item Συντελεστές: Οι πραγματικοί $α_i$, $0\le i \le ν$
+            \item Σταθερός όρος: Το $α_0$
+            \item Σταθερό πολυώνυμο: το πολυώνυμο $α_0$
+            \item Μηδενικό πολυώνυμο: το πολυώνυμο με όλα τα $α_i=0$, $0\le i \le ν$
+            \item Βαθμός πολυωνύμου: ο μεγαλύτερος εκθέτης από τους μη μηδενικούς όρους
+        \end{itemize}
 
- \end{block}
+    \end{block}
 \end{frame}
 
 \begin{frame}{Ισότητα}
- \begin{block}{Ισότητα Πολυωνύμων}
-  Δύο πολυώνυμα
+    \begin{block}{Ισότητα Πολυωνύμων}
+        Δύο πολυώνυμα
 
-  $α_νx^ν+α_{ν-1}x^{ν-1}+\cdots+α_1x+α_0$ και $β_κx^κ+β_{κ-1}x^{κ-1}+\cdots+β_1x+β_0$ με $ν\ge κ$
+        $α_νx^ν+α_{ν-1}x^{ν-1}+\cdots+α_1x+α_0$ και $β_κx^κ+β_{κ-1}x^{κ-1}+\cdots+β_1x+β_0$ με $ν\ge κ$
 
-  είναι \emph{ίσα} όταν
+        είναι \emph{ίσα} όταν
 
-  $α_0=β_0$, $α_0=β_0$, \ldots, $α_κ=β_κ$ και $β_{κ+1}=β_{κ+2}=\cdots=β_ν=0$
- \end{block}
+        $α_0=β_0$, $α_0=β_0$, \ldots, $α_κ=β_κ$ και $β_{κ+1}=β_{κ+2}=\cdots=β_ν=0$
+    \end{block}
 \end{frame}
 
 \begin{frame}{Πολυώνυμο = Συνάρτηση, άρα...}
- \begin{block}{Αριθμητική Τιμή}
-  Έστω ένα πολυώνυμο $P(x)=α_νx^ν+α_{ν-1}x^{ν-1}+\cdots+α_1x+α_0$
+    \begin{block}{Αριθμητική Τιμή}
+        Έστω ένα πολυώνυμο $P(x)=α_νx^ν+α_{ν-1}x^{ν-1}+\cdots+α_1x+α_0$
 
-  \emph{Αριθμητική τιμή} ή απλά \emph{τιμή} του είναι κάθε αριθμός $P(ρ)$ με $ρ\in\mathbb{R}$
+        \emph{Αριθμητική τιμή} ή απλά \emph{τιμή} του είναι κάθε αριθμός $P(ρ)$ με $ρ\in\mathbb{R}$
 
-  $$P(ρ)=α_νρ^ν+α_{ν-1}ρ^{ν-1}+\cdots+α_1ρ+α_0$$
- \end{block}
+        $$P(ρ)=α_νρ^ν+α_{ν-1}ρ^{ν-1}+\cdots+α_1ρ+α_0$$
+    \end{block}
 
- \begin{block}{Ρίζα}
-  Έστω ένα πολυώνυμο $P(x)=α_νx^ν+α_{ν-1}x^{ν-1}+\cdots+α_1x+α_0$
+    \begin{block}{Ρίζα}
+        Έστω ένα πολυώνυμο $P(x)=α_νx^ν+α_{ν-1}x^{ν-1}+\cdots+α_1x+α_0$
 
-  \emph{Ρίζα} του είναι κάθε $ρ\in\mathbb{R}$ με $P(ρ)=0$
- \end{block}
+        \emph{Ρίζα} του είναι κάθε $ρ\in\mathbb{R}$ με $P(ρ)=0$
+    \end{block}
 \end{frame}
 
 \begin{frame}{Πράξεις}
- \begin{block}{}
-  \begin{itemize}
-   \item<1-> Πρόσθεση
-   \item<2-> Αφαίρεση
-   \item<3-> Πολλαπλασιασμός
-   \item<4-> Διαίρεση!!!!!
-  \end{itemize}
- \end{block}
- \onslide<5-> Τι γίνεται με τους βαθμούς?
+    \begin{block}{}
+        \begin{itemize}
+            \item<1-> Πρόσθεση
+            \item<2-> Αφαίρεση
+            \item<3-> Πολλαπλασιασμός
+            \item<4-> Διαίρεση!!!!!
+        \end{itemize}
+    \end{block}
+    \onslide<5-> Τι γίνεται με τους βαθμούς?
+\end{frame}
+
+\begin{frame}[noframenumbering]
+    Στο moodle θα βρείτε τις ασκήσεις που πρέπει να κάνετε, όπως και αυτή τη παρουσίαση
 \end{frame}
 
 \section{Ασκήσεις}
-\subsection{Άσκηση 1}
-\begin{frame}[label=Άσκηση1]{Εξάσκηση 1}
- Δίνεται το πολυώνυμο $P(x)=x^4-3x+2$
- \begin{enumerate}
-  \item<1-> Να βρείτε την τιμή του πολυωνύμου για $x=2$
-  \item<2-> Να εξετάσετε ποιοι από τους αριθμούς $1$ και $-1$ είναι ρίζες του
 
- \end{enumerate}
-
- % \hyperlink{Λύση1}{\beamerbutton{Λύση}}
+\begin{frame}[noframenumbering]
+    \vfill
+    \centering
+    \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+        \usebeamerfont{title}Ασκήσεις
+    \end{beamercolorbox}
+    \vfill
 \end{frame}
 
-\subsection{Άσκηση 2}
-\begin{frame}[label=Άσκηση2]{Εξάσκηση 2}
- Να βρείτε τις τιμές των $α$ και $β$ για τις οποίες η αριθμητική τιμή του πολυωνύμου
- $$P(x)=αx^3+βx+1$$
- για $x=2$ είναι $5$ και ο αριθμός $1$ είναι ρίζα του
+\begin{askisi}
+    Δίνεται το πολυώνυμο $P(x)=x^4-3x+2$
+    \begin{enumerate}
+        \item<1-> Να βρείτε την τιμή του πολυωνύμου για $x=2$
+        \item<2-> Να εξετάσετε ποιοι από τους αριθμούς $1$ και $-1$ είναι ρίζες του
 
- % \hyperlink{Λύση2}{\beamerbutton{Λύση}}
-\end{frame}
+    \end{enumerate}
 
-\subsection{Άσκηση 3}
-\begin{frame}[label=Άσκηση3]{Εξάσκηση 3}
- Δίνονται τα πολυώνυμα $P(x)=x^3-x$ και $Q(x)=2x-1$. Να βρείτε τα παρακάτω πολυώνυμα και τον βαθμό τους:
- \begin{enumerate}
-  \item<1-> $R(x)=2P(x)-3Q(x)$
-  \item<2-> $H(x)=P(x)\cdot Q(x)$
-  \item<3-> $Φ(x)=\left( Q(x) \right)^2 $
- \end{enumerate}
+    % \hyperlink{Λύση1}{\beamerbutton{Λύση}}
+\end{askisi}
 
- % \hyperlink{Λύση3}{\beamerbutton{Λύση}}
-\end{frame}
+\begin{askisi}
+    Να βρείτε τις τιμές των $α$ και $β$ για τις οποίες η αριθμητική τιμή του πολυωνύμου
+    $$P(x)=αx^3+βx+1$$
+    για $x=2$ είναι $5$ και ο αριθμός $1$ είναι ρίζα του
 
-\subsection{Άσκηση 4}
-\begin{frame}[label=Άσκηση4]{Εξάσκηση 4}
- Δίνεται το πολυώνυμο $P(x)=(x+1)λ^2+(x^2-1)λ-x^2-x+2$.
- \begin{enumerate}
-  \item<1-> Να βρείτε τους συντελεστές του πολυωνύμου $P(x)$ και το σταθερό όρο του
-  \item<2-> Να δείξετε ότι ο σταθερός όρος του είναι μη μηδενικός για κάθε $λ\in\mathbb{R}$
-  \item<3-> Να βρείτε τις τιμές του $λ$, για τις οποίες το πολυώνυμο $P(x)$ είναι σταθερό πολυώνυμο
- \end{enumerate}
+    % \hyperlink{Λύση2}{\beamerbutton{Λύση}}
+\end{askisi}
 
- % \hyperlink{Λύση4}{\beamerbutton{Λύση}}
-\end{frame}
+\begin{askisi}
+    Δίνονται τα πολυώνυμα $P(x)=x^3-x$ και $Q(x)=2x-1$. Να βρείτε τα παρακάτω πολυώνυμα και τον βαθμό τους:
+    \begin{enumerate}
+        \item<1-> $R(x)=2P(x)-3Q(x)$
+        \item<2-> $H(x)=P(x)\cdot Q(x)$
+        \item<3-> $Φ(x)=\left( Q(x) \right)^2 $
+    \end{enumerate}
 
-\subsection{Άσκηση 5}
-\begin{frame}[label=Άσκηση5]{Εξάσκηση 5}
- Να βρείτε τιμές του $μ$, για τις οποίες το πολυώνυμο
+    % \hyperlink{Λύση3}{\beamerbutton{Λύση}}
+\end{askisi}
 
- $$P(x)=(μ^3-1)x^3+(μ^2-μ)x+|μ|-1$$
+\begin{askisi}
+    Δίνεται το πολυώνυμο $P(x)=(x+1)λ^2+(x^2-1)λ-x^2-x+2$.
+    \begin{enumerate}
+        \item<1-> Να βρείτε τους συντελεστές του πολυωνύμου $P(x)$ και το σταθερό όρο του
+        \item<2-> Να δείξετε ότι ο σταθερός όρος του είναι μη μηδενικός για κάθε $λ\in\mathbb{R}$
+        \item<3-> Να βρείτε τις τιμές του $λ$, για τις οποίες το πολυώνυμο $P(x)$ είναι σταθερό πολυώνυμο
+    \end{enumerate}
 
- είναι το μηδενικό πολυώνυμο
+    % \hyperlink{Λύση4}{\beamerbutton{Λύση}}
+\end{askisi}
 
- % \hyperlink{Λύση5}{\beamerbutton{Λύση}}
-\end{frame}
+\begin{askisi}
+    Να βρείτε τιμές του $μ$, για τις οποίες το πολυώνυμο
 
-\subsection{Άσκηση 6}
-\begin{frame}[label=Άσκηση6]{Εξάσκηση 6}
- Να βρείτε τις τιμές των πραγματικών αριθμών $α$, $β$ και $γ$ για τις οποίες τα πολυώνυμα
- $$P(x)=(α-2)x^2-3x \text{ και } Q(x)=(β-1)x+γ-α$$
- είναι ίσα
+    $$P(x)=(μ^3-1)x^3+(μ^2-μ)x+|μ|-1$$
 
- % \hyperlink{Λύση6}{\beamerbutton{Λύση}}
-\end{frame}
+    είναι το μηδενικό πολυώνυμο
 
-\subsection{Άσκηση 7}
-\begin{frame}[label=Άσκηση7]{Εξάσκηση 7}
- Να βρείτε τους πραγματικούς αριθμούς $α$, $β$, $γ$ και $δ$ για τους οποίους το πολυώνυμο $f(x)=3x^2-2x+5$ παίρνει τη μορφή:
- $$f(x)=αx(x^2-1)+βx^2+γx+δ$$
+    % \hyperlink{Λύση5}{\beamerbutton{Λύση}}
+\end{askisi}
 
- %\hyperlink{Λύση7}{\beamerbutton{Λύση}}
-\end{frame}
+\begin{askisi}
+    Να βρείτε τις τιμές των πραγματικών αριθμών $α$, $β$ και $γ$ για τις οποίες τα πολυώνυμα
+    $$P(x)=(α-2)x^2-3x \text{ και } Q(x)=(β-1)x+γ-α$$
+    είναι ίσα
 
-\subsection{Άσκηση 8}
-\begin{frame}[label=Άσκηση8]{Εξάσκηση 8}
- Έστω το πολυώνυμο $P(x)=(λ^2-4)x-λ+2$. Να βρείτε τις τιμές του $λ$, για τις οποίες:
- \begin{enumerate}
-  \item<1-> Το $P(x)$ είναι 1ου βαθμού
-  \item<2-> Το $P(x)$ είναι μηδενικού βαθμού
-  \item<3-> Δεν ορίζεται βαθμός του $P(x)$
- \end{enumerate}
+    % \hyperlink{Λύση6}{\beamerbutton{Λύση}}
+\end{askisi}
 
- %\hyperlink{Λύση8}{\beamerbutton{Λύση}}
-\end{frame}
+\begin{askisi}
+    Να βρείτε τους πραγματικούς αριθμούς $α$, $β$, $γ$ και $δ$ για τους οποίους το πολυώνυμο $f(x)=3x^2-2x+5$ παίρνει τη μορφή:
+    $$f(x)=αx(x^2-1)+βx^2+γx+δ$$
 
-\subsection{Άσκηση 9}
-\begin{frame}[label=Άσκηση9]{Εξάσκηση 9}
- Να βρείτε πολυώνυμο 2ου βαθμού με ρίζες τους αριθμούς $-1$, $0$ και να ισχύει $P(1)=4$
+    %\hyperlink{Λύση7}{\beamerbutton{Λύση}}
+\end{askisi}
 
- %\hyperlink{Λύση9}{\beamerbutton{Λύση}}
-\end{frame}
+\begin{askisi}
+    Έστω το πολυώνυμο $P(x)=(λ^2-4)x-λ+2$. Να βρείτε τις τιμές του $λ$, για τις οποίες:
+    \begin{enumerate}
+        \item<1-> Το $P(x)$ είναι 1ου βαθμού
+        \item<2-> Το $P(x)$ είναι μηδενικού βαθμού
+        \item<3-> Δεν ορίζεται βαθμός του $P(x)$
+    \end{enumerate}
 
-\subsection{Άσκηση 10}
-\begin{frame}[label=Άσκηση10]{Εξάσκηση 10}
- Να βρείτε το βαθμό του πολυωνύμου
- $$P(x)=(λ^3-4λ)x^3+(λ^2-2λ)x-λ+2$$
- για τις διάφορες τιμές του $λ\in\mathbb{R}$
+    %\hyperlink{Λύση8}{\beamerbutton{Λύση}}
+\end{askisi}
 
- %\hyperlink{Λύση10}{\beamerbutton{Λύση}}
-\end{frame}
+\begin{askisi}
+    Να βρείτε πολυώνυμο 2ου βαθμού με ρίζες τους αριθμούς $-1$, $0$ και να ισχύει $P(1)=4$
 
-\subsection{Άσκηση 11}
-\begin{frame}[label=Άσκηση11]{Εξάσκηση 11}
-Να βρείτε πολυώνυμο $P(x)$ για το οποίο ισχύει:
+    %\hyperlink{Λύση9}{\beamerbutton{Λύση}}
+\end{askisi}
 
-$$(x^2+1)P(x)=2x^3-x(x-2)-1$$
+\begin{askisi}
+    Να βρείτε το βαθμό του πολυωνύμου
+    $$P(x)=(λ^3-4λ)x^3+(λ^2-2λ)x-λ+2$$
+    για τις διάφορες τιμές του $λ\in\mathbb{R}$
 
- %\hyperlink{Λύση11}{\beamerbutton{Λύση}}
-\end{frame}
+    %\hyperlink{Λύση10}{\beamerbutton{Λύση}}
+\end{askisi}
 
-\subsection{Άσκηση 12}
-\begin{frame}[label=Άσκηση12]{Εξάσκηση 12}
-Αν το πολυώνυμο $P(x)$ έχει ρίζα το $1$, να δείξετε ότι το πολυώνυμο
+\begin{askisi}
+    Να βρείτε πολυώνυμο $P(x)$ για το οποίο ισχύει:
 
-$$Q(x)=P(x^2-3)+(x-2)P(3x)$$
+    $$(x^2+1)P(x)=2x^3-x(x-2)-1$$
 
-έχει ρίζα το $2$
+    %\hyperlink{Λύση11}{\beamerbutton{Λύση}}
+\end{askisi}
 
- %\hyperlink{Λύση12}{\beamerbutton{Λύση}}
-\end{frame}
+\begin{askisi}
+    Αν το πολυώνυμο $P(x)$ έχει ρίζα το $1$, να δείξετε ότι το πολυώνυμο
 
-\subsection{Άσκηση 13}
-\begin{frame}[label=Άσκηση13]{Εξάσκηση 13}
-Να βρείτε το πολυώνυμο $P(x)$ για το οποίο ισχύει
-$$P(x+1)=x^3-3x+1$$
+    $$Q(x)=P(x^2-3)+(x-2)P(3x)$$
 
- %\hyperlink{Λύση13}{\beamerbutton{Λύση}}
-\end{frame}
+    έχει ρίζα το $2$
 
-\subsection{Άσκηση 14}
-\begin{frame}[label=Άσκηση14]{Εξάσκηση 14}
-Να βρείτε πολυώνυμο $P(x)$, για το οποίο ισχύει
-$$\left[ P(x) \right]^2-P(x)=x^2+x$$
- %\hyperlink{Λύση14}{\beamerbutton{Λύση}}
-\end{frame}
+    %\hyperlink{Λύση12}{\beamerbutton{Λύση}}
+\end{askisi}
 
+\begin{askisi}
+    Να βρείτε το πολυώνυμο $P(x)$ για το οποίο ισχύει
+    $$P(x+1)=x^3-3x+1$$
 
-% \appendix
-%
-% \section{Αποδείξεις}
-% \begin{frame}[label=Απόδειξη1]{Απόδειξη μονοτονίας συνάρτησης}
-%  Θα δείξουμε ότι για κάθε $x_1<x_2\in Δ \implies f(x_1)<f(x_2)$.
-%
-%  \onslide<1-> Στο $[x_1,x_2]$ είναι παραγωγίσιμη, άρα θα ισχύει το ΘΜΤ
-%
-%  \onslide<2-> Υπάρχει $ξ\in Δ$ ώστε $f'(ξ)=\dfrac{f(x_2)-f(x_1)}{x_2-x_1}$.
-%
-%  \onslide<3-> Αλλά $f'(x)>0$ για κάθε $x\in Δ$
-%
-%  \onslide<4-> Άρα $f'(ξ)=\dfrac{f(x_2)-f(x_1)}{x_2-x_1}>0$
-%
-%  \onslide<5-> $f(x_2)>f(x_1)$
-%
-%  \hyperlink{Θεώρημα1}{\beamerbutton{Πίσω στη θεωρία}}
-% \end{frame}
+    %\hyperlink{Λύση13}{\beamerbutton{Λύση}}
+\end{askisi}
 
-
-% \section{Λύσεις Ασκήσεων}
-% \begin{frame}
-%  \tableofcontents
-% \end{frame}
-%
-% \subsection{Άσκηση 1}
-% \begin{frame}[label=Λύση1]
-%  Με θεώρημα ενδιαμέσων τιμών. Η συνάρτηση είναι συνεχής στο $[10,11]$ με $f(10)=1024$ και $f(11)=2048$. Αφού $2023\in (1024,2048)$ υπάρχει $x_0$...
-%
-%  \hyperlink{Άσκηση1}{\beamerbutton{Πίσω στην άσκηση}}
-% \end{frame}
-%
-% \subsection{Άσκηση 2}
-% \begin{frame}[label=Λύση2]
-%  Με Bolzano ή με μέγιστης ελάχιστης τιμής και ΘΕΤ.
-%
-%  \begin{gather*}
-%   f(3)<f(2)<f(1) \\
-%   3f(3)<f(1)+f(2)+f(3)<3f(1) \\
-%   f(3)<\dfrac{f(1)+f(2)+f(3)}{3}<f(1)
-%  \end{gather*}
-%
-%  \hyperlink{Άσκηση2}{\beamerbutton{Πίσω στην άσκηση}}
-% \end{frame}
-%
-% \subsection{Άσκηση 3}
-% \begin{frame}[label=Λύση3]
-%  Προφανές ελάχιστο στα $x_1=1$ και $x_2=3$. Ως συνεχής στο $[1,3]$ έχει σίγουρα ΚΑΙ μέγιστο στο $(1,3)$
-%
-%  \hyperlink{Άσκηση3}{\beamerbutton{Πίσω στην άσκηση}}
-% \end{frame}
-%
-% \subsection{Άσκηση 4}
-% \begin{frame}[label=Λύση4]
-%  Η συνάρτηση `απόστασης` $f(x)-x$ είναι ορισμένη στο κλειστό διάστημα και έχει σίγουρα μέγιστο
-%
-%  \hyperlink{Άσκηση4}{\beamerbutton{Πίσω στην άσκηση}}
-% \end{frame}
-%
-% \subsection{Άσκηση 5}
-% \begin{frame}[label=Λύση5]
-%  Όμοια με την Άσκηση 2
-%
-%  \hyperlink{Άσκηση5}{\beamerbutton{Πίσω στην άσκηση}}
-% \end{frame}
-%
-% \subsection{Άσκηση 6}
-% \begin{frame}[label=Λύση6]
-%  \begin{enumerate}
-%   \item Είναι γνησίως αύξουσα άρα $(f(+\infty),f(-\infty))$
-%   \item Προφανώς $[f(0),f(1)]$...
-%  \end{enumerate}
-%
-%  \hyperlink{Άσκηση6}{\beamerbutton{Πίσω στην άσκηση}}
-% \end{frame}
+\begin{askisi}
+    Να βρείτε πολυώνυμο $P(x)$, για το οποίο ισχύει
+    $$\left[ P(x) \right]^2-P(x)=x^2+x$$
+    %\hyperlink{Λύση14}{\beamerbutton{Λύση}}
+\end{askisi}
 
 \end{document}
