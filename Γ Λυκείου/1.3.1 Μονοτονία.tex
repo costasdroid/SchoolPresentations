@@ -1,32 +1,4 @@
-\documentclass[greek]{beamer}
-%\usepackage{fontspec}
-\usepackage{amsmath,amsthm}
-\usepackage{unicode-math}
-\usepackage{xltxtra}
-\usepackage{graphicx}
-\usetheme{CambridgeUS}
-\usecolortheme{seagull}
-\usepackage{hyperref}
-\usepackage{ulem}
-\usepackage{xgreek}
-
-\usepackage{pgfpages} 
-\usepackage{tikz}
-%\setbeameroption{show notes on second screen}
-%\setbeameroption{show only notes}
-
-\setsansfont{Calibri}
-
-\usepackage{multicol}
-
-\usepackage{appendixnumberbeamer}
-
-\usepackage{polynom}
-
-\usepackage{pgffor}
-
-\setbeamercovered{transparent}
-\beamertemplatenavigationsymbolsempty
+\documentclass{presentation}
 
 \title{Συναρτήσεις}
 \subtitle{Μονοτονία}
@@ -114,8 +86,7 @@
 
 \section{Ασκήσεις}
 
-\subsection{Άσκηση 1}
-\begin{frame}[label=Άσκηση1,t]{Εξάσκηση 1}
+\begin{askisi}
       Η συνάρτηση $f$ του σχήματος είναι ορισμένη στους πραγματικούς αριθμούς.
       \begin{itemize}
             \item Να γράψετε τα διαστήματα μονοτονίας της
@@ -127,19 +98,17 @@
       \end{itemize}
       \centering
       \includegraphics[width=0.5\textwidth]{"images/1.3 Μονοτονία.png"}
-\end{frame}
+\end{askisi}
 
-\subsection{Άσκηση 2}
-\begin{frame}[label=Άσκηση2,t]{Εξάσκηση 2}
+\begin{askisi}
       Δίνεται η συνάρτηση $f(x)=x^3+3x-5$
       \begin{enumerate}
             \item Να μελετήσετε την συνάρτηση ως προς την μονοτονία \pause
             \item Να συγκρίνετε τις τιμές $f(2022)$ και $f(2023)$
       \end{enumerate}
-\end{frame}
+\end{askisi}
 
-\subsection{Άσκηση 3}
-\begin{frame}[label=Άσκηση3,t]{Εξάσκηση 3}
+\begin{askisi}
       Δίνεται η συνάρτηση $f(x)=e^x+\ln x-1$
       \begin{enumerate}
             \item Να μελετήσετε την συνάρτηση ως προς την μονοτονία \pause
@@ -152,10 +121,9 @@
                         \item Για κάθε $x>1$, $f(x^2)>f(x)$
                   \end{enumerate}
       \end{enumerate}
-\end{frame}
+\end{askisi}
 
-\subsection{Άσκηση 4}
-\begin{frame}[label=Άσκηση4,t]{Εξάσκηση 4}
+\begin{askisi}
       \begin{enumerate}
             \item Να βρείτε τις ρίζες και το πρόσημο της συνάρτησης $f(x)=e^x+2x-1$ \pause
             \item Να βρείτε το πεδίο ορισμού των συναρτήσεων:
@@ -164,10 +132,9 @@
                         \item $h(x)=\frac{1}{f(x)}$
                   \end{enumerate}
       \end{enumerate}
-\end{frame}
+\end{askisi}
 
-\subsection{Άσκηση 5}
-\begin{frame}[label=Άσκηση5,t]{Εξάσκηση 5}
+\begin{askisi}
       Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση, η οποία είναι γνησίως φθίνουσα. Να λύσετε τις ανισώσεις:
       \begin{itemize}
             \item $f(x)>f(3)$
@@ -175,10 +142,9 @@
             \item $f(x^2-3x)\ge f(2-4x)$
             \item $f\left(f(3x-1)\right)<f\left(f(2x+3)\right)$
       \end{itemize}
-\end{frame}
+\end{askisi}
 
-\subsection{Άσκηση 6}
-\begin{frame}[label=Άσκηση6,t]{Εξάσκηση 7}
+\begin{askisi}
       Δίνεται η συνάρτηση $f(x)=e^x+x-1$
       \begin{enumerate}
             \item Να μελετήσετε την συνάρτηση ως προς την μονοτονία \pause
@@ -190,10 +156,9 @@
                         \item $e^{f(x)}+f(x)-x>e^x$
                   \end{enumerate}
       \end{enumerate}
-\end{frame}
+\end{askisi}
 
-\subsection{Άσκηση 7}
-\begin{frame}[label=Άσκηση7,t]{Εξάσκηση 7}
+\begin{askisi}
       Δίνεται η συνάρτηση $f(x)=x^5+x-2$. Να λύσετε τις ανισώσεις:
       \begin{enumerate}
             \item $x<\frac{2}{x^4+1}$ \pause
@@ -201,57 +166,51 @@
             \item $\ln^5 x+\ln x<2$ \pause
             \item $f(2x-1)+2>x^5+x$
       \end{enumerate}
-\end{frame}
+\end{askisi}
 
-\subsection{Άσκηση 8}
-\begin{frame}[label=Άσκηση8,t]{Εξάσκηση 8}
+\begin{askisi}
       Δίνεται η συνάρτηση $f(x)=x+\ln (x+1)$
       \begin{enumerate}
             \item Να εξετάσετε τη συνάρτηση $f$ ως προς τη μονοτονία \pause
             \item Να λύσετε την ανίσωση $x^2+\ln (x^2+1)>0$ \pause
             \item Να λύσετε την ανίσωση $x^4-x^2<\ln \frac{x^2+1}{x^4+1}$
       \end{enumerate}
-\end{frame}
+\end{askisi}
 
-\subsection{Άσκηση 9}
-\begin{frame}[label=Άσκηση9,t]{Εξάσκηση 9}
+\begin{askisi}
       Να λύσετε τις ανισώσεις:
       \begin{enumerate}
             \item $e^x+x^3<1$ \pause
             \item $e^x-e^{x^2}>\ln x$
       \end{enumerate}
-\end{frame}
+\end{askisi}
 
-\subsection{Άσκηση 10}
-\begin{frame}[label=Άσκηση10,t]{Εξάσκηση 10}
+\begin{askisi}
       Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση με $f(0)=1$ και $f\uparrow$. Να λύσετε τις ανισώσεις:
       \begin{enumerate}
             \item $f(x)+e^x>2$ \pause
             \item $(x+1)f(x)<1$, στο $(-1,+\infty)$
       \end{enumerate}
-\end{frame}
+\end{askisi}
 
-\subsection{Άσκηση 11}
-\begin{frame}[label=Άσκηση11,t]{Εξάσκηση 11}
+\begin{askisi}
       Δίνονται οι συναρτήσεις $f(x)=e^x$, $x>0$ και $g(x)=\frac{e}{x}$, $x>0$.
       \begin{enumerate}
             \item Να βρείτε τα κοινά σημεία των $C_f$ και $C_g$ \pause
             \item Να βρείτε τη σχετική θέση των $C_f$ και $C_g$
       \end{enumerate}
-\end{frame}
+\end{askisi}
 
-\subsection{Άσκηση 12}
-\begin{frame}[label=Άσκηση12,t]{Εξάσκηση 12}
+\begin{askisi}
       Έστω $g:(0,+\infty)\to\mathbb{R}$ μία γνησίως μονότονη συνάρτηση της οποίας η γραφική παράσταση διέρχεται από τα σημεία $Α(1,-2)$, $Β(2,-3)$ και η συνάρτηση $f(x)=\ln x-g(x)$, $x>0$.
       \begin{enumerate}
             \item Να δείξετε ότι η $g$ είναι γνησίως φθίνουσα \pause
             \item Να δείξετε ότι η $f$ είναι γνησίως αύξουσα \pause
             \item Να λύσετε την ανίσωση $2\ln x<2+g(x^2)$
       \end{enumerate}
-\end{frame}
+\end{askisi}
 
-\subsection{Άσκηση 13}
-\begin{frame}[label=Άσκηση13,t]{Εξάσκηση 13}
+\begin{askisi}
       Έστω $f,g:\mathbb{R}\to\mathbb{R}$ δύο συναρτήσεις με $g\uparrow$ και
       $$g(x)=f(x+1)-f(x)\text{, για κάθε } x\in\mathbb{R}$$
       \begin{enumerate}
@@ -263,19 +222,17 @@
             \item Να αποδείξετε ότι  \pause
                   $$f(e^x+1)-f(ημ x+1)>f(e^x)-f(ημ x)\text{, για κάθε } x>0$$
       \end{enumerate}
-\end{frame}
+\end{askisi}
 
-\subsection{Άσκηση 14}
-\begin{frame}[label=Άσκηση14,t]{Εξάσκηση 14}
+\begin{askisi}
       Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση η οποία είναι γνησίως φθίνουσα
       \begin{enumerate}
             \item Να δείξετε ότι $f(x)+f(7x)>f(3x)+f(10x)$, για κάθε $x>0$ \pause
             \item Να λύσετε την εξίσωση $f(x)+f(x^3)=f(x^2)+f(x^8)$, στο $(0,+\infty)$
       \end{enumerate}
-\end{frame}
+\end{askisi}
 
-\subsection{Άσκηση 15}
-\begin{frame}[label=Άσκηση15]{Εξάσκηση 15}
+\begin{askisi}
 
       \begin{enumerate}
             \item Έστω $f,g:\mathbb{R}\to\mathbb{R}$ δύο συναρτήσεις όπου $g\circ f \downarrow$ και $g\uparrow$. Να δείξετε ότι $f\downarrow$ \pause
@@ -283,10 +240,6 @@
                   $$f^3(x)+e^{f(x)}-e^{-x}-1=0\text{, για κάθε } x\in\mathbb{R}$$
                   Να εξετάσετε τη συνάρτηση $f$ ως προς τη μονοτνία
       \end{enumerate}
-\end{frame}
-
-\begin{frame}
-      Στο moodle θα βρείτε τις ασκήσεις που πρέπει να κάνετε, όπως και αυτή τη παρουσίαση
-\end{frame}
+\end{askisi}
 
 \end{document}

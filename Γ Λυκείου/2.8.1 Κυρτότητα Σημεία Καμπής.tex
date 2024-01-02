@@ -1,283 +1,246 @@
-\documentclass[greek]{beamer}
-%\usepackage{fontspec}
-\usepackage{amsmath,amsthm}
-\usepackage{unicode-math}
-\usepackage{xltxtra}
-\usepackage{graphicx}
-\usetheme{CambridgeUS}
-\usecolortheme{seagull}
-\usepackage{hyperref}
-\usepackage{ulem}
-\usepackage{xgreek}
-
-\usepackage{pgfpages}
-\usepackage{tikz}
-\usepackage{tkz-tab}
-%\setbeameroption{show notes on second screen}
-%\setbeameroption{show only notes}
-
-\setsansfont{Noto Serif}
-
-\usepackage{multicol}
-
-\usepackage{appendixnumberbeamer}
-
-\setbeamercovered{transparent}
-\beamertemplatenavigationsymbolsempty
+\documentclass{presentation}
 
 \title{Συναρτήσεις}
 \subtitle{Κυρτότηα, Σημεία Καμπής}
 \author[Λόλας]{Κωνσταντίνος Λόλας}
+\institute[$10^ο$ ΓΕΛ]{$10^ο$ ΓΕΛ Θεσσαλονίκης}
 \date{}
 
 \begin{document}
 
 \begin{frame}
-  \titlepage
+    \titlepage
 \end{frame}
 
 \section{Θεωρία}
 \begin{frame}{Γραφικές παραστάσεις λοιπόν!}
-  Τι μπορούμε να "χαράξουμε"
-  \begin{enumerate}
-    \item Το πεδίο ορισμού
-    \item Τα σημεία τομής με άξονες
-    \item Τη συμμετρία ως προς $x'x$ ή $y'y$
-    \item Τη συνέχεια
-    \item Την παραγωγισιμότητα
-    \item Τη μονοτονία
-    \item Τα ακρότατα
-  \end{enumerate}
-  \onslide<2-> Έμειναν
-  \begin{enumerate}
-    \item<3-> Το πώς "ανέρχεται" ή "κατέρχεται" (κυρτότητα)
-    \item<4-> Αν πλησιάζει προς ευθείες (ασύμπτωτες)
-  \end{enumerate}
+    Τι μπορούμε να "χαράξουμε"
+    \begin{enumerate}
+        \item Το πεδίο ορισμού
+        \item Τα σημεία τομής με άξονες
+        \item Τη συμμετρία ως προς $x'x$ ή $y'y$
+        \item Τη συνέχεια
+        \item Την παραγωγισιμότητα
+        \item Τη μονοτονία
+        \item Τα ακρότατα
+    \end{enumerate}
+    \onslide<2-> Έμειναν
+    \begin{enumerate}
+        \item<3-> Το πώς "ανέρχεται" ή "κατέρχεται" (κυρτότητα)
+        \item<4-> Αν πλησιάζει προς ευθείες (ασύμπτωτες)
+    \end{enumerate}
 \end{frame}
 
 \begin{frame}{Κυρτότητα}
-  \begin{block}{Ορισμός}
-    Ένα σχήμα λέγεται κυρτό, αν-ν κάθε ευθύγραμμο τμήμα με άκρα εσωτερικά σημεία του σχήματος, βρίσκεται εξολοκλήρου στο σχήμα
-  \end{block}
-  \onslide<2-> π.χ.
-  \begin{itemize}
-    \item<3-> Κυρτή γωνία \onslide<4->{$180<θ<360$}
-    \item<5-> Κυρτή παραβολή \onslide<6->{$αx^2+βx+γ$ με $α>0$}
-    \item<7-> Κυρτή συνάρτηση?
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{Κυρτότητα}
-  \begin{block}{Συναρτήσεων}
-    Έστω μια συνάρτηση $f$ συνεχής σε ένα διάστημα $Δ$ και παραγωγίσιμη στο εσωτερικό του $Δ$. Θα λέμε ότι:
+    \begin{block}{Ορισμός}
+        Ένα σχήμα λέγεται κυρτό, αν-ν κάθε ευθύγραμμο τμήμα με άκρα εσωτερικά σημεία του σχήματος, βρίσκεται εξολοκλήρου στο σχήμα
+    \end{block}
+    \onslide<2-> π.χ.
     \begin{itemize}
-      \item η συνάρτηση στρέφει τα \emph{κοίλα προς τα άνω} ή είναι \emph{κυρτή} στο $Δ$, αν η $f'$ είναι γνησίως αύξουσα στο εσωτερικό του $Δ$
-      \item η συνάρτηση στρέφει τα \emph{κοίλα προς τα κάτω} ή είναι \emph{κοίλη} στο $Δ$, αν η $f'$ είναι γνησίως φθίνουσα στο εσωτερικό του $Δ$
+        \item<3-> Κυρτή γωνία \onslide<4->{$180<θ<360$}
+        \item<5-> Κυρτή παραβολή \onslide<6->{$αx^2+βx+γ$ με $α>0$}
+        \item<7-> Κυρτή συνάρτηση?
     \end{itemize}
-  \end{block}
+\end{frame}
+
+\begin{frame}{Κυρτότητα}
+    \begin{block}{Συναρτήσεων}
+        Έστω μια συνάρτηση $f$ συνεχής σε ένα διάστημα $Δ$ και παραγωγίσιμη στο εσωτερικό του $Δ$. Θα λέμε ότι:
+        \begin{itemize}
+            \item η συνάρτηση στρέφει τα \emph{κοίλα προς τα άνω} ή είναι \emph{κυρτή} στο $Δ$, αν η $f'$ είναι γνησίως αύξουσα στο εσωτερικό του $Δ$
+            \item η συνάρτηση στρέφει τα \emph{κοίλα προς τα κάτω} ή είναι \emph{κοίλη} στο $Δ$, αν η $f'$ είναι γνησίως φθίνουσα στο εσωτερικό του $Δ$
+        \end{itemize}
+    \end{block}
 \end{frame}
 
 \begin{frame}{Και άρα στο εύκολο}
-  \begin{block}{Κυρτότητα από $f''(x)$}
-    Έστω μια συνάρτηση $f$ συνεχής σ’ ένα διάστημα $Δ$ και δυο φορές παραγωγίσιμη στο εσωτερικό του $Δ$
-    \begin{itemize}
-      \item Αν $f''(x)>0$ για κάθε εσωτερικό σημείο του $Δ$ τότε είναι \emph{κυρτή} στο $Δ$
-      \item Αν $f''(x)<0$ για κάθε εσωτερικό σημείο του $Δ$ τότε είναι \emph{κοίλη} στο $Δ$
-    \end{itemize}
-  \end{block}
-  \onslide<2-> Προσοχή, δεν είναι αυτός ο ορισμός. Ούτε ισχύει το αντίστροφο
+    \begin{block}{Κυρτότητα από $f''(x)$}
+        Έστω μια συνάρτηση $f$ συνεχής σ’ ένα διάστημα $Δ$ και δυο φορές παραγωγίσιμη στο εσωτερικό του $Δ$
+        \begin{itemize}
+            \item Αν $f''(x)>0$ για κάθε εσωτερικό σημείο του $Δ$ τότε είναι \emph{κυρτή} στο $Δ$
+            \item Αν $f''(x)<0$ για κάθε εσωτερικό σημείο του $Δ$ τότε είναι \emph{κοίλη} στο $Δ$
+        \end{itemize}
+    \end{block}
+    \onslide<2-> Προσοχή, δεν είναι αυτός ο ορισμός. Ούτε ισχύει το αντίστροφο
 \end{frame}
 
 \begin{frame}{Και ένα σχόλιο}
-  Φτιάξτε μία κυρτή συνάρτηση και μελετήστε ΚΑΘΕ εφαπτομένη της!
-  \onslide<2->
-  \begin{block}{Ανίσωση SOS}
-    Αν μία συνάρτηση είναι κυρτή σ' ένα διάστημα $Δ$ τότε η εφαπτομένη της γραφικής παράστασης της $f$ σε κάθε σημείο του $Δ$ βρίσκεται "κάτω" από τη γραφική της παράσταση. Αντίστοιχα από "πάνω" όταν είναι κοίλη.
-  \end{block}
-  \onslide<3-> Η απόδειξη είναι πολύ εύκολη και γίνεται με ΘΜΤ ή με ακρότατα.
+    Φτιάξτε μία κυρτή συνάρτηση και μελετήστε ΚΑΘΕ εφαπτομένη της!
+    \onslide<2->
+    \begin{block}{Ανίσωση SOS}
+        Αν μία συνάρτηση είναι κυρτή σ' ένα διάστημα $Δ$ τότε η εφαπτομένη της γραφικής παράστασης της $f$ σε κάθε σημείο του $Δ$ βρίσκεται "κάτω" από τη γραφική της παράσταση. Αντίστοιχα από "πάνω" όταν είναι κοίλη.
+    \end{block}
+    \onslide<3-> Η απόδειξη είναι πολύ εύκολη και γίνεται με ΘΜΤ ή με ακρότατα.
 \end{frame}
 
 \begin{frame}{Σημείο Καμπής}
-  \begin{block}{Ορισμός}
-    Έστω μία συνάρτηση $f$ παραγωγίσιμη σ' ένα διάστημα $(α,β)$ με εξαίρεση ίσως ένα σημείο του $x_0$. Αν
-    \begin{itemize}
-      \item η $f$ είναι κυρτή στο $(α,x_0)$ και κοίλη στο $(x_0,β)$ ή αντιστρόφως, και
-      \item η $C_f$ έχει εφαπτόμενη στο σημείο $Α(x_0,f(x_0))$
-    \end{itemize}
-    τότε το σημείο $Α(x_0,f(x_0))$ ονομάζεται \emph{σημείο καμπής} της γραφικής παράστασης της $f$
-  \end{block}
+    \begin{block}{Ορισμός}
+        Έστω μία συνάρτηση $f$ παραγωγίσιμη σ' ένα διάστημα $(α,β)$ με εξαίρεση ίσως ένα σημείο του $x_0$. Αν
+        \begin{itemize}
+            \item η $f$ είναι κυρτή στο $(α,x_0)$ και κοίλη στο $(x_0,β)$ ή αντιστρόφως, και
+            \item η $C_f$ έχει εφαπτόμενη στο σημείο $Α(x_0,f(x_0))$
+        \end{itemize}
+        τότε το σημείο $Α(x_0,f(x_0))$ ονομάζεται \emph{σημείο καμπής} της γραφικής παράστασης της $f$
+    \end{block}
 \end{frame}
 
 \begin{frame}[label=Θεώρημα1]{Θεώρημα Σημείου Καμπής}
-  \begin{block}{Ιδιότητα}
-    Αν το $Α(x_0,f(x_0))$ είναι σημείο καμπής της $C_f$ και η $f$ είναι δύο φορές παραγωγίσιμη, τότε $f''(x_0)=0$.
-  \end{block}
+    \begin{block}{Ιδιότητα}
+        Αν το $Α(x_0,f(x_0))$ είναι σημείο καμπής της $C_f$ και η $f$ είναι δύο φορές παραγωγίσιμη, τότε $f''(x_0)=0$.
+    \end{block}
 
-  \hyperlink{Απόδειξη1}{\beamerbutton{Απόδειξη}}
+    \hyperlink{Απόδειξη1}{\beamerbutton{Απόδειξη}}
 \end{frame}
 
 \begin{frame}{Πού κρύβονται?}
-  \begin{enumerate}
-    \item<1-> $f''(x_0)=0$
-    \item<2-> $f''(x_0)$ δεν ορίζεται
-  \end{enumerate}
-  \only<3-> {Πείτε το, αφού δεν κρατιέστε! Τα σημεία καμπής είναι τα ακρότατα της $f'$, χωρίς τα άκρα!}
+    \begin{enumerate}
+        \item<1-> $f''(x_0)=0$
+        \item<2-> $f''(x_0)$ δεν ορίζεται
+    \end{enumerate}
+    \only<3-> {Πείτε το, αφού δεν κρατιέστε! Τα σημεία καμπής είναι τα ακρότατα της $f'$, χωρίς τα άκρα!}
 \end{frame}
 
 \section{Ασκήσεις}
-\subsection{Άσκηση 1}
-\begin{frame}[label=Άσκηση1,t]{Εξάσκηση 1}
-  Να μελετήσετε τις παρακάτω συναρτήσεις ως προς την κυρτότητα
-  \begin{enumerate}
-    \item<1-> $f(x)=x^2-\ln x$
-    \item<2-> $f(x)=\sqrt{x}-e^x$
-    \item<3-> $f(x)=x^4-2x+1$
-    \item<4-> $f(x)=x\ln x-e^{-x}$
-  \end{enumerate}
+\begin{askisi}
+    Να μελετήσετε τις παρακάτω συναρτήσεις ως προς την κυρτότητα
+    \begin{enumerate}
+        \item<1-> $f(x)=x^2-\ln x$
+        \item<2-> $f(x)=\sqrt{x}-e^x$
+        \item<3-> $f(x)=x^4-2x+1$
+        \item<4-> $f(x)=x\ln x-e^{-x}$
+    \end{enumerate}
 
-  % \hyperlink{Λύση1}{\beamerbutton{Λύση}}
-\end{frame}
+    % \hyperlink{Λύση1}{\beamerbutton{Λύση}}
+\end{askisi}
 
-\subsection{Άσκηση 2}
-\begin{frame}[label=Άσκηση2,t]{Εξάσκηση 2}
-  Δίνεται η συνάρτηση $f(x)=e^x-x$.
-  \begin{enumerate}
-    \item<1-> Να μελετήσετε τη συνάρτηση $f$ ως προς τη μονοτονία, τα ακρότατα και την κυρτότητα
-    \item<2-> Να βρείτε τις οριακές τιμές της $f$ στα άκρα του πεδίου ορισμού της, να κάνετε τον πίνακα μεταβολών της $f$ και να σχεδιάσετε τη $C_f$
-    \item<3-> Να λύσετε την εξίσωση $f(x)=συνx$
-  \end{enumerate}
+\begin{askisi}
+    Δίνεται η συνάρτηση $f(x)=e^x-x$.
+    \begin{enumerate}
+        \item<1-> Να μελετήσετε τη συνάρτηση $f$ ως προς τη μονοτονία, τα ακρότατα και την κυρτότητα
+        \item<2-> Να βρείτε τις οριακές τιμές της $f$ στα άκρα του πεδίου ορισμού της, να κάνετε τον πίνακα μεταβολών της $f$ και να σχεδιάσετε τη $C_f$
+        \item<3-> Να λύσετε την εξίσωση $f(x)=συνx$
+    \end{enumerate}
 
-  % \hyperlink{Λύση2}{\beamerbutton{Λύση}}
-\end{frame}
+    % \hyperlink{Λύση2}{\beamerbutton{Λύση}}
+\end{askisi}
 
-\subsection{Άσκηση 3}
-\begin{frame}[label=Άσκηση3,t]{Εξάσκηση 3}
-  Να βρείτε τα διαστήματα στα οποία οι παρακάτω συναρτήσεις είναι κυρτές ή κοίλες και να προσδιορίσετε (αν υπάρχουν) τα σημεία καμπής
-  \begin{enumerate}
-    \item<1-> $f(x)=x^3-3x^2+5$
-    \item<2-> $f(x)=3x^5-5x^4$
-  \end{enumerate}
+\begin{askisi}
+    Να βρείτε τα διαστήματα στα οποία οι παρακάτω συναρτήσεις είναι κυρτές ή κοίλες και να προσδιορίσετε (αν υπάρχουν) τα σημεία καμπής
+    \begin{enumerate}
+        \item<1-> $f(x)=x^3-3x^2+5$
+        \item<2-> $f(x)=3x^5-5x^4$
+    \end{enumerate}
 
-  % \hyperlink{Λύση3}{\beamerbutton{Λύση}}
-\end{frame}
+    % \hyperlink{Λύση3}{\beamerbutton{Λύση}}
+\end{askisi}
 
-\subsection{Άσκηση 4}
-\begin{frame}[label=Άσκηση4,t]{Εξάσκηση 4}
-  Να βρείτε τα διαστήματα στα οποία οι παρακάτω συναρτήσεις είναι κυρτές ή κοίλες και να προσδιορίσετε (αν υπάρχουν) τα σημεία καμπής
-  \begin{enumerate}
-    \item<1-> $f(x)=\dfrac{1}{x^2+1}$
-    \item<2-> $f(x)=x+\dfrac{1}{x}$
-  \end{enumerate}
+\begin{askisi}
+    Να βρείτε τα διαστήματα στα οποία οι παρακάτω συναρτήσεις είναι κυρτές ή κοίλες και να προσδιορίσετε (αν υπάρχουν) τα σημεία καμπής
+    \begin{enumerate}
+        \item<1-> $f(x)=\dfrac{1}{x^2+1}$
+        \item<2-> $f(x)=x+\dfrac{1}{x}$
+    \end{enumerate}
 
-  % \hyperlink{Λύση4}{\beamerbutton{Λύση}}
-\end{frame}
+    % \hyperlink{Λύση4}{\beamerbutton{Λύση}}
+\end{askisi}
 
-\subsection{Άσκηση 5}
-\begin{frame}[label=Άσκηση5,t]{Εξάσκηση 5}
-  Να βρείτε τις θέσεις των σημείων καμπής των συναρτήσεων:
-  \begin{enumerate}
-    \item<1-> $f(x)=συνx-\dfrac{x^2}{3}+\dfrac{x^2}{2}-1$
-    \item<2-> $f(x)=2x(\ln x-1)-\ln^2x$
-  \end{enumerate}
+\begin{askisi}
+    Να βρείτε τις θέσεις των σημείων καμπής των συναρτήσεων:
+    \begin{enumerate}
+        \item<1-> $f(x)=συνx-\dfrac{x^2}{3}+\dfrac{x^2}{2}-1$
+        \item<2-> $f(x)=2x(\ln x-1)-\ln^2x$
+    \end{enumerate}
 
-  % \hyperlink{Λύση5}{\beamerbutton{Λύση}}
-\end{frame}
+    % \hyperlink{Λύση5}{\beamerbutton{Λύση}}
+\end{askisi}
 
-\subsection{Άσκηση 6}
-\begin{frame}[label=Άσκηση6,t]{Εξάσκηση 6}
-  Να βρείτε τα διαστήματα στα οποία οι παρακάτω συναρτήσεις είναι κυρτές ή κοίλες και να προσδιορίσετε (αν υπάρχουν) τα σημεία καμπής
-  \begin{enumerate}
-    \item<1-> $f(x)=σφx$, $x\in (0,\pi)$
-    \item<2-> $f(x)=εφx-x+2\ln (συνx)$, $x\in (-\dfrac{\pi}{2},\dfrac{\pi}{2})$
-  \end{enumerate}
+\begin{askisi}
+    Να βρείτε τα διαστήματα στα οποία οι παρακάτω συναρτήσεις είναι κυρτές ή κοίλες και να προσδιορίσετε (αν υπάρχουν) τα σημεία καμπής
+    \begin{enumerate}
+        \item<1-> $f(x)=σφx$, $x\in (0,\pi)$
+        \item<2-> $f(x)=εφx-x+2\ln (συνx)$, $x\in (-\dfrac{\pi}{2},\dfrac{\pi}{2})$
+    \end{enumerate}
 
-  % \hyperlink{Λύση6}{\beamerbutton{Λύση}}
-\end{frame}
+    % \hyperlink{Λύση6}{\beamerbutton{Λύση}}
+\end{askisi}
 
-\subsection{Άσκηση 7}
-\begin{frame}[label=Άσκηση7,t]{Εξάσκηση 7}
-  Δίνεται η συνάρτηση $f(x)=x^3-3x$
-  \begin{enumerate}
-    \item<1-> Να μελετήσετε τη συνάρτηση $f$ ως προς τη μονοτονία, τα ακρότατα, την κυρτότητα και τα σημεία καμπής
-    \item<2-> Να βρείτε τις οριακές τιμές της $f$ στα άκρα του διαστήματος του πεδίου ορισμού της, να κάνετε τον πίνακα μεταβολών της $f$ και με βάση τις απαντήσεις σας στα προηγούμενα ερωτήματα, να σχεδιάσετε τη γραφική παράσταση της $f$
-  \end{enumerate}
+\begin{askisi}
+    Δίνεται η συνάρτηση $f(x)=x^3-3x$
+    \begin{enumerate}
+        \item<1-> Να μελετήσετε τη συνάρτηση $f$ ως προς τη μονοτονία, τα ακρότατα, την κυρτότητα και τα σημεία καμπής
+        \item<2-> Να βρείτε τις οριακές τιμές της $f$ στα άκρα του διαστήματος του πεδίου ορισμού της, να κάνετε τον πίνακα μεταβολών της $f$ και με βάση τις απαντήσεις σας στα προηγούμενα ερωτήματα, να σχεδιάσετε τη γραφική παράσταση της $f$
+    \end{enumerate}
 
-  %\hyperlink{Λύση7}{\beamerbutton{Λύση}}
-\end{frame}
+    %\hyperlink{Λύση7}{\beamerbutton{Λύση}}
+\end{askisi}
 
-\subsection{Άσκηση 8}
-\begin{frame}[label=Άσκηση8,t]{Εξάσκηση 8}
-  Δίνεται η συνάρτηση $f(x)=e^x+\ln x$. Να δείξετε ότι:
-  \begin{enumerate}
-    \item<1-> Η $C_f$ έχει μοναδικό σημείο καμπής το $Α(x_0,f(x_0))$
-    \item<2-> $x_0<\dfrac{4}{5}$
-  \end{enumerate}
+\begin{askisi}
+    Δίνεται η συνάρτηση $f(x)=e^x+\ln x$. Να δείξετε ότι:
+    \begin{enumerate}
+        \item<1-> Η $C_f$ έχει μοναδικό σημείο καμπής το $Α(x_0,f(x_0))$
+        \item<2-> $x_0<\dfrac{4}{5}$
+    \end{enumerate}
 
-  %\hyperlink{Λύση8}{\beamerbutton{Λύση}}
-\end{frame}
+    %\hyperlink{Λύση8}{\beamerbutton{Λύση}}
+\end{askisi}
 
-\subsection{Άσκηση 9}
-\begin{frame}[label=Άσκηση9,t]{Εξάσκηση 9}
-  Δίνεται η συνάρτηση $f(x)=6e^x-x^3-4x^2$. Να δείξετε ότι η $f$ έχει ακριβώς δύο σημεία καμπής
+\begin{askisi}
+    Δίνεται η συνάρτηση $f(x)=6e^x-x^3-4x^2$. Να δείξετε ότι η $f$ έχει ακριβώς δύο σημεία καμπής
 
-  %\hyperlink{Λύση9}{\beamerbutton{Λύση}}
-\end{frame}
+    %\hyperlink{Λύση9}{\beamerbutton{Λύση}}
+\end{askisi}
 
-\subsection{Άσκηση 10}
-\begin{frame}[label=Άσκηση10,t]{Εξάσκηση 10}
-  Δίνεται η συνάρτηση $$f(x)=\dfrac{x^4}{12}-\dfrac{α^2x^3}{3}+\dfrac{αx^2}{2}-3x+1$$
-  Να βρείτε τις τιμές του $α\in\mathbb{R}$ για τις οποίες:
-  \begin{enumerate}
-    \item<1-> Η $f$ παρουσιάζει καμπή στο $x_0=1$
-    \item<2-> Η $C_f$ έχει ακριβώς δύο σημεία καμπής
-  \end{enumerate}
+\begin{askisi}
+    Δίνεται η συνάρτηση $$f(x)=\dfrac{x^4}{12}-\dfrac{α^2x^3}{3}+\dfrac{αx^2}{2}-3x+1$$
+    Να βρείτε τις τιμές του $α\in\mathbb{R}$ για τις οποίες:
+    \begin{enumerate}
+        \item<1-> Η $f$ παρουσιάζει καμπή στο $x_0=1$
+        \item<2-> Η $C_f$ έχει ακριβώς δύο σημεία καμπής
+    \end{enumerate}
 
-  %\hyperlink{Λύση10}{\beamerbutton{Λύση}}
-\end{frame}
+    %\hyperlink{Λύση10}{\beamerbutton{Λύση}}
+\end{askisi}
 
-\subsection{Άσκηση 11}
-\begin{frame}[label=Άσκηση11,,t]{Εξάσκηση 11}
-  Να αποδείξετε ότι για κάθε $α\in (-2,2)$ η συνάρτηση $f(x)=x^4-2αx^3+6x^2-1$ είναι κυρτή σε όλο το $\mathbb{R}$
+\begin{askisi}
+    Να αποδείξετε ότι για κάθε $α\in (-2,2)$ η συνάρτηση $f(x)=x^4-2αx^3+6x^2-1$ είναι κυρτή σε όλο το $\mathbb{R}$
 
-  %\hyperlink{Λύση11}{\beamerbutton{Λύση}}
-\end{frame}
+    %\hyperlink{Λύση11}{\beamerbutton{Λύση}}
+\end{askisi}
 
-\subsection{Άσκηση 12}
-\begin{frame}[label=Άσκηση12,t]{Εξάσκηση 12}
-  Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση για την οποία ισχύει
-  $$f''(x)+f(x)\ne 2f'(x)\text{, για κάθε } x\in\mathbb{R}$$
-  Να δείξετε ότι η συνάρτηση $g(x)=e^{-x}f(x)$, $x\in\mathbb{R}$ δεν έχει σημεία καμπής.
+\begin{askisi}
+    Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση για την οποία ισχύει
+    $$f''(x)+f(x)\ne 2f'(x)\text{, για κάθε } x\in\mathbb{R}$$
+    Να δείξετε ότι η συνάρτηση $g(x)=e^{-x}f(x)$, $x\in\mathbb{R}$ δεν έχει σημεία καμπής.
 
-  %\hyperlink{Λύση12}{\beamerbutton{Λύση}}
-\end{frame}
+    %\hyperlink{Λύση12}{\beamerbutton{Λύση}}
+\end{askisi}
 
-\subsection{Άσκηση 13}
-\begin{frame}[label=Άσκηση13,t]{Εξάσκηση 13}
+\begin{askisi}
 
-  Έστω $f:(1,3)\to\mathbb{R}$ μία συνάρτηση, η οποία είναι δύο φορές παραγωγίσιμη και ισχύει:
-  $$f^2(x)+xf(x)+x^2-3x+1=0\text{, για κάθε } x\in (1,3)$$
-  Να δείξετε ότι η συνάρτηση $f$, δεν παρουσιάζει καμπή
+    Έστω $f:(1,3)\to\mathbb{R}$ μία συνάρτηση, η οποία είναι δύο φορές παραγωγίσιμη και ισχύει:
+    $$f^2(x)+xf(x)+x^2-3x+1=0\text{, για κάθε } x\in (1,3)$$
+    Να δείξετε ότι η συνάρτηση $f$, δεν παρουσιάζει καμπή
 
-  %\hyperlink{Λύση13}{\beamerbutton{Λύση}}
-\end{frame}
+    %\hyperlink{Λύση13}{\beamerbutton{Λύση}}
+\end{askisi}
 
 
 \appendix
 
 \section{Αποδείξεις}
 \begin{frame}[label=Απόδειξη1]{Απόδειξη σημείο καμπής}
-  \onslide<1-> Έστω ότι η $f$ έχει σημείο καμπής στο $x_0$ με κυρτή αριστερά και κοίλη δεξιά του σημείου.
+    \onslide<1-> Έστω ότι η $f$ έχει σημείο καμπής στο $x_0$ με κυρτή αριστερά και κοίλη δεξιά του σημείου.
 
-  Άρα $f'(x)< f'(x_0)$ για κάθε $x<x_0$ και $f'(x)<f'(x_0)$ για κάθε $x>x_0$
+    Άρα $f'(x)< f'(x_0)$ για κάθε $x<x_0$ και $f'(x)<f'(x_0)$ για κάθε $x>x_0$
 
-  \onslide<2-> Αφού $f'$ παραγωγίσιμη, θα υπάρχει το όριο
+    \onslide<2-> Αφού $f'$ παραγωγίσιμη, θα υπάρχει το όριο
 
-  $$f''(x_0)=\lim\limits_{x \to x_0^-}{ \dfrac{f'(x)-f'(x_0)}{x-x_0} }\ge 0$$
+    $$f''(x_0)=\lim\limits_{x \to x_0^-}{ \dfrac{f'(x)-f'(x_0)}{x-x_0} }\ge 0$$
 
-  \onslide<3-> όμοια
-  $$f''(x_0)=\lim\limits_{x \to x_0^+}{ \dfrac{f'(x)-f'(x_0)}{x-x_0} } \le 0$$
+    \onslide<3-> όμοια
+    $$f''(x_0)=\lim\limits_{x \to x_0^+}{ \dfrac{f'(x)-f'(x_0)}{x-x_0} } \le 0$$
 
-  \onslide<4-> Άρα $f''(x_0)=0$ \hyperlink{Θεώρημα1}{\beamerbutton{Πίσω στη θεωρία}}
+    \onslide<4-> Άρα $f''(x_0)=0$ \hyperlink{Θεώρημα1}{\beamerbutton{Πίσω στη θεωρία}}
 \end{frame}
 
 
@@ -286,15 +249,13 @@
 %  \tableofcontents
 % \end{frame}
 %
-% \subsection{Άσκηση 1}
-% \begin{frame}[label=Λύση1]
+% \begin{askisi}
 %  Με θεώρημα ενδιαμέσων τιμών. Η συνάρτηση είναι συνεχής στο $[10,11]$ με $f(10)=1024$ και $f(11)=2048$. Αφού $2023\in (1024,2048)$ υπάρχει $x_0$...
 %
 %  \hyperlink{Άσκηση1}{\beamerbutton{Πίσω στην άσκηση}}
 % \end{frame}
 %
-% \subsection{Άσκηση 2}
-% \begin{frame}[label=Λύση2]
+% \begin{askisi}
 %  Με Bolzano ή με μέγιστης ελάχιστης τιμής και ΘΕΤ.
 %
 %  \begin{gather*}
@@ -306,29 +267,25 @@
 %  \hyperlink{Άσκηση2}{\beamerbutton{Πίσω στην άσκηση}}
 % \end{frame}
 %
-% \subsection{Άσκηση 3}
-% \begin{frame}[label=Λύση3]
+% \begin{askisi}
 %  Προφανές ελάχιστο στα $x_1=1$ και $x_2=3$. Ως συνεχής στο $[1,3]$ έχει σίγουρα ΚΑΙ μέγιστο στο $(1,3)$
 %
 %  \hyperlink{Άσκηση3}{\beamerbutton{Πίσω στην άσκηση}}
 % \end{frame}
 %
-% \subsection{Άσκηση 4}
-% \begin{frame}[label=Λύση4]
+% \begin{askisi}
 %  Η συνάρτηση `απόστασης` $f(x)-x$ είναι ορισμένη στο κλειστό διάστημα και έχει σίγουρα μέγιστο
 %
 %  \hyperlink{Άσκηση4}{\beamerbutton{Πίσω στην άσκηση}}
 % \end{frame}
 %
-% \subsection{Άσκηση 5}
-% \begin{frame}[label=Λύση5]
+% \begin{askisi}
 %  Όμοια με την Άσκηση 2
 %
 %  \hyperlink{Άσκηση5}{\beamerbutton{Πίσω στην άσκηση}}
 % \end{frame}
 %
-% \subsection{Άσκηση 6}
-% \begin{frame}[label=Λύση6]
+% \begin{askisi}
 %  \begin{enumerate}
 %   \item Είναι γνησίως αύξουσα άρα $(f(+\infty),f(-\infty))$
 %   \item Προφανώς $[f(0),f(1)]$...

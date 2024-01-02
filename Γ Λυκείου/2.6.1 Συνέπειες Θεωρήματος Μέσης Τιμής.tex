@@ -1,228 +1,193 @@
-\documentclass[greek]{beamer}
-%\usepackage{fontspec}
-\usepackage{amsmath,amsthm}
-\usepackage{unicode-math}
-\usepackage{xltxtra}
-\usepackage{graphicx}
-\usetheme{CambridgeUS}
-\usecolortheme{seagull}
-\usepackage{hyperref}
-\usepackage{ulem}
-\usepackage{xgreek}
-
-\usepackage{pgfpages}
-\usepackage{tikz}
-\usepackage{tkz-tab}
-%\setbeameroption{show notes on second screen}
-%\setbeameroption{show only notes}
-
-\setsansfont{Noto Serif}
-
-\usepackage{multicol}
-
-\usepackage{appendixnumberbeamer}
-
-\setbeamercovered{transparent}
-\beamertemplatenavigationsymbolsempty
+\documentclass{presentation}
 
 \title{Συναρτήσεις}
 \subtitle{Συνέπειες Θεωρήματος Μέσης Τιμής}
 \author[Λόλας]{Κωνσταντίνος Λόλας}
+\institute[$10^ο$ ΓΕΛ]{$10^ο$ ΓΕΛ Θεσσαλονίκης}
 \date{}
 
 \begin{document}
 
 \begin{frame}
-  \titlepage
+    \titlepage
 \end{frame}
 
 \section{Θεωρία}
 \begin{frame}{Ανάσες, τελείωσε η ανηφόρα}
-  Από εδώ και πέρα θα εφαρμόζουμε ΜΟΝΟ (υπολογίζουμε)
-  \begin{enumerate}
-    \item<1-> Θα βρίσκουμε συνάρτηση από την παράγωγο
-    \item<2-> Θα βρίσκουμε μονοτονία
-    \item<3-> Θα βρίσκουμε ακρότατα
-  \end{enumerate}
-  \onslide<4-> και όλα αυτά χάρις το ΘΜΤ (για όσους έλεγαν ΠΟΥ θα χρειαστούν αυτά που κάνουμε!!!!)
+    Από εδώ και πέρα θα εφαρμόζουμε ΜΟΝΟ (υπολογίζουμε)
+    \begin{enumerate}
+        \item<1-> Θα βρίσκουμε συνάρτηση από την παράγωγο
+        \item<2-> Θα βρίσκουμε μονοτονία
+        \item<3-> Θα βρίσκουμε ακρότατα
+    \end{enumerate}
+    \onslide<4-> και όλα αυτά χάρις το ΘΜΤ (για όσους έλεγαν ΠΟΥ θα χρειαστούν αυτά που κάνουμε!!!!)
 \end{frame}
 
 \begin{frame}{Από $f'\to f$}
-  Μέχρι τώρα, ξέραμε την συνάρτηση και υπολογίζαμε την παράγωγο. Πάμε για το αντίστροφο!
-  \begin{enumerate}
-    \item<1-> Βρείτε μία συνάρτηση που $f'(x)=0$
-    \item<2-> Βρείτε μία συνάρτηση που $f'(x)=x$
-    \item<3-> Βρείτε μία συνάρτηση που $f'(x)=ημx+\frac{1}{x}$
-    \item<4-> Βρείτε μία συνάρτηση που $f'(x)=\frac{1}{f(x)}$ ΟΥΠΣ!
-  \end{enumerate}
+    Μέχρι τώρα, ξέραμε την συνάρτηση και υπολογίζαμε την παράγωγο. Πάμε για το αντίστροφο!
+    \begin{enumerate}
+        \item<1-> Βρείτε μία συνάρτηση που $f'(x)=0$
+        \item<2-> Βρείτε μία συνάρτηση που $f'(x)=x$
+        \item<3-> Βρείτε μία συνάρτηση που $f'(x)=ημx+\frac{1}{x}$
+        \item<4-> Βρείτε μία συνάρτηση που $f'(x)=\frac{1}{f(x)}$ ΟΥΠΣ!
+    \end{enumerate}
 \end{frame}
 
 \begin{frame}{Θεώρημα σταθερής συνάρτησης}
-  \begin{block}{Θεώρημα σταθερής συνάρτησης}
-    Έστω μία συνάρτηση $f$ ορισμένη στο $Δ$ όπου
-    \begin{itemize}
-      \item $f$ συνεχής στο $Δ$
-      \item $f'(x)=0$ για κάθε \emph{εσωτερικό} σημείο του $Δ$
-    \end{itemize}
-    Τότε
-    $$f(x)=c \text{, για κάθε } x\in Δ$$
-  \end{block}
+    \begin{block}{Θεώρημα σταθερής συνάρτησης}
+        Έστω μία συνάρτηση $f$ ορισμένη στο $Δ$ όπου
+        \begin{itemize}
+            \item $f$ συνεχής στο $Δ$
+            \item $f'(x)=0$ για κάθε \emph{εσωτερικό} σημείο του $Δ$
+        \end{itemize}
+        Τότε
+        $$f(x)=c \text{, για κάθε } x\in Δ$$
+    \end{block}
 \end{frame}
 
 \begin{frame}{Μάλλον μπλέκουμε σε μπελάδες!}
-  \begin{enumerate}
-    \item<1-> Για αρχή θα δίνεται η συνάρτηση που ζητάται!
-    \item<2-> Αν δεν δίνεται... καλώς ήρθατε στις διαφορικές εξισώσεις!
-    \item<3-> Αν τα μάθετε καλά, τα ολοκληρώματα θα είναι γελοία
-    \item<4-> Στο μαθηματικό είναι 2-3 μαθήματα (Λογισμός 2, Διαφορικές εξισώσεις...)
-  \end{enumerate}
+    \begin{enumerate}
+        \item<1-> Για αρχή θα δίνεται η συνάρτηση που ζητάται!
+        \item<2-> Αν δεν δίνεται... καλώς ήρθατε στις διαφορικές εξισώσεις!
+        \item<3-> Αν τα μάθετε καλά, τα ολοκληρώματα θα είναι γελοία
+        \item<4-> Στο μαθηματικό είναι 2-3 μαθήματα (Λογισμός 2, Διαφορικές εξισώσεις...)
+    \end{enumerate}
 \end{frame}
 
 \begin{frame}{Θεώρημα ίσων παραγώγων}
-  \begin{block}{Θεώρημα ίσων παραγώγων}
-    Έστω δύο συναρτήσεος $f$ και $g$ ορισμένες στο $Δ$ όπου
-    \begin{itemize}
-      \item $f$ και $g$ συνεχείς στο $Δ$
-      \item $f'(x)=g'(x)$ για κάθε \emph{εσωτερικό} σημείο του $Δ$
-    \end{itemize}
-    Τότε
-    $$f(x)=g(x)+c \text{, για κάθε } x\in Δ$$
-  \end{block}
+    \begin{block}{Θεώρημα ίσων παραγώγων}
+        Έστω δύο συναρτήσεος $f$ και $g$ ορισμένες στο $Δ$ όπου
+        \begin{itemize}
+            \item $f$ και $g$ συνεχείς στο $Δ$
+            \item $f'(x)=g'(x)$ για κάθε \emph{εσωτερικό} σημείο του $Δ$
+        \end{itemize}
+        Τότε
+        $$f(x)=g(x)+c \text{, για κάθε } x\in Δ$$
+    \end{block}
 \end{frame}
 
 \section{Ασκήσεις}
-\subsection{Άσκηση 1}
-\begin{frame}[label=Άσκηση1]{Εξάσκηση 1}
-  Έστω $f:(0,+\infty)\to\mathbb{R}$ μία συνάρτηση, η οποία είναι παραγωγίσιμη και ισχύει $xf'(x)-2f(x)=0$ για κάθε $x>0$
-  \begin{enumerate}
-    \item<1-> Να δείξετε ότι η συνάρτηση $g(x)=\frac{f(x)}{x^2}$. $x>0$ είναι σταθερή
-    \item<2-> Αν επιπλέον $f(1)=2$ να βρείτε τον τύπο υης $f$
-  \end{enumerate}
+\begin{askisi}
+    Έστω $f:(0,+\infty)\to\mathbb{R}$ μία συνάρτηση, η οποία είναι παραγωγίσιμη και ισχύει $xf'(x)-2f(x)=0$ για κάθε $x>0$
+    \begin{enumerate}
+        \item<1-> Να δείξετε ότι η συνάρτηση $g(x)=\frac{f(x)}{x^2}$. $x>0$ είναι σταθερή
+        \item<2-> Αν επιπλέον $f(1)=2$ να βρείτε τον τύπο υης $f$
+    \end{enumerate}
 
-  % \hyperlink{Λύση1}{\beamerbutton{Λύση}}
-\end{frame}
+    % \hyperlink{Λύση1}{\beamerbutton{Λύση}}
+\end{askisi}
 
-\subsection{Άσκηση 2}
-\begin{frame}[label=Άσκηση2]{Εξάσκηση 2}
-  Έστω $f:[0,π]\to\mathbb{R}$ μία συνάρτηση με $f(0)=1$, η οποία είναι συνεχής και ισχύει $f'(x)=xσυνx$ για κάθε $x\in (0,π)$
+\begin{askisi}
+    Έστω $f:[0,π]\to\mathbb{R}$ μία συνάρτηση με $f(0)=1$, η οποία είναι συνεχής και ισχύει $f'(x)=xσυνx$ για κάθε $x\in (0,π)$
 
-  Να δείξετε ότι $f(x)=xημx+συνx$, $x\in [0,π]$
+    Να δείξετε ότι $f(x)=xημx+συνx$, $x\in [0,π]$
 
-  % \hyperlink{Λύση2}{\beamerbutton{Λύση}}
-\end{frame}
+    % \hyperlink{Λύση2}{\beamerbutton{Λύση}}
+\end{askisi}
 
-\subsection{Άσκηση 3}
-\begin{frame}[label=Άσκηση3]{Εξάσκηση 3}
-  Έστω $f:(0,+\infty)\to\mathbb{R}$ μία συνάρτηση με $f(1)=0$, η οποία είναι παραγωγίσιμη και ισχύει $f'(x)=\frac{1-xf(x)}{x^2}$ για κάθε $x>0$
+\begin{askisi}
+    Έστω $f:(0,+\infty)\to\mathbb{R}$ μία συνάρτηση με $f(1)=0$, η οποία είναι παραγωγίσιμη και ισχύει $f'(x)=\frac{1-xf(x)}{x^2}$ για κάθε $x>0$
 
-  Να δείξετε ότι $f(x)=\frac{\ln x}{x}$, $x>0$
+    Να δείξετε ότι $f(x)=\frac{\ln x}{x}$, $x>0$
 
-  % \hyperlink{Λύση3}{\beamerbutton{Λύση}}
-\end{frame}
+    % \hyperlink{Λύση3}{\beamerbutton{Λύση}}
+\end{askisi}
 
-\subsection{Άσκηση 4}
-\begin{frame}[label=Άσκηση4]{Εξάσκηση 4}
-  Έστω $f:(0,π)\to\mathbb{R}$ μία συνάρτηση με $f(\frac{π}{2})=1$, η οποία είναι παραγωγίσιμη και ισχύει $f'(x)-σφx\cdot f(x)=0$ για κάθε $x\in (0,π)$
+\begin{askisi}
+    Έστω $f:(0,π)\to\mathbb{R}$ μία συνάρτηση με $f(\frac{π}{2})=1$, η οποία είναι παραγωγίσιμη και ισχύει $f'(x)-σφx\cdot f(x)=0$ για κάθε $x\in (0,π)$
 
-  Να δείξετε ότι $f(x)=ημx$, $x\in (0,π)$
+    Να δείξετε ότι $f(x)=ημx$, $x\in (0,π)$
 
-  % \hyperlink{Λύση4}{\beamerbutton{Λύση}}
-\end{frame}
+    % \hyperlink{Λύση4}{\beamerbutton{Λύση}}
+\end{askisi}
 
-\subsection{Άσκηση 5}
-\begin{frame}[label=Άσκηση5]{Εξάσκηση 5}
-  Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση με $f(0)=1$, η οποία είναι παραγωγίσιμη και ισχύει $f'(x)=f(x)-e^xημx$ για κάθε $x\in\mathbb{R}$
+\begin{askisi}
+    Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση με $f(0)=1$, η οποία είναι παραγωγίσιμη και ισχύει $f'(x)=f(x)-e^xημx$ για κάθε $x\in\mathbb{R}$
 
-  Να δείξετε ότι $f(x)=e^xσυνx$, $x\in\mathbb{R}$
+    Να δείξετε ότι $f(x)=e^xσυνx$, $x\in\mathbb{R}$
 
-  % \hyperlink{Λύση5}{\beamerbutton{Λύση}}
-\end{frame}
+    % \hyperlink{Λύση5}{\beamerbutton{Λύση}}
+\end{askisi}
 
-\subsection{Άσκηση 6}
-\begin{frame}[label=Άσκηση6]{Εξάσκηση 6}
-  Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση με $f(0)=0$, η οποία είναι παραγωγίσιμη και ισχύει $f'(x)=2xe^{-f(x)}$ για κάθε $x\in\mathbb{R}$
+\begin{askisi}
+    Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση με $f(0)=0$, η οποία είναι παραγωγίσιμη και ισχύει $f'(x)=2xe^{-f(x)}$ για κάθε $x\in\mathbb{R}$
 
-  Να δείξετε ότι $f(x)=\ln (x^2+1)$, $x\in\mathbb{R}$
+    Να δείξετε ότι $f(x)=\ln (x^2+1)$, $x\in\mathbb{R}$
 
-  % \hyperlink{Λύση6}{\beamerbutton{Λύση}}
-\end{frame}
+    % \hyperlink{Λύση6}{\beamerbutton{Λύση}}
+\end{askisi}
 
-\subsection{Άσκηση 7}
-\begin{frame}[label=Άσκηση7]{Εξάσκηση 7}
-  Έστω $f$, $g:\mathbb{R}\to\mathbb{R}$ δύο συναρτήσεις οι οποίες είναι δύο φορές παραγωγίσιμες και ισχύουν
-  \begin{itemize}
-    \item $f''(x)=g''(x)$ για κάθε $x\in\mathbb{R}$
-    \item $f(0)=g(0)+1$
-  \end{itemize}
+\begin{askisi}
+    Έστω $f$, $g:\mathbb{R}\to\mathbb{R}$ δύο συναρτήσεις οι οποίες είναι δύο φορές παραγωγίσιμες και ισχύουν
+    \begin{itemize}
+        \item $f''(x)=g''(x)$ για κάθε $x\in\mathbb{R}$
+        \item $f(0)=g(0)+1$
+    \end{itemize}
 
-  Να δείξετε ότι $f(0)=g(0)+1$
+    Να δείξετε ότι $f(0)=g(0)+1$
 
-  %\hyperlink{Λύση7}{\beamerbutton{Λύση}}
-\end{frame}
+    %\hyperlink{Λύση7}{\beamerbutton{Λύση}}
+\end{askisi}
 
-\subsection{Άσκηση 8}
-\begin{frame}[label=Άσκηση8]{Εξάσκηση 8}
-  Έστω $f:(0,+\infty)\to\mathbb{R}$ μία συνάρτηση με $f(0)=0$, η οποία είναι συνεχής και ισχύει $f(x)=x(f(x)-f'(x))$ για κάθε $x>0$
-  \begin{enumerate}
-    \item<1-> Αν $g(x)=xf(x)$, $x>0$ να δείξετε ότι $g(x)=c\cdot e^x$, $x>0$
-    \item<2-> Αν επιπλέον $f(1)=e$ να βρείτε τον τύπο της $f$
-  \end{enumerate}
+\begin{askisi}
+    Έστω $f:(0,+\infty)\to\mathbb{R}$ μία συνάρτηση με $f(0)=0$, η οποία είναι συνεχής και ισχύει $f(x)=x(f(x)-f'(x))$ για κάθε $x>0$
+    \begin{enumerate}
+        \item<1-> Αν $g(x)=xf(x)$, $x>0$ να δείξετε ότι $g(x)=c\cdot e^x$, $x>0$
+        \item<2-> Αν επιπλέον $f(1)=e$ να βρείτε τον τύπο της $f$
+    \end{enumerate}
 
-  %\hyperlink{Λύση8}{\beamerbutton{Λύση}}
-\end{frame}
+    %\hyperlink{Λύση8}{\beamerbutton{Λύση}}
+\end{askisi}
 
-\subsection{Άσκηση 9}
-\begin{frame}[label=Άσκηση9]{Εξάσκηση 9}
-  Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση η οποία είναι δύο φορές παραγωγίσιμη και ισχύουν
-  \begin{itemize}
-    \item $2f(x)+4xf'(x)+(x^2+9)f''(x)=0$ για κάθε $x\in\mathbb{R}$
-    \item $f(0)=0$ και $f'(0)=\frac{1}{9}$
-  \end{itemize}
+\begin{askisi}
+    Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση η οποία είναι δύο φορές παραγωγίσιμη και ισχύουν
+    \begin{itemize}
+        \item $2f(x)+4xf'(x)+(x^2+9)f''(x)=0$ για κάθε $x\in\mathbb{R}$
+        \item $f(0)=0$ και $f'(0)=\frac{1}{9}$
+    \end{itemize}
 
-  Να δείξετε ότι $f(x)=\frac{x}{x^2+9}$
+    Να δείξετε ότι $f(x)=\frac{x}{x^2+9}$
 
-  %\hyperlink{Λύση9}{\beamerbutton{Λύση}}
-\end{frame}
+    %\hyperlink{Λύση9}{\beamerbutton{Λύση}}
+\end{askisi}
 
-\subsection{Άσκηση 10}
-\begin{frame}[label=Άσκηση10]{Εξάσκηση 10}
-  Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση για την οποία ισχύει
-  $$|f(x)-f(y)|\le (x-y)^2 \text{ για κάθε } x,y\in\mathbb{R}$$
+\begin{askisi}
+    Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση για την οποία ισχύει
+    $$|f(x)-f(y)|\le (x-y)^2 \text{ για κάθε } x,y\in\mathbb{R}$$
 
-  Να δείξετε ότι η $f$ είναι σταθερή
+    Να δείξετε ότι η $f$ είναι σταθερή
 
-  %\hyperlink{Λύση10}{\beamerbutton{Λύση}}
-\end{frame}
+    %\hyperlink{Λύση10}{\beamerbutton{Λύση}}
+\end{askisi}
 
-\subsection{Άσκηση 11}
-\begin{frame}[label=Άσκηση11]{Εξάσκηση 11}
-  Αν για τις συναρτήσεις $f$, $g$ ισχύουν $f(0)=0$, $g(0)=1$, $f'(x)=g(x)$ και $g'(x)=-f(x)$ για κάθε $x\in\mathbb{R}$ να αποδείξετε ότι:
-  \begin{enumerate}
-    \item<1-> $f^2(x)+g^2(x)=1$, $x\in\mathbb{R}$
-    \item<2-> $f(x)=ημx$, $x\in\mathbb{R}$ και $g(x)=συνx$, $x\in\mathbb{R}$
-  \end{enumerate}
+\begin{askisi}
+    Αν για τις συναρτήσεις $f$, $g$ ισχύουν $f(0)=0$, $g(0)=1$, $f'(x)=g(x)$ και $g'(x)=-f(x)$ για κάθε $x\in\mathbb{R}$ να αποδείξετε ότι:
+    \begin{enumerate}
+        \item<1-> $f^2(x)+g^2(x)=1$, $x\in\mathbb{R}$
+        \item<2-> $f(x)=ημx$, $x\in\mathbb{R}$ και $g(x)=συνx$, $x\in\mathbb{R}$
+    \end{enumerate}
 
-  %\hyperlink{Λύση11}{\beamerbutton{Λύση}}
-\end{frame}
+    %\hyperlink{Λύση11}{\beamerbutton{Λύση}}
+\end{askisi}
 
 
 \appendix
 
 \section{Αποδείξεις}
 \begin{frame}{Απόδειξη σταθερής συνάρτησης}
-  Θα δείξουμε ότι $f(x_1)=f(x_2)$ για κάθε $x_1$, $x_2\in Δ$
+    Θα δείξουμε ότι $f(x_1)=f(x_2)$ για κάθε $x_1$, $x_2\in Δ$
 
-  \onslide<1-> Αν $x_1=x_2$...
+    \onslide<1-> Αν $x_1=x_2$...
 
-  \onslide<2-> Αν $x_1\ne x_2$ τότε αφού είναι παραγωγίσιμη στο $Δ$ θα ισχύει το ΘΜΤ.
+    \onslide<2-> Αν $x_1\ne x_2$ τότε αφού είναι παραγωγίσιμη στο $Δ$ θα ισχύει το ΘΜΤ.
 
-  \onslide<3-> Υπάρχει $ξ\in Δ$ ώστε $f'(ξ)=\frac{f(x_2)-f(x_1)}{x_2-x_1}$.
+    \onslide<3-> Υπάρχει $ξ\in Δ$ ώστε $f'(ξ)=\frac{f(x_2)-f(x_1)}{x_2-x_1}$.
 
-  \onslide<4-> Αλλά $f'(x)=0$ για κάθε $x\in Δ$
+    \onslide<4-> Αλλά $f'(x)=0$ για κάθε $x\in Δ$
 
-  \onslide<5-> Άρα $f'(ξ)=\frac{f(x_2)-f(x_1)}{x_2-x_1}=0$
+    \onslide<5-> Άρα $f'(ξ)=\frac{f(x_2)-f(x_1)}{x_2-x_1}=0$
 
-  \onslide<6-> $f(x_2)=f(x_1)$
+    \onslide<6-> $f(x_2)=f(x_1)$
 \end{frame}
 
 
@@ -231,15 +196,13 @@
 %  \tableofcontents
 % \end{frame}
 %
-% \subsection{Άσκηση 1}
-% \begin{frame}[label=Λύση1]
+% \begin{askisi}
 %  Με θεώρημα ενδιαμέσων τιμών. Η συνάρτηση είναι συνεχής στο $[10,11]$ με $f(10)=1024$ και $f(11)=2048$. Αφού $2023\in (1024,2048)$ υπάρχει $x_0$...
 %
 %  \hyperlink{Άσκηση1}{\beamerbutton{Πίσω στην άσκηση}}
 % \end{frame}
 %
-% \subsection{Άσκηση 2}
-% \begin{frame}[label=Λύση2]
+% \begin{askisi}
 %  Με Bolzano ή με μέγιστης ελάχιστης τιμής και ΘΕΤ.
 %
 %  \begin{gather*}
@@ -251,29 +214,25 @@
 %  \hyperlink{Άσκηση2}{\beamerbutton{Πίσω στην άσκηση}}
 % \end{frame}
 %
-% \subsection{Άσκηση 3}
-% \begin{frame}[label=Λύση3]
+% \begin{askisi}
 %  Προφανές ελάχιστο στα $x_1=1$ και $x_2=3$. Ως συνεχής στο $[1,3]$ έχει σίγουρα ΚΑΙ μέγιστο στο $(1,3)$
 %
 %  \hyperlink{Άσκηση3}{\beamerbutton{Πίσω στην άσκηση}}
 % \end{frame}
 %
-% \subsection{Άσκηση 4}
-% \begin{frame}[label=Λύση4]
+% \begin{askisi}
 %  Η συνάρτηση `απόστασης` $f(x)-x$ είναι ορισμένη στο κλειστό διάστημα και έχει σίγουρα μέγιστο
 %
 %  \hyperlink{Άσκηση4}{\beamerbutton{Πίσω στην άσκηση}}
 % \end{frame}
 %
-% \subsection{Άσκηση 5}
-% \begin{frame}[label=Λύση5]
+% \begin{askisi}
 %  Όμοια με την Άσκηση 2
 %
 %  \hyperlink{Άσκηση5}{\beamerbutton{Πίσω στην άσκηση}}
 % \end{frame}
 %
-% \subsection{Άσκηση 6}
-% \begin{frame}[label=Λύση6]
+% \begin{askisi}
 %  \begin{enumerate}
 %   \item Είναι γνησίως αύξουσα άρα $(f(+\infty),f(-\infty))$
 %   \item Προφανώς $[f(0),f(1)]$...

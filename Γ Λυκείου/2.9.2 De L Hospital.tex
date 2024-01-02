@@ -1,33 +1,9 @@
-\documentclass[greek]{beamer}
-%\usepackage{fontspec}
-\usepackage{amsmath,amsthm}
-\usepackage{unicode-math}
-\usepackage{xltxtra}
-\usepackage{graphicx}
-\usetheme{CambridgeUS}
-\usecolortheme{seagull}
-\usepackage{hyperref}
-\usepackage{ulem}
-\usepackage{xgreek}
-
-\usepackage{pgfpages}
-\usepackage{tikz}
-\usepackage{tkz-tab}
-%\setbeameroption{show notes on second screen}
-%\setbeameroption{show only notes}
-
-\setsansfont{Noto Serif}
-
-\usepackage{multicol}
-
-\usepackage{appendixnumberbeamer}
-
-\setbeamercovered{transparent}
-\beamertemplatenavigationsymbolsempty
+\documentclass{presentation}
 
 \title{Συναρτήσεις}
 \subtitle{Κανόνας De L' Hospital}
 \author[Λόλας]{Κωνσταντίνος Λόλας}
+\institute[$10^ο$ ΓΕΛ]{$10^ο$ ΓΕΛ Θεσσαλονίκης}
 \date{}
 
 \begin{document}
@@ -82,8 +58,7 @@
 \end{frame}
 
 \section{Ασκήσεις}
-\subsection{Άσκηση 1}
-\begin{frame}[label=Άσκηση1,t]{Εξάσκηση 1}
+\begin{askisi}
     Να υπολογιστούν τα παρακάτω όρια:
     \begin{enumerate}
         \item<1-> $\lim\limits_{x \to 1}{ \dfrac{x^7+x-2}{x^2-x} }$
@@ -93,10 +68,9 @@
     \end{enumerate}
 
     % \hyperlink{Λύση1}{\beamerbutton{Λύση}}
-\end{frame}
+\end{askisi}
 
-\subsection{Άσκηση 2}
-\begin{frame}[label=Άσκηση2,t]{Εξάσκηση 2}
+\begin{askisi}
     Να υπολογίσετε τα παρακάτω όρια:
     \begin{enumerate}
         \item<1-> $\lim\limits_{x \to +\infty}{ \dfrac{\ln x}{x} }$
@@ -104,10 +78,9 @@
     \end{enumerate}
 
     % \hyperlink{Λύση2}{\beamerbutton{Λύση}}
-\end{frame}
+\end{askisi}
 
-\subsection{Άσκηση 3}
-\begin{frame}[label=Άσκηση3,t]{Εξάσκηση 3}
+\begin{askisi}
     Να υπολογίσετε τα παρακάτω όρια:
     \begin{enumerate}
         \item<1-> $\lim\limits_{x \to +\infty}{ (x-\ln x-e^x) }$
@@ -116,10 +89,9 @@
     \end{enumerate}
 
     % \hyperlink{Λύση3}{\beamerbutton{Λύση}}
-\end{frame}
+\end{askisi}
 
-\subsection{Άσκηση 4}
-\begin{frame}[label=Άσκηση4,t]{Εξάσκηση 4}
+\begin{askisi}
     Να βρείτε τα όρια:
     \begin{enumerate}
         \item<1-> $\lim\limits_{x \to +\infty}{ (x-\ln (1+e^x)) }$
@@ -127,10 +99,9 @@
     \end{enumerate}
 
     % \hyperlink{Λύση4}{\beamerbutton{Λύση}}
-\end{frame}
+\end{askisi}
 
-\subsection{Άσκηση 5}
-\begin{frame}[label=Άσκηση5,t]{Εξάσκηση 5}
+\begin{askisi}
     Να υπολογίσετε τα παρακάτω όρια:
     \begin{enumerate}
         \item<1-> $\lim\limits_{x \to -\infty}{ (xe^x) }$
@@ -140,10 +111,9 @@
     \end{enumerate}
 
     % \hyperlink{Λύση5}{\beamerbutton{Λύση}}
-\end{frame}
+\end{askisi}
 
-\subsection{Άσκηση 6}
-\begin{frame}[label=Άσκηση6,t]{Εξάσκηση 6}
+\begin{askisi}
     Να υπολογίσετε τα παρακάτω όρια:
     \begin{enumerate}
         \item<1-> $\lim\limits_{x \to 0^-}{ x^x }$
@@ -151,29 +121,26 @@
     \end{enumerate}
 
     % \hyperlink{Λύση6}{\beamerbutton{Λύση}}
-\end{frame}
+\end{askisi}
 
-\subsection{Άσκηση 7}
-\begin{frame}[label=Άσκηση7,t]{Εξάσκηση 7}
+\begin{askisi}
     Έστω η συνάρτηση $f(x)=\dfrac{x^2+x+2a}{x-a^2}$. Να βρείτε τις τιμές του $α\in\mathbb{R}$, για τις οποίες η ευθεία $ε:x=1$ είναι ασύμπτωτη της $C_f$
 
     %\hyperlink{Λύση7}{\beamerbutton{Λύση}}
-\end{frame}
+\end{askisi}
 
-\subsection{Άσκηση 8}
-\begin{frame}[label=Άσκηση8,t]{Εξάσκηση 8}
+\begin{askisi}
     Δίνεται η συνάρτηση $f(x)=\dfrac{a^2x^n+5x+1}{x^2+1}$. Να βρείτε τις τιμές των $a\in\mathbb{R}^*$ και $n\in\mathbb{N}-{0,1}$ για τις οποίες η ευθεία $ε:y=1$ είναι οριζόντια ασύμπτωτη της $C_f$ στο $+\infty$
 
     %\hyperlink{Λύση8}{\beamerbutton{Λύση}}
-\end{frame}
+\end{askisi}
 
-\subsection{Άσκηση 9}
-\begin{frame}[label=Άσκηση9,t]{Εξάσκηση 9}
+\begin{askisi}
     Να βρείτε τις τιμές των $α$ και $β\in\mathbb{R}$, ώστε
     $$\lim\limits_{x \to +\infty}{ \left(   \dfrac{αx^2+βx+3}{x-1}-x \right)}=2$$
 
     %\hyperlink{Λύση9}{\beamerbutton{Λύση}}
-\end{frame}
+\end{askisi}
 
 \begin{frame}
     Στο moodle θα βρείτε τις ασκήσεις που πρέπει να κάνετε, όπως και αυτή τη παρουσίαση
@@ -204,15 +171,13 @@
 %  \tableofcontents
 % \end{frame}
 %
-% \subsection{Άσκηση 1}
-% \begin{frame}[label=Λύση1]
+% \begin{askisi}
 %  Με θεώρημα ενδιαμέσων τιμών. Η συνάρτηση είναι συνεχής στο $[10,11]$ με $f(10)=1024$ και $f(11)=2048$. Αφού $2023\in (1024,2048)$ υπάρχει $x_0$...
 %
 %  \hyperlink{Άσκηση1}{\beamerbutton{Πίσω στην άσκηση}}
 % \end{frame}
 %
-% \subsection{Άσκηση 2}
-% \begin{frame}[label=Λύση2]
+% \begin{askisi}
 %  Με Bolzano ή με μέγιστης ελάχιστης τιμής και ΘΕΤ.
 %
 %  \begin{gather*}
@@ -224,29 +189,25 @@
 %  \hyperlink{Άσκηση2}{\beamerbutton{Πίσω στην άσκηση}}
 % \end{frame}
 %
-% \subsection{Άσκηση 3}
-% \begin{frame}[label=Λύση3]
+% \begin{askisi}
 %  Προφανές ελάχιστο στα $x_1=1$ και $x_2=3$. Ως συνεχής στο $[1,3]$ έχει σίγουρα ΚΑΙ μέγιστο στο $(1,3)$
 %
 %  \hyperlink{Άσκηση3}{\beamerbutton{Πίσω στην άσκηση}}
 % \end{frame}
 %
-% \subsection{Άσκηση 4}
-% \begin{frame}[label=Λύση4]
+% \begin{askisi}
 %  Η συνάρτηση `απόστασης` $f(x)-x$ είναι ορισμένη στο κλειστό διάστημα και έχει σίγουρα μέγιστο
 %
 %  \hyperlink{Άσκηση4}{\beamerbutton{Πίσω στην άσκηση}}
 % \end{frame}
 %
-% \subsection{Άσκηση 5}
-% \begin{frame}[label=Λύση5]
+% \begin{askisi}
 %  Όμοια με την Άσκηση 2
 %
 %  \hyperlink{Άσκηση5}{\beamerbutton{Πίσω στην άσκηση}}
 % \end{frame}
 %
-% \subsection{Άσκηση 6}
-% \begin{frame}[label=Λύση6]
+% \begin{askisi}
 %  \begin{enumerate}
 %   \item Είναι γνησίως αύξουσα άρα $(f(+\infty),f(-\infty))$
 %   \item Προφανώς $[f(0),f(1)]$...

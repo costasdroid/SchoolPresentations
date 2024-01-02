@@ -2,7 +2,7 @@
   "latex-workshop.latex.recipes": [
     {
       "name": "xelatex",
-      "tools": ["xelatex"]
+      "tools": ["xelatex", "xelatex"]
     },
     {
       "name": "latexmk (xelatex)",
@@ -44,19 +44,19 @@
   "latex-workshop.latex.autoBuild.run": "onSave",
   "latex-workshop.latex.autoClean.run": "onSucceeded",
   "latex-workshop.latex.tools": [
-    {
-      "name": "xelatex",
-      "command": "xelatex",
-      "args": [
-        // "-synctex=1",
-        "-interaction=nonstopmode",
-        "-file-line-error",
-        "-pdf",
-        // "-outdir=%OUTDIR%",
-        "%DOC%"
-      ],
-      "env": {}
-    },
+    // {
+    //   "name": "xelatex",
+    //   "command": "xelatex",
+    //   "args": [
+    //     // "-synctex=1",
+    //     "-interaction=nonstopmode",
+    //     "-file-line-error",
+    //     "-pdf",
+    //     "-outdir=%OUTDIR%",
+    //     "%DOC%"
+    //   ],
+    //   "env": {}
+    // },
     {
       "name": "latexmk",
       "command": "latexmk",

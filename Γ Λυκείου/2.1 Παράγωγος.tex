@@ -1,323 +1,243 @@
-\documentclass[greek]{beamer}
-%\usepackage{fontspec}
-\usepackage{amsmath,amsthm}
-\usepackage{unicode-math}
-\usepackage{xltxtra}
-\usepackage{graphicx}
-\usetheme{CambridgeUS}
-\usecolortheme{seagull}
-\usepackage{hyperref}
-\usepackage{ulem}
-\usepackage{xgreek}
-
-\usepackage{pgfpages}
-\usepackage{tikz}
-\usepackage{tkz-tab}
-%\setbeameroption{show notes on second screen}
-%\setbeameroption{show only notes}
-
-\setsansfont{Noto Serif}
-
-\usepackage{multicol}
-
-\usepackage{appendixnumberbeamer}
-
-\setbeamercovered{transparent}
-\beamertemplatenavigationsymbolsempty
+\documentclass{presentation}
 
 \title{Συναρτήσεις}
 \subtitle{Παράγωγος}
 \author[Λόλας]{Κωνσταντίνος Λόλας}
+\institute[$10^ο$ ΓΕΛ]{$10^ο$ ΓΕΛ Θεσσαλονίκης}
 \date{}
 
 \begin{document}
 
 \begin{frame}
-  \titlepage
+    \titlepage
 \end{frame}
 
 \section{Θεωρία}
 \begin{frame}{Μαγεία}
-  Ξέρετε τι είναι η κλίση...
-  \begin{itemize}
-    \item<1-> ευθείας
-    \item<2-> καμπύλης?
-  \end{itemize}
+    Ξέρετε τι είναι η κλίση...
+    \begin{itemize}
+        \item<1-> ευθείας
+        \item<2-> καμπύλης?
+    \end{itemize}
 \end{frame}
 
 \begin{frame}{Τι θα μάθουμε}
-  \begin{itemize}
-    \item<1-> Τι είναι η κλίση μιας οποιαδήποτε συνάρτηση στο $x_0$ της (παράγωγος)
-    \item<2-> Από κλίση στο $x_0$ θα πάμε στο $x\in D_f$ (παράγωγος συνάρτηση)
-    \item<3-> Από παράγωγο συνάρτησης, μονοτονία και τα συναφή (ακρότατα, Σ.Τ.)
-    \item<4-> Από παράγωγο παραγώγου, κυρτότητα
-    \item<5-> Νέα θεωρήματα (Rolle, ΘΜΤ)
-    \item<6-> Υπολογισμός ορίων που αφήσαμε πιο πίσω ($\infty \over \infty$, $0 \over 0$)
-    \item<7-> Μελέτη συνάρτησης (Γραφικά)
-    \item<8-> Το αγαπημένο μου \onslide<9> διαφορικές εξισώσεις
-  \end{itemize}
+    \begin{itemize}
+        \item<1-> Τι είναι η κλίση μιας οποιαδήποτε συνάρτηση στο $x_0$ της (παράγωγος)
+        \item<2-> Από κλίση στο $x_0$ θα πάμε στο $x\in D_f$ (παράγωγος συνάρτηση)
+        \item<3-> Από παράγωγο συνάρτησης, μονοτονία και τα συναφή (ακρότατα, Σ.Τ.)
+        \item<4-> Από παράγωγο παραγώγου, κυρτότητα
+        \item<5-> Νέα θεωρήματα (Rolle, ΘΜΤ)
+        \item<6-> Υπολογισμός ορίων που αφήσαμε πιο πίσω ($\dfrac{\infty}{\infty}$, $\dfrac{0}{0}$)
+        \item<7-> Μελέτη συνάρτησης (Γραφικά)
+        \item<8-> Το αγαπημένο μου \onslide<9> διαφορικές εξισώσεις
+    \end{itemize}
 \end{frame}
 
 \begin{frame}{Κλίση σε σημείο = Παράγωγος}
-  Ας παίξουμε
-  \href{https://www.geogebra.org/m/v6g6qvfw}{Geogebra}
+    Ας παίξουμε
+    \href{https://www.geogebra.org/m/v6g6qvfw}{Geogebra}
 \end{frame}
 
 \begin{frame}{Ορισμός}
-  \begin{block}{Παράγωγος}
-    Έστω μια συνάρτηση $f$. Λέμε ότι η $f$ είναι παραγωγίσιμη στο $x_0\in D_f$ και γράφουμε $f'(x_0)$ αν υπάρχει το όριο:
-    $$f'(x_0)=\lim\limits_{x \to x_0}{ \frac{f(x)-f(x_0)}{x-x_0} }$$
-  \end{block}
+    \begin{block}{Παράγωγος}
+        Έστω μια συνάρτηση $f$. Λέμε ότι η $f$ είναι παραγωγίσιμη στο $x_0\in D_f$ και γράφουμε $f'(x_0)$ αν υπάρχει το όριο:
+        $$f'(x_0)=\lim\limits_{x \to x_0}{ \frac{f(x)-f(x_0)}{x-x_0} }$$
+    \end{block}
 
-  \onslide<2>Με αντικατάσταση $x=x_0+h$
-  \begin{block}{Άλλος τύπος}
-    $$f'(x_0)=\lim\limits_{h \to 0}{ \frac{f(x_0+h)-f(x_0)}{h} }$$
-  \end{block}
+    \onslide<2>Με αντικατάσταση $x=x_0+h$
+    \begin{block}{Άλλος τύπος}
+        $$f'(x_0)=\lim\limits_{h \to 0}{ \frac{f(x_0+h)-f(x_0)}{h} }$$
+    \end{block}
 \end{frame}
 
 \begin{frame}{Άμεσες απορίες - παρατηρήσεις}
-  \begin{itemize}
-    \item<1-> Τι σημαίνει λοιπόν υπάρχει $f'(x_0)$
-    \item<2-> Πότε δεν θα υπάρχει?
-    \item<3-> Γραφικά πώς θα είναι η συνάρτηση που είναι (δεν είναι) παραγωγίσιμη
-    \item<4-> Πάλι όρια!
-    \item<5-> Με την συνέχεια τι έγινε?
-  \end{itemize}
+    \begin{itemize}
+        \item<1-> Τι σημαίνει λοιπόν υπάρχει $f'(x_0)$
+        \item<2-> Πότε δεν θα υπάρχει?
+        \item<3-> Γραφικά πώς θα είναι η συνάρτηση που είναι (δεν είναι) παραγωγίσιμη
+        \item<4-> Πάλι όρια!
+        \item<5-> Με την συνέχεια τι έγινε?
+    \end{itemize}
 \end{frame}
 
 \begin{frame}{Θεώρημα}
-  \begin{block}{Παράγωγος $\to$ Συνέχεια}
-    Αν μία συνάρτηση είναι παραγωγίσιμη σε ένα σημείο, τότε είναι και συνεχής στο σημείο αυτό
-  \end{block}
-  \onslide<2->
-  Έχω $f'(x_0)=\lim\limits_{x \to x_0}{ \frac{f(x)-f(x_0)}{x-x_0} }$. Θέτω $g(x)=\frac{f(x)-f(x_0)}{x-x_0}$
-  $$f(x)=g(x)(x-x_0)+f(x_0)$$
-  \begin{align*}
-    \lim\limits_{x \to x_0}{ f(x) } & =\lim\limits_{x \to x_0}{ g(x)(x-x_0)+f(x_0) } \\
-                                    & =f'(x_0)\cdot (x_0-x_0)+f(x_0)                 \\
-                                    & =f(x_0)
-  \end{align*}
+    \begin{block}{Παράγωγος $\to$ Συνέχεια}
+        Αν μία συνάρτηση είναι παραγωγίσιμη σε ένα σημείο, τότε είναι και συνεχής στο σημείο αυτό
+    \end{block}
+    \onslide<2->
+    Έχω $f'(x_0)=\lim\limits_{x \to x_0}{ \dfrac{f(x)-f(x_0)}{x-x_0} }$. Θέτω $g(x)=\dfrac{f(x)-f(x_0)}{x-x_0}$
+    $$f(x)=g(x)(x-x_0)+f(x_0)$$
+    \begin{align*}
+        \lim\limits_{x \to x_0}{ f(x) } & =\lim\limits_{x \to x_0}{ g(x)(x-x_0)+f(x_0) } \\
+                                        & =f'(x_0)\cdot (x_0-x_0)+f(x_0)                 \\
+                                        & =f(x_0)
+    \end{align*}
 \end{frame}
 
 \begin{frame}{Θεώρημα}
-  \begin{block}{Παράγωγος $\to$ Συνέχεια}
-    Αν μία συνάρτηση είναι παραγωγίσιμη σε ένα σημείο, τότε είναι και συνεχής στο σημείο αυτό
-  \end{block}
-  \onslide<2-> Φτιάξτε συνάρτηση (γραφικά) που ενώ είναι συνεχής σε ένα σημείο, δεν είναι παραγωγίσιμη στο σημείο αυτό.
+    \begin{block}{Παράγωγος $\to$ Συνέχεια}
+        Αν μία συνάρτηση είναι παραγωγίσιμη σε ένα σημείο, τότε είναι και συνεχής στο σημείο αυτό
+    \end{block}
+    \onslide<2-> Φτιάξτε συνάρτηση (γραφικά) που ενώ είναι συνεχής σε ένα σημείο, δεν είναι παραγωγίσιμη στο σημείο αυτό.
 
-  \onslide<3-> Άρα Συνέχεια $\nrightarrow$ Παράγωγος
+    \onslide<3-> Άρα Συνέχεια $\nrightarrow$ Παράγωγος
 \end{frame}
 
 \begin{frame}{Συμβολισμοί}
-  \begin{itemize}
-    \item<1-> Lagrange $f'(x)$
-    \item<2-> Leibniz $\frac{df}{dx}$
-    \item<3-> Euler $f_x(x)$
-  \end{itemize}
+    \begin{itemize}
+        \item<1-> Lagrange $f'(x)$
+        \item<2-> Leibniz $\dfrac{df}{dx}$
+        \item<3-> Euler $f_x(x)$
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}[noframenumbering]
+    Στο moodle θα βρείτε τις ασκήσεις που πρέπει να κάνετε, όπως και αυτή τη παρουσίαση
 \end{frame}
 
 \section{Ασκήσεις}
-\subsection{Άσκηση 1}
-\begin{frame}[label=Άσκηση1]{Εξάσκηση 1}
-  Να βρείτε την παράγωγο των παρακάτω συναρτήσεων στο $x_0$ εφόσον υπάρχει
-  \begin{enumerate}
-    \item<1-> $f(x)=1+ημx$, $x_0=0$
-    \item<2-> $f(x)=\sqrt{x-1}$, $x_0=1$
-  \end{enumerate}
 
-  % \hyperlink{Λύση1}{\beamerbutton{Λύση}}
+\begin{frame}[noframenumbering]
+    \vfill
+    \centering
+    \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+        \usebeamerfont{title}Ασκήσεις
+    \end{beamercolorbox}
+    \vfill
 \end{frame}
 
-\subsection{Άσκηση 2}
-\begin{frame}[label=Άσκηση2]{Εξάσκηση 2}
-  Να βρείτε την παράγωγο της συνάρτησης $f(x)=x+1-xημ|x|$, στο σημείο $x_0=0$.
+\begin{askisi}
+    Να βρείτε την παράγωγο των παρακάτω συναρτήσεων στο $x_0$ εφόσον υπάρχει
+    \begin{enumerate}
+        \item<1-> $f(x)=1+ημx$, $x_0=0$
+        \item<2-> $f(x)=\sqrt{x-1}$, $x_0=1$
+    \end{enumerate}
 
-  % \hyperlink{Λύση2}{\beamerbutton{Λύση}}
-\end{frame}
+    % \hyperlink{Λύση1}{\beamerbutton{Λύση}}
+\end{askisi}
 
-\subsection{Άσκηση 3}
-\begin{frame}[label=Άσκηση3]{Εξάσκηση 3}
-  Να βρείτε την παράγωγο της συνάρτησης $f$ στο σημείο $x_0=0$, όταν
-  \begin{enumerate}
-    \item<1-> $\begin{cases}
-          x^2,    & x<0    \\
-          συνx-1, & x\ge 0
-        \end{cases}$
-    \item<2-> $\begin{cases}
-          x^2ημ\frac{1}{x}, & x\ne 0 \\
-          0,                & x= 0
-        \end{cases}$
-  \end{enumerate}
+\begin{askisi}
+    Να βρείτε την παράγωγο της συνάρτησης $f(x)=x+1-xημ|x|$, στο σημείο $x_0=0$.
 
-  % \hyperlink{Λύση3}{\beamerbutton{Λύση}}
-\end{frame}
+    % \hyperlink{Λύση2}{\beamerbutton{Λύση}}
+\end{askisi}
 
-\subsection{Άσκηση 4}
-\begin{frame}[label=Άσκηση4]{Εξάσκηση 4}
-  Αν $x+1\le f(x) \le x^2+x+1$ για κάθε $x\in\mathbb{R}$, να βρείτε την
-  $$\frac{df(0)}{dx}$$
+\begin{askisi}
+    Να βρείτε την παράγωγο της συνάρτησης $f$ στο σημείο $x_0=0$, όταν
+    \begin{enumerate}
+        \item<1-> $\begin{cases}
+                    x^2,    & x<0    \\
+                    συνx-1, & x\ge 0
+                \end{cases}$
+        \item<2-> $\begin{cases}
+                    x^2ημ\dfrac{1}{x}, & x\ne 0 \\
+                    0,                 & x= 0
+                \end{cases}$
+    \end{enumerate}
 
-  % \hyperlink{Λύση4}{\beamerbutton{Λύση}}
-\end{frame}
+    % \hyperlink{Λύση3}{\beamerbutton{Λύση}}
+\end{askisi}
 
-\subsection{Άσκηση 5}
-\begin{frame}[label=Άσκηση5]{Εξάσκηση 5}
-  Αν για μια συνάρτηση $f:\mathbb{R}\to\mathbb{R}$ ισχύει
-  $$f(3+h)=2+h^2+ημh \text{, για κάθε } h\in\mathbb{R}$$
-  Να αποδείξετε ότι $f(3)=2$ και να βρείτε την $f'(3)$.
+\begin{askisi}
+    Αν $x+1\le f(x) \le x^2+x+1$ για κάθε $x\in\mathbb{R}$, να βρείτε την
+    $$\frac{df(0)}{dx}$$
 
-  % \hyperlink{Λύση5}{\beamerbutton{Λύση}}
-\end{frame}
+    % \hyperlink{Λύση4}{\beamerbutton{Λύση}}
+\end{askisi}
 
-\subsection{Άσκηση 6}
-\begin{frame}[label=Άσκηση6]{Εξάσκηση 6}
-  Αν η συνάρτηση $f$ είναι συνεχής στο $0$, να αποδείξετε ότι η συνάρτηση $g(x)=f(x)ημ^2x$ είναι παραγωγίσιμη στο $0$.
+\begin{askisi}
+    Αν για μια συνάρτηση $f:\mathbb{R}\to\mathbb{R}$ ισχύει
+    $$f(3+h)=2+h^2+ημh \text{, για κάθε } h\in\mathbb{R}$$
+    Να αποδείξετε ότι $f(3)=2$ και να βρείτε την $f'(3)$.
 
-  % \hyperlink{Λύση6}{\beamerbutton{Λύση}}
-\end{frame}
+    % \hyperlink{Λύση5}{\beamerbutton{Λύση}}
+\end{askisi}
 
-\subsection{Άσκηση 7}
-\begin{frame}{Εξάσκηση 7}
-  Αφού μελετήσετε ως προς τη συνέχεις στο $x_0$ τις παρακάτω συναρτήσεις, να εξετάσετε αν είναι παραγωγίσιμες στο σημείο αυτό.
-  \begin{enumerate}
-    \item<1-> $f(x)=\begin{cases}
-          e^x, & x<0    \\
-          x^2, & x\ge 0
-        \end{cases}$, αν $x_0=0$
-    \item<2-> $f(x)=|x-1|+3x-2$, αν $x_0=1$
-  \end{enumerate}
-\end{frame}
+\begin{askisi}
+    Αν η συνάρτηση $f$ είναι συνεχής στο $0$, να αποδείξετε ότι η συνάρτηση $g(x)=f(x)ημ^2x$ είναι παραγωγίσιμη στο $0$.
 
-\subsection{Άσκηση 8}
-\begin{frame}{Εξάσκηση 8}
-  Να βρείτε τις τιμές των $α$ και $β$, για τις οποίες η συνάρτηση
-  $f(x)=\begin{cases}
-      αx^3+1, & x\le 1 \\
-      βx+3,   & x >1
-    \end{cases}$, είναι παραγωγίσιμη στο $x_0=1$
-\end{frame}
+    % \hyperlink{Λύση6}{\beamerbutton{Λύση}}
+\end{askisi}
 
-\subsection{Άσκηση 9}
-\begin{frame}[label=Άσκηση9]{Εξάσκηση 9}
-  Έστω η συνάρτηση $f$ με $f(1)=2$ και $f'(1)=-1$. Να βρείτε τα όρια:
-  \begin{enumerate}
-    \item<1-> $\lim\limits_{x \to 1}{ \frac{f(x)-2x}{x^2-x}}$
-    \item<2-> $\lim\limits_{x \to 1}{ \frac{f^2(x)-2f(x)}{x^2-1}}$
-    \item<3-> $\lim\limits_{x \to 1}{ \frac{xf(x)-2}{x-1}}$
-  \end{enumerate}
+\begin{askisi}
+    Αφού μελετήσετε ως προς τη συνέχεις στο $x_0$ τις παρακάτω συναρτήσεις, να εξετάσετε αν είναι παραγωγίσιμες στο σημείο αυτό.
+    \begin{enumerate}
+        \item<1-> $f(x)=\begin{cases}
+                    e^x, & x<0    \\
+                    x^2, & x\ge 0
+                \end{cases}$, αν $x_0=0$
+        \item<2-> $f(x)=|x-1|+3x-2$, αν $x_0=1$
+    \end{enumerate}
+\end{askisi}
 
-  %\hyperlink{Λύση9}{\beamerbutton{Λύση}}
-\end{frame}
+\begin{askisi}
+    Να βρείτε τις τιμές των $α$ και $β$, για τις οποίες η συνάρτηση
+    $f(x)=\begin{cases}
+            αx^3+1, & x\le 1 \\
+            βx+3,   & x >1
+        \end{cases}$, είναι παραγωγίσιμη στο $x_0=1$
+\end{askisi}
 
-\subsection{Άσκηση 10}
-\begin{frame}[label=Άσκηση10]{Εξάσκηση 10}
-  Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση με $f(3)=0$ και $f'(3)=5$. Να βρείτε το $\lim\limits_{x \to 2}{ \frac{f(2x-1)}{x-2} }$
+\begin{askisi}
+    Έστω η συνάρτηση $f$ με $f(1)=2$ και $f'(1)=-1$. Να βρείτε τα όρια:
+    \begin{enumerate}
+        \item<1-> $\lim\limits_{x \to 1}{ \dfrac{f(x)-2x}{x^2-x}}$
+        \item<2-> $\lim\limits_{x \to 1}{ \dfrac{f^2(x)-2f(x)}{x^2-1}}$
+        \item<3-> $\lim\limits_{x \to 1}{ \dfrac{xf(x)-2}{x-1}}$
+    \end{enumerate}
 
-  %\hyperlink{Λύση10}{\beamerbutton{Λύση}}
-\end{frame}
+    %\hyperlink{Λύση9}{\beamerbutton{Λύση}}
+\end{askisi}
 
-\subsection{Άσκηση 11}
-\begin{frame}[label=Άσκηση11]{Εξάσκηση 11}
-  Έστω μία συνάρτηση $f$ η οποία είναι παραγωγίσιμη στο $x_0=1$. Να αποδείξετε ότι:
-  \begin{enumerate}
-    \item<1-> $\lim\limits_{h \to 0}{ \frac{f(1+2h)-f(1)}{h} }=2f'(1)$
-    \item<2-> $\lim\limits_{h \to 0}{ \frac{f(1+h)-f(1-h)}{h} }=2f'(1)$
-    \item<3-> $\lim\limits_{x \to +\infty}{ xf\left( x+\frac{1}{X} \right) }=f'(1)$, αν $f(1)=0$
-  \end{enumerate}
+\begin{askisi}
+    Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση με $f(3)=0$ και $f'(3)=5$. Να βρείτε το $\lim\limits_{x \to 2}{ \dfrac{f(2x-1)}{x-2} }$
 
-  %\hyperlink{Λύση11}{\beamerbutton{Λύση}}
-\end{frame}
+    %\hyperlink{Λύση10}{\beamerbutton{Λύση}}
+\end{askisi}
 
-\subsection{Άσκηση 12}
-\begin{frame}[label=Άσκηση12]{Εξάσκηση 12}
-  Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση η οποία είναι συνεχής στο $1$. Να βρείτε τις τιμές $f(1)$ και $f'(1)$, όταν:
-  \begin{enumerate}
-    \item<1-> $\lim\limits_{x \to 1}{ \frac{f(x)-2}{x-1} }=4$
-    \item<2-> $\lim\limits_{h \to 0}{ \frac{f(1+2h)-2}{h} }=8$
-    \item<3-> $\lim\limits_{x \to +\infty}{ \left[ xf\left( \frac{x+1}{x} \right)-2x   \right]  }$
-  \end{enumerate}
+\begin{askisi}
+    Έστω μία συνάρτηση $f$ η οποία είναι παραγωγίσιμη στο $x_0=1$. Να αποδείξετε ότι:
+    \begin{enumerate}
+        \item<1-> $\lim\limits_{h \to 0}{ \dfrac{f(1+2h)-f(1)}{h} }=2f'(1)$
+        \item<2-> $\lim\limits_{h \to 0}{ \dfrac{f(1+h)-f(1-h)}{h} }=2f'(1)$
+        \item<3-> $\lim\limits_{x \to +\infty}{ xf\left( x+\dfrac{1}{x} \right) }=f'(1)$, αν $f(1)=0$
+    \end{enumerate}
 
-  %\hyperlink{Λύση12}{\beamerbutton{Λύση}}
-\end{frame}
+    %\hyperlink{Λύση11}{\beamerbutton{Λύση}}
+\end{askisi}
 
-\subsection{Άσκηση 13}
-\begin{frame}[label=Άσκηση13]{Εξάσκηση 13}
-  Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση με
-  $$f^3(x)+f(x)+1=x^3 \text{, } x\in\mathbb{R}$$
-  Να δείξετε ότι:
-  \begin{enumerate}
-    \item<1-> Η $f$ είναι συνεχής στο $x_0=1$
-    \item<2-> $f'(1)=3$
-    \item<3-> $\lim\limits_{x \to 1}{ \frac{f(2x^2-x)}{x-1}  }$
-  \end{enumerate}
+\begin{askisi}
+    Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση η οποία είναι συνεχής στο $1$. Να βρείτε τις τιμές $f(1)$ και $f'(1)$, όταν:
+    \begin{enumerate}
+        \item<1-> $\lim\limits_{x \to 1}{ \dfrac{f(x)-2}{x-1} }=4$
+        \item<2-> $\lim\limits_{h \to 0}{ \dfrac{f(1+2h)-2}{h} }=8$
+        \item<3-> $\lim\limits_{x \to +\infty}{ \left[ xf\left( \dfrac{x+1}{x} \right)-2x   \right]  }$
+    \end{enumerate}
 
-  %\hyperlink{Λύση13}{\beamerbutton{Λύση}}
-\end{frame}
+    %\hyperlink{Λύση12}{\beamerbutton{Λύση}}
+\end{askisi}
 
-\subsection{Άσκηση 14}
-\begin{frame}[label=Άσκηση14]{Εξάσκηση 14}
-  Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση η οποία είναι παραγωγίσιμη στο $0$ με $f'(0)=1$ και ισχύει:
-  $$f(x+y)=f(x)+f(y)+xy \text{, για κάθε } x,y\in\mathbb{R}$$
-  Να αποδείξετε ότι η $f$ είναι παραγωγίσιμη σε κάθε $x_0\in\mathbb{R}$
+\begin{askisi}
+    Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση με
+    $$f^3(x)+f(x)+1=x^3 \text{, } x\in\mathbb{R}$$
+    Να δείξετε ότι:
+    \begin{enumerate}
+        \item<1-> Η $f$ είναι συνεχής στο $x_0=1$
+        \item<2-> $f'(1)=3$
+        \item<3-> $\lim\limits_{x \to 1}{ \dfrac{f(2x^2-x)}{x-1}  }$
+    \end{enumerate}
 
-  %\hyperlink{Λύση14}{\beamerbutton{Λύση}}
-\end{frame}
+    %\hyperlink{Λύση13}{\beamerbutton{Λύση}}
+\end{askisi}
 
-% \appendix
-% \section{Λύσεις Ασκήσεων}
-% \begin{frame}
-%  \tableofcontents
-% \end{frame}
-%
-% \subsection{Άσκηση 1}
-% \begin{frame}[label=Λύση1]
-%  Με θεώρημα ενδιαμέσων τιμών. Η συνάρτηση είναι συνεχής στο $[10,11]$ με $f(10)=1024$ και $f(11)=2048$. Αφού $2023\in (1024,2048)$ υπάρχει $x_0$...
-%
-%  \hyperlink{Άσκηση1}{\beamerbutton{Πίσω στην άσκηση}}
-% \end{frame}
-%
-% \subsection{Άσκηση 2}
-% \begin{frame}[label=Λύση2]
-%  Με Bolzano ή με μέγιστης ελάχιστης τιμής και ΘΕΤ.
-%
-%  \begin{gather*}
-%   f(3)<f(2)<f(1) \\
-%   3f(3)<f(1)+f(2)+f(3)<3f(1) \\
-%   f(3)<\frac{f(1)+f(2)+f(3)}{3}<f(1)
-%  \end{gather*}
-%
-%  \hyperlink{Άσκηση2}{\beamerbutton{Πίσω στην άσκηση}}
-% \end{frame}
-%
-% \subsection{Άσκηση 3}
-% \begin{frame}[label=Λύση3]
-%  Προφανές ελάχιστο στα $x_1=1$ και $x_2=3$. Ως συνεχής στο $[1,3]$ έχει σίγουρα ΚΑΙ μέγιστο στο $(1,3)$
-%
-%  \hyperlink{Άσκηση3}{\beamerbutton{Πίσω στην άσκηση}}
-% \end{frame}
-%
-% \subsection{Άσκηση 4}
-% \begin{frame}[label=Λύση4]
-%  Η συνάρτηση `απόστασης` $f(x)-x$ είναι ορισμένη στο κλειστό διάστημα και έχει σίγουρα μέγιστο
-%
-%  \hyperlink{Άσκηση4}{\beamerbutton{Πίσω στην άσκηση}}
-% \end{frame}
-%
-% \subsection{Άσκηση 5}
-% \begin{frame}[label=Λύση5]
-%  Όμοια με την Άσκηση 2
-%
-%  \hyperlink{Άσκηση5}{\beamerbutton{Πίσω στην άσκηση}}
-% \end{frame}
-%
-% \subsection{Άσκηση 6}
-% \begin{frame}[label=Λύση6]
-%  \begin{enumerate}
-%   \item Είναι γνησίως αύξουσα άρα $(f(+\infty),f(-\infty))$
-%   \item Προφανώς $[f(0),f(1)]$...
-%  \end{enumerate}
-%
-%  \hyperlink{Άσκηση6}{\beamerbutton{Πίσω στην άσκηση}}
-% \end{frame}
+\begin{askisi}
+    Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση η οποία είναι παραγωγίσιμη στο $0$ με $f'(0)=1$ και ισχύει:
+    $$f(x+y)=f(x)+f(y)+xy \text{, για κάθε } x,y\in\mathbb{R}$$
+    Να αποδείξετε ότι η $f$ είναι παραγωγίσιμη σε κάθε $x_0\in\mathbb{R}$
+
+    %\hyperlink{Λύση14}{\beamerbutton{Λύση}}
+\end{askisi}
 
 \end{document}
