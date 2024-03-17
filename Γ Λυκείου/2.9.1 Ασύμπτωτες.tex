@@ -53,11 +53,11 @@
 
 \begin{frame}{Πλάγια ασύμπτωτη}
     \begin{block}{Ορισμός}
-        Η $y=ax+b$ είναι \emph{ασύμπτωτη} της $C_f$ στο $+\infty$ αν $\lim\limits_{x \to +\infty}{ [f(x)-(ax+b)] }=0$
+        Η $y=ax+b$ είναι \emph{ασύμπτωτη} της $C_f$ στο $+\infty$ αν $$\lim\limits_{x \to +\infty}{ [f(x)-(ax+b)] }=0$$
     \end{block}
     και αντίστοιχα
     \begin{block}{Ορισμός}
-        Η $y=ax+b$ είναι \emph{ασύμπτωτη} της $C_f$ στο $-\infty$ αν $\lim\limits_{x \to -\infty}{ [f(x)-(ax+b)] }=0$
+        Η $y=ax+b$ είναι \emph{ασύμπτωτη} της $C_f$ στο $-\infty$ αν $$\lim\limits_{x \to -\infty}{ [f(x)-(ax+b)] }=0$$
     \end{block}
 \end{frame}
 
@@ -86,7 +86,7 @@
     Για το βιβλίο σχόλια, για εμάς ασκήσεις
 
     \begin{itemize}
-        \item<1-> Ποιό είναι τα μοναδικα πολυώνυμα που έχουν ασύμπτωτες και ποιές?
+        \item<1-> Ποιό είναι τα μοναδικά πολυώνυμα που έχουν ασύμπτωτες και ποιές?
         \item<2-> Τι πρέπει να ισχύει για τις ρητές συναρτήσεις ώστε να έχουν πλάγιες ασύμπτωτες?
         \item<3-> Ποιές συναρτήσεις έχουν κατακόρυφες ασύμπτωτες?
         \item<4-> Πού ψάχνουμε κατακόρυφες ασύμπτωτες?
@@ -94,7 +94,18 @@
 
 \end{frame}
 
+
 \section{Ασκήσεις}
+
+\begin{frame}[noframenumbering]
+    \vfill
+    \centering
+    \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+        \usebeamerfont{title}Ασκήσεις
+    \end{beamercolorbox}
+    \vfill
+\end{frame}
+
 \begin{askisi}
     Να βρείτε τις κατακόρυφες ασύμπτωτες των γραφικών παραστάσεων των παρακάτω συναρτήσεων
     \begin{enumerate}
@@ -179,75 +190,5 @@
 \begin{frame}
     Στο moodle θα βρείτε τις ασκήσεις που πρέπει να κάνετε, όπως και αυτή τη παρουσίαση
 \end{frame}
-
-
-\appendix
-
-\section{Αποδείξεις}
-\begin{frame}[label=Απόδειξη1]{Απόδειξη σημείο καμπής}
-    \onslide<1-> Έστω ότι η $f$ έχει σημείο καμπής στο $x_0$ με κυρτή αριστερά και κοίλη δεξιά του σημείου.
-
-    Άρα $f'(x)< f'(x_0)$ για κάθε $x<x_0$ και $f'(x)<f'(x_0)$ για κάθε $x>x_0$
-
-    \onslide<2-> Αφού $f'$ παραγωγίσιμη, θα υπάρχει το όριο
-
-    $$f''(x_0)=\lim\limits_{x \to x_0^-}{ \dfrac{f'(x)-f'(x_0)}{x-x_0} }\ge 0$$
-
-    \onslide<3-> όμοια
-    $$f''(x_0)=\lim\limits_{x \to x_0^+}{ \dfrac{f'(x)-f'(x_0)}{x-x_0} } \le 0$$
-
-    \onslide<4-> Άρα $f''(x_0)=0$ \hyperlink{Θεώρημα1}{\beamerbutton{Πίσω στη θεωρία}}
-\end{frame}
-
-
-% \section{Λύσεις Ασκήσεων}
-% \begin{frame}
-%  \tableofcontents
-% \end{frame}
-%
-% \begin{askisi}
-%  Με θεώρημα ενδιαμέσων τιμών. Η συνάρτηση είναι συνεχής στο $[10,11]$ με $f(10)=1024$ και $f(11)=2048$. Αφού $2023\in (1024,2048)$ υπάρχει $x_0$...
-%
-%  \hyperlink{Άσκηση1}{\beamerbutton{Πίσω στην άσκηση}}
-% \end{frame}
-%
-% \begin{askisi}
-%  Με Bolzano ή με μέγιστης ελάχιστης τιμής και ΘΕΤ.
-%
-%  \begin{gather*}
-%   f(3)<f(2)<f(1) \\
-%   3f(3)<f(1)+f(2)+f(3)<3f(1) \\
-%   f(3)<\dfrac{f(1)+f(2)+f(3)}{3}<f(1)
-%  \end{gather*}
-%
-%  \hyperlink{Άσκηση2}{\beamerbutton{Πίσω στην άσκηση}}
-% \end{frame}
-%
-% \begin{askisi}
-%  Προφανές ελάχιστο στα $x_1=1$ και $x_2=3$. Ως συνεχής στο $[1,3]$ έχει σίγουρα ΚΑΙ μέγιστο στο $(1,3)$
-%
-%  \hyperlink{Άσκηση3}{\beamerbutton{Πίσω στην άσκηση}}
-% \end{frame}
-%
-% \begin{askisi}
-%  Η συνάρτηση `απόστασης` $f(x)-x$ είναι ορισμένη στο κλειστό διάστημα και έχει σίγουρα μέγιστο
-%
-%  \hyperlink{Άσκηση4}{\beamerbutton{Πίσω στην άσκηση}}
-% \end{frame}
-%
-% \begin{askisi}
-%  Όμοια με την Άσκηση 2
-%
-%  \hyperlink{Άσκηση5}{\beamerbutton{Πίσω στην άσκηση}}
-% \end{frame}
-%
-% \begin{askisi}
-%  \begin{enumerate}
-%   \item Είναι γνησίως αύξουσα άρα $(f(+\infty),f(-\infty))$
-%   \item Προφανώς $[f(0),f(1)]$...
-%  \end{enumerate}
-%
-%  \hyperlink{Άσκηση6}{\beamerbutton{Πίσω στην άσκηση}}
-% \end{frame}
 
 \end{document}

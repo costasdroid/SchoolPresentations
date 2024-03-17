@@ -1,0 +1,38 @@
+\documentclass{presentation}
+
+\title{Συναρτήσεις}
+\subtitle{Ορισμένο Ολοκλήρωμα}
+\author[Λόλας]{Κωνσταντίνος Λόλας}
+\institute[$10^ο$ ΓΕΛ]{$10^ο$ ΓΕΛ Θεσσαλονίκης}
+\date{}
+
+\begin{document}
+
+\begin{frame}
+    \titlepage
+\end{frame}
+
+\section{Θεωρία}
+\begin{frame}{Κάτι πολύ θεωρητικό}
+    Αλλά πρώτα ας παίξουμε με \href{https://www.geogebra.org/classic/asyjagxx}{Geogebra}
+\end{frame}
+
+\begin{frame}{Σε ακόμα πιο θεωρητικό}
+    Συμβολίζουμε με
+    $$\lim_{n\to +\infty}\left( {\sum_{i=0}^{n}f(ξ_i)Δx_i} \right)=\int_α^β f(x)\,dx $$
+\end{frame}
+
+\begin{frame}{Που οδηγεί σε ιδιότητες}
+    Άμεσες συνέπειες του ορισμού:
+    \begin{enumerate}[<+->]
+        \item $\int_α^α f(x)\,dx =0$
+        \item $\int_α^β f(x)\,dx + \int_β^γ f(x)\,dx =\int_α^γ f(x)\,dx $
+        \item $\int_α^β f(x)\,dx = -\int_β^α f(x)\,dx$
+        \item $\int_α^β f(x)\,dx + \int_α^β g(x)\,dx =\int_α^β f(x)+g(x)\,dx $
+        \item $\int_α^β λf(x)\,dx =λ \int_α^β f(x)\,dx$
+        \item Αν $f(x)\ge 0$ τότε $\int_α^β f(x)\,dx \ge 0$
+        \item Αν $f(x)\ge 0$ και υπάρχει $ξ$ με $f(ξ)\ne 0$ τότε $\int_α^β f(x)\,dx > 0$
+    \end{enumerate}
+\end{frame}
+
+\end{document}
