@@ -1,39 +1,23 @@
-\documentclass[greek]{beamer}
-%\usepackage{fontspec}
-\usepackage{amsmath,amsthm}
-\usepackage{unicode-math}
-\usepackage{xltxtra}
-\usepackage{graphicx}
-\usetheme{CambridgeUS}
-\usecolortheme{seagull}
-\usepackage{hyperref}
-\usepackage{ulem}
-\usepackage{xgreek}
-\usepackage{pgfpages} 
-\usepackage{tikz}
-%\setbeameroption{show notes on second screen}
-%\setbeameroption{show only notes}
-\setsansfont{Calibri}
-\usepackage{multicol}
-\usepackage{appendixnumberbeamer}
-\usepackage{polynom}
-\usepackage{pgffor}
-\setbeamercovered{transparent}
-\beamertemplatenavigationsymbolsempty
+\documentclass{presentation}
+
 \title{Συναρτήσεις}
 \subtitle{Γραφική Παραστάση}
 \author[Λόλας]{Κωνσταντίνος Λόλας }
 \institute[$10^ο$ ΓΕΛ]{$10^ο$ ΓΕΛ Θεσσαλονίκης}
 \date{}
+
 \begin{document}
+
 \begin{frame}
       \titlepage
 \end{frame}
+
 \begin{frame}{Ορισμός}
       \begin{block}{Ορισμός}
             Γραφική παράσταση μιας συνάρτησης είναι το σύνολο των σημείων $A(x,f(x))$, $x\in D_f$, και συμβολίζεται με $C_f$
       \end{block}
 \end{frame}
+
 \begin{frame}{Τι βλέπω}
       \begin{itemize}
             \item<1-> Είναι γραφική παράσταση?
@@ -46,6 +30,7 @@
             \item<8-> Σχετική θέση
       \end{itemize}
 \end{frame}
+
 \begin{frame}{Γνωστές Γραφικές}
       \begin{itemize}
             \item<1-> $y=a$
@@ -60,6 +45,7 @@
             \item<10-> Μετατοπίσεις
       \end{itemize}
 \end{frame}
+
 \begin{frame}{Μετατοπίσεις}
       $$y=f(x)$$
       \begin{itemize}
@@ -75,21 +61,19 @@
 
 \section{Ασκήσεις}
 
-\subsection{Άσκηση 1}
-\begin{frame}[label=Άσκηση1,t]{Εξάσκηση 1}
+\begin{askisi}
       \href{https://www.geogebra.org/m/jmmx7bp8}{\beamergotobutton{Άσκηση Geogebra}}
       \begin{enumerate}
             \item<1-> Να βρείτε το πεδίο ορισμού και το σύνολο τιμών
             \item Να βρείτε τις τιμές: $f(2)$ και $f(f(0))$
             \item<2-> Να λύσετε γραφικά την $f(x)=0$
             \item<3-> Να λύσετε γραφικά την $f(x)<0$
-            \item<4-> Να βρείτε το πεδίο ορισμού της συνάρτησης $g(x)=\ln x$
+            \item<4-> Να βρείτε το πεδίο ορισμού της συνάρτησης $g(x)=\ln f(x)$
       \end{enumerate}
       %\hyperlink{Λύση1}{\beamerbutton{Λύση}}
-\end{frame}
+\end{askisi}
 
-\subsection{Άσκηση 2}
-\begin{frame}[label=Άσκηση2,t]{Εξάσκηση 2}
+\begin{askisi}
       \href{https://www.geogebra.org/m/td6m58hw}{\beamergotobutton{Άσκηση Geogebra}}
       \begin{enumerate}
             \item<1-> Να βρείτε τα κοινά σημεία των $C_f$ και $C_g$
@@ -103,10 +87,9 @@
             \item<7-> Να βρείτε την κατακόρυφη απόσταση των συναρτήσεων στο $x_0=0$
       \end{enumerate}
       %\hyperlink{Λύση2}{\beamerbutton{Λύση}}
-\end{frame}
+\end{askisi}
 
-\subsection{Άσκηση 3}
-\begin{frame}[label=Άσκηση3,t]{Εξάσκηση 3}
+\begin{askisi}
       Δίνεται η συνάρτηση $f(x)=ax^2-5a+1$, της οποίας η γραφική παράσταση διέρχεται από το σημείο $Α(3,5)$. Να βρείτε:
       \begin{enumerate}
             \item<1-> την τιμή του $a$
@@ -114,20 +97,18 @@
             \item<3-> τα διαστήματα του $x$ που η $C_f$ βρίσκεται πάνω από τον άξονα $x'x$
       \end{enumerate}
       %\hyperlink{Λύση3}{\beamerbutton{Λύση}}
-\end{frame}
+\end{askisi}
 
-\subsection{Άσκηση 4}
-\begin{frame}[label=Άσκηση4,t]{Εξάσκηση 4}
+\begin{askisi}
       Δίνονται οι συναρτήσεις $f(x)=\frac{1}{x}$ και $g(x)=1$. Να βρείτε:
       \begin{enumerate}
             \item<1-> τα κοινά τους σημεία
             \item<2-> την σχετική τους θέση
       \end{enumerate}
       %\hyperlink{Λύση4}{\beamerbutton{Λύση}}
-\end{frame}
+\end{askisi}
 
-\subsection{Άσκηση 5}
-\begin{frame}[label=Άσκηση5,t]{Εξάσκηση 5}
+\begin{askisi}
       Να σχεδιάσετε τις γραφικές παραστάσεις των συναρτήσεων:
       \begin{enumerate}
             \item<1->
@@ -145,24 +126,21 @@
       \end{enumerate}
       Από τη γραφική παράσταση να προσδιορίσετε το σύνολο τιμών σε καθεμία περίπτωση
       %\hyperlink{Λύση5}{\beamerbutton{Λύση}}
-\end{frame}
+\end{askisi}
 
-\subsection{Άσκηση 6}
-\begin{frame}[label=Άσκηση6,t]{Εξάσκηση 6}
+\begin{askisi}
       Στο ίδιο σύστημα αξόνων να σχεδιάσετε τις γραφικές παραστάσεις των συναρτήσεων $e^x$, $ημ x$ για $x>0$, να βρείτε τη σχετική τους θέση και να επιβεβαιώσετε αλγεβρικά την ανισώτητα:
       $$e^x>ημ x \text{, για κάθε } x>0$$
       %\hyperlink{Λύση6}{\beamerbutton{Λύση}}
-\end{frame}
+\end{askisi}
 
-\subsection{Άσκηση 7}
-\begin{frame}[label=Άσκηση7,t]{Εξάσκηση 7}
+\begin{askisi}
       Να σχεδιάσετε τις γραφικές παραστάσεις των παρακάτω συναρτήσεων στο ίδιο σύστημα αξόνων
       $$f(x)=(x-1)^2+1\text{, } x\ge 1 \text{ και } g(x)=1+\sqrt{x-1}$$
       %\hyperlink{Λύση7}{\beamerbutton{Λύση}}
-\end{frame}
+\end{askisi}
 
-\subsection{Άσκηση 8}
-\begin{frame}[label=Άσκηση8,t]{Εξάσκηση 8}
+\begin{askisi}
       \href{https://www.geogebra.org/m/euy2uhma}{\beamergotobutton{Άσκηση Geogebra}}
       \begin{enumerate}
             \item<1-> Να λύσετε την εξίσωση $f(x)=2$
@@ -175,30 +153,27 @@
                   \end{enumerate}
       \end{enumerate}
       %\hyperlink{Λύση8}{\beamerbutton{Λύση}}
-\end{frame}
+\end{askisi}
 
-\subsection{Άσκηση 9}
-\begin{frame}[label=Άσκηση9,t]{Εξάσκηση 9}
+\begin{askisi}
       \href{https://www.geogebra.org/m/dvzdm7bw}{\beamergotobutton{Άσκηση Geogebra}}
       \begin{enumerate}
             \item<1-> Να βρείτε το πλήθος των λύσεων της εξίσωσης $f(x)=a$, για τις διάφορες τιμές του $a\in\mathbb{R}$
             \item<2-> Να δείξετε ότι η εξίσωση $f(x)=3ημ a - 5$ είναι αδύνατη, για κάθε $a\in\mathbb{R}$
       \end{enumerate}
       %\hyperlink{Λύση9}{\beamerbutton{Λύση}}
-\end{frame}
+\end{askisi}
 
-\subsection{Άσκηση 10}
-\begin{frame}[label=Άσκηση10,t]{Εξάσκηση 10}
+\begin{askisi}
       Να εξετάσετε
       \begin{enumerate}
             \item<1-> αν ο αριθμός $2$ ανήκει στο σύνολο τιμών της συνάρτησης $f(x)=1+\sqrt{x}$
             \item<2-> αν ο αριθμός $0$ ανήκει στο σύνολο τιμών της συνάρτησης $f(x)=\frac{e^x-1}{x}$
       \end{enumerate}
       %\hyperlink{Λύση10}{\beamerbutton{Λύση}}
-\end{frame}
+\end{askisi}
 
-\subsection{Άσκηση 11}
-\begin{frame}[label=Άσκηση11,t]{Εξάσκηση 11}
+\begin{askisi}
       Έστω $f:A\to\mathbb{R}$ μία συνάρτηση με $A=\mathbb{R}$ και $f(A)=(1,+\infty)$.
       \begin{enumerate}
             \item<1-> Να δείξετε ότι η εξίσωση $f(x)=2023$ έχει μία τουλάχιστον λύση
@@ -206,9 +181,6 @@
             \item<3-> Να εξετάσετε αν υπάρχει $x_0\ge 0$ τέτοιο ώστε $f(x)=e^{x_0}$
       \end{enumerate}
       %\hyperlink{Λύση11}{\beamerbutton{Λύση}}
-\end{frame}
+\end{askisi}
 
-\begin{frame}
-      Στο moodle θα βρείτε τις ασκήσεις που πρέπει να κάνετε, όπως και αυτή τη παρουσίαση
-\end{frame}
 \end{document}

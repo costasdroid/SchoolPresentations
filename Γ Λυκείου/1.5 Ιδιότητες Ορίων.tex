@@ -1,32 +1,4 @@
-\documentclass[greek]{beamer}
-%\usepackage{fontspec}
-\usepackage{amsmath,amsthm}
-\usepackage{unicode-math}
-\usepackage{xltxtra}
-\usepackage{graphicx}
-\usetheme{CambridgeUS}
-\usecolortheme{seagull}
-\usepackage{hyperref}
-\usepackage{ulem}
-\usepackage{xgreek}
-
-\usepackage{pgfpages} 
-\usepackage{tikz}
-%\setbeameroption{show notes on second screen}
-%\setbeameroption{show only notes}
-
-\setsansfont{Calibri}
-
-\usepackage{multicol}
-
-\usepackage{appendixnumberbeamer}
-
-\usepackage{polynom}
-
-\usepackage{pgffor}
-
-\setbeamercovered{transparent}
-\beamertemplatenavigationsymbolsempty
+\documentclass{presentation}
 
 \title{Συναρτήσεις}
 \subtitle{Πράξεις ορίων}
@@ -62,7 +34,7 @@
   \end{block}
 \end{frame}
 
-\begin{frame}{Από κάπου να ποιαστούμε?}
+\begin{frame}{Από κάπου να πιαστούμε?}
   \begin{itemize}
     \item $\lim\limits_{x \to x_0}{ x }=x_0$
     \item $\lim\limits_{x \to x_0}{ c }=c$
@@ -72,10 +44,10 @@
 \begin{frame}{Και υπολογίζουμε...}
   ΜΟΝΟ αν υπάρχουν τα όρια των $f$ και $g$ τότε
   \begin{itemize}
-    \item $\lim\limits_{x \to x_0}{ f(x)+g(x) }=\lim\limits_{x \to x_0}{ f(x) }+\lim\limits_{x \to x_0}{ g(x) }$
-    \item $\lim\limits_{x \to x_0}{ k\cdot f(x) }=k\cdot \lim\limits_{x \to x_0}{ f(x) }$
-    \item $\lim\limits_{x \to x_0}{ f(x)\cdot g(x) }=\lim\limits_{x \to x_0}{ f(x) }\cdot\lim\limits_{x \to x_0}{ g(x) }$
-    \item $\lim\limits_{x \to x_0}{ \frac{f(x)}{g(x)} }=\frac{\lim\limits_{x \to x_0}{ f(x) }}{\lim\limits_{x \to x_0}{ g(x) }}$ εννοείται ότι $\lim\limits_{x \to x_0}{ g(x) }\ne 0$
+    \item $\lim\limits_{x \to x_0}{ \left[ f(x)+g(x) \right] }=\lim\limits_{x \to x_0}{ f(x) }+\lim\limits_{x \to x_0}{ g(x) }$
+    \item $\lim\limits_{x \to x_0}{ \left( k\cdot f(x) \right) }=k\cdot \lim\limits_{x \to x_0}{ f(x) }$
+    \item $\lim\limits_{x \to x_0}{ \left[ f(x)\cdot g(x) \right]}=\lim\limits_{x \to x_0}{ f(x) }\cdot\lim\limits_{x \to x_0}{ g(x) }$
+    \item $\lim\limits_{x \to x_0}{ \dfrac{f(x)}{g(x)} }=\dfrac{\lim\limits_{x \to x_0}{ f(x) }}{\lim\limits_{x \to x_0}{ g(x) }}$ εννοείται ότι $\lim\limits_{x \to x_0}{ g(x) }\ne 0$
     \item $\lim\limits_{x \to x_0}{ |f(x)| }=|\lim\limits_{x \to x_0}{ f(x) }|$
     \item $\lim\limits_{x \to x_0}{ \sqrt[n]{f(x)} }=\sqrt[n]{\lim\limits_{x \to x_0}{ f(x) }}$, εννοείται ότι $f(x)>0$ κοντά στο $x_0$
   \end{itemize}
@@ -86,7 +58,7 @@
     \begin{itemize}
       \item $\lim\limits_{x \to x_0}{ x^n }=x_0^n$, για $n\in \mathbb{N}^*$ \pause
       \item $\lim\limits_{x \to x_0}{ P(x) }=P(x_0)$ \pause, η πρώτη σας απόδειξη!!! \pause
-      \item $\lim\limits_{x \to x_0}{ \frac{P(x)}{Q(x)} }=\frac{P(x_0)}{Q(x_0)}$ \pause με λίγη προσοχή \pause
+      \item $\lim\limits_{x \to x_0}{ \dfrac{P(x)}{Q(x)} }=\dfrac{P(x_0)}{Q(x_0)}$ \pause με λίγη προσοχή \pause
       \item $\lim\limits_{x \to x_0}{ ημ(x) }=ημ(x_0)$ \pause
       \item $\lim\limits_{x \to x_0}{ συν(x) }=συν(x_0)$ \pause
       \item $\lim\limits_{x \to x_0}{ εφ(x) }=εφ(x_0)$
@@ -98,60 +70,69 @@
   \begin{block}{Sandwich, Παρεμβολής...}
     Έστω οι συναρτήσεις $f$, $g$ και $h$. Αν
     \begin{itemize}
-      \item $h(x)\le f(x) \le g(x)$, κοντά στο $x_0$ \pause
-      \item $\lim\limits_{x \to x_0}{ h(x) }=\lim\limits_{x \to x_0}{ g(x) }=k \in\mathbb{R}$, \pause
+      \item<1-> $h(x)\le f(x) \le g(x)$, κοντά στο $x_0$
+      \item<2-> $\lim\limits_{x \to x_0}{ h(x) }=\lim\limits_{x \to x_0}{ g(x) }=k \in\mathbb{R}$,
     \end{itemize}
-    τότε $\lim\limits_{x \to x_0}{ f(x) }=k$
+    \onslide<3->τότε $\lim\limits_{x \to x_0}{ f(x) }=k$
   \end{block}
 \end{frame}
 
 \begin{frame}{Σχεδόν τελειώσαμε}
   \begin{block}{Και λίγα άγνωστα όρια}
     \begin{itemize}
-      \item $\lim\limits_{x \to 0}{ \frac{ημx}{x} }=1$, \pause
-      \item $\lim\limits_{x \to 0}{ \frac{1-συνx}{x} }=0$
+      \item $\lim\limits_{x \to 0}{ \dfrac{ημx}{x} }=1$, \pause
+      \item $\lim\limits_{x \to 0}{ \dfrac{1-συνx}{x} }=0$
     \end{itemize}
   \end{block}
 \end{frame}
 
 \begin{frame}{Όλα τα είχε η Μαριωρή...}
-  Τι γίνεται με τη σύνθεση  $\lim\limits_{x \to x_0}{ f(g(x))}$? \pause
+  Τι γίνεται με τη σύνθεση  $\lim\limits_{x \to x_0}{ f(g(x))}$?
   \begin{enumerate}
-    \item Θέτουμε $u=g(x)$ \pause
-    \item Υπολογίζουμε (αν υπάρχει!) το $u_0=\lim\limits_{x \to x_0}{ g(x)}$ \pause
-    \item Υπολογίζουμε (αν υπάρχει!) το $k=\lim\limits_{u \to u_0}{ f(u)}$ \pause
+    \item<1-> Θέτουμε $u=g(x)$
+    \item<2-> Υπολογίζουμε (αν υπάρχει!) το $u_0=\lim\limits_{x \to x_0}{ g(x)}$
+    \item<3-> Υπολογίζουμε (αν υπάρχει!) το $k=\lim\limits_{u \to u_0}{ f(u)}$
   \end{enumerate}
-  Τότε αν $g(x)\ne u_0$ κοντά στο $x_0$, τότε προφανώς $\lim\limits_{x \to x_0}{ f(g(x))}=k$
+  \onslide<4->Τότε αν $g(x)\ne u_0$ κοντά στο $x_0$, τότε προφανώς $\lim\limits_{x \to x_0}{ f(g(x))}=k$
+\end{frame}
+
+\begin{frame}
+  Στο moodle θα βρείτε τις ασκήσεις που πρέπει να κάνετε, όπως και αυτή τη παρουσίαση
 \end{frame}
 
 \section{Ασκήσεις}
-\begin{frame}{Εξάσκηση}
+
+\begin{askisi}
   Αν για τις συναρτήσεις $f$, $g$ ισχύουν
   $$\lim\limits_{x \to 2}{ f(x) }=1 \text{ και } \lim\limits_{ x \to 2}{ g(x) }=2$$
   να υπολογίσετε το $\lim\limits_{x \to 2}{ (3f(x)+f(x)\cdot g(x)) }$
-\end{frame}
 
-\begin{frame}{Εξάσκηση}
+  %\hyperlink{Λύση1}{\beamerbutton{Λύση}}
+\end{askisi}
+
+\begin{askisi}
   Να υπολογίσετε τα όρια
   \begin{enumerate}
-    \item $\lim\limits_{x \to 3}{ \frac{x^2-3x}{x^2-9} }$ \pause
-    \item $\lim\limits_{x \to 1}{ \frac{2x^3-2x}{2x^2-5x+3} }$ \pause
-    \item $\lim\limits_{x \to 2}{ \frac{x^3-8}{x^3-7x+6} }$ \pause
-    \item $\lim\limits_{x \to 1}{ \left( \frac{x}{x-1}+\frac{x-2}{x^2-x}  \right)  }$
+    \item $\lim\limits_{x \to 3}{ \dfrac{x^2-3x}{x^2-9} }$ \pause
+    \item $\lim\limits_{x \to 1}{ \dfrac{2x^3-2x}{2x^2-5x+3} }$ \pause
+    \item $\lim\limits_{x \to 2}{ \dfrac{x^3-8}{x^3-7x+6} }$ \pause
+    \item $\lim\limits_{x \to 1}{ \left( \dfrac{x}{x-1}+\dfrac{x-2}{x^2-x}  \right)  }$
   \end{enumerate}
-\end{frame}
+  %\hyperlink{Λύση2}{\beamerbutton{Λύση}}
+\end{askisi}
 
-\begin{frame}{Εξάσκηση}
+\begin{askisi}
   Να υπολογίσετε τα όρια
   \begin{enumerate}
-    \item $\lim\limits_{x \to 4}{ \frac{x-4}{\sqrt{x}-2} }$ \pause
-    \item $\lim\limits_{x \to -1}{ \frac{\sqrt{x+5}-2}{x^2+x} }$ \pause
-    \item $\lim\limits_{x \to 1}{ \frac{\sqrt{x^2+3}-3x+1}{x^2-1} }$ \pause
-    \item $\lim\limits_{x \to 1}{ \frac{2\sqrt{2x-1}-\sqrt{x+3}}{\sqrt{x}-1} }$
+    \item $\lim\limits_{x \to 4}{ \dfrac{x-4}{\sqrt{x}-2} }$ \pause
+    \item $\lim\limits_{x \to -1}{ \dfrac{\sqrt{x+5}-2}{x^2+x} }$ \pause
+    \item $\lim\limits_{x \to 1}{ \dfrac{\sqrt{x^2+3}-3x+1}{x^2-1} }$ \pause
+    \item $\lim\limits_{x \to 1}{ \dfrac{2\sqrt{2x-1}-\sqrt{x+3}}{\sqrt{x}-1} }$
   \end{enumerate}
-\end{frame}
+  %\hyperlink{Λύση3}{\beamerbutton{Λύση}}
+\end{askisi}
 
-\begin{frame}{Εξάσκηση}
+\begin{askisi}
   Έστω η συνάρτηση $f(x)=\begin{cases}
       x-2,  & 0<x\le 1 \\
       3x-4, & 1<x<2    \\
@@ -163,173 +144,210 @@
     \item $\lim\limits_{x \to 1}{ f(x) }$ \pause
     \item $\lim\limits_{x \to 2}{ f(x) }$
   \end{enumerate}
-\end{frame}
+  %\hyperlink{Λύση4}{\beamerbutton{Λύση}}
+\end{askisi}
 
-\begin{frame}{Εξάσκηση}
+\begin{askisi}
   Έστω η συνάρτηση $f(x)=\begin{cases}
-      \frac{x^2-x-2}{2x-4}, & x\ne 2 \\
-      a,                    & x=2
+      \dfrac{x^2-x-2}{2x-4}, & x\ne 2 \\
+      a,                     & x=2
     \end{cases}$.
   \begin{enumerate}
     \item Να βρείτε το $\lim\limits_{x \to 2}{ f(x) }$ \pause
     \item Να βρείτε το $a$ ώστε $\lim\limits_{x \to 2}{ f(x) }=f(2)$
   \end{enumerate}
-\end{frame}
+  %\hyperlink{Λύση5}{\beamerbutton{Λύση}}
+\end{askisi}
 
-\begin{frame}{Εξάσκηση}
+\begin{askisi}
   Έστω η συνάρτηση $f(x)=\begin{cases}
       ασυνx+ημx-β,    & x<0    \\
       α\sqrt{x+1}+2β, & x\ge 0
     \end{cases}$.
   Να βρείτε τα $α$ και $β\in\mathbb{R}$ ώστε $\lim\limits_{x \to 0}{ f(x) }=1$
-\end{frame}
 
-\begin{frame}{Εξάσκηση}
+  %\hyperlink{Λύση6}{\beamerbutton{Λύση}}
+\end{askisi}
+
+\begin{askisi}
   Να βρείτε αν υπάρχουν τα όρια:
   \begin{enumerate}
-    \item $\lim\limits_{x \to 2}{ \frac{|x^3-x-1|-|x-7|}{x^2-4} }$ \pause
-    \item $\lim\limits_{x \to 2}{ \frac{|x^2-4|-x+2}{x^2-2x} }$
+    \item $\lim\limits_{x \to 2}{ \dfrac{|x^3-x-1|-|x-7|}{x^2-4} }$ \pause
+    \item $\lim\limits_{x \to 2}{ \dfrac{|x^2-4|-x+2}{x^2-2x} }$
   \end{enumerate}
-\end{frame}
 
-\begin{frame}{Εξάσκηση}
+  %\hyperlink{Λύση7}{\beamerbutton{Λύση}}
+\end{askisi}
+
+\begin{askisi}
   Έστω $f:\mathbb{R}\to\mathbb{R}$ μια συνάρτηση, για την οποία:
   \begin{enumerate}
     \item Αν ισχύει $3x-2-x^2\le f(x) \le x^2-x$, για κάθε $x\in\mathbb{R}$, να βρείτε το $\lim\limits_{x \to 1}{ f(x) }$ \pause
     \item Αν ισχύει $|f(x)-2|\le x^2$, για κάθε $x\in\mathbb{R}$, να βρείτε το $\lim\limits_{x \to 0}{ f(x) }$ \pause
     \item Αν ισχύει $f(\mathbb{R})=(0,1)$, να βρείτε το $\lim\limits_{x \to 0}{ \left(x^2f(x)  \right) }$
   \end{enumerate}
-\end{frame}
 
-\begin{frame}{Εξάσκηση}
-  Να βρείτε το $\lim\limits_{x \to 0}{ \frac{f(x)}{x} }$, όταν ισχύει:
+  %\hyperlink{Λύση8}{\beamerbutton{Λύση}}
+\end{askisi}
+
+\begin{askisi}
+  Να βρείτε το $\lim\limits_{x \to 0}{ \dfrac{f(x)}{x} }$, όταν ισχύει:
   $$2x-3x^2\le f(x) \le x^4+2x$$
-\end{frame}
 
-\begin{frame}{Εξάσκηση}
-  Να βρείτε το $\lim\limits_{x \to 0}{ xσυν\frac{1}{x} }$
-\end{frame}
+  %\hyperlink{Λύση9}{\beamerbutton{Λύση}}
+\end{askisi}
 
-\begin{frame}{Εξάσκηση}
+\begin{askisi}
+  Να βρείτε το $\lim\limits_{x \to 0}{ xσυν\dfrac{1}{x} }$
+
+  %\hyperlink{Λύση10}{\beamerbutton{Λύση}}
+\end{askisi}
+
+\begin{askisi}
   Να υπολογίσετε τα όρια
   \begin{enumerate}
-    \item $\lim\limits_{x \to 0}{ \frac{ημx}{x}+συνx^2 }$ \pause
-    \item $\lim\limits_{x \to 0}{ \frac{συνx-1}{x}-εφx }$ \pause
-    \item $\lim\limits_{x \to 0}{ \left( xημ\frac{1}{x}+\frac{ημ^2x}{x^2} \right)}$ \pause
-    \item $\lim\limits_{x \to 0}{ \frac{1-συν^2x}{x} }$
+    \item $\lim\limits_{x \to 0}{ \dfrac{ημx}{x}+συνx^2 }$ \pause
+    \item $\lim\limits_{x \to 0}{ \dfrac{συνx-1}{x}-εφx }$ \pause
+    \item $\lim\limits_{x \to 0}{ \left( xημ\dfrac{1}{x}+\dfrac{ημ^2x}{x^2} \right)}$ \pause
+    \item $\lim\limits_{x \to 0}{ \dfrac{1-συν^2x}{x} }$
   \end{enumerate}
-\end{frame}
 
-\begin{frame}{Εξάσκηση}
+  %\hyperlink{Λύση11}{\beamerbutton{Λύση}}
+\end{askisi}
+
+\begin{askisi}
   Να υπολογίσετε τα όρια
   \begin{enumerate}
-    \item $\lim\limits_{x \to 0}{ \frac{x}{ημx} }$ \pause
-    \item $\lim\limits_{x \to 0}{ \frac{εφx}{x} }$ \pause
-    \item $\lim\limits_{x \to 0}{ \frac{συνx-1}{ημx} }$ \pause
-    \item $\lim\limits_{x \to 0}{ \left( ημx\cdot ημ\frac{1}{x} \right) }$
+    \item $\lim\limits_{x \to 0}{ \dfrac{x}{ημx} }$ \pause
+    \item $\lim\limits_{x \to 0}{ \dfrac{εφx}{x} }$ \pause
+    \item $\lim\limits_{x \to 0}{ \dfrac{συνx-1}{ημx} }$ \pause
+    \item $\lim\limits_{x \to 0}{ \left( ημx\cdot ημ\dfrac{1}{x} \right) }$
   \end{enumerate}
-\end{frame}
 
-\begin{frame}{Εξάσκηση}
+  %\hyperlink{Λύση12}{\beamerbutton{Λύση}}
+\end{askisi}
+
+\begin{askisi}
   Να υπολογίσετε τα όρια
   \begin{enumerate}
-    \item $\lim\limits_{x \to 0}{ \frac{x+ημx}{x} }$ \pause
-    \item $\lim\limits_{x \to 0}{ \frac{ημ(π-x)}{x^2+x} }$ \pause
-    \item $\lim\limits_{x \to 0}{ \frac{ημx+3x}{2x-ημx} }$ \pause
-    \item $\lim\limits_{x \to 0}{ \frac{ημ^2x}{\sqrt{x^2+1}-1} }$
+    \item $\lim\limits_{x \to 0}{ \dfrac{x+ημx}{x} }$ \pause
+    \item $\lim\limits_{x \to 0}{ \dfrac{ημ(π-x)}{x^2+x} }$ \pause
+    \item $\lim\limits_{x \to 0}{ \dfrac{ημx+3x}{2x-ημx} }$ \pause
+    \item $\lim\limits_{x \to 0}{ \dfrac{ημ^2x}{\sqrt{x^2+1}-1} }$
   \end{enumerate}
-\end{frame}
 
-\begin{frame}{Εξάσκηση}
+  %\hyperlink{Λύση13}{\beamerbutton{Λύση}}
+\end{askisi}
+
+\begin{askisi}
   Να υπολογίσετε τα όρια
   \begin{enumerate}
-    \item $\lim\limits_{x \to 0}{ \frac{ημ5x}{x} }$ \pause
-    \item $\lim\limits_{x \to 0}{ \frac{συν3x-1}{x} }$ \pause
-    \item $\lim\limits_{x \to π}{ \frac{ημx}{π-x} }$ \pause
-    \item $\lim\limits_{x \to 0}{ \frac{ημx^2}{ημ3x} }$
+    \item $\lim\limits_{x \to 0}{ \dfrac{ημ5x}{x} }$ \pause
+    \item $\lim\limits_{x \to 0}{ \dfrac{συν3x-1}{x} }$ \pause
+    \item $\lim\limits_{x \to π}{ \dfrac{ημx}{π-x} }$ \pause
+    \item $\lim\limits_{x \to 0}{ \dfrac{ημx^2}{ημ3x} }$
   \end{enumerate}
-\end{frame}
 
-\begin{frame}{Εξάσκηση}
+  %\hyperlink{Λύση14}{\beamerbutton{Λύση}}
+\end{askisi}
+
+\begin{askisi}
   Να υπολογίσετε τα όρια
   \begin{enumerate}
-    \item $\lim\limits_{x \to 1}{ \frac{x\sqrt{x}-1}{x^2-\sqrt{x}} }$ \pause
-    \item $\lim\limits_{x \to 2}{ \frac{\sqrt{x-1}+\sqrt[3]{x-1}-2}{x-2} }$
+    \item $\lim\limits_{x \to 1}{ \dfrac{x\sqrt{x}-1}{x^2-\sqrt{x}} }$ \pause
+    \item $\lim\limits_{x \to 2}{ \dfrac{\sqrt{x-1}+\sqrt[3]{x-1}-2}{x-2} }$
   \end{enumerate}
-\end{frame}
 
-\begin{frame}{Εξάσκηση}
-  Αν $\lim\limits_{x \to 1}{ f(x) }=0$, να βρείτε το $\lim\limits_{x \to 1}{ \frac{f(x)-2ημf(x)}{f(x)+1-συνf(x)} }$
-\end{frame}
+  %\hyperlink{Λύση15}{\beamerbutton{Λύση}}
+\end{askisi}
 
-\begin{frame}{Εξάσκηση}
-  Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση για την οποία ισχύει $\lim\limits_{x \to 0}{ \frac{f(x)-1}{x} }=2$. Να βρείτε τα όρια:
+\begin{askisi}
+  Αν $\lim\limits_{x \to 1}{ f(x) }=0$, να βρείτε το $\lim\limits_{x \to 1}{ \dfrac{f(x)-2ημf(x)}{f(x)+1-συνf(x)} }$
+
+  %\hyperlink{Λύση16}{\beamerbutton{Λύση}}
+\end{askisi}
+
+\begin{askisi}
+  Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση για την οποία ισχύει $\lim\limits_{x \to 0}{ \dfrac{f(x)-1}{x} }=2$. Να βρείτε τα όρια:
   \begin{enumerate}
-    \item $\lim\limits_{x \to 0}{ \frac{f(5x)-1}{x} }$ \pause
-    \item $\lim\limits_{x \to 0}{ \frac{f(3x)-f(2x)}{x} }$
+    \item $\lim\limits_{x \to 0}{ \dfrac{f(5x)-1}{x} }$ \pause
+    \item $\lim\limits_{x \to 0}{ \dfrac{f(3x)-f(2x)}{x} }$
   \end{enumerate}
-\end{frame}
 
-\begin{frame}{Εξάσκηση}
-  Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση για την οποία ισχύει $\lim\limits_{h \to 0}{ \frac{f(1+h)-1}{h} }=2$. Να βρείτε τα όρια:
+  %\hyperlink{Λύση17}{\beamerbutton{Λύση}}
+\end{askisi}
+
+\begin{askisi}
+  Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση για την οποία ισχύει $\lim\limits_{h \to 0}{ \dfrac{f(1+h)-1}{h} }=2$. Να βρείτε τα όρια:
   \begin{enumerate}
-    \item $\lim\limits_{h \to 0}{ \frac{f(1-2h)-1}{h} }$ \pause
-    \item $\lim\limits_{h \to 0}{ \frac{f(1+2h)-f(1-h)}{h} }$
+    \item $\lim\limits_{h \to 0}{ \dfrac{f(1-2h)-1}{h} }$ \pause
+    \item $\lim\limits_{h \to 0}{ \dfrac{f(1+2h)-f(1-h)}{h} }$
   \end{enumerate}
-\end{frame}
 
-\begin{frame}{Εξάσκηση}
-  Αν $\lim\limits_{x \to 1}{ \frac{f(x)-3}{x-1} }=2$, να βρείτε το $\lim\limits_{x \to 1}{ \frac{f(x^2-x+1)-3}{x-1} }$
-\end{frame}
+  %\hyperlink{Λύση18}{\beamerbutton{Λύση}}
+\end{askisi}
 
-\begin{frame}{Εξάσκηση}
+\begin{askisi}
+  Αν $\lim\limits_{x \to 1}{ \dfrac{f(x)-3}{x-1} }=2$, να βρείτε το $\lim\limits_{x \to 1}{ \dfrac{f(x^2-x+1)-3}{x-1} }$
+
+  %\hyperlink{Λύση19}{\beamerbutton{Λύση}}
+\end{askisi}
+
+\begin{askisi}
   Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση. Να βρείτε το $\lim\limits_{x \to x_0}{ f(x) }$ όταν:
   \begin{enumerate}
     \item $\lim\limits_{x \to x_0}{\left(f(x)-x^2+3x  \right)=3  }$ και $x_0=2$ \pause
-    \item $\lim\limits_{x \to x_0}{\frac{f(x)-1}{x-2}=3  }$ και $x_0=2$ \pause
-    \item $\lim\limits_{x \to x_0}{\frac{f(x)+ημx}{x}=2  }$ και $x_0=0$
+    \item $\lim\limits_{x \to x_0}{\dfrac{f(x)-1}{x-2}=3  }$ και $x_0=2$ \pause
+    \item $\lim\limits_{x \to x_0}{\dfrac{f(x)+ημx}{x}=2  }$ και $x_0=0$
   \end{enumerate}
-\end{frame}
 
-\begin{frame}{Εξάσκηση}
-  Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση για την οποία ισχύει $\lim\limits_{x \to 0}{ \frac{f(x)}{x} }=1$.
+  %\hyperlink{Λύση20}{\beamerbutton{Λύση}}
+\end{askisi}
+
+\begin{askisi}
+  Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση για την οποία ισχύει $\lim\limits_{x \to 0}{ \dfrac{f(x)}{x} }=1$.
   \begin{enumerate}
     \item Να βρείτε το $\lim\limits_{x \to 0}{f(x)}$ \pause
-    \item Να βρείτε το $\lim\limits_{x \to 0}{\frac{f^2(x)+xf(x)+xημx}{f^2(x)+x^2+ημ^2x}}$
+    \item Να βρείτε το $\lim\limits_{x \to 0}{\dfrac{f^2(x)+xf(x)+xημx}{f^2(x)+x^2+ημ^2x}}$
   \end{enumerate}
-\end{frame}
 
-\begin{frame}{Εξάσκηση}
+  %\hyperlink{Λύση21 }{\beamerbutton{Λύση}}
+\end{askisi}
+
+\begin{askisi}
   Να βρείτε το πεδίο ορισμού των συναρτήσεων:
   \begin{enumerate}
     \item $f(x)=\sqrt{|x|-|ημx|}$ \pause
-    \item $f(x)=\frac{1}{ημ^2x-x^2}$
+    \item $f(x)=\dfrac{1}{ημ^2x-x^2}$
   \end{enumerate}
-\end{frame}
 
-\begin{frame}{Εξάσκηση}
+  %\hyperlink{Λύση22}{\beamerbutton{Λύση}}
+\end{askisi}
+
+\begin{askisi}
   Να λύσετε την εξίσωση $|ημx|=|π-x|$
-\end{frame}
 
-\begin{frame}{Εξάσκηση}
+  %\hyperlink{Λύση23}{\beamerbutton{Λύση}}
+\end{askisi}
+
+\begin{askisi}
   \begin{enumerate}
     \item Να λύσετε την εξίσωση $ημ(x^2+x)-x^2=x$ \pause
     \item Δίνεται η συνάρτηση $f(x)=2x+3\frac{ημx}{x}$. Να αποδείξετε ότι
           $$2x-3<f(x)<2x+3 \text{ για κάθε } x\ne 0$$
   \end{enumerate}
-\end{frame}
 
-\begin{frame}{Εξάσκηση}
+  %\hyperlink{Λύση24}{\beamerbutton{Λύση}}
+\end{askisi}
+
+\begin{askisi}
   Να υπολογίσετε τα όρια
   \begin{enumerate}
-    \item $\lim\limits_{x \to 0}{ \frac{x}{\sqrt[3]{x}} }$ \pause
-    \item $\lim\limits_{x \to 0}{ \frac{x}{\sqrt[3]{x^2}} }$
+    \item $\lim\limits_{x \to 0}{ \dfrac{x}{\sqrt[3]{x}} }$ \pause
+    \item $\lim\limits_{x \to 0}{ \dfrac{x}{\sqrt[3]{x^2}} }$
   \end{enumerate}
-\end{frame}
 
-\section{}
-\begin{frame}
-  Στο moodle θα βρείτε τις ασκήσεις που πρέπει να κάνετε, όπως και αυτή τη παρουσίαση
-\end{frame}
+  %\hyperlink{Λύση25}{\beamerbutton{Λύση}}
+\end{askisi}
 
 \end{document}

@@ -1,32 +1,4 @@
-\documentclass[greek]{beamer}
-%\usepackage{fontspec}
-\usepackage{amsmath,amsthm}
-\usepackage{unicode-math}
-\usepackage{xltxtra}
-\usepackage{graphicx}
-\usetheme{CambridgeUS}
-\usecolortheme{seagull}
-\usepackage{hyperref}
-\usepackage{ulem}
-\usepackage{xgreek}
-
-\usepackage{pgfpages} 
-\usepackage{tikz}
-%\setbeameroption{show notes on second screen}
-%\setbeameroption{show only notes}
-
-\setsansfont{Calibri}
-
-\usepackage{multicol}
-
-\usepackage{appendixnumberbeamer}
-
-\usepackage{polynom}
-
-\usepackage{pgffor}
-
-\setbeamercovered{transparent}
-\beamertemplatenavigationsymbolsempty
+\documentclass{presentation}
 
 \title{Συναρτήσεις} 
 \subtitle{Έννοια Πραγματικής Συνάρτησης}
@@ -94,24 +66,31 @@
       \end{itemize}
 \end{frame}
 
-\begin{frame}
+\begin{frame}[noframenumbering]
       Στο moodle θα βρείτε τις ασκήσεις που πρέπει να κάνετε, όπως και αυτή τη παρουσίαση
 \end{frame}
 
 \section{Ασκήσεις}
 
-\subsection{Άσκηση 1}
-\begin{frame}[label=Άσκηση1,t]{Εξάσκηση}
+\begin{frame}[noframenumbering]
+      \vfill
+      \centering
+      \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+            \usebeamerfont{title}Ασκήσεις
+      \end{beamercolorbox}
+      \vfill
+\end{frame}
+
+\begin{askisi}
       Δίνεται η συνάρτηση $f(x)=x^3-x+a$ με $f(-1)=1$
       \begin{enumerate}
             \item<1-> Να βρείτε την τιμή του $a$.
             \item<2-> Να λύσετε την εξίσωση $f(x)=1$.
       \end{enumerate}
-      %\hyperlink{Λύσ}{\beamerbutton{Λύση}}
-\end{frame}
+      %\hyperlink{Λύση}{\beamerbutton{Λύση}}
+\end{askisi}
 
-\subsection{Άσκηση 2}
-\begin{frame}[label=Άσκηση2,t]{Εξάσκηση 2}
+\begin{askisi}
       Για τη συνάρτηση $f(x)=\begin{cases}
                   2x+a^2,  & x<3   \\
                   x-3+b^2, & x\ge3
@@ -122,10 +101,9 @@
             \item<3-> Να βρείτε τις τιμές $f(\pi)$ και $f(e)$.
       \end{enumerate}
       %\hyperlink{Λύση2}{\beamerbutton{Λύση}}
-\end{frame}
+\end{askisi}
 
-\subsection{Άσκηση 3}
-\begin{frame}[label=Άσκηση3,t]{Εξάσκηση 3}
+\begin{askisi}
       Να βρείτε το πεδίο ορισμού των συναρτήσεων
       \begin{enumerate}
             \item<1-> $\frac{1}{x-1}$
@@ -141,10 +119,9 @@
             \item<11-> $\ln \left(\sqrt{x-1}-x+3\right)$
       \end{enumerate}
       %\hyperlink{Λύση3}{\beamerbutton{Λύση}}
-\end{frame}
+\end{askisi}
 
-\subsection{Άσκηση 4}
-\begin{frame}[label=Άσκηση4,t]{Εξάσκηση 4}
+\begin{askisi}
       Δίνεται η συνάρτηση $f(x)=\begin{cases}
                   1-x^2,     & x\le 1 \\
                   \ln (x-1), & x>1
@@ -158,6 +135,6 @@
             \item<2-> Να λύσετε την εξίσωση $f(x)=0$
       \end{enumerate}
       %\hyperlink{Λύση4}{\beamerbutton{Λύση}}
-\end{frame}
+\end{askisi}
 
 \end{document}

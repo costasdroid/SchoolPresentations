@@ -1,0 +1,291 @@
+\documentclass{presentation}
+
+\title{Συναρτήσεις}
+\subtitle{Αόριστο Ολοκλήρωμα}
+\author[Λόλας]{Κωνσταντίνος Λόλας}
+\institute[$10^ο$ ΓΕΛ]{$10^ο$ ΓΕΛ Θεσσαλονίκης}
+\date{}
+
+\begin{document}
+
+\begin{frame}
+    \titlepage
+\end{frame}
+
+\section{Θεωρία}
+\begin{frame}{Καιρός να τελειώνουμε!}
+    Απλά, θα μάθουμε να αντιπαραγωγίζουμε! Επειδή:
+    \begin{itemize}[<+->]
+        \item μπορούμε
+        \item θα λύνουμε προβλήματα ρυθμού μεταβολής (ροπή αδράνειας, έργο δύναμης, κέντρο μάζας...)
+        \item θα βρίσκουμε εμβαδά. Whattttttttttttt????????
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Ποιό Σύμβολο?}
+    \begin{block}{Ορισμός Αόριστου Ολοκληρώματος}
+        Έστω $f(x)$ συνάτηση ορισμένη σε διάστημα $Δ$ και $F(x)$ μία συνάρτηση με $F'(x)=f(x)$. Τότε
+        $$\int f(x) \, dx=F(x)+c$$
+    \end{block}
+    H $F$ έχει πολλά ονόματα: Αρχική, Αντιπαράγωγος, Παράγουσα...
+\end{frame}
+
+\begin{frame}{Πόσες αρχικές υπάρχουν μίας $f$}
+    \begin{block}{Θεώρημα}
+        Έστω $F(x)$ μία αρχική της $f(x)$. Τότε:
+        \begin{itemize}
+            \item κάθε $F(x)+c$ είναι επίσης αρχική
+            \item κάθε αρχική είναι της μορφής $F(x)+c$
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}{Σαν έτοιμοι από καιρό, σαν θαρραλέοι...}
+    Γνωστές αρχικές:
+    \begin{multicols}{2}
+        \begin{itemize}[<+->]
+            \item $\int 0 \, dx=c$
+            \item $\int a \, dx=ax+c$
+            \item $\int x^a \, dx=\dfrac{x^{a+1}}{a+1}+c$, $a\ne -1$
+            \item $\int \dfrac{1}{x} \, dx=\ln|x|+c$ !!!!!!!!!
+            \item $\int ημx \, dx=-συνx+c$
+            \item $\int συνx \, dx=ημx+c$
+            \item $\int \dfrac{1}{συν^2x} \, dx=εφx+c$
+            \item $\int \dfrac{1}{ημ^2x} \, dx=-σφx+c$
+            \item $\int e^x \, dx=e^x+c$
+            \item $\int a^x \, dx=\dfrac{a^x}{\ln a}+c$...
+        \end{itemize}
+    \end{multicols}
+\end{frame}
+
+\begin{frame}{Άλλες Αρχικές?}
+    Γνωστές αρχικές 2:
+    \begin{itemize}[<+->]
+        \item $\int f'(x) \, dx=f(x)+c$
+        \item $\int af'(x) \, dx=af(x)+c$
+        \item $\int f'(x)g(x)+f(x)g'(x) \, dx=f(x)g(x)+c$
+        \item $\int \dfrac{f'(x)g(x)-f(x)g'(x)}{g^2(x)} \, dx=\dfrac{f(x)}{g(x)}+c$
+        \item $\int f'(g(x))g'(x) \, dx=f(g(x))+c$
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Το "τέλειο" των ολοκληρωμάτων...}
+    Δεν έχουν όλες οι συναρτήσεις "αλγεβρικό τύπο" για αρχική!
+    \begin{itemize}[<+->]
+        \item $e^{x^2}$
+        \item $\dfrac{e^x}{x}$
+        \item $ημx^2$...
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Τι γίνεται με την ύπαρξη?}
+    Εκτός ύλης! Να σας αρκεί ότι αν είναι συνεχής τότε έχει αρχική...
+    \newline
+    \only<2>{Πάντως, εννοείται υπάρχουν και μη συνεχείς που έχουν αρχική!}
+\end{frame}
+
+\begin{frame}[noframenumbering]
+    Στο moodle θα βρείτε τις ασκήσεις που πρέπει να κάνετε, όπως και αυτή τη παρουσίαση
+\end{frame}
+
+\section{Ασκήσεις}
+
+\begin{frame}[noframenumbering]
+    \vfill
+    \centering
+    \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+        \usebeamerfont{title}Ασκήσεις
+    \end{beamercolorbox}
+    \vfill
+\end{frame}
+
+\begin{askisi}
+    Δίνεται η συνάρτηση $f(x)=ημx$. Να βρείτε:
+    \begin{enumerate}[<+->]
+        \item Μια παράγουσα της $f$
+        \item Όλες τις παράγουσες της $f$
+        \item Την παράγουσα της $f$ της οποίας η γραφική παράσταση διέρχεται από το σημείο $A(0,1)$
+    \end{enumerate}
+\end{askisi}
+
+\begin{askisi}
+    Να βρείτε μία παράγουσα των συναρτήσεων:
+    \begin{enumerate}[<+->]
+        \item $f(x)=x^4$
+        \item $f(x)=\dfrac{1}{x^5}$, $x>0$
+        \item $f(x)=\sqrt[3]{x}$
+        \item $\dfrac{1}{\sqrt[3]{x^2}}$, $x>0$
+    \end{enumerate}
+\end{askisi}
+
+\begin{askisi}
+    Να βρείτε μία παράγουσα των συναρτήσεων:
+    \begin{enumerate}[<+->]
+        \item $f(x)=ημx+e^x-\dfrac{1}{x}$, $x>0$
+        \item $f(x)=x^2+x-\dfrac{1}{x^2}$, $x<0$
+    \end{enumerate}
+\end{askisi}
+
+\begin{askisi}
+    Να βρείτε μια παράγουσα των συναρτήσεων:
+    \begin{enumerate}[<+->]
+        \item $f(x)=5x^2$
+        \item $f(x)=4x^3$
+        \item $f(x)=\dfrac{3}{2x}$, $x>0$
+        \item $f(x)=\dfrac{1}{\sqrt{x}}$
+        \item $f(x)=3x^2+ax+b$
+        \item $f(x)=\dfrac{a}{x}-bσυνx$, $x>0$
+    \end{enumerate}
+\end{askisi}
+
+\begin{askisi}
+    Να βρείτε μια παράγουσα των συναρτήσεων:
+    \begin{enumerate}[<+->]
+        \item $f(x)=\dfrac{(2x-1)^2}{x^2}$, $x<0$
+        \item $f(x)=\dfrac{1}{ημ^2x\cdot συν^2x}$, $x\in \left( 0,\dfrac{π}{2} \right) $
+    \end{enumerate}
+\end{askisi}
+
+\begin{askisi}
+    Να βρείτε μια παράγουσα των συναρτήσεων:
+    \begin{enumerate}[<+->]
+        \item $f(x)=συνx-xημx$
+        \item $f(x)=\dfrac{συνx-ημx}{e^x}$
+    \end{enumerate}
+\end{askisi}
+
+\begin{askisi}
+    Να βρείτε μια παράγουσα των συναρτήσεων:
+    \begin{enumerate}[<+->]
+        \item $f(x)=e^{ημx}συνx$
+        \item $f(x)=2xe^{x^2}$
+        \item $f(x)=\dfrac{e^x}{\sqrt{1+e^x}}$
+        \item $f(x)=\dfrac{x}{\sqrt{x^2+1}}$
+    \end{enumerate}
+\end{askisi}
+
+\begin{askisi}
+    Να βρείτε μια παράγουσα των συναρτήσεων:
+    \begin{enumerate}[<+->]
+        \item $f(x)=\dfrac{2x+1}{x^2+x+1}$
+        \item $f(x)=\dfrac{1}{x-1}$, $x>1$
+        \item $f(x)=εφx$, $x\in \left( 0,\dfrac{π}{2} \right) $
+        \item $f(x)=\dfrac{1}{x\ln x}$, $x>1$
+        \item $f(x)=\dfrac{(x-1)^2}{x^2+1}$
+        \item $f(x)=\dfrac{1}{1+e^{-x}}$
+    \end{enumerate}
+\end{askisi}
+
+\begin{askisi}
+    Να βρείτε όλες τις παράγουσες των συναρτήσεων:
+    \begin{enumerate}[<+->]
+        \item $f(x)=(2x-3)(x^2-3x+1)^2$
+        \item $f(x)=ημx\cdot συν^2x$
+        \item $f(x)=\dfrac{\ln x}{x}$
+        \item $f(x)=2x\sqrt{x^2+1}$
+        \item $f(x)=εφ^3x+εφ^5x$, $x\in \left( 0,\dfrac{π}{2} \right)$
+    \end{enumerate}
+\end{askisi}
+
+\begin{askisi}
+    Να βρείτε μια παράγουσα των συναρτήσεων:
+    \begin{enumerate}[<+->]
+        \item $f(x)=e^{2x}$
+        \item $f(x)=\dfrac{1}{3x+2}$, $x>0$
+        \item $f(x)=συν2x+e^{-x}$
+    \end{enumerate}
+\end{askisi}
+
+\begin{askisi}
+    Να βρείτε της αρχικές της συνάρτησης $f(x)=2|x|+1$, $x\in\mathbb{R}$
+\end{askisi}
+
+\begin{askisi}
+    Να βρείτε τον τύπο της συνάρτησης $f$ για κάθε μία από τις παρακάτω περιπτώσεις:
+    \begin{enumerate}[<+->]
+        \item $f'(x)=e^x-ημx$, $x\in\mathbb{R}$ και $f(0)=2$
+        \item $f'(x)=\dfrac{1}{x}+\dfrac{2}{x^2}-1$, $x>0$ και $f(1)=1$
+    \end{enumerate}
+\end{askisi}
+
+\begin{askisi}
+    Να βρείτε τον τύπο της συνάρτησης $f$ για κάθε μία από τις παρακάτω περιπτώσεις:
+    \begin{enumerate}[<+->]
+        \item $f'(x)=e^{-x}+\dfrac{1}{1+x}$, $x>-1$ και $f(0)=-1$
+        \item $f'(x)=\dfrac{x}{\sqrt{x^2+1}}$, $x\in\mathbb{R}$ και $f(1)=\sqrt{2}$
+    \end{enumerate}
+\end{askisi}
+
+\begin{askisi}
+    Να βρείτε τον τύπο της συνάρτησης $f$ για κάθε μία από τις παρακάτω περιπτώσεις:
+    \begin{enumerate}[<+->]
+        \item $x^2f'(x)=x^2+x-1$, $x>0$ και $f(1)=0$
+        \item $f'(x)=\dfrac{(x+1)^2}{x^2+1}$, $x\in\mathbb{R}$ και $f(0)=0$
+    \end{enumerate}
+\end{askisi}
+
+\begin{askisi}
+    Να βρείτε τον τύπο της συνάρτησης $f$ για κάθε μία από τις παρακάτω περιπτώσεις:
+    \begin{enumerate}[<+->]
+        \item $f'(x)=x(2συνx-xημx)$, $x\in\mathbb{R}$ και $f(0)=1$
+        \item $f'(x)=\dfrac{1-\ln x}{x^2}$, $x>0$ και $f(1)=0$
+    \end{enumerate}
+\end{askisi}
+
+\begin{askisi}
+    Να βρείτε τον τύπο της συνάρτησης $f$ όταν ισχύουν $f''(x)=e^x-ημx$, $x\in\mathbb{R}$ και $f'(0)=f(0)=1$
+\end{askisi}
+
+\begin{askisi}
+    Έστω $f$,$g:\mathbb{R}\to\mathbb{R}$ δύο συναρτήσεις, για τις οποίες ισχύει $f''(x)=e^x-ημx$, για κάθε $x\in\mathbb{R}$. Αν οι $C_f$ και $C_g$ τέμνονται πάνω στον άξονα $y'y$ και οι εφαπτομένες των $C_f$ και $C_g$ στο $x_0=1$ είναι παράληλες, να λύσετε την ανίσωση
+    $$f(x)<g(x)$$
+\end{askisi}
+
+\begin{askisi}
+    Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση με $f(π)=0$, η οποία είναι συνεχής και ισχύει
+    $$f'(x)=\begin{cases}
+            3x^2 & ,x<0 \\
+            συνx & ,x>0
+        \end{cases}$$
+    Να βρείτε τον τύπο της $f(x)$
+\end{askisi}
+
+\begin{askisi}
+    Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση, για την οποία ισχύει $f(0)=2$ και
+    $$(x-1)f'(x)=2x^2-x-1$$
+    για κάθε $x\in\mathbb{R}$. Να βρείτε την $f(x)$
+\end{askisi}
+
+\begin{askisi}
+    Να βρείτε τον τύπο της συνάρτησης $f$ για κάθε μία από τις παρακάτω περιπτώσεις:
+    \begin{enumerate}[<+->]
+        \item $(x^2+1)f'(x)=1-2xf(x)$, $x\in\mathbb{R}$ και $f(0)=1$
+        \item $f'(x)ημx=ημ^2x+f(x)συνx$, $x\in \left( 0,π \right) $ και $f(\frac{π}{2})=\frac{π}{2}$
+    \end{enumerate}
+\end{askisi}
+
+\begin{askisi}
+    Να βρείτε τον τύπο της συνάρτησης $f$ για κάθε μία από τις παρακάτω περιπτώσεις:
+    \begin{enumerate}[<+->]
+        \item $f'(x)=e^{x-f(x)}$, $x\in\mathbb{R}$ και $f(0)=\ln 2$
+        \item $\dfrac{f'(x)}{f(x)}=2x+\dfrac{1}{x}$, $x>0$ και $f(1)=e$ και $f(x)\ne 0$ για κάθε $x>0$
+    \end{enumerate}
+\end{askisi}
+
+\begin{askisi}
+    Έστω $f:(0,+\infty)\to\mathbb{R}$ μία συνάρτηση, για την οποία ισχύει $xf'(x)+(1-x)f(x)=0$ για κάθε $x>0$ και $f(1)=e$. Να βρείτε την $f(x)$
+\end{askisi}
+
+\begin{askisi}
+    Να βρείτε τον τύπο της συνάρτησης $f$ για κάθε μία από τις παρακάτω περιπτώσεις:
+    \begin{enumerate}[<+->]
+        \item $xf'(x)=συνx-f(x)$, $x\in\mathbb{R}$
+        \item $f'(x)-\dfrac{x}{f(x)}=0$, $x\in\mathbb{R}$ και $f(0)=2$
+    \end{enumerate}
+\end{askisi}
+
+\begin{askisi}
+    Από την πώληση ενός προϊόντος μιας εταιρείας, διαπιστώθηκε ότι ο ρυθμός μεταβολής του κόστους $Κ(t)$ του προϊόντος είναι $1000-0.8t$ (σε ευρώ την ημέρα), ενώ ο ρυθμός είπσραξης $Ε(t)$ στο τέλος των $t$ ημερών δίνεται από τον τύπο $Ε'(t)=1300+0.4t$ (σε ευρώ την ημέρα). Να βρείτε το συνολικό κέρδος της εταιρείας από την τρίτη έως και την έβδομη ημέρα.
+\end{askisi}
+
+\end{document}

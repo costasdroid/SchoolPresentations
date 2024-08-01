@@ -1,0 +1,277 @@
+\documentclass[greek]{beamer}
+%\usepackage{fontspec}
+\usepackage{amsmath,amsthm}
+\usepackage{unicode-math}
+\usepackage{xltxtra}
+\usepackage{graphicx}
+\usetheme{CambridgeUS}
+\usecolortheme{seagull}
+\usepackage{hyperref}
+\usepackage{ulem}
+\usepackage{xgreek}
+
+\usepackage{pgfpages} 
+\usepackage{tikz}
+%\setbeameroption{show notes on second screen}
+%\setbeameroption{show only notes}
+
+\setsansfont{Calibri}
+
+\usepackage{multicol}
+
+\usepackage{appendixnumberbeamer}
+
+\usepackage{polynom}
+
+\usepackage{pgffor}
+
+\setbeamercovered{transparent}
+\beamertemplatenavigationsymbolsempty
+
+\title{Διανύσματα}
+\subtitle{Συντεταγμένες στο επίπεδο}
+\author[Λόλας]{Κωνσταντίνος Λόλας}
+\institute[$10^ο$ ΓΕΛ]{$10^ο$ ΓΕΛ Θεσσαλονίκης}
+\date{}
+
+\begin{document}
+
+\begin{frame}
+      \titlepage
+\end{frame}
+\begin{frame}{Μα γιατί?}
+      Καλή η φαντασία (βασικά είναι τέλεια), αλλά πάμε σε κάτι πιο χειροπιαστό!
+\end{frame}
+
+\begin{frame}{Πώς θα γίνει η δουλειά?}
+      \begin{itemize}
+            \item<1-> κάθε διάνυσμα θα γίνει σημείο!!!!!!!!!!!!!!!
+            \item<2-> κάθε πράξη στα διανύσματα θα γίνει πράξη σημείων!!!
+            \item<3-> κάθε προηγούμενος ορισμός θα οριστεί στα σημεία και τελικά...
+            \item<4-> θα λάμψει η γεωμετρία ... \only<5> {μέσα από άλγεβρα}
+      \end{itemize}
+\end{frame}
+
+\begin{frame}{Από κάμπια σε πεταλούδα}
+      \begin{itemize}
+            \item<1-> γνωρίζουμε ότι κάθε διάνυσμα μπορεί να μεταφερθεί παράλληλα
+            \item<2-> γιατί όχι λοιπόν στην αρχή των αξόνων
+                  \only<3> {το έχετε ξανακάνει...?}
+            \item<4-> άρα κάθε διάνυσμα πλέον είναι σημείο και κάθε σημείο διάνυσμα
+      \end{itemize}
+      \onslide<5->{$$A(x,y) \iff \overrightarrow{OA}=(x,y)$$}
+\end{frame}
+
+\begin{frame}{Μετά τα γεννητούρια}
+      \begin{enumerate}
+            \item<1-> Το μηδενικό διάνυσμα...
+            \item<2-> Ίσα διανύσματα...
+            \item<3-> Ένα παράλληλο στον $x'x$...
+            \item<4-> Ένα παράλληλο στον $y'y$
+      \end{enumerate}
+\end{frame}
+
+\begin{frame}{Πράξεις από διανύσματα ...}
+      Αν $\vec{α}=(x_1,y_1)$ και $\vec{β}=(x_2,y_2)$ όπως θα θέλατε...
+      \begin{itemize}
+            \item<1-> $\vec{α}+\vec{β}=$ \onslide<2->{$(x_1+x_2,y_1+y_2)$}
+            \item<2->  $\vec{α}-\vec{β}=$ \onslide<3->{$(x_1-x_2,y_1-y_2)$}
+            \item<3->  $λ\vec{α}=$ \onslide<4->{$(λx_1,λy_1)$}
+      \end{itemize}
+\end{frame}
+
+\begin{frame}{Ορισμοί...}
+      \begin{itemize}
+            \item<1-> \emph{Μέσου}: Αφού $\overrightarrow{ΟΜ}=\dfrac{1}{2}\left( \overrightarrow{ΟΑ}+\overrightarrow{ΟΒ}\right)$
+                  $$\overrightarrow{ΟΜ}=\left(\dfrac{x_1+x_2}{2},\dfrac{y_1+y_2}{2}\right)$$
+            \item<2-> \emph{Μέτρου}: Από απόσταση αρχής αξόνων από σημείο
+                  $$|\overrightarrow{ΟΑ}|=\sqrt{x_1^2+y_1^2}$$
+            \item<3-> \emph{Τυχαίο διάνυσμα $\overrightarrow{ΑΒ}$}: Από διανύσματα θέσης
+                  $$\overrightarrow{ΑΒ}=\overrightarrow{ΟΒ}-\overrightarrow{ΟΑ}=(x_2-x_1,y_2-y_1)$$
+            \item<4-> \emph{Aπόσταση των σημείων $Α$ και $Β$}: από πριν
+                  $$\overrightarrow{ΑΒ}=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}$$
+      \end{itemize}
+\end{frame}
+
+\begin{frame}{Και κάτι νέο...}
+      \begin{block}{Συνθήκη Παραλληλίας Διανυσμάτων}
+            Αν $\vec{α}=(x_1,y_1)$ και $\vec{β}=(x_2,y_2)$ τότε
+            $$\vec{α} 	\parallel \vec{β} \iff \begin{vmatrix}
+                        x_1 & y_1 \\
+                        x_2 & y_2
+                  \end{vmatrix}=0$$
+      \end{block} \pause
+      Η απόδειξη είναι απλή...
+\end{frame}
+
+\begin{frame}{Behind the scenes}
+      Έστω $\strong{i}$ και $\strong{j}$ τα μοναδιαία διανύσματα που είναι ομόρροπα με τους θετικούς ημιάξονες $x'x$ και $y'y$ αντίστοιχα:
+      \begin{block}{Σύνδεση διανυσμάτων με συντεταγμένες}
+            Κάθε διάνυσμα στο επίπεδο γράφεται ως γραμμικός συνδυασμός των $\strong{i}$ και $\strong{j}$
+
+            $$(x,y)=x\strong{i}+y\strong{j}$$
+      \end{block}
+\end{frame}
+
+\begin{frame}
+      Στο moodle θα βρείτε τις ασκήσεις που πρέπει να κάνετε, όπως και αυτή τη παρουσίαση
+\end{frame}
+
+\section{Ασκήσεις}
+
+\subsection{Άσκηση 1}
+\begin{frame}[label=Άσκηση1,t]{Εξάσκηση}
+      Να βρείτε τις συντεταγμένες των διανυσμάτων:
+      \begin{enumerate}
+            \item<1-> $\overrightarrow{ΟΑ}$, όταν $Α(-5,3)$, ($Ο$ η αρχή των αξόνων)
+            \item<2-> $\vec{α}=3\vec{i}+\vec{j}$
+            \item<3-> $\vec{β}=-2\vec{i}$
+            \item<4-> $\vec{γ}=\vec{j}$
+      \end{enumerate}
+      %\hyperlink{Λύση1}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 2}
+\begin{frame}[label=Άσκηση2,t]{Εξάσκηση 2}
+      Δίνονται τα διανύσματα $\vec{α}=(λ-2,3μ)$ και $\vec{β}=(μ-1,2λ-7)$. Να βρείτε τις τιμές των $λ$ και $μ$ ώστε:
+      \begin{enumerate}
+            \item<1-> τα διανύσματα $\vec{α}$ και $\vec{β}$ να είναι ίσα
+            \item<2-> το διάνυσμα $\vec{α}$ να είναι το μηδενικό διάνυσμα
+      \end{enumerate}
+      %\hyperlink{Λύση2}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 3}
+\begin{frame}[label=Άσκηση3,t]{Εξάσκηση 3}
+      Δίνονται το διάνυσμα $\vec{α}=(λ^2-9,λ^2+3λ)$. Για ποια τιμή του $λ$ είναι:
+      $$\vec{α}\ne \vec{0} \text{ και } \vec{α}\parallel x'x$$
+      %\hyperlink{Λύση3}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 4}
+\begin{frame}[label=Άσκηση4,t]{Εξάσκηση 4}
+      Δίνονται τα διανύσματα $\vec{α}=(2,-1)$ και $\vec{β}=(-3,2)$.
+      \begin{enumerate}
+            \item<1-> Να βρείτε τα διανύσματατα διανύσματα $\vec{γ}=3\vec{α}-2\vec{β}$ και $\vec{δ}=\vec{α}-\vec{β}$
+            \item<2-> να γράψετε το διάνυσμα $\vec{u}=(5,-4)$ ως γραμμικό συνδυασμό των διανυσμάτων $\vec{γ}$ και $\vec{δ}$ του ερωτήματος 1.
+      \end{enumerate}
+      %\hyperlink{Λύση4}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 5}
+\begin{frame}[label=Άσκηση5,t]{Εξάσκηση 5}
+      Δίνονται τα διανύσματα $\vec{α}=(λ-1,3)$, $\vec{β}=(2,λ-μ)$ και $\vec{γ}=(λ,μ)$. Αν τα $\vec{α}$ και $\vec{β}$ είναι αντίθετα, να αναλύσετε το διάνυσμα $\vec{u}=(-4,5)$ σε δύο συνιστώσες με διευθύνσεις εκείνες των $\vec{α}$ και $\vec{γ}$
+
+      %\hyperlink{Λύση5}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 6}
+\begin{frame}[label=Άσκηση6,t]{Εξάσκηση 6}
+      Δίνονται τα σημεία $Α(3,-2)$ και $Β(-5,1)$. Να βρείτε τις συντεταγμένες:
+
+      \begin{enumerate}
+            \item<1-> του διανύσματος $\overrightarrow{ΑΒ}$
+            \item<2-> του σημείου $Γ$, αν $\overrightarrow{ΑΓ}=(5,-4)$
+            \item<3-> του σημείου $Μ$, αν ισχύει $2\overrightarrow{ΑΜ}-\overrightarrow{ΑΒ}=3\overrightarrow{ΒΜ}$
+      \end{enumerate}
+
+      %\hyperlink{Λύση6}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 7}
+\begin{frame}[label=Άσκηση7,t]{Εξάσκηση 7}
+      Έστω τα σημεία $Α(-5,2)$ και $Β(1,-3)$. Να βρείτε τις συντεταγμένες:
+      \begin{enumerate}
+            \item<1-> του μέσου $Μ$ του τμήματος $ΑΒ$
+            \item<2-> του συμμετρικού σημείου $Γ$ του $Α$ ως προς το $Β$
+      \end{enumerate}
+
+      %\hyperlink{Λύση7}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 8}
+\begin{frame}[label=Άσκηση8,t]{Εξάσκηση 8}
+
+      Δίνεται παραλληλόγραμμο $ΑΒΓΔ$ με $Α(-1,2)$, $Β(3,-4)$. Αν $Κ(5,-2)$ το κέντρο του παραλληλογράμμου, να βρείτε τις συντεταγμένες των κορυφών $Γ$ και $Δ$.
+
+      %\hyperlink{Λύση8}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 9}
+\begin{frame}[label=Άσκηση9,t]{Εξάσκηση 9}
+      Δίνεται τρίγωνο $ΑΒΓ$ με $Α(-1,2)$, $Β(2,3)$ και $Γ(4,1)$. Αν $ΑΜ$ διάμεσος και $Θ$ το βαρύκεντρο του τριγώνου $ΑΒΓ$, να βρείτε τα σημεία $Μ$ και $Θ$.
+      %\hyperlink{Λύση9}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 10}
+\begin{frame}[label=Άσκηση10,t]{Εξάσκηση 10}
+      Δίνονται τα διανύσματα $\vec{α}=(3,-4)$ και $\vec{β}=(1,-2)$. Να βρείτε το μέτρο του διανύσματος:
+      \begin{enumerate}
+            \item<1-> $\vec{α}$
+            \item<2-> $\vec{v}=-3\vec{α}$
+            \item<3-> $2\vec{α}-3\vec{β}$
+      \end{enumerate}
+      %\hyperlink{Λύση10}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 11}
+\begin{frame}[label=Άσκηση11,t]{Εξάσκηση 11}
+      Δίνεται παραλληλόγραμμο $ΑΒΓΔ$ με $Α(3,1)$, $Β(-2,0)$ και $Γ(1,-3)$. Να βρείτε:
+      \begin{enumerate}
+            \item<1-> τις συντεταγμένες του διανύσματος $\overrightarrow{ΒΔ}$
+            \item<2-> το μέτρο $|\overrightarrow{ΒΔ}|$
+      \end{enumerate}
+      %\hyperlink{Λύση11}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 12}
+\begin{frame}[label=Άσκηση12,t]{Εξάσκηση 12}
+      Να βρείτε ένα διάνυσμα $\vec{u}$ που να είναι αντίρροπο του διανύσματος $\vec{v}=(7,-2)$ και έχει μέτρο τριπλάσιο του $\vec{v}$
+      %\hyperlink{Λύση12}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 13}
+\begin{frame}[label=Άσκηση13,t]{Εξάσκηση 13}
+      Αν $\vec{α}=(-1,2)$ και $\vec{β}=(2,-3)$, να υπολογίσετε το μέτρο του $\vec{v}$ για το οποίο ισχύει $\vec{v}=\vec{α}+|\vec{v}|\vec{β}$
+      %\hyperlink{Λύση13}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 14}
+\begin{frame}[label=Άσκηση14,t]{Εξάσκηση 14}
+      Δίνονται τα σημεία $Α(-3,2)$ και $Β(1,-2)$. Να βρείτε σημείο $Μ$ του άξονα $y'y$, ώστε το τρίγωνο $ΜΑΒ$ να είναι ισοσκελές με βάση την $ΑΒ$
+      %\hyperlink{Λύση14}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 15}
+\begin{frame}[label=Άσκηση15,t]{Εξάσκηση 15}
+      Δίνονται τα σημεία $Α(0,-1)$, $Β(2,3)$, $Γ(1,2)$ και $Δ(-2,-5)$. Να δείξετε ότι:
+      \begin{enumerate}
+            \item<1-> τα διανύσματα $\overrightarrow{ΑΒ}$ και $\overrightarrow{ΑΔ}$ είναι συγγραμμικά
+            \item<2-> τα σημεία $Α$, $Β$ και $Γ$ είναι κορυφές τριγώνου
+      \end{enumerate}
+      %\hyperlink{Λύση15}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 16}
+\begin{frame}[label=Άσκηση16,t]{Εξάσκηση 16}
+      Δίνονται τα διανύσματα $\vec{α}=(λ-2,1)$ και $\vec{β}=(-8,4-2λ)$. Να βρείτε το $λ$ ώστε $\vec{α}\upuparrows \vec{β}$
+      %\hyperlink{Λύση16}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 17}
+\begin{frame}[label=Άσκηση17,t]{Εξάσκηση 17}
+      Δίνονται τα διανύσματα $\vec{α}=(2,3)$ και $\vec{β}=(κ,κ-1)$. Να βρείτε:
+      \begin{enumerate}
+            \item<1-> Το συντελεστή διεύθυνσης του διανύσματος $\vec{α}$
+            \item<2-> Το $κ$ ώστε το $\vec{v}=2\vec{α}-\vec{β}$, να σχηματίζει με τον άξονα $x'x$ γωνία $ω=135^{\circ}$
+      \end{enumerate}
+      %\hyperlink{Λύση17}{\beamerbutton{Λύση}}
+\end{frame}
+
+\subsection{Άσκηση 18}
+\begin{frame}[label=Άσκηση18,t]{Εξάσκηση 18}
+      Έστω $Οxy$ ορθοκανονικό σύστημα συντεταγμένων στο επίπεδο και $\overrightarrow{ΟΑ}=(-1,2)$, $\overrightarrow{ΟΒ}=(-3,1)$ και $\overrightarrow{ΟΓ}=(-2,1)$. Να βρείτε το σημείο $Μ$ στον άξονα $x'x$, ώστε η παράσταση $d=|\overrightarrow{ΜΑ}|^2+|\overrightarrow{ΜΒ}-2\overrightarrow{ΜΓ}|^2$ να παίρνει την ελάχιστη τιμή.
+      %\hyperlink{Λύση18}{\beamerbutton{Λύση}}
+\end{frame}
+
+\end{document}

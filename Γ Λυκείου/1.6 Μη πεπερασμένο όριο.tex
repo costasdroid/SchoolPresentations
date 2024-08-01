@@ -1,32 +1,4 @@
-\documentclass[greek]{beamer}
-%\usepackage{fontspec}
-\usepackage{amsmath,amsthm}
-\usepackage{unicode-math}
-\usepackage{xltxtra}
-\usepackage{graphicx}
-\usetheme{CambridgeUS}
-\usecolortheme{seagull}
-\usepackage{hyperref}
-\usepackage{ulem}
-\usepackage{xgreek}
-
-\usepackage{pgfpages} 
-\usepackage{tikz}
-%\setbeameroption{show notes on second screen}
-%\setbeameroption{show only notes}
-
-\setsansfont{Calibri}
-
-\usepackage{multicol}
-
-\usepackage{appendixnumberbeamer}
-
-\usepackage{polynom}
-
-\usepackage{pgffor}
-
-\setbeamercovered{transparent}
-\beamertemplatenavigationsymbolsempty
+\documentclass{presentation}
 
 \title{Συναρτήσεις}
 \subtitle{Μη πεπερασμένο όριο στο $x_0$}
@@ -76,10 +48,10 @@
 \begin{frame}{Πάμε στα γνωστά}
   Συναρτήσεις που πηγαίνουν στο $+\infty$. \pause Πάμε... \pause
   \begin{itemize}
-    \item $\frac{1}{x}$
-    \item $\frac{1}{x^2}$
-    \item $\frac{1}{x^{2k}}$
-    \item $\frac{1}{x^{2k+1}}$
+    \item $\dfrac{1}{x}$
+    \item $\dfrac{1}{x^2}$
+    \item $\dfrac{1}{x^{2k}}$
+    \item $\dfrac{1}{x^{2k+1}}$
     \item $\ln{x}$
     \item $εφ(x)$
   \end{itemize}
@@ -97,7 +69,7 @@
 \end{frame}
 
 \begin{frame}{Το άπειρο δεν είναι παιχνίδι (part 2)}
-  Μπορώ πολύ εύκολα να αποδείξω ότι $1+2+3+4+\cdots = -\frac{1}{12}$
+  Μπορώ πολύ εύκολα να αποδείξω ότι $1+2+3+4+\cdots = -\dfrac{1}{12}$
 
   \centering
   \includegraphics[height=0.4\columnwidth]{images/qiev6}
@@ -126,9 +98,9 @@
       \item $\pm\infty + a=$ \pause $\pm\infty$ \pause
       \item $\pm\infty - a=$ \pause $\pm\infty$ \pause
       \item $\pm\infty \cdot a=$ \pause $\begin{cases} \pm\infty, & a>0 \\ \mp\infty, & a<0 \\ ?, & a=0\end{cases}$ \pause
-      \item $\frac{\pm\infty}{a}=$ \pause $\begin{cases} \pm\infty, & a>0 \\ \mp\infty, & a<0\end{cases}$ \pause
-      \item $\frac{a}{\pm\infty}=$ \pause $0$ \pause
-      \item $(+\infty)^a=$ \pause $\begin{cases} +\infty, & a>0 \\ -\infty, & a<0 \\ ?, & a=0\end{cases}$ \pause
+      \item $\dfrac{\pm\infty}{a}=$ \pause $\begin{cases} \pm\infty, & a>0 \\ \mp\infty, & a<0\end{cases}$ \pause
+      \item $\dfrac{a}{\pm\infty}=$ \pause $0$ \pause
+      \item $(+\infty)^a=$ \pause $\begin{cases} +\infty, & a>0 \\ 0, & a<0 \\ ?, & a=0\end{cases}$ \pause
       \item $a^{+\infty}=$ \pause $\begin{cases} 0, & 0\le a <1 \\ ?, & a=1 \\ +\infty, & a>1\end{cases}$ \pause
       \item $a^{-\infty}=$ \pause $\begin{cases} +\infty, & 0\le a <1 \\ ?, & a=1 \\ 0, & a>1\end{cases}$ \pause
     \end{itemize}
@@ -143,12 +115,12 @@
       \item $-\infty + (-\infty)=$ \pause $-\infty$ \pause
       \item $+\infty + (-\infty)=$ \pause $?$ \pause
       \item $\pm\infty \cdot \pm\infty=$ \pause $\pm\infty$ \pause
-      \item $\frac{\pm\infty}{\pm\infty}=$ \pause $?$ \pause
+      \item $\dfrac{\pm\infty}{\pm\infty}=$ \pause $?$ \pause
       \item $(+\infty)^{+\infty}=$ \pause $+\infty$ \pause
       \item $(+\infty)^{-\infty}=$ \pause $0$ \pause
     \end{itemize}
   \end{multicols}
-  Κρατάμε τα $\infty\cdot 0$, $\infty^0$, $1^{\pm\infty}$, $+\infty + (-\infty)$, $\frac{\pm\infty}{\pm\infty}$, $\frac{0}{0}$
+  Κρατάμε τα $\infty\cdot 0$, $\infty^0$, $1^{\pm\infty}$, $+\infty + (-\infty)$, $\dfrac{\pm\infty}{\pm\infty}$, $\dfrac{0}{0}$
 \end{frame}
 
 \section{Ασκήσεις}
@@ -157,42 +129,42 @@
   \href{https://www.geogebra.org/m/xzc6usbm}{\beamergotobutton{Geogebra}}
   φαίνεται η γραφική παράσταση μιας συνάρτησης $f(x)$. Να υπολογίσετε τα παρακάτω όρια (εφόσον υπάρχουν):
   \begin{itemize}
-    \item $\lim\limits_{x \to 1}{ f(x) }$, $\lim\limits_{x \to 1}{ |f(x)| }$, $\lim\limits_{x \to 1}{ \sqrt{f(x)} }$ και $\lim\limits_{x \to 1}{ \frac{1}{f(x)} }$ \pause
-    \item $\lim\limits_{x \to 0}{ f(x) }$, $\lim\limits_{x \to 0}{ |f(x)| }$ και $\lim\limits_{x \to 0}{ \frac{1}{f(x)} }$ \pause
-    \item $\lim\limits_{x \to 3}{ f(x) }$, $\lim\limits_{x \to 3}{ |f(x)| }$ και $\lim\limits_{x \to 3}{ \frac{1}{f(x)} }$ \pause
-    \item $\lim\limits_{x \to 4}{ \frac{1}{f(x)} }$, $\lim\limits_{x \to 6}{ \frac{1}{f(x)-3} }$ και $\lim\limits_{x \to 7}{ \frac{1}{f(x)} }$
+    \item $\lim\limits_{x \to 1}{ f(x) }$, $\lim\limits_{x \to 1}{ |f(x)| }$, $\lim\limits_{x \to 1}{ \sqrt{f(x)} }$ και $\lim\limits_{x \to 1}{ \dfrac{1}{f(x)} }$ \pause
+    \item $\lim\limits_{x \to 0}{ f(x) }$, $\lim\limits_{x \to 0}{ |f(x)| }$ και $\lim\limits_{x \to 0}{ \dfrac{1}{f(x)} }$ \pause
+    \item $\lim\limits_{x \to 3}{ f(x) }$, $\lim\limits_{x \to 3}{ |f(x)| }$ και $\lim\limits_{x \to 3}{ \dfrac{1}{f(x)} }$ \pause
+    \item $\lim\limits_{x \to 4}{ \dfrac{1}{f(x)} }$, $\lim\limits_{x \to 6}{ \dfrac{1}{f(x)-3} }$ και $\lim\limits_{x \to 7}{ \dfrac{1}{f(x)} }$
   \end{itemize}
 \end{frame}
 
 \begin{frame}{Εξάσκηση}
   Να βρείτε τα όρια (αν υπάρχουν)
   \begin{enumerate}
-    \item $\lim\limits_{x \to 3}{ \frac{1}{|x-3|} }$ \pause
-    \item $\lim\limits_{x \to 1}{ \frac{x-3}{(x-1)^2} }$ \pause
-    \item $\lim\limits_{x \to 2}{ \frac{2x+1}{x-2} }$ \pause
-    \item $\lim\limits_{x \to 0}{ \frac{1+\sqrt{x}}{x}}$
+    \item $\lim\limits_{x \to 3}{ \dfrac{1}{|x-3|} }$ \pause
+    \item $\lim\limits_{x \to 1}{ \dfrac{x-3}{(x-1)^2} }$ \pause
+    \item $\lim\limits_{x \to 2}{ \dfrac{2x+1}{x-2} }$ \pause
+    \item $\lim\limits_{x \to 0}{ \dfrac{1+\sqrt{x}}{x}}$
   \end{enumerate}
 \end{frame}
 
 \begin{frame}{Εξάσκηση}
-  Να βρείτε, (αν υπάρχει) το $\lim\limits_{x \to 1}{ \frac{3x+2}{x^2-1} }$
+  Να βρείτε, (αν υπάρχει) το $\lim\limits_{x \to 1}{ \dfrac{3x+2}{x^2-1} }$
 \end{frame}
 
 \begin{frame}{Εξάσκηση}
-  Για τις διάφορες τιμές του $λ$ να βρείτε το $\lim\limits_{x \to 2}{ \frac{x^2-λx+λ}{(x-2)^2} }$
+  Για τις διάφορες τιμές του $λ$ να βρείτε το $\lim\limits_{x \to 2}{ \dfrac{x^2-λx+λ}{(x-2)^2} }$
 \end{frame}
 
 \begin{frame}{Εξάσκηση}
-  Να βρείτε την τιμή του $α\in\mathbb{R}$ για την οποία το $\lim\limits_{x \to 1}{\frac{αx^2+x-2}{x^2-x}  }$ είναι πραγματικός αριθμός
+  Να βρείτε την τιμή του $α\in\mathbb{R}$ για την οποία το $\lim\limits_{x \to 1}{\dfrac{αx^2+x-2}{x^2-x}  }$ είναι πραγματικός αριθμός
 \end{frame}
 
 \begin{frame}{Εξάσκηση}
   Έστω μια συνάρτηση $f:(0,+\infty)\to\mathbb{R}$ για την οποία ισχύει:
-  $$f(x)\le x-\frac{1}{x} \text{ για κάθε } x>0$$
+  $$f(x)\le x-\dfrac{1}{x} \text{ για κάθε } x>0$$
   Να βρείτε τα όρια:
   \begin{enumerate}
     \item $\lim\limits_{x \to 0}{ f(x) }$ \pause
-    \item $\lim\limits_{x \to 0}{ \frac{|f(x)-3|}{f^2(x)-3f(x)} }$
+    \item $\lim\limits_{x \to 0}{ \dfrac{|f(x)-3|}{f^2(x)-3f(x)} }$
   \end{enumerate}
 \end{frame}
 
@@ -202,7 +174,7 @@
   Να βρείτε τα όρια:
   \begin{enumerate}
     \item $\lim\limits_{x \to 2}{ f(x) }$ \pause
-    \item $\lim\limits_{x \to 2}{ f(x)ημ\frac{1}{f(x)} }$
+    \item $\lim\limits_{x \to 2}{ f(x)ημ\dfrac{1}{f(x)} }$
   \end{enumerate}
 \end{frame}
 
@@ -211,15 +183,15 @@
   Να βρείτε τα όρια
   \begin{enumerate}
     \item $\lim\limits_{x \to 0}{ f(x) }$ \pause
-    \item $\lim\limits_{x \to 0}{ \frac{x-1}{f(x)} }$
+    \item $\lim\limits_{x \to 0}{ \dfrac{x-1}{f(x)} }$
   \end{enumerate}
 \end{frame}
 
 \begin{frame}{Εξάσκηση}
   Να βρείτε (αν υπάρχουν) τα παρακάτω όρια.
   \begin{enumerate}
-    \item $\lim\limits_{x \to 0}{ \frac{3x+2}{|ημx|-|x|} }$ \pause
-    \item $\lim\limits_{x \to 0}{ \left( \frac{1}{|x|}-\frac{1}{x}  \right)  }$
+    \item $\lim\limits_{x \to 0}{ \dfrac{3x+2}{|ημx|-|x|} }$ \pause
+    \item $\lim\limits_{x \to 0}{ \left( \dfrac{1}{|x|}-\dfrac{1}{x}  \right)  }$
   \end{enumerate}
 \end{frame}
 

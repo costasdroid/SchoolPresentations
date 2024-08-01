@@ -1,32 +1,4 @@
-\documentclass[greek]{beamer} 
-%\usepackage{fontspec}
-\usepackage{amsmath,amsthm}
-\usepackage{unicode-math}
-\usepackage{xltxtra}
-\usepackage{graphicx}
-\usetheme{CambridgeUS}
-\usecolortheme{seagull}
-\usepackage{hyperref}
-\usepackage{ulem}
-\usepackage{xgreek}
-
-\usepackage{pgfpages} 
-\usepackage{tikz}
-%\setbeameroption{show notes on second screen}
-%\setbeameroption{show only notes}
-
-\setsansfont{Calibri}
-
-\usepackage{multicol}
-
-\usepackage{appendixnumberbeamer}
-
-\usepackage{polynom}
-
-\usepackage{pgffor}
-
-\setbeamercovered{transparent}
-\beamertemplatenavigationsymbolsempty
+\documentclass{presentation}
 
 \title{Συναρτήσεις}
 \subtitle{Θεώρημα Bolzano}
@@ -41,11 +13,29 @@
 \end{frame}
 
 \section{Θεωρία}
-\begin{frame}{Challenge}
+\begin{frame}{Challenge 1}
     \begin{itemize}
         \item<1-> Φτιάξτε άξονες
         \item<2-> Σημειώστε ένα σημείο $Α$ με θετική τεταγμένη και ένα σημείο $Β$ με αρνητική
         \item<3-> Σχηματίστε συνάρτηση στο $[α,β]$ χωρίς να περάσετε από τον άξονα $x'x$
+    \end{itemize}
+    \onslide<4-> Συμπέρασμα...
+\end{frame}
+
+\begin{frame}{Challenge 2}
+    \begin{itemize}
+        \item<1-> Φτιάξτε άξονες
+        \item<2-> Σημειώστε ένα σημείο $Α$ με θετική τεταγμένη και ένα σημείο $Β$ με αρνητική
+        \item<3-> Σχηματίστε συνεχή συνάρτηση στο $(α,β)$ χωρίς να περάσετε από τον άξονα $x'x$
+    \end{itemize}
+    \onslide<4-> Συμπέρασμα...
+\end{frame}
+
+\begin{frame}{Challenge 3}
+    \begin{itemize}
+        \item<1-> Φτιάξτε άξονες
+        \item<2-> Σημειώστε ένα σημείο $Α$ με θετική τεταγμένη και ένα σημείο $Β$ με αρνητική
+        \item<3-> Σχηματίστε συνεχή συνάρτηση στο $[α,β]$ χωρίς να περάσετε από τον άξονα $x'x$
     \end{itemize}
     \onslide<4-> Συμπέρασμα...
 \end{frame}
@@ -80,9 +70,22 @@
     \end{itemize}
 \end{frame}
 
+\begin{frame}[noframenumbering]
+    Στο moodle θα βρείτε τις ασκήσεις που πρέπει να κάνετε, όπως και αυτή τη παρουσίαση
+\end{frame}
+
 \section{Ασκήσεις}
-\subsection{Άσκηση 1}
-\begin{frame}[label=Άσκηση1]{Εξάσκηση 1}
+
+\begin{frame}[noframenumbering]
+    \vfill
+    \centering
+    \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+        \usebeamerfont{title}Ασκήσεις
+    \end{beamercolorbox}
+    \vfill
+\end{frame}
+
+\begin{askisi}
     Να αποδείξετε ότι:
     \begin{enumerate}
         \item<1-> Η συνάρτηση $f(x)=x^3+x-1$ ικανοποιεί τις υποθέσεις του θεωρήματος Bolzano στο διάστημα $[0,1]$.
@@ -90,81 +93,63 @@
     \end{enumerate}
 
     %\hyperlink{Λύση1}{\beamerbutton{Λύση}}
-\end{frame}
+\end{askisi}
 
-\subsection{Άσκηση 2}
-\begin{frame}[label=Άσκηση2]{Εξάσκηση 2}
+\begin{askisi}
     Να αποδείξετε ότι υπάρχει ένα τουλάχιστον $x_0\in (0,1)$ τέτοιο ώστε $x_0^2+3x_0=e^{x_0}+1$.
 
     %\hyperlink{Λύση2}{\beamerbutton{Λύση}}
-\end{frame}
+\end{askisi}
 
-\subsection{Άσκηση 3}
-\begin{frame}[label=Άσκηση3]{Εξάσκηση 3}
+\begin{askisi}
     Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση η οποία είναι συνεχής με $f(\mathbb{R})=(0,1)$. Να αποδείξετε ότι η εξίσωση $f(x)=x-1$ έχει μία τουλάχιστον ρίζα στο διάστημα $(1,2)$.
 
     %\hyperlink{Λύση3}{\beamerbutton{Λύση}}
-\end{frame}
+\end{askisi}
 
-\subsection{Άσκηση 4}
-\begin{frame}[label=Άσκηση4]{Εξάσκηση 4}
-    Να αποδείξετε ότι η εξίσωση $\frac{e^x}{x-2}+\frac{x^2+1}{x-1}=0$ έχει μία τουλάχιστον ρίζα στο διάστημα $(1,2)$.
+\begin{askisi}
+    Να αποδείξετε ότι η εξίσωση $\dfrac{e^x}{x-2}+\dfrac{x^2+1}{x-1}=0$ έχει μία τουλάχιστον ρίζα στο διάστημα $(1,2)$.
 
     %\hyperlink{Λύση4}{\beamerbutton{Λύση}}
-\end{frame}
+\end{askisi}
 
-\subsection{Άσκηση 5}
-\begin{frame}[label=Άσκηση5]{Εξάσκηση 5}
+\begin{askisi}
     Να αποδείξετε ότι υπάρχει μοναδικό $x_0\in (0,1)$ τέτοιο ώστε $e^{x_0}+x_0=2$
 
     %\hyperlink{Λύση5}{\beamerbutton{Λύση}}
-\end{frame}
+\end{askisi}
 
-\subsection{Άσκηση 6}
-\begin{frame}[label=Άσκηση6]{Εξάσκηση 6}
-
-    Δίνονται οι συναρτήσεις $f(x)=\ln x$ και $g(x)=\frac{1}{x}$. Να αποδείξετε ότι οι $C_f$ και $C_g$ στο διάστημα $(1,e)$ έχουν ένα ακριβώς κοινό σημείο.
+\begin{askisi}
+    Δίνονται οι συναρτήσεις $f(x)=\ln x$ και $g(x)=\dfrac{1}{x}$. Να αποδείξετε ότι οι $C_f$ και $C_g$ στο διάστημα $(1,e)$ έχουν ένα ακριβώς κοινό σημείο.
 
     %\hyperlink{Λύση6}{\beamerbutton{Λύση}}
-\end{frame}
+\end{askisi}
 
-\subsection{Άσκηση 7}
-\begin{frame}[label=Άσκηση7]{Εξάσκηση 7}
-
+\begin{askisi}
     Να αποδείξετε ότι η εξίσωση $x^3-4x^2+2=0$ έχει δύο τουλάχιστον ρίζες στο διάστημα $(-1,1)$.
 
     %\hyperlink{Λύση7}{\beamerbutton{Λύση}}
-\end{frame}
+\end{askisi}
 
-\subsection{Άσκηση 8}
-\begin{frame}[label=Άσκηση8]{Εξάσκηση 8}
+\begin{askisi}
     Δίνεται το ορθογώνιο $ΟΑΒΓ$ του σχήματος και μία συνεχής συνάρτηση $f$ στο $[0,2]$ της οποίας η γραφική παράσταση βρίσκεται στο χωρίο που ορίζει το ορθογώνιο. Να αποδείξετε ότι η $C_f$ τέμνει τη διαγώνιο $ΑΓ$.
-
 
     \centering
     \includegraphics[width=0.5\textwidth]{"images/Bolzano.png"}
 
     %\hyperlink{Λύση8}{\beamerbutton{Λύση}}
-\end{frame}
+\end{askisi}
 
-\subsection{Άσκηση 9}
-\begin{frame}[label=Άσκηση9]{Εξάσκηση 9}
-    Να δείξετε ότι η εξίσωση $\ln x=\frac{1}{x-1}$ έχει μία τουλάχιστον ρίζα στο διάστημα $(0,1)$.
-
+\begin{askisi}
+    Να δείξετε ότι η εξίσωση $\ln x=\dfrac{1}{x-1}$ έχει μία τουλάχιστον ρίζα στο διάστημα $(0,1)$.
 
     %\hyperlink{Λύση9}{\beamerbutton{Λύση}}
-\end{frame}
+\end{askisi}
 
-\subsection{Άσκηση 10}
-\begin{frame}[label=Άσκηση10]{Εξάσκηση 10}
+\begin{askisi}
     Έστω η συνεχής συνάρτηση $f:[0,1]\to\mathbb{R}$ με $-1<f(x)<0$, για κάθε $x\in [0,1]$. Να δείξετε ότι υπάρχει ένα τουλάχιστον $x_0\in (0,1)$ τέτοιο ώστε $f^2(x_0)=2f(x_0)+3x_0$
 
     %\hyperlink{Λύση10}{\beamerbutton{Λύση}}
-\end{frame}
-
-\section{}
-\begin{frame}
-    Στο moodle θα βρείτε τις ασκήσεις που πρέπει να κάνετε, όπως και αυτή τη παρουσίαση
-\end{frame}
+\end{askisi}
 
 \end{document}

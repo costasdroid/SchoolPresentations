@@ -1,32 +1,4 @@
-\documentclass[greek]{beamer}
-%\usepackage{fontspec}
-\usepackage{amsmath,amsthm}
-\usepackage{unicode-math}
-\usepackage{xltxtra}
-\usepackage{graphicx}
-\usetheme{CambridgeUS}
-\usecolortheme{seagull}
-\usepackage{hyperref}
-\usepackage{ulem}
-\usepackage{xgreek}
-
-\usepackage{pgfpages} 
-\usepackage{tikz}
-%\setbeameroption{show notes on second screen}
-%\setbeameroption{show only notes}
-
-\setsansfont{Calibri}
-
-\usepackage{multicol}
-
-\usepackage{appendixnumberbeamer}
-
-\usepackage{polynom}
-
-\usepackage{pgffor}
-
-\setbeamercovered{transparent}
-\beamertemplatenavigationsymbolsempty
+\documentclass{presentation}
 
 \title{Συναρτήσεις}
 \subtitle{Όρια συνάρτησης στο άπειρο}
@@ -48,14 +20,14 @@
 
 \begin{frame}{Στο προηγούμενο επεισόδιο...}
       \begin{enumerate}
-            \item $\lim\limits_{x \to 0^+}{ \frac{1}{x} } = +\infty\implies$ \pause $\lim\limits_{x \to +\infty}{ \frac{1}{x} }=0$ \pause
+            \item $\lim\limits_{x \to 0^+}{ \dfrac{1}{x} } = +\infty\implies$ \pause $\lim\limits_{x \to +\infty}{ \dfrac{1}{x} }=0$ \pause
             \item $\lim\limits_{x \to +\infty}{ x^n } = +\infty$ \pause
-            \item $\lim\limits_{x \to +\infty}{ \frac{1}{x^n} } = 0$ \pause
+            \item $\lim\limits_{x \to +\infty}{ \dfrac{1}{x^n} } = 0$ \pause
             \item $\lim\limits_{x \to -\infty}{ x^n } = \begin{cases}
                               +\infty & n \text{ άρτιος}   \\
                               -\infty & n \text{ περιττός} \\
                         \end{cases}$ \pause
-            \item $\lim\limits_{x \to -\infty}{ \frac{1}{x^n} } = 0$ \pause
+            \item $\lim\limits_{x \to -\infty}{ \dfrac{1}{x^n} } = 0$ \pause
             \item με $a>1$, $\lim\limits_{x \to +\infty}{ a^x } = +\infty$ \pause
             \item με $a>1$, $\lim\limits_{x \to -\infty}{ a^x } = 0$ \pause
             \item με $0<a<1$, $\lim\limits_{x \to +\infty}{ a^x } = 0$ \pause
@@ -76,7 +48,7 @@
 \begin{frame}{Μόνο 2 περιπτώσεις}
       Ασχολούμαστε μόνο με
       \begin{enumerate}
-            \item $\frac{\pm\infty}{\pm\infty}$
+            \item $\dfrac{\pm\infty}{\pm\infty}$
             \item $+\infty-\infty$
       \end{enumerate}
 \end{frame}
@@ -101,7 +73,7 @@
       Έστω $P(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots +a_1x+a_0$ και $Q(x)=b_kx^k+b_{k-1}x^{k-1}+\cdots +b_1x+b_0$
       \begin{itemize}
             \item $\lim\limits_{x \to \pm\infty}{ P(x) }=\lim\limits_{x \to \pm\infty}{ a_nx^n }$
-            \item $\lim\limits_{x \to \pm\infty}{ \frac{P(x)}{Q(x)} }=\lim\limits_{x \to \pm\infty}{ \frac{a_nx^n}{b_kx^k} }$
+            \item $\lim\limits_{x \to \pm\infty}{ \dfrac{P(x)}{Q(x)} }=\lim\limits_{x \to \pm\infty}{ \dfrac{a_nx^n}{b_kx^k} }$
       \end{itemize}
 \end{frame}
 
@@ -113,8 +85,8 @@
       \begin{itemize}
             \item $\lim\limits_{x \to -\infty}{ f(x) }$ \pause
             \item $\lim\limits_{x \to +\infty}{ f(x) }$ \pause
-            \item $\lim\limits_{x \to -\infty}{ \frac{1}{f(x)-1} }$ \pause
-            \item $\lim\limits_{x \to +\infty}{ \frac{1}{f(x)} }$
+            \item $\lim\limits_{x \to -\infty}{ \dfrac{1}{f(x)-1} }$ \pause
+            \item $\lim\limits_{x \to +\infty}{ \dfrac{1}{f(x)} }$
       \end{itemize}
 \end{frame}
 
@@ -131,9 +103,9 @@
 \begin{frame}{Εξάσκηση}
       Να βρείτε τα όρια:
       \begin{itemize}
-            \item $\lim\limits_{x \to +\infty}{ \frac{2x^3-x+1}{3x^3+x^2+1} }$ \pause
-            \item $\lim\limits_{x \to -\infty}{ \frac{x^2-x+2}{2x^3+x+1} }$ \pause
-            \item $\lim\limits_{x \to +\infty}{ \left( \frac{x^2}{x-1}+x  \right)  }$
+            \item $\lim\limits_{x \to +\infty}{ \dfrac{2x^3-x+1}{3x^3+x^2+1} }$ \pause
+            \item $\lim\limits_{x \to -\infty}{ \dfrac{x^2-x+2}{2x^3+x+1} }$ \pause
+            \item $\lim\limits_{x \to +\infty}{ \left( \dfrac{x^2}{x-1}-x  \right)  }$
       \end{itemize}
 \end{frame}
 
@@ -162,7 +134,7 @@
 \end{frame}
 
 \begin{frame}{Εξάσκηση}
-      Να βρείτε τις τιμές του $μ\in\mathbb{R}$, για τις οποίες το $\lim\limits_{x \to +\infty}{ \frac{(μ-1)x^3+μx^2-2}{(μ-2)x^2+3x+1}  }$, είναι πραγματικός αριθμός
+      Να βρείτε τις τιμές του $μ\in\mathbb{R}$, για τις οποίες το $\lim\limits_{x \to +\infty}{ \dfrac{(μ-1)x^3+μx^2-2}{(μ-2)x^2+3x+1}  }$, είναι πραγματικός αριθμός
 \end{frame}
 
 \begin{frame}{Εξάσκηση}
@@ -170,55 +142,55 @@
 \end{frame}
 
 \begin{frame}{Εξάσκηση}
-      Δίνεται η συνάρτηση $f(x)=\frac{x^n+x-1}{x^2+1}$, $n\in\mathbb{N}^*$. Να βρείτε το $\lim\limits_{x \to +\infty}{ f(x) } $ για τις διάφορες τιμές του $n\in\mathbb{N}^*$.
+      Δίνεται η συνάρτηση $f(x)=\dfrac{x^n+x-1}{x^2+1}$, $n\in\mathbb{N}^*$. Να βρείτε το $\lim\limits_{x \to +\infty}{ f(x) } $ για τις διάφορες τιμές του $n\in\mathbb{N}^*$.
 \end{frame}
 
 \begin{frame}{Εξάσκηση}
-      Έστω $f:\mathbb{R}\to\mathbb{R}$ μια συνάρτηση, για την οποία ισχύει $\lim\limits_{x \to +\infty}{ \left( xf\left( \frac{x-1}{x} \right)  \right)  }=2$, να υπολογίσετε το $\lim\limits_{x \to 1}{ \frac{f(x)}{x-1} }$.
+      Έστω $f:\mathbb{R}\to\mathbb{R}$ μια συνάρτηση, για την οποία ισχύει $\lim\limits_{x \to +\infty}{ \left( xf\left( \dfrac{x-1}{x} \right)  \right)  }=2$, να υπολογίσετε το $\lim\limits_{x \to 1}{ \dfrac{f(x)}{x-1} }$.
 \end{frame}
 
 \begin{frame}{Εξάσκηση}
       Έστω $f:\mathbb{R}\to\mathbb{R}$ μια συνάρτηση, για την οποία ισχύει $\lim\limits_{x \to 1}{ f(x)  }=-\infty$, να υπολογίσετε τα όρια
       \begin{enumerate}
-            \item $\lim\limits_{x \to 1}{ \frac{2f^2(x)+f(x)-1}{f^3(x)-f(x)-2} }$ \pause
+            \item $\lim\limits_{x \to 1}{ \dfrac{2f^2(x)+f(x)-1}{f^3(x)-f(x)-2} }$ \pause
             \item $\lim\limits_{x \to 1}{ \left( \sqrt{f^2(x)+1}-f(x) \right)  }$
       \end{enumerate}
 \end{frame}
 
 \begin{frame}{Εξάσκηση}
-      Έστω $f:(-\infty,0)\to\mathbb{R}$ μια συνάρτηση, για την οποία ισχύει $\lim\limits_{x \to -\infty}{ \frac{xf(x)-2x+3}{x+2}  }=1$
+      Έστω $f:(-\infty,0)\to\mathbb{R}$ μια συνάρτηση, για την οποία ισχύει $\lim\limits_{x \to -\infty}{ \dfrac{xf(x)-2x+3}{x+2}  }=1$
       \begin{enumerate}
             \item να βρείτε τα όρια:
                   \begin{enumerate}
                         \item $\lim\limits_{x \to -\infty}{ f(x) }$ \pause
-                        \item $\lim\limits_{x \to -\infty}{ \frac{3x^2f(x)-x^2+1}{xf(x)+3}  }$
+                        \item $\lim\limits_{x \to -\infty}{ \dfrac{3x^2f(x)-x^2+1}{xf(x)+3}  }$
                   \end{enumerate}
-            \item Αν επιπλέον ισχύει $f\left( (-\infty,0) \right)=(3,+\infty) $, να βρείτε το $\lim\limits_{x \to -\infty}{ \frac{x}{f(x)-3} }$
+            \item Αν επιπλέον ισχύει $f\left( (-\infty,0) \right)=(3,+\infty) $, να βρείτε το $\lim\limits_{x \to -\infty}{ \dfrac{x}{f(x)-3} }$
       \end{enumerate}
 \end{frame}
 
 \begin{frame}{Εξάσκηση}
       Έστω $f:(0,+\infty)\to\mathbb{R}$ μια συνάρτηση, για την οποία ισχύουν
-      $$\lim\limits_{x \to +\infty}{ \frac{f(x)}{x} }=5 \text{ και } \lim\limits_{x \to +\infty}{ (f(x)-5x) }=2$$
+      $$\lim\limits_{x \to +\infty}{ \dfrac{f(x)}{x} }=5 \text{ και } \lim\limits_{x \to +\infty}{ (f(x)-5x) }=2$$
       Να βρείτε το $λ\in\mathbb{R}$, ώστε
-      $$\lim\limits_{x \to +\infty}{ \frac{3f(x)+λx-2}{xf(x)-5x^2+1} }=3$$
+      $$\lim\limits_{x \to +\infty}{ \dfrac{3f(x)+λx-2}{xf(x)-5x^2+1} }=3$$
 \end{frame}
 
 \begin{frame}{Εξάσκηση}
       Να βρείτε τα όρια:
       \begin{enumerate}
-            \item $\lim\limits_{x \to +\infty}{ ημ\frac{2x-1}{x^2+1} }$ \pause
-            \item $\lim\limits_{x \to +\infty}{ \frac{x}{x^2+1}συνx  }$
+            \item $\lim\limits_{x \to +\infty}{ ημ\dfrac{2x-1}{x^2+1} }$ \pause
+            \item $\lim\limits_{x \to +\infty}{ \dfrac{x}{x^2+1}συνx  }$
       \end{enumerate}
 \end{frame}
 
 \begin{frame}{Εξάσκηση}
       Να αποδείξετε ότι:
       \begin{enumerate}
-            \item $\lim\limits_{x \to -\infty}{ xημ\frac{1}{x} }=1$ \pause
-            \item $\lim\limits_{x \to +\infty}{ \frac{ημx}{x}  }=0$  \pause
-            \item $\lim\limits_{x \to +\infty}{ ημx\cdot ημ\frac{1}{x}  }=0$  \pause
-            \item $\lim\limits_{x \to +\infty}{ \frac{x-ημx}{x-1}  }=1$
+            \item $\lim\limits_{x \to -\infty}{ xημ\dfrac{1}{x} }=1$ \pause
+            \item $\lim\limits_{x \to +\infty}{ \dfrac{ημx}{x}  }=0$  \pause
+            \item $\lim\limits_{x \to +\infty}{ ημx\cdot ημ\dfrac{1}{x}  }=0$  \pause
+            \item $\lim\limits_{x \to +\infty}{ \dfrac{x-ημx}{x-1}  }=1$
       \end{enumerate}
 \end{frame}
 
@@ -226,46 +198,46 @@
       Να βρείτε τα όρια:
       \begin{enumerate}
             \item $\lim\limits_{x \to +\infty}{ (x+ημx) }$ \pause
-            \item $\lim\limits_{x \to +\infty}{ \frac{x}{2-ημx}  }$
+            \item $\lim\limits_{x \to +\infty}{ \dfrac{x}{2-ημx}  }$
       \end{enumerate}
 \end{frame}
 
 \begin{frame}{Εξάσκηση}
       Να βρείτε τα όρια:
       \begin{enumerate}
-            \item $\lim\limits_{x \to +\infty}{ \frac{e^x-2^x+1}{3^x-5^x-2} }$ \pause
-            \item $\lim\limits_{x \to -\infty}{ \frac{3^x-5^x}{3^x-2^x}  }$
+            \item $\lim\limits_{x \to +\infty}{ \dfrac{e^x-2^x+1}{3^x-5^x-2} }$ \pause
+            \item $\lim\limits_{x \to -\infty}{ \dfrac{3^x-5^x}{3^x-2^x}  }$
       \end{enumerate}
 \end{frame}
 
 \begin{frame}{Εξάσκηση}
-      Να βρείτε το $\lim\limits_{x \to +\infty}{ \frac{2^x-a^x}{2^x+3a^x}  }$, $a>0$
+      Να βρείτε το $\lim\limits_{x \to +\infty}{ \dfrac{2^x-a^x}{2^x+3a^x}  }$, $a>0$
 \end{frame}
 
 \begin{frame}{Εξάσκηση}
       Να βρείτε τα όρια:
       \begin{enumerate}
             \item $\lim\limits_{x \to +\infty}{ e^{-x^2+1} }$ \pause
-            \item $\lim\limits_{x \to 0^-}{ e^{-\frac{1}{x}} }$\pause
-            \item $\lim\limits_{x \to 0}{ \frac{1}{e^{x^2}-1}}$
+            \item $\lim\limits_{x \to 0^-}{ e^{-\dfrac{1}{x}} }$\pause
+            \item $\lim\limits_{x \to 0}{ \dfrac{1}{e^{x^2}-1}}$
       \end{enumerate}
 \end{frame}
 
 \begin{frame}{Εξάσκηση}
       Να βρείτε τα όρια:
       \begin{enumerate}
-            \item $\lim\limits_{x \to 0}{ \frac{1}{x}-\ln x }$ \pause
-            \item $\lim\limits_{x \to 0}{ \frac{x}{\ln x} }$\pause
-            \item $\lim\limits_{x \to 1}{ \frac{1+\sqrt{x-1}}{\ln x}}$\pause
-            \item $\lim\limits_{x \to 0}{ \frac{\ln x}{ημx}}$
+            \item $\lim\limits_{x \to 0}{ \dfrac{1}{x}-\ln x }$ \pause
+            \item $\lim\limits_{x \to 0}{ \dfrac{x}{\ln x} }$\pause
+            \item $\lim\limits_{x \to 1}{ \dfrac{1+\sqrt{x-1}}{\ln x}}$\pause
+            \item $\lim\limits_{x \to 0}{ \dfrac{\ln x}{ημx}}$
       \end{enumerate}
 \end{frame}
 
 \begin{frame}{Εξάσκηση}
       Να βρείτε τα όρια:
       \begin{enumerate}
-            \item $\lim\limits_{x \to +\infty}{\left(    \ln x + e^{-\frac{1}{x}} \right)}$ \pause
-            \item $\lim\limits_{x \to 1}{ \ln\frac{x}{x-1} }$\pause
+            \item $\lim\limits_{x \to +\infty}{\left(    \ln x + e^{-\dfrac{1}{x}} \right)}$ \pause
+            \item $\lim\limits_{x \to 1}{ \ln\dfrac{x}{x-1} }$\pause
             \item $\lim\limits_{x \to +\infty}{\left( \ln (1+e^{2x})-x \right)}$
       \end{enumerate}
 \end{frame}
@@ -274,7 +246,7 @@
       Να βρείτε τα όρια:
       \begin{enumerate}
             \item $\lim\limits_{x \to +\infty}{\left( \ln x+συνx \right)}$ \pause
-            \item $\lim\limits_{x \to +\infty}{ \frac{συνx}{\ln x} }$
+            \item $\lim\limits_{x \to +\infty}{ \dfrac{συνx}{\ln x} }$
       \end{enumerate}
 \end{frame}
 
