@@ -36,51 +36,51 @@
 \begin{document}
 
 \begin{frame}
- \titlepage
+  \titlepage
 \end{frame}
 
 \section{Θεωρία}
 \begin{frame}{Παρατήρηση 1}
- \begin{block}{Ιδιότητα 1 Λογάριθμου}
-  \begin{itemize}
-   \item<1-> $\log 54.324=\log 10\cdot 5.4324=\log 10+\log 5.4324$
-   \item<2-> $\log 432.53=\log 100\cdot 4.3253 = \log 100 + \log 4.3253$
-  \end{itemize}
+  \begin{block}{Ιδιότητα 1 Λογάριθμου}
+    \begin{itemize}
+      \item<1-> $\log 54.324=\log 10\cdot 5.4324=\log 10+\log 5.4324$
+      \item<2-> $\log 432.53=\log 100\cdot 4.3253 = \log 100 + \log 4.3253$
+    \end{itemize}
 
- \end{block}
- \onslide<3->Άρα αν ξέραμε τους λογάριθμους από $1$ έως $9.999999...$ θα ξέραμε τους λογάριθμους όλων των αριθμών!
+  \end{block}
+  \onslide<3->Άρα αν ξέραμε τους λογάριθμους από $1$ έως $9.999999...$ θα ξέραμε τους λογάριθμους όλων των αριθμών!
 \end{frame}
 
 \begin{frame}{Παρατήρηση 2}
- \begin{block}{Ιδιότητα 2 Λογάριθμου}
+  \begin{block}{Ιδιότητα 2 Λογάριθμου}
 
- $$\log 54.324\cdot 432.53 = \log 54.342 + \log 432.53 = $$
+    $$\log 54.324\cdot 432.53 = \log 54.342 + \log 432.53 = $$
 
- \end{block}
- \onslide<3->Άρα αν ξέραμε τους λογάριθμους από $0$ έως $0.999999...$ θα ξέραμε τους λογάριθμους όλων των αριθμών!
+  \end{block}
+  \onslide<3->Άρα αν ξέραμε τους λογάριθμους από $0$ έως $0.999999...$ θα ξέραμε τους λογάριθμους όλων των αριθμών!
 \end{frame}
 
 \begin{frame}{Σχέση με προηγούμενα?}
- Από τον ορισμό του λογάριθμου έχουμε
- $$\ln x=y\iff e^y=x$$
- \begin{itemize}
-  \item Αν λοιπόν $f(x)=\ln x$ τότε τα σημεία της είναι τα $(x,\ln x)$
-  \item Αντίστοιχα, αν $g(x)=e^x$ τότε τα σημεία της είναι τα $(x,e^x)$
- \end{itemize}
- Με απλή αντικατάσταση
+  Από τον ορισμό του λογάριθμου έχουμε
+  $$\ln x=y\iff e^y=x$$
+  \begin{itemize}
+    \item Αν λοιπόν $f(x)=\ln x$ τότε τα σημεία της είναι τα $(x,\ln x)$
+    \item Αντίστοιχα, αν $g(x)=e^x$ τότε τα σημεία της είναι τα $(x,e^x)$
+  \end{itemize}
+  Με απλή αντικατάσταση
 
- $$(x,e^x)=(\ln x, e^{\ln x})=(\ln x,x)$$
- \only<1> {Αυτό σημαίνει ότι...}
+  $$(x,e^x)=(\ln x, e^{\ln x})=(\ln x,x)$$
+  \only<1> {Αυτό σημαίνει ότι...}
 
- \only<2> {Η γραφική παράσταση της $\ln x$ είναι συμμετρική της $e^x$ ως προς την ευθεία $y=x$}
+  \only<2> {Η γραφική παράσταση της $\ln x$ είναι συμμετρική της $e^x$ ως προς την ευθεία $y=x$}
 \end{frame}
 
 \begin{frame}{Ιδιότητες της $C_{\ln}$}
- \begin{itemize}
-  \item Μονοτονία \only<2-> {$\rightarrow$ Γνησίως αύξουσα}
-  \item Ακρότατα \only<3-> {$\rightarrow$ Δεν έχει}
-  \item Ένα προς ένα? \only<4-> {$\rightarrow$ Ως γνησίως αύξουσα είναι!}
- \end{itemize}
+  \begin{itemize}
+    \item Μονοτονία \only<2-> {$\rightarrow$ Γνησίως αύξουσα}
+    \item Ακρότατα \only<3-> {$\rightarrow$ Δεν έχει}
+    \item Ένα προς ένα? \only<4-> {$\rightarrow$ Ως γνησίως αύξουσα είναι!}
+  \end{itemize}
 \end{frame}
 
 \begin{frame}{Και τελειώνοντας...}
@@ -88,315 +88,315 @@
 \end{frame}
 
 \section{Ασκήσεις}
-\subsection{Άσκηση 1}
-\begin{frame}[label=Άσκηση1,t]{Εξάσκηση 1}
- Να βρείτε το πεδίο ορισμού των συναρτήσεων
- \begin{enumerate}
-  \item<1-> $f(x)=\ln (e^x-1)$
-  \item<2-> $f(x)=\ln \left( x-\dfrac{4}{x} \right) $
- \end{enumerate}
+\begin{askisi}
+  Να βρείτε το πεδίο ορισμού των συναρτήσεων
+  \begin{enumerate}
+    \item<1-> $f(x)=\ln (e^x-1)$
+    \item<2-> $f(x)=\ln \left( x-\dfrac{4}{x} \right) $
+  \end{enumerate}
 
- % \hyperlink{Λύση1}{\beamerbutton{Λύση}}
-\end{frame}
+  % \hyperlink{Λύση1}{\beamerbutton{Λύση}}
 
-\subsection{Άσκηση 2}
-\begin{frame}[label=Άσκηση2,t]{Εξάσκηση 2}
- Να Παραστήσετε γραφικά τις συναρτήσεις
- \begin{enumerate}
-  \item<1-> $f(x)=\ln x+1$
-  \item<2-> $f(x)=\ln (x-1)$
- \end{enumerate}
+\end{askisi}
 
- % \hyperlink{Λύση2}{\beamerbutton{Λύση}}
-\end{frame}
+\begin{askisi}
+  Να Παραστήσετε γραφικά τις συναρτήσεις
+  \begin{enumerate}
+    \item<1-> $f(x)=\ln x+1$
+    \item<2-> $f(x)=\ln (x-1)$
+  \end{enumerate}
 
-\subsection{Άσκηση 3}
-\begin{frame}[label=Άσκηση3,t]{Εξάσκηση 3}
- Στο ίδιο σύστημα αξόνων να κάνετε τις γραφικές παραστάσεις των συναρτήσεων:
- \begin{enumerate}
-  \item $y=x$
-  \item $y=x+1$
-  \item $y=x-1$
-  \item $y=e^x$
-  \item $y=\ln x$
- \end{enumerate}
+  % \hyperlink{Λύση2}{\beamerbutton{Λύση}}
 
- % \hyperlink{Λύση3}{\beamerbutton{Λύση}}
-\end{frame}
+\end{askisi}
 
-\subsection{Άσκηση 4}
-\begin{frame}[label=Άσκηση4,t]{Εξάσκηση 4}
- Να παραστήσετε γραφικά τις παρακάτω συναρτήσεις:
- \begin{enumerate}
-  \item<1-> $g(x)=\ln \dfrac{1}{x}$
-  \item<2-> $h(x)=|\ln x|$
-  \item<3-> $φ(x)=\ln |x|$
- \end{enumerate}
+\begin{askisi}
+  Στο ίδιο σύστημα αξόνων να κάνετε τις γραφικές παραστάσεις των συναρτήσεων:
+  \begin{enumerate}
+    \item $y=x$
+    \item $y=x+1$
+    \item $y=x-1$
+    \item $y=e^x$
+    \item $y=\ln x$
+  \end{enumerate}
 
- % \hyperlink{Λύση4}{\beamerbutton{Λύση}}
-\end{frame}
+  % \hyperlink{Λύση3}{\beamerbutton{Λύση}}
 
-\subsection{Άσκηση 5}
-\begin{frame}[label=Άσκηση5,t]{Εξάσκηση 5}
- Έστω η συνάρτηση $f(x)=\ln \dfrac{5-x}{5+x}$.
- \begin{enumerate}
-  \item<1-> Να βρείτε το πεδίο ορισμού της συνάρτησης $f$
-  \item<2-> Να δείξετε ότι η συνάρτηση $f$ είναι περιττή
- \end{enumerate}
+\end{askisi}
 
- %\hyperlink{Λύση5}{\beamerbutton{Λύση}}
-\end{frame}
+\begin{askisi}
+  Να παραστήσετε γραφικά τις παρακάτω συναρτήσεις:
+  \begin{enumerate}
+    \item<1-> $g(x)=\ln \dfrac{1}{x}$
+    \item<2-> $h(x)=|\ln x|$
+    \item<3-> $φ(x)=\ln |x|$
+  \end{enumerate}
 
-\subsection{Άσκηση 6}
-\begin{frame}[label=Άσκηση6,t]{Εξάσκηση 6}
- Έστω η συνάρτηση $f(x)=\ln \left( \sqrt{x^2+1}-x \right) $
- \begin{enumerate}
-  \item<1-> Να βρείτε το πεδίο ορισμού της $f$
-  \item<2-> Να δείξετε ότι η συνάρτηση $f$ είναι περιττή
- \end{enumerate}
+  % \hyperlink{Λύση4}{\beamerbutton{Λύση}}
 
- %\hyperlink{Λύση6}{\beamerbutton{Λύση}}
-\end{frame}
+\end{askisi}
 
-\subsection{Άσκηση 7}
-\begin{frame}[label=Άσκηση7,t]{Εξάσκηση 7}
- Δίνεται η συνάρτηση $f(x)=x+\ln(1+x)$
- \begin{enumerate}
-  \item<1-> Να μελετήσετε τη συνάρτηση $f$ ως προς τη μονοτονία
-  \item<2-> Να βρείτε τις ρίζες και το πρόσημο της συνάρτησης $f$
-  \item<3-> Αν $α$, $β>0$ και $α<β$, να δείξετε ότι $α-β<\ln \dfrac{1+β}{1+α}$
- \end{enumerate}
+\begin{askisi}
+  Έστω η συνάρτηση $f(x)=\ln \dfrac{5-x}{5+x}$.
+  \begin{enumerate}
+    \item<1-> Να βρείτε το πεδίο ορισμού της συνάρτησης $f$
+    \item<2-> Να δείξετε ότι η συνάρτηση $f$ είναι περιττή
+  \end{enumerate}
 
- %\hyperlink{Λύση7}{\beamerbutton{Λύση}}
-\end{frame}
+  %\hyperlink{Λύση5}{\beamerbutton{Λύση}}
 
-\subsection{Άσκηση 8}
-\begin{frame}[label=Άσκηση8,t]{Εξάσκηση 8}
- Να κάνετε τον πίνακα προσήμων της συνάρτησης $f(x)=x-1+\dfrac{\ln x}{x}$
+\end{askisi}
 
- %\hyperlink{Λύση8}{\beamerbutton{Λύση}}
-\end{frame}
+\begin{askisi}
+  Έστω η συνάρτηση $f(x)=\ln \left( \sqrt{x^2+1}-x \right) $
+  \begin{enumerate}
+    \item<1-> Να βρείτε το πεδίο ορισμού της $f$
+    \item<2-> Να δείξετε ότι η συνάρτηση $f$ είναι περιττή
+  \end{enumerate}
 
-\subsection{Άσκηση 9}
-\begin{frame}[label=Άσκηση9,t]{Εξάσκηση 9}
- Να λύσετε τις εξισώσεις
- \begin{enumerate}
-  \item<1-> $\ln x-1=0$
-  \item<2-> $\ln (x-1)=0$
-  \item<3-> $\ln x^2-1=0$
-  \item<4-> $\ln 3x-\ln(4-x)=0$
- \end{enumerate}
+  %\hyperlink{Λύση6}{\beamerbutton{Λύση}}
 
- %\hyperlink{Λύση9}{\beamerbutton{Λύση}}
-\end{frame}
+\end{askisi}
 
-\subsection{Άσκηση 10}
-\begin{frame}[label=Άσκηση10,t]{Εξάσκηση 10}
- Να λύσετε την εξίσωση $\ln x+\ln (x+1)=\ln (x+3)+\ln 2$
+\begin{askisi}
+  Δίνεται η συνάρτηση $f(x)=x+\ln(1+x)$
+  \begin{enumerate}
+    \item<1-> Να μελετήσετε τη συνάρτηση $f$ ως προς τη μονοτονία
+    \item<2-> Να βρείτε τις ρίζες και το πρόσημο της συνάρτησης $f$
+    \item<3-> Αν $α$, $β>0$ και $α<β$, να δείξετε ότι $α-β<\ln \dfrac{1+β}{1+α}$
+  \end{enumerate}
 
- %\hyperlink{Λύση10}{\beamerbutton{Λύση}}
-\end{frame}
+  %\hyperlink{Λύση7}{\beamerbutton{Λύση}}
 
-\subsection{Άσκηση 11}
-\begin{frame}[label=Άσκηση11,t]{Εξάσκηση 11}
- Να λύσετε την εξίσωση $\log (x^2+7x)=1+\log (x+1)$
+\end{askisi}
 
- %\hyperlink{Λύση11}{\beamerbutton{Λύση}}
-\end{frame}
+\begin{askisi}
+  Να κάνετε τον πίνακα προσήμων της συνάρτησης $f(x)=x-1+\dfrac{\ln x}{x}$
 
-\subsection{Άσκηση 12}
-\begin{frame}[label=Άσκηση12,t]{Εξάσκηση 12}
- Να λύσετε την εξίσωση $$\ln^2x-3\ln x-4=0$$
+  %\hyperlink{Λύση8}{\beamerbutton{Λύση}}
 
- %\hyperlink{Λύση12}{\beamerbutton{Λύση}}
-\end{frame}
+\end{askisi}
 
-\subsection{Άσκηση 13}
-\begin{frame}[label=Άσκηση13,t]{Εξάσκηση 13}
- Να λύσετε τις εξισώσεις
- \begin{enumerate}
-  \item<1-> $e^x=2$
-  \item<2-> $3^x=10$
-  \item<3-> $2e^x-1=0$
-  \item<4-> $e^{-x}=2^x$
- \end{enumerate}
+\begin{askisi}
+  Να λύσετε τις εξισώσεις
+  \begin{enumerate}
+    \item<1-> $\ln x-1=0$
+    \item<2-> $\ln (x-1)=0$
+    \item<3-> $\ln x^2-1=0$
+    \item<4-> $\ln 3x-\ln(4-x)=0$
+  \end{enumerate}
 
- %\hyperlink{Λύση13}{\beamerbutton{Λύση}}
-\end{frame}
+  %\hyperlink{Λύση9}{\beamerbutton{Λύση}}
 
-\subsection{Άσκηση 14}
-\begin{frame}[label=Άσκηση14,t]{Εξάσκηση 14}
- Να λύσετε τις εξισώσεις
- \begin{enumerate}
-  \item<1-> $\ln x+1\le 0$
-  \item<2-> $3\ln x-1<0$
- \end{enumerate}
+\end{askisi}
 
- %\hyperlink{Λύση14}{\beamerbutton{Λύση}}
-\end{frame}
+\begin{askisi}
+  Να λύσετε την εξίσωση $\ln x+\ln (x+1)=\ln (x+3)+\ln 2$
 
-\subsection{Άσκηση 15}
-\begin{frame}[label=Άσκηση15,t]{Εξάσκηση 15}
- Να λύσετε την ανίσωση $$\ln (1-x)>1+\ln x$$
+  %\hyperlink{Λύση10}{\beamerbutton{Λύση}}
 
- %\hyperlink{Λύση15}{\beamerbutton{Λύση}}
-\end{frame}
+\end{askisi}
 
-\subsection{Άσκηση 16}
-\begin{frame}[label=Άσκηση16,t]{Εξάσκηση 16}
- Να λύσετε τις ανισώσεις
- \begin{enumerate}
-  \item<1-> $3e^x-1<0$
-  \item<2-> $e^{-x}-2>0$
-  \item<3-> $\left( \dfrac{2}{5} \right)^x>3 $
- \end{enumerate}
+\begin{askisi}
+  Να λύσετε την εξίσωση $\log (x^2+7x)=1+\log (x+1)$
 
- %\hyperlink{Λύση16}{\beamerbutton{Λύση}}
-\end{frame}
+  %\hyperlink{Λύση11}{\beamerbutton{Λύση}}
 
-\subsection{Άσκηση 17}
-\begin{frame}[label=Άσκηση17,t]{Εξάσκηση 17}
- Να λύσετε την ανίσωση
- $$\ln^2x-ln x^2-3>0$$
+\end{askisi}
 
- %\hyperlink{Λύση17}{\beamerbutton{Λύση}}
-\end{frame}
+\begin{askisi}
+  Να λύσετε την εξίσωση $$\ln^2x-3\ln x-4=0$$
 
-\subsection{Άσκηση 18}
-\begin{frame}[label=Άσκηση18,t]{Εξάσκηση 18}
- Να λύσετε την ανίσωση $$\dfrac{e^x-1}{2e^x-1}<\dfrac{1}{3}$$
+  %\hyperlink{Λύση12}{\beamerbutton{Λύση}}
 
- %\hyperlink{Λύση18}{\beamerbutton{Λύση}}
-\end{frame}
+\end{askisi}
 
-\subsection{Άσκηση 19}
-\begin{frame}[label=Άσκηση19,t]{Εξάσκηση 19}
- Να κάνετε τον πίνακα προσήμων της συνάρτησης $$f(x)=2e^x-1$$
+\begin{askisi}
+  Να λύσετε τις εξισώσεις
+  \begin{enumerate}
+    \item<1-> $e^x=2$
+    \item<2-> $3^x=10$
+    \item<3-> $2e^x-1=0$
+    \item<4-> $e^{-x}=2^x$
+  \end{enumerate}
 
- %\hyperlink{Λύση19}{\beamerbutton{Λύση}}
-\end{frame}
+  %\hyperlink{Λύση13}{\beamerbutton{Λύση}}
 
-\subsection{Άσκηση 20}
-\begin{frame}[label=Άσκηση20,t]{Εξάσκηση 20}
- Να κάνετε τον πίνακα προσήμων της συνάρτησης $$f(x)=2\ln x-1$$
+\end{askisi}
 
- %\hyperlink{Λύση20}{\beamerbutton{Λύση}}
-\end{frame}
+\begin{askisi}
+  Να λύσετε τις εξισώσεις
+  \begin{enumerate}
+    \item<1-> $\ln x+1\le 0$
+    \item<2-> $3\ln x-1<0$
+  \end{enumerate}
 
-\subsection{Άσκηση 21}
-\begin{frame}[label=Άσκηση21,t]{Εξάσκηση 21}
- Έστω η συνάρτηση $f(x)=2\ln (x-1)-1$
- \begin{enumerate}
-  \item<1-> Να βρείτε το πεδίο ορισμού της συνάρτησης $f$
-  \item<2-> Να βρείτε τις ρίζες της $f$ και να κάνετε τον πίνακα προσήμων της
-  \item<3-> Να βρείτε τα διαστήματα του $x$ που η $C_f$ είναι κάτω από τον άξονα $x'x$
- \end{enumerate}
+  %\hyperlink{Λύση14}{\beamerbutton{Λύση}}
 
- %\hyperlink{Λύση21}{\beamerbutton{Λύση}}
-\end{frame}
+\end{askisi}
 
-\subsection{Άσκηση 22}
-\begin{frame}[label=Άσκηση22,t]{Εξάσκηση 22}
- Να κάνετε τον πίνακα προσήμων των συναρτήσεων
- \begin{enumerate}
-  \item<1-> $f(x)=\dfrac{e^x-2}{x-1}$
-  \item<2-> $f(x)=\dfrac{1-2\ln x}{x-2}$
-  \item<3-> $f(x)=\dfrac{\ln x}{x-1}$
-  \item<4-> $f(x)=x^2-1+\ln x$
- \end{enumerate}
+\begin{askisi}
+  Να λύσετε την ανίσωση $$\ln (1-x)>1+\ln x$$
 
- %\hyperlink{Λύση22}{\beamerbutton{Λύση}}
-\end{frame}
+  %\hyperlink{Λύση15}{\beamerbutton{Λύση}}
 
-\subsection{Άσκηση 23}
-\begin{frame}[label=Άσκηση23,t]{Εξάσκηση 23}
- Να λύσετε την εξίσωση
- $$2\ln (2x-1)-\dfrac{1}{2}\ln 9=\ln (x-1)+\ln (x+1)$$
+\end{askisi}
 
- %\hyperlink{Λύση23}{\beamerbutton{Λύση}}
-\end{frame}
+\begin{askisi}
+  Να λύσετε τις ανισώσεις
+  \begin{enumerate}
+    \item<1-> $3e^x-1<0$
+    \item<2-> $e^{-x}-2>0$
+    \item<3-> $\left( \dfrac{2}{5} \right)^x>3 $
+  \end{enumerate}
 
-\subsection{Άσκηση 24}
-\begin{frame}[label=Άσκηση24,t]{Εξάσκηση 24}
- Να λύσετε το σύστημα
+  %\hyperlink{Λύση16}{\beamerbutton{Λύση}}
 
- $$\begin{cases}
-   \ln x^3+\ln y^4=11 \\
-   \ln (xy)=3
-  \end{cases}$$
+\end{askisi}
 
- %\hyperlink{Λύση24}{\beamerbutton{Λύση}}
-\end{frame}
+\begin{askisi}
+  Να λύσετε την ανίσωση
+  $$\ln^2x-ln x^2-3>0$$
 
-\subsection{Άσκηση 25}
-\begin{frame}[label=Άσκηση25,t]{Εξάσκηση 25}
- Να λύσετε το σύστημα
+  %\hyperlink{Λύση17}{\beamerbutton{Λύση}}
 
- $$\begin{cases}
-   y=xe^x \\
-   \ln y-\ln^2x=x
-  \end{cases}$$
+\end{askisi}
 
- %\hyperlink{Λύση25}{\beamerbutton{Λύση}}
-\end{frame}
+\begin{askisi}
+  Να λύσετε την ανίσωση $$\dfrac{e^x-1}{2e^x-1}<\dfrac{1}{3}$$
 
-\subsection{Άσκηση 26}
-\begin{frame}[label=Άσκηση26,t]{Εξάσκηση 26}
- Να λύσετε τις εξισώσεις
- \begin{enumerate}
-  \item<1-> $3^{x-1}=e^{2-x}$
-  \item<2-> $\ln (e^x+2^x)=x+\ln 3$
- \end{enumerate}
+  %\hyperlink{Λύση18}{\beamerbutton{Λύση}}
 
- %\hyperlink{Λύση26}{\beamerbutton{Λύση}}
-\end{frame}
+\end{askisi}
 
-\subsection{Άσκηση 27}
-\begin{frame}[label=Άσκηση27,t]{Εξάσκηση 27}
- \begin{enumerate}
-  \item<1-> Να δείξετε ότι $5^{\ln x}=x^{ln 5}$
-  \item<2-> Να λύσετε την εξίσωση $25^{\ln x}-4x^{\ln 5}+3=0$
- \end{enumerate}
+\begin{askisi}
+  Να κάνετε τον πίνακα προσήμων της συνάρτησης $$f(x)=2e^x-1$$
 
- %\hyperlink{Λύση27}{\beamerbutton{Λύση}}
-\end{frame}
+  %\hyperlink{Λύση19}{\beamerbutton{Λύση}}
 
-\subsection{Άσκηση 28}
-\begin{frame}[label=Άσκηση28,t]{Εξάσκηση 28}
- Να λύσετε την εξίσωση
+\end{askisi}
 
- $$x^{\ln x^2}=e^2x$$
+\begin{askisi}
+  Να κάνετε τον πίνακα προσήμων της συνάρτησης $$f(x)=2\ln x-1$$
 
- %\hyperlink{Λύση28}{\beamerbutton{Λύση}}
-\end{frame}
+  %\hyperlink{Λύση20}{\beamerbutton{Λύση}}
 
-\subsection{Άσκηση 29}
-\begin{frame}[label=Άσκηση29,t]{Εξάσκηση 29}
- Το ενοίκιο $Q(t)$ ενός σπιτιού που πληρώνει ένας ενοικιαστής μετά από $t$ χρόνια από όταν το ενοικίασε, δίνεται από τη συνάρτηση
- $$Q(t)=α+β(1-e^{-γt}) \text{, } β \text{, } γ\ne 0\text{, } t\ge 0$$
- Στην αρχή πλήρωσε ενοίκιο $200$ Ευρώ, μετά από $2$ χρόνια πλήρωσε $232$ Ευρώ και μετά από άλλα $2$ χρόνια πλήρωσε $248$ Ευρώ
- \begin{enumerate}
-  \item<1-> Να βρείτε τα $α$, $β$ και $γ$
-  \item<2-> Να δείξετε ότι $Q(t)=200+64\left( 1-2^{-\frac{1}{2}} \right) $
-  \item<3-> Να βρείτε ποιο χρόνο θα πληρώνει ενοίκιο $262$ Ευρώ
-  \item<4-> Να βρείτε για πόσα χρόνια το ενοίκιο δεν θα ξεπεράσει τα $260$ Ευρώ
-  \item<5-> Να δείξετε ότι το ποσόν του ενοικίου δεν θα ξεπεράσει τα $264$ Ευρώ
- \end{enumerate}
+\end{askisi}
 
- %\hyperlink{Λύση29}{\beamerbutton{Λύση}}
-\end{frame}
+\begin{askisi}
+  Έστω η συνάρτηση $f(x)=2\ln (x-1)-1$
+  \begin{enumerate}
+    \item<1-> Να βρείτε το πεδίο ορισμού της συνάρτησης $f$
+    \item<2-> Να βρείτε τις ρίζες της $f$ και να κάνετε τον πίνακα προσήμων της
+    \item<3-> Να βρείτε τα διαστήματα του $x$ που η $C_f$ είναι κάτω από τον άξονα $x'x$
+  \end{enumerate}
+
+  %\hyperlink{Λύση21}{\beamerbutton{Λύση}}
+
+\end{askisi}
+
+\begin{askisi}
+  Να κάνετε τον πίνακα προσήμων των συναρτήσεων
+  \begin{enumerate}
+    \item<1-> $f(x)=\dfrac{e^x-2}{x-1}$
+    \item<2-> $f(x)=\dfrac{1-2\ln x}{x-2}$
+    \item<3-> $f(x)=\dfrac{\ln x}{x-1}$
+    \item<4-> $f(x)=x^2-1+\ln x$
+  \end{enumerate}
+
+  %\hyperlink{Λύση22}{\beamerbutton{Λύση}}
+
+\end{askisi}
+
+\begin{askisi}
+  Να λύσετε την εξίσωση
+  $$2\ln (2x-1)-\dfrac{1}{2}\ln 9=\ln (x-1)+\ln (x+1)$$
+
+  %\hyperlink{Λύση23}{\beamerbutton{Λύση}}
+
+\end{askisi}
+
+\begin{askisi}
+  Να λύσετε το σύστημα
+
+  $$\begin{cases}
+      \ln x^3+\ln y^4=11 \\
+      \ln (xy)=3
+    \end{cases}$$
+
+  %\hyperlink{Λύση24}{\beamerbutton{Λύση}}
+
+\end{askisi}
+
+\begin{askisi}
+  Να λύσετε το σύστημα
+
+  $$\begin{cases}
+      y=xe^x \\
+      \ln y-\ln^2x=x
+    \end{cases}$$
+
+  %\hyperlink{Λύση25}{\beamerbutton{Λύση}}
+
+\end{askisi}
+
+\begin{askisi}
+  Να λύσετε τις εξισώσεις
+  \begin{enumerate}
+    \item<1-> $3^{x-1}=e^{2-x}$
+    \item<2-> $\ln (e^x+2^x)=x+\ln 3$
+  \end{enumerate}
+
+  %\hyperlink{Λύση26}{\beamerbutton{Λύση}}
+
+\end{askisi}
+
+\begin{askisi}
+  \begin{enumerate}
+    \item<1-> Να δείξετε ότι $5^{\ln x}=x^{ln 5}$
+    \item<2-> Να λύσετε την εξίσωση $25^{\ln x}-4x^{\ln 5}+3=0$
+  \end{enumerate}
+
+  %\hyperlink{Λύση27}{\beamerbutton{Λύση}}
+
+\end{askisi}
+
+\begin{askisi}
+  Να λύσετε την εξίσωση
+
+  $$x^{\ln x^2}=e^2x$$
+
+  %\hyperlink{Λύση28}{\beamerbutton{Λύση}}
+
+\end{askisi}
+
+\begin{askisi}
+  Το ενοίκιο $Q(t)$ ενός σπιτιού που πληρώνει ένας ενοικιαστής μετά από $t$ χρόνια από όταν το ενοικίασε, δίνεται από τη συνάρτηση
+  $$Q(t)=α+β(1-e^{-γt}) \text{, } β \text{, } γ\ne 0\text{, } t\ge 0$$
+  Στην αρχή πλήρωσε ενοίκιο $200$ Ευρώ, μετά από $2$ χρόνια πλήρωσε $232$ Ευρώ και μετά από άλλα $2$ χρόνια πλήρωσε $248$ Ευρώ
+  \begin{enumerate}
+    \item<1-> Να βρείτε τα $α$, $β$ και $γ$
+    \item<2-> Να δείξετε ότι $Q(t)=200+64\left( 1-2^{-\frac{1}{2}} \right) $
+    \item<3-> Να βρείτε ποιο χρόνο θα πληρώνει ενοίκιο $262$ Ευρώ
+    \item<4-> Να βρείτε για πόσα χρόνια το ενοίκιο δεν θα ξεπεράσει τα $260$ Ευρώ
+    \item<5-> Να δείξετε ότι το ποσόν του ενοικίου δεν θα ξεπεράσει τα $264$ Ευρώ
+  \end{enumerate}
+
+  %\hyperlink{Λύση29}{\beamerbutton{Λύση}}
+
+\end{askisi}
 
 \appendix
 
 \section{}
 \begin{frame}
- \centering
- \includegraphics[width=0.8\textwidth]{"./images/thatsall.png"}
+  \centering
+  \includegraphics[width=0.8\textwidth]{"./images/thatsall.png"}
 
 \end{frame}
 
 \begin{frame}
- Στο moodle θα βρείτε τις ασκήσεις που πρέπει να κάνετε, όπως και αυτή τη παρουσίαση
+  Στο moodle θα βρείτε τις ασκήσεις που πρέπει να κάνετε, όπως και αυτή τη παρουσίαση
 \end{frame}
 
 % \section{Αποδείξεις}
