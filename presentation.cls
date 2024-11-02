@@ -29,6 +29,8 @@
 
 \usepackage{pgffor} % macros
 
+\usepackage{cancel} % cancel terms in equations
+
 \setbeamercovered{highly dynamic}
 \setbeamertemplate{navigation symbols}{}
 
