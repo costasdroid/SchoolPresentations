@@ -50,5 +50,8 @@
     "%DIR%/",
     "%TMPFILE%",
     "-y=defaultIndent: '  '"
-  ]
+  ],
+  "editor.wordWrap": "on",
+  "editor.wrappingIndent": "indent",
+  "editor.fontSize": 14
 }

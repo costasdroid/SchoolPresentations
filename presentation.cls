@@ -51,3 +51,13 @@
         }{
     \end{frame}
 }
+
+\newcounter{apodiksi} % enviroment for proofs
+\newenvironment{apodiksi}[1][]
+{
+    \refstepcounter{apodiksi}\par
+    \subsection{Απόδειξη \theapodiksi}
+    \begin{frame}[label=Απόδειξη\theapodiksi,t]{Απόδειξη #1}
+        }{
+    \end{frame}
+}
