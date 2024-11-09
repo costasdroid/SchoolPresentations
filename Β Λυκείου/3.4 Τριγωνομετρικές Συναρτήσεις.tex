@@ -1,29 +1,4 @@
-\documentclass[greek]{beamer}
-%\usepackage{fontspec}
-\usepackage{amsmath,amsthm}
-\usepackage{unicode-math}
-\usepackage{xltxtra}
-\usepackage{graphicx}
-\usetheme{CambridgeUS}
-\usecolortheme{seagull}
-\usepackage{hyperref}
-\usepackage{ulem}
-\usepackage{xgreek}
-
-\usepackage{pgfpages}
-\usepackage{tikz}
-\usepackage{tkz-tab}
-%\setbeameroption{show notes on second screen}
-%\setbeameroption{show only notes}
-
-\setsansfont{Noto Serif}
-
-\usepackage{multicol}
-
-\usepackage{appendixnumberbeamer}
-
-\setbeamercovered{transparent}
-\beamertemplatenavigationsymbolsempty
+\documentclass{../presentation}
 
 \title{Τριγωνομετρία}
 \subtitle{Τριγωνομετρικές Συναρτήσεις}
@@ -33,214 +8,170 @@
 \begin{document}
 
 \begin{frame}
- \titlepage
+  \titlepage
 \end{frame}
 
 \section{Θεωρία}
 \begin{frame}{Γεύση από το μέλλον (part 2)}
- Τριγωνομετρικές συναρτήσεις
- \begin{enumerate}
-  \item<1-> νέα ιδιότητα συναρτήσεων (περίοδος)
-  \item<2-> γραφική παράσταση $ημx$, $συνx$, $εφx$ και $σφx$
-  \item<3-> γραφική παράσταση σύνθετων τριγωνομετρικών συναρτήσεων
- \end{enumerate}
+  Τριγωνομετρικές συναρτήσεις
+  \begin{enumerate}
+    \item<1-> νέα ιδιότητα συναρτήσεων (περίοδος)
+    \item<2-> γραφική παράσταση $ημx$, $συνx$, $εφx$ και $σφx$
+    \item<3-> γραφική παράσταση σύνθετων τριγωνομετρικών συναρτήσεων
+  \end{enumerate}
 \end{frame}
 
 \begin{frame}{Καταιγίδα πριν την λιακάδα}
- Γνωστή έννοια με άγνωστα μαθηματικά... Περίοδος
- \begin{enumerate}
-  \item<1-> περιστροφής γης γύρω από τον εαυτό της $T\approx 24$ ώρες
-  \item<2-> λεπτοδείκτη $60$ λεπτά
-  \item<3-> σελήνης γύρω από τη γη $\approx 27$ ημέρες...
- \end{enumerate}
+  Γνωστή έννοια με άγνωστα μαθηματικά... Περίοδος
+  \begin{enumerate}
+    \item<1-> περιστροφής γης γύρω από τον εαυτό της $T\approx 24$ ώρες
+    \item<2-> λεπτοδείκτη $60$ λεπτά
+    \item<3-> σελήνης γύρω από τη γη $\approx 27$ ημέρες...
+  \end{enumerate}
 \end{frame}
 
 \begin{frame}{Λίιιιιιγο μαθηματικά}
- \begin{block}{Ορισμός}<1->
-  Μία συνάρτηση $f$ με πεδίο ορισμού το $Α$ λέγεται \emph{περιοδική}, όταν υπάρχει αριθμός $Τ$ τέτοιος ώστε για κάθε $x\in Α$ να ισχύει:
-  \begin{itemize}
-   \item $x+Τ\in Α$, $x-Τ\in Α$
+  \begin{block}{Ορισμός}<1->
+    Μία συνάρτηση $f$ με πεδίο ορισμού το $Α$ λέγεται \emph{περιοδική}, όταν υπάρχει αριθμός $Τ$ τέτοιος ώστε για κάθε $x\in Α$ να ισχύει:
+    \begin{itemize}
+      \item $x+Τ\in Α$, $x-Τ\in Α$
 
-         και
+            και
 
-   \item $f(x+Τ)=f(x-Τ)=f(x)$
-  \end{itemize}
-  Ο πραγματικός αριθμός $Τ$ λέγεται \emph{περίοδος} της συνάρτησης $f$
- \end{block}
+      \item $f(x+Τ)=f(x-Τ)=f(x)$
+    \end{itemize}
+    Ο πραγματικός αριθμός $Τ$ λέγεται \emph{περίοδος} της συνάρτησης $f$
+  \end{block}
 
- \begin{block}{Ορισμός (εξτρά)}<2->
-  Θεμελιώδης περίοδος είναι το μικρότερο θετικό $Τ$
- \end{block}
+  \begin{block}{Ορισμός (εξτρά)}<2->
+    Θεμελιώδης περίοδος είναι το μικρότερο θετικό $Τ$
+  \end{block}
 
 \end{frame}
 
 \begin{frame}{Δεν κρατιέστε!}
- Γνωστές περιοδικές συναρτήσεις
- \begin{itemize}
-  \item<1-> $ημx$ με περίοδο \onslide<2-> $Τ=2π$ \onslide<3-> ή $Τ=4π$
-  \item<4-> $συνx$ με περίοδο \onslide<5-> το ίδιο με πριν
-  \item<6-> $εφx$ με περίοδο \onslide<7-> $π$
- \end{itemize}
+  Γνωστές περιοδικές συναρτήσεις
+  \begin{itemize}
+    \item<1-> $ημx$ με περίοδο \onslide<2-> $Τ=2π$ \onslide<3-> ή $Τ=4π$
+    \item<4-> $συνx$ με περίοδο \onslide<5-> το ίδιο με πριν
+    \item<6-> $εφx$ με περίοδο \onslide<7-> $π$
+  \end{itemize}
 \end{frame}
 
 \begin{frame}{Γραφικές yeah!}
- \begin{itemize}
-  \item<1-> Ας δούμε την γραφική παράσταση της $ημx$ στο \href{https://www.geogebra.org/m/jvvwgvru}{Geogebra}
-  \item<2-> Για το $συνx$ σιγά μην ξανακάνουμε το ίδιο
-  \item<3-> Ας δούμε την γραφική παράσταση της $εφx$ στο \href{https://www.geogebra.org/m/qmk7cmh2}{Geogebra}
- \end{itemize}
+  \begin{itemize}
+    \item<1-> Ας δούμε την γραφική παράσταση της $ημx$ στο \href{https://www.geogebra.org/m/jvvwgvru}{Geogebra}
+    \item<2-> Για το $συνx$ σιγά μην ξανακάνουμε το ίδιο
+    \item<3-> Ας δούμε την γραφική παράσταση της $εφx$ στο \href{https://www.geogebra.org/m/qmk7cmh2}{Geogebra}
+  \end{itemize}
 \end{frame}
 
 \section{Ασκήσεις}
-\subsection{Άσκηση 1}
-\begin{frame}[label=Άσκηση1]{Εξάσκηση 1}
- Να δείξετε ότι η συνάρτηση $f(x)$ έχει περίοδο $Τ=π$
+\begin{askisi}
+  Να δείξετε ότι η συνάρτηση $f(x)$ έχει περίοδο $Τ=π$
+\end{askisi}
 
- % \hyperlink{Λύση1}{\beamerbutton{Λύση}}
-\end{frame}
+\begin{askisi}
+  Να εξετάσετε αν οι παρακάτω συναρτήσεις είναι άρτιες ή περιττές
+  \begin{enumerate}
+    \item<1-> $f(x)=xημ\frac{1}{x}-3συνx$
+    \item<2-> $f(x)=\frac{ημx}{x^2}$
+  \end{enumerate}
+\end{askisi}
 
-\subsection{Άσκηση 2}
-\begin{frame}[label=Άσκηση2]{Εξάσκηση 2}
- Να εξετάσετε αν οι παρακάτω συναρτήσεις είναι άρτιες ή περιττές
- \begin{enumerate}
-  \item<1-> $f(x)=xημ\frac{1}{x}-3συνx$
-  \item<2-> $f(x)=\frac{ημx}{x^2}$
- \end{enumerate}
+\begin{askisi}
+  Να συγκρίνετε τους αριθμούς
+  \begin{enumerate}
+    \item<1-> $ημ\frac{π}{5}$, $ημ\frac{π}{7}$
+    \item<2-> $συν\frac{π}{5}$, $συν\frac{π}{7}$
+    \item<3-> $εφ\frac{π}{5}$, $εφ\frac{π}{7}$
+    \item<4-> $σφ\frac{π}{5}$, $σφ\frac{π}{7}$
+  \end{enumerate}
+\end{askisi}
 
- %\hyperlink{Λύση2}{\beamerbutton{Λύση}}
-\end{frame}
+\begin{askisi}
+  \begin{enumerate}
+    \item<1-> Να δείξετε ότι αν, $0<x<\frac{π}{6}$, τότε $2ημx-1<0$
+    \item<2-> Να δείξετε ότι αν, $x\in(\frac{3π}{4},π)$, τότε $εφx+1>0$
+  \end{enumerate}
+\end{askisi}
 
-\subsection{Άσκηση 3}
-\begin{frame}[label=Άσκηση3]{Εξάσκηση 3}
- Να συγκρίνετε τους αριθμούς
- \begin{enumerate}
-  \item<1-> $ημ\frac{π}{5}$, $ημ\frac{π}{7}$
-  \item<2-> $συν\frac{π}{5}$, $συν\frac{π}{7}$
-  \item<3-> $εφ\frac{π}{5}$, $εφ\frac{π}{7}$
-  \item<4-> $σφ\frac{π}{5}$, $σφ\frac{π}{7}$
- \end{enumerate}
+\begin{askisi}
+  Σε ένα σύστημα αξόνων, να σχεδιάσετε τη γραφική παράσταση της συνάρτησης $f(x)=ημx$ και στη συνέχεια, τη γραφική παράσταση της συνάρτησης $g(x)=1+ημx$
+\end{askisi}
 
- %\hyperlink{Λύση3}{\beamerbutton{Λύση}}
-\end{frame}
+\begin{askisi}
+  Να κάνετε τη γραφική παράσταση της συνάρτησης $f(x)=|ημx|$ στο διάστημα $[0,2π]$
+\end{askisi}
 
-\subsection{Άσκηση 4}
-\begin{frame}[label=Άσκηση4]{Εξάσκηση 4}
- \begin{enumerate}
-  \item<1-> Να δείξετε ότι αν, $0<x<\frac{π}{6}$, τότε $2ημx-1<0$
-  \item<2-> Να δείξετε ότι αν, $x\in(\frac{3π}{4},π)$, τότε $εφx+1>0$
- \end{enumerate}
+\begin{askisi}
+  Στις παρακάτω συναρτήσεις:
+  \begin{itemize}
+    \item Να εξετάσετε αν είναι περιοδικές και να βρείτε την περίοδό τους
+    \item Να βρείτε τη μέγιστη και ελάχιστη τιμή τους
+          \begin{enumerate}
+            \item<1-> $f(x)=3ημ2x$
+            \item<2-> $f(x)=-2συν\frac{x}{3}$
+            \item<3-> $f(x)=εφ\frac{πx}{2}$
+          \end{enumerate}
+  \end{itemize}
+\end{askisi}
 
- %\hyperlink{Λύση4}{\beamerbutton{Λύση}}
-\end{frame}
+\begin{askisi}
+  Να παραστήσετε γραφικά τη συνάρτηση $f(x)=ημ\frac{x}{2}$
+\end{askisi}
 
-\subsection{Άσκηση 5}
-\begin{frame}[label=Άσκηση5]{Εξάσκηση 5}
- Σε ένα σύστημα αξόνων, να σχεδιάσετε τη γραφική παράσταση της συνάρτησης $f(x)=ημx$ και στη συνέχεια, τη γραφική παράσταση της συνάρτησης $g(x)=1+ημx$
+\begin{askisi}
+  Να παραστήσετε γραφικά τη συνάρτηση $f(x)=3συν2x$ σε διάστημα πλάτους μιας περιόδου
+\end{askisi}
 
- %\hyperlink{Λύση5}{\beamerbutton{Λύση}}
-\end{frame}
+\begin{askisi}
+  Να παραστήσετε γραφικά τη συνάρτηση $f(x)=ημ(π-x)+συν(\frac{π}{2}-x)$
+\end{askisi}
 
-\subsection{Άσκηση 6}
-\begin{frame}[label=Άσκηση6]{Εξάσκηση 6}
- Να κάνετε τη γραφική παράσταση της συνάρτησης $f(x)=|ημx|$ στο διάστημα $[0,2π]$
+\begin{askisi}
+  Να δείξετε ότι η συνάρτηση $f(x)=2ημx+συν\frac{x}{2}$ έχει περίοδο $T=4π$
+\end{askisi}
 
- %\hyperlink{Λύση6}{\beamerbutton{Λύση}}
-\end{frame}
+\begin{askisi}
+  Αν η συνάρτηση $f(x)=(2-α)ημβx$, $α>2$ και $β>0$ έχει περίοδο το $\frac{π}{2}$ και μέγιστη τιμή το $3$, να βρείτε τα $α$ και $β$
+\end{askisi}
 
-\subsection{Άσκηση 7}
-\begin{frame}[label=Άσκηση]{Εξάσκηση 7}
- Στις παρακάτω συναρτήσεις:
- \begin{itemize}
-  \item Να εξετάσετε αν είναι περιοδικές και να βρείτε την περίοδό τους
-  \item Να βρείτε τη μέγιστη και ελάχιστη τιμή τους
-        \begin{enumerate}
-         \item<1-> $f(x)=3ημ2x$
-         \item<2-> $f(x)=-2συν\frac{x}{3}$
-         \item<3-> $f(x)=εφ\frac{πx}{2}$
-        \end{enumerate}
- \end{itemize}
+\begin{askisi}
+  Έστω η συνάρτηση $f(x)=1-3ημ2x$
+  \begin{enumerate}
+    \item<1-> Ποιά είναι η περίοδός της
+    \item<2-> Ποιά είναι η μέγιστη και ποια η ελάχιστη τιμή της συνάρτησης αυτής
+    \item<3-> Να σχεδιάσετε τη γραφική παράσταση της $f$ σε διάστημα πλάτους μιας περιόδου
+  \end{enumerate}
+\end{askisi}
 
- %\hyperlink{Λύση}{\beamerbutton{Λύση}}
-\end{frame}
+\begin{askisi}
+  Η θερμοκρασία σε βαθμούς Κελσίου μιας ημέρας σε ένα χώρο περιγράφεται κατά προσέγγιση από τη συνάρτηση $Θ=10ημ\frac{πt}{12}$, όπου $t$ ο χρόνος σε ώρες.
+  \begin{enumerate}
+    \item<1-> Πόση είναι η μέγιστη μεταβολή της θερμοκρασίας κατά τη διάρκεια ενός 24ώρου?
+    \item<2-> Να κάνετε τη γραφική παράσταση της συνάρτησης για $0\le t \le 24$
+    \item<3-> Να βρείτε γραφικά ποιες χρονικές στιγμές η θερμοκρασία ήταν:
+          \begin{enumerate}
+            \item<3-> $0^{\circ}$C
+            \item<4-> κάτω από $0^{\circ}$C
+          \end{enumerate}
+  \end{enumerate}
+\end{askisi}
 
-\subsection{Άσκηση 8}
-\begin{frame}[label=Άσκηση8]{Εξάσκηση 8}
- Να παραστήσετε γραφικά τη συνάρτηση $f(x)=ημ\frac{x}{2}$
-
- %\hyperlink{Λύση8}{\beamerbutton{Λύση}}
-\end{frame}
-
-\subsection{Άσκηση 9}
-\begin{frame}[label=Άσκηση9]{Εξάσκηση 9}
- Να παραστήσετε γραφικά τη συνάρτηση $f(x)=3συν2x$ σε διάστημα πλάτους μιας περιόδου
-
- %\hyperlink{Λύση9}{\beamerbutton{Λύση}}
-\end{frame}
-
-\subsection{Άσκηση 10}
-\begin{frame}[label=Άσκηση10]{Εξάσκηση 10}
- Να παραστήσετε γραφικά τη συνάρτηση $f(x)=ημ(π-x)+συν(\frac{π}{2}-x)$
-
- %\hyperlink{Λύση10}{\beamerbutton{Λύση}}
-\end{frame}
-
-\subsection{Άσκηση 11}
-\begin{frame}[label=Άσκηση11]{Εξάσκηση 11}
- Να δείξετε ότι η συνάρτηση $f(x)=2ημx+συν\frac{x}{2}$ έχει περίοδο $T=4π$
-
- %\hyperlink{Λύση11}{\beamerbutton{Λύση}}
-\end{frame}
-
-\subsection{Άσκηση 12}
-\begin{frame}[label=Άσκηση12]{Εξάσκηση 12}
- Αν η συνάρτηση $f(x)=(2-α)ημβx$, $α>2$ και $β>0$ έχει περίοδο το $\frac{π}{2}$ και μέγιστη τιμή το $3$, να βρείτε τα $α$ και $β$
-
- %\hyperlink{Λύση12}{\beamerbutton{Λύση}}
-\end{frame}
-
-\subsection{Άσκηση 13}
-\begin{frame}[label=Άσκηση13]{Εξάσκηση 13}
- Έστω η συνάρτηση $f(x)=1-3ημ2x$
- \begin{enumerate}
-  \item<1-> Ποιά είναι η περίοδός της
-  \item<2-> Ποιά είναι η μέγιστη και ποια η ελάχιστη τιμή της συνάρτησης αυτής
-  \item<3-> Να σχεδιάσετε τη γραφική παράσταση της $f$ σε διάστημα πλάτους μιας περιόδου
- \end{enumerate}
-
- %\hyperlink{Λύση13}{\beamerbutton{Λύση}}
-\end{frame}
-
-\subsection{Άσκηση 14}
-\begin{frame}[label=Άσκηση14]{Εξάσκηση 14}
- Η θερμοκρασία σε βαθμούς Κελσίου μιας ημέρας σε ένα χώρο περιγράφεται κατά προσέγγιση από τη συνάρτηση $Θ=10ημ\frac{πt}{12}$, όπου $t$ ο χρόνος σε ώρες.
- \begin{enumerate}
-  \item<1-> Πόση είναι η μέγιστη μεταβολή της θερμοκρασίας κατά τη διάρκεια ενός 24ώρου?
-  \item<2-> Να κάνετε τη γραφική παράσταση της συνάρτησης για $0\le t \le 24$
-  \item<3-> Να βρείτε γραφικά ποιες χρονικές στιγμές η θερμοκρασία ήταν:
-   \begin{enumerate}
-    \item<3-> $0^{\circ}$C
-    \item<4-> κάτω από $0^{\circ}$C
-   \end{enumerate}
- \end{enumerate}
-
- %\hyperlink{Λύση14}{\beamerbutton{Λύση}}
-\end{frame}
-
-\subsection{Άσκηση 15}
-\begin{frame}[label=Άσκηση15]{Εξάσκηση 15}
+\begin{askisi}
   Δίνεται η συνάρτηση $f(x)=\frac{ημx}{x}$, $x\in\left[ \frac{π}{2},π \right) $
-\begin{enumerate}
-  \item<1-> Να μελετήσετε τη συνάρτηση $f$ ως προς τη μονοτονία
-  \item<2-> Αν $α$, $β\in\left[ \frac{π}{2},π \right) $ και $α<β$, να δείξετε ότι $\frac{α}{β}<\frac{ημα}{ημβ}$
-  \item<3-> Να βρείτε την τιμή $f(\frac{π}{2})$
-  \item<4-> Να δείξετε ότι $\frac{ημx}{x}<\frac{π}{2}$ για κάθε $x\in\left[ \frac{π}{2},π \right) $
-\end{enumerate}
-  %\hyperlink{Λύση15}{\beamerbutton{Λύση}}
-\end{frame}
+  \begin{enumerate}
+    \item<1-> Να μελετήσετε τη συνάρτηση $f$ ως προς τη μονοτονία
+    \item<2-> Αν $α$, $β\in\left[ \frac{π}{2},π \right) $ και $α<β$, να δείξετε ότι $\frac{α}{β}<\frac{ημα}{ημβ}$
+    \item<3-> Να βρείτε την τιμή $f(\frac{π}{2})$
+    \item<4-> Να δείξετε ότι $\frac{ημx}{x}<\frac{π}{2}$ για κάθε $x\in\left[ \frac{π}{2},π \right) $
+  \end{enumerate}
+\end{askisi}
 
 \section{}
 \begin{frame}
- Στο moodle θα βρείτε τις ασκήσεις που πρέπει να κάνετε, όπως και αυτή τη παρουσίαση
+  Στο moodle θα βρείτε τις ασκήσεις που πρέπει να κάνετε, όπως και αυτή τη παρουσίαση
 \end{frame}
 
 % \appendix
