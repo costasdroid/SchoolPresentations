@@ -34,6 +34,30 @@
 \setbeamercovered{highly dynamic}
 \setbeamertemplate{navigation symbols}{}
 
+\usetikzlibrary{mindmap,trees}\usetikzlibrary{shapes.geometric, arrows}
+
+  \tikzstyle{startstop} = [rectangle, rounded corners,
+  minimum width=3cm,
+  minimum height=1cm,
+  text centered,
+  draw=black,
+  fill=red!30]
+  \tikzstyle{decision} = [diamond,
+  minimum width=3cm,
+  minimum height=1cm,
+  text centered,
+  draw=black,
+  fill=green!30]
+  \tikzstyle{arrow} = [thick,->,>=stealth]
+  \tikzstyle{process} = [rectangle,
+  minimum width=3cm,
+  minimum height=1cm,
+  text centered,
+  text width=3cm,
+  draw=black,
+  fill=orange!30]
+\usepackage{tkz-tab}
+
 \newcounter{askisi} % enviroment for exercises
 \newenvironment{askisi}
 {
