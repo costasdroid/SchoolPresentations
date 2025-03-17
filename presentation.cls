@@ -1,7 +1,7 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{presentation}[2024/01/01 Παρουσίαση στο σχολείο]
+\ProvidesClass{presentation}
 
-\LoadClass[greek]{beamer}
+\LoadClass{beamer}
 
 \usepackage{amsmath,amsthm} % needed for mathematics
 \usepackage{fontspec}
@@ -15,9 +15,12 @@
 \usepackage{xgreek}
 
 \usepackage{pgfpages}
+
 \usepackage{tikz} % package for shapes and more
 %\setbeameroption{show notes on second screen}
 %\setbeameroption{show only notes}
+
+\usepackage{ifthen} % package for if then else macros
 
 \setsansfont{Calibri} % it is said that Calibri is the proper font for reading difficulties
 
@@ -57,6 +60,14 @@
   draw=black,
   fill=orange!30]
 \usepackage{tkz-tab}
+
+\newcommand{\exercises}{
+  \begin{frame}[noframenumbering,c]
+    \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+      \usebeamerfont{title}Ασκήσεις
+    \end{beamercolorbox}
+  \end{frame}
+}
 
 \newcounter{askisi} % enviroment for exercises
 \newenvironment{askisi}
