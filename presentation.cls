@@ -1,7 +1,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{presentation}
 
-\LoadClass{beamer}
+\LoadClass[greek]{beamer}
 
 \usepackage{amsmath,amsthm} % needed for mathematics
 \usepackage{fontspec}
