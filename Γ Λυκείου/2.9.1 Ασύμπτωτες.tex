@@ -1,194 +1,184 @@
-\documentclass{presentation}
+\documentclass{../presentation}
 
 \title{Συναρτήσεις}
 \subtitle{Ασύμπτωτες}
 \author[Λόλας]{Κωνσταντίνος Λόλας}
 \institute[$10^ο$ ΓΕΛ]{$10^ο$ ΓΕΛ Θεσσαλονίκης}
-\date{}
+\date{\today}
 
 \begin{document}
 
 \begin{frame}
-    \titlepage
+  \titlepage
 \end{frame}
 
 \section{Θεωρία}
 \begin{frame}{Ναι αλλά "καταλήγουμε" κάπου?}
-    Σχεδόν τελειώσαμε την σχεδίαση. Έμεινε να δούμε, αν πλησιάζουμε σε ευθείες και πότε!
+  Σχεδόν τελειώσαμε την σχεδίαση. Έμεινε να δούμε, αν πλησιάζουμε σε ευθείες και πότε!
 \end{frame}
 
 \begin{frame}{Ζωγραφική 1 από 3}
-    Φτιάξτε συνάρτηση που να τείνει να γίνει η ευθεία $x=1$
+  Φτιάξτε συνάρτηση που να τείνει να γίνει η ευθεία $x=1$
 
-    \onslide<2-> Τι παρατηρείτε για την συνάρτηση όσο $x\to 1$?
+  \onslide<2-> Τι παρατηρείτε για την συνάρτηση όσο $x\to 1$?
 \end{frame}
 
 \begin{frame}{Κατακόρυφη ασύμπτωτη}
-    \begin{block}{Ορισμός}
-        Η $x=x_0$ είναι \emph{κατακόρυφη ασύμπτωτη} της $C_f$ αν ένα τουλάχιστον από τα όρια $\lim\limits_{x \to x_0^+}{ f(x) }$ ή $\lim\limits_{x \to x_0^-}{ f(x) }$ είναι $+\infty$ ή $-\infty$.
-    \end{block}
+  \begin{block}{Ορισμός}
+    Η $x=x_0$ είναι \emph{κατακόρυφη ασύμπτωτη} της $C_f$ αν ένα τουλάχιστον από τα όρια $\lim\limits_{x \to x_0^+}{ f(x) }$ ή $\lim\limits_{x \to x_0^-}{ f(x) }$ είναι $+\infty$ ή $-\infty$.
+  \end{block}
 \end{frame}
 
 \begin{frame}{Ζωγραφική 2 από 3}
-    Φτιάξτε συνάρτηση που \emph{δεξιά} να τείνει να γίνει η ευθεία $y=1$
+  Φτιάξτε συνάρτηση που \emph{δεξιά} να τείνει να γίνει η ευθεία $y=1$
 
-    \onslide<2-> Τι παρατηρείτε για την συνάρτηση όσο $x\to +\infty$?
+  \onslide<2-> Τι παρατηρείτε για την συνάρτηση όσο $x\to +\infty$?
 \end{frame}
 
 \begin{frame}{Οριζόντια ασύμπτωτη}
-    \begin{block}{Ορισμός}
-        Η $y=a$ είναι \emph{οριζόντια ασύμπτωτη} της $C_f$ στο $+\infty$ αν $\lim\limits_{x \to +\infty}{ f(x) }=a$
-    \end{block}
-    και αντίστοιχα
-    \begin{block}{Ορισμός}
-        Η $y=a$ είναι \emph{οριζόντια ασύμπτωτη} της $C_f$ στο $-\infty$ αν $\lim\limits_{x \to -\infty}{ f(x) }=a$
-    \end{block}
+  \begin{block}{Ορισμός}
+    Η $y=a$ είναι \emph{οριζόντια ασύμπτωτη} της $C_f$ στο $+\infty$ αν $\lim\limits_{x \to +\infty}{ f(x) }=a$
+  \end{block}
+  και αντίστοιχα
+  \begin{block}{Ορισμός}
+    Η $y=a$ είναι \emph{οριζόντια ασύμπτωτη} της $C_f$ στο $-\infty$ αν $\lim\limits_{x \to -\infty}{ f(x) }=a$
+  \end{block}
 \end{frame}
 
 \begin{frame}{Ζωγραφική 3 από 3}
-    Φτιάξτε συνάρτηση που \emph{δεξιά} να τείνει να γίνει η ευθεία $y=2x+1$
+  Φτιάξτε συνάρτηση που \emph{δεξιά} να τείνει να γίνει η ευθεία $y=2x+1$
 
-    \onslide<2-> Προσπαθήστε να ορίσετε συνθήκη για να είναι μία ευθεία ασύμπτωτη της $f(x)$
+  \onslide<2-> Προσπαθήστε να ορίσετε συνθήκη για να είναι μία ευθεία ασύμπτωτη της $f(x)$
 \end{frame}
 
 \begin{frame}{Πλάγια ασύμπτωτη}
-    \begin{block}{Ορισμός}
-        Η $y=ax+b$ είναι \emph{ασύμπτωτη} της $C_f$ στο $+\infty$ αν $$\lim\limits_{x \to +\infty}{ [f(x)-(ax+b)] }=0$$
-    \end{block}
-    και αντίστοιχα
-    \begin{block}{Ορισμός}
-        Η $y=ax+b$ είναι \emph{ασύμπτωτη} της $C_f$ στο $-\infty$ αν $$\lim\limits_{x \to -\infty}{ [f(x)-(ax+b)] }=0$$
-    \end{block}
+  \begin{block}{Ορισμός}
+    Η $y=ax+b$ είναι \emph{ασύμπτωτη} της $C_f$ στο $+\infty$ αν $$\lim\limits_{x \to +\infty}{ [f(x)-(ax+b)] }=0$$
+  \end{block}
+  και αντίστοιχα
+  \begin{block}{Ορισμός}
+    Η $y=ax+b$ είναι \emph{ασύμπτωτη} της $C_f$ στο $-\infty$ αν $$\lim\limits_{x \to -\infty}{ [f(x)-(ax+b)] }=0$$
+  \end{block}
 \end{frame}
 
 \begin{frame}{Μην μπερδευτούμε μόνο}
-    \begin{itemize}
-        \item<1-> η ασύμπτωτη με $a=0$ ονομάζεται οριζόντια
-        \item<2-> η ασύμπτωτη με $a\ne 0$ ονομάζεται πλάγια
-        \item<3-> η ασύμπτωτη που δεν ορίζεται το $a$ ονομάζεται κατακόρυφη
-    \end{itemize}
+  \begin{itemize}
+    \item<1-> η ασύμπτωτη με $a=0$ ονομάζεται οριζόντια
+    \item<2-> η ασύμπτωτη με $a\ne 0$ ονομάζεται πλάγια
+    \item<3-> η ασύμπτωτη που δεν ορίζεται το $a$ ονομάζεται κατακόρυφη
+  \end{itemize}
 \end{frame}
 
 \begin{frame}{Και λίγοι υπολογισμοί}
-    Ξέροντας ότι
-    $$\lim\limits_{x \to +\infty}{ [f(x)-(ax+b)] }=0$$
-    να βρείτε τα $a$ και $b$.
-    \begin{block}{Πλάγια ασύμπτωτη}<2->
-        Η ευθεία $y=ax+b$ λέγεται πλάγια ασύμπτωτη της $C_f$ στο $+\infty$ αν και μόνο αν
-        $$\lim\limits_{x \to +\infty}{ \dfrac{f(x)}{x} }=a\in\mathbb{R}$$
-        και
-        $$\lim\limits_{x \to +\infty}{ (f(x)-ax) }=b\in\mathbb{R}$$
-    \end{block}
+  Ξέροντας ότι
+  $$\lim\limits_{x \to +\infty}{ [f(x)-(ax+b)] }=0$$
+  να βρείτε τα $a$ και $b$.
+  \begin{block}{Πλάγια ασύμπτωτη}<2->
+    Η ευθεία $y=ax+b$ λέγεται πλάγια ασύμπτωτη της $C_f$ στο $+\infty$ αν και μόνο αν
+    $$\lim\limits_{x \to +\infty}{ \dfrac{f(x)}{x} }=a\in\mathbb{R}$$
+    και
+    $$\lim\limits_{x \to +\infty}{ (f(x)-ax) }=b\in\mathbb{R}$$
+  \end{block}
 \end{frame}
 
 \begin{frame}{Παρατηρήσεις}
 
-    Για το βιβλίο σχόλια, για εμάς ασκήσεις
+  Για το βιβλίο σχόλια, για εμάς ασκήσεις
 
-    \begin{itemize}
-        \item<1-> Ποιό είναι τα μοναδικά πολυώνυμα που έχουν ασύμπτωτες και ποιές?
-        \item<2-> Τι πρέπει να ισχύει για τις ρητές συναρτήσεις ώστε να έχουν πλάγιες ασύμπτωτες?
-        \item<3-> Ποιές συναρτήσεις έχουν κατακόρυφες ασύμπτωτες?
-        \item<4-> Πού ψάχνουμε κατακόρυφες ασύμπτωτες?
-    \end{itemize}
+  \begin{itemize}
+    \item<1-> Ποιό είναι τα μοναδικά πολυώνυμα που έχουν ασύμπτωτες και ποιές?
+    \item<2-> Τι πρέπει να ισχύει για τις ρητές συναρτήσεις ώστε να έχουν πλάγιες ασύμπτωτες?
+    \item<3-> Ποιές συναρτήσεις έχουν κατακόρυφες ασύμπτωτες?
+    \item<4-> Πού ψάχνουμε κατακόρυφες ασύμπτωτες?
+  \end{itemize}
 
 \end{frame}
 
+\moodle
 
 \section{Ασκήσεις}
 
-\begin{frame}[noframenumbering]
-    \vfill
-    \centering
-    \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
-        \usebeamerfont{title}Ασκήσεις
-    \end{beamercolorbox}
-    \vfill
-\end{frame}
+\exerices
 
 \begin{askisi}
-    Να βρείτε τις κατακόρυφες ασύμπτωτες των γραφικών παραστάσεων των παρακάτω συναρτήσεων
-    \begin{enumerate}
-        \item<1-> $f(x)=\dfrac{\ln x}{x}$
-        \item<2-> $f(x)=\dfrac{x}{x-2}$
-        \item<3-> $f(x)=εφ x$
-    \end{enumerate}
+  Να βρείτε τις κατακόρυφες ασύμπτωτες των γραφικών παραστάσεων των παρακάτω συναρτήσεων
+  \begin{enumerate}
+    \item<1-> $f(x)=\dfrac{\ln x}{x}$
+    \item<2-> $f(x)=\dfrac{x}{x-2}$
+    \item<3-> $f(x)=εφ x$
+  \end{enumerate}
 
-    % \hyperlink{Λύση1}{\beamerbutton{Λύση}}
+  % \hyperlink{Λύση1}{\beamerbutton{Λύση}}
 \end{askisi}
 
 \begin{askisi}
-    Να βρείτε τις οριζόντιες και τις κατακόρυφες ασύμπτωτες των γραφικών παραστάσεων των συναρτήσεων:
-    \begin{enumerate}
-        \item<1-> $f(x)=\dfrac{x}{x^2+1}$
-        \item<2-> $f(x)=\dfrac{e^x}{1+e^x}$
-        \item<3-> $f(x)=\dfrac{ημx}{x}$
-        \item<4-> $f(x)=e^{\frac{1}{x}}$
-    \end{enumerate}
+  Να βρείτε τις οριζόντιες και τις κατακόρυφες ασύμπτωτες των γραφικών παραστάσεων των συναρτήσεων:
+  \begin{enumerate}
+    \item<1-> $f(x)=\dfrac{x}{x^2+1}$
+    \item<2-> $f(x)=\dfrac{e^x}{1+e^x}$
+    \item<3-> $f(x)=\dfrac{ημx}{x}$
+    \item<4-> $f(x)=e^{\frac{1}{x}}$
+  \end{enumerate}
 
-    % \hyperlink{Λύση2}{\beamerbutton{Λύση}}
+  % \hyperlink{Λύση2}{\beamerbutton{Λύση}}
 \end{askisi}
 
 \begin{askisi}
-    Δίνεται η συνάρτηση $f(x)=\sqrt{x^2+1}$
-    \begin{enumerate}
-        \item<1-> Να βρείτε στο $+\infty$ και στο $-\infty$ τις ασύμπτωτες $ε_1$ και $ε_2$ αντίστοιχα της $C_f$
-        \item<2-> Να δείξετε ότι η $C_f$ βρίσκεται πάνω από την $ε_1$ κοντά στο $+\infty$ και πάνω από την $ε_2$ κοντά στο $-\infty$
-    \end{enumerate}
+  Δίνεται η συνάρτηση $f(x)=\sqrt{x^2+1}$
+  \begin{enumerate}
+    \item<1-> Να βρείτε στο $+\infty$ και στο $-\infty$ τις ασύμπτωτες $ε_1$ και $ε_2$ αντίστοιχα της $C_f$
+    \item<2-> Να δείξετε ότι η $C_f$ βρίσκεται πάνω από την $ε_1$ κοντά στο $+\infty$ και πάνω από την $ε_2$ κοντά στο $-\infty$
+  \end{enumerate}
 
-    % \hyperlink{Λύση3}{\beamerbutton{Λύση}}
+  % \hyperlink{Λύση3}{\beamerbutton{Λύση}}
 \end{askisi}
 
 \begin{askisi}
-    Έστω $f$, $g:\mathbb{R}\to\mathbb{R}$ δύο συναρτήσεις για τις οποίες ισχύει:
-    $$g(x)=f(x)-2x+\dfrac{x}{x^2+1} \text{, } x\in\mathbb{R}$$
-    και η ευθεία $y=3x-2$ η οποία είναι ασύμπτωτη της $C_f$ στο $+\infty$
-    \begin{enumerate}
-        \item<1-> Να βρείτε την ασύμπτωτη της $C_g$ στο $+\infty$
-        \item<2-> Να βρείτε τις τιμές του $λ$, για τις οποίες ισχύει:
-            $$\lim\limits_{x \to +\infty}{ \dfrac{xf(x)-3x^2+λx-1}{λf(x)-4x+5} }=1$$
-    \end{enumerate}
+  Έστω $f$, $g:\mathbb{R}\to\mathbb{R}$ δύο συναρτήσεις για τις οποίες ισχύει:
+  $$g(x)=f(x)-2x+\dfrac{x}{x^2+1} \text{, } x\in\mathbb{R}$$
+  και η ευθεία $y=3x-2$ η οποία είναι ασύμπτωτη της $C_f$ στο $+\infty$
+  \begin{enumerate}
+    \item<1-> Να βρείτε την ασύμπτωτη της $C_g$ στο $+\infty$
+    \item<2-> Να βρείτε τις τιμές του $λ$, για τις οποίες ισχύει:
+          $$\lim\limits_{x \to +\infty}{ \dfrac{xf(x)-3x^2+λx-1}{λf(x)-4x+5} }=1$$
+  \end{enumerate}
 
-    % \hyperlink{Λύση4}{\beamerbutton{Λύση}}
+  % \hyperlink{Λύση4}{\beamerbutton{Λύση}}
 \end{askisi}
 
 \begin{askisi}
-    Να δείξετε ότι η ευθεία $y=x$ είναι πλάγια ασύμπτωτη της γραφικής παράστασης της συνάρτησης $f(x)=\dfrac{x^2-x+1}{x-1}$ στο $+\infty$
+  Να δείξετε ότι η ευθεία $y=x$ είναι πλάγια ασύμπτωτη της γραφικής παράστασης της συνάρτησης $f(x)=\dfrac{x^2-x+1}{x-1}$ στο $+\infty$
 
-    % \hyperlink{Λύση5}{\beamerbutton{Λύση}}
+  % \hyperlink{Λύση5}{\beamerbutton{Λύση}}
 \end{askisi}
 
 \begin{askisi}
-    Να βρείτε τις πλάγιες ή οριζόντιες ασύμπτωτες στο $+\infty$ των γραφικών παραστάσεων των παρακάτω συναρτήσεων
-    \begin{enumerate}
-        \item<1-> $f(x)=x-1+\dfrac{1}{x}$
-        \item<2-> $f(x)=2+\dfrac{1}{x+1}$
-    \end{enumerate}
+  Να βρείτε τις πλάγιες ή οριζόντιες ασύμπτωτες στο $+\infty$ των γραφικών παραστάσεων των παρακάτω συναρτήσεων
+  \begin{enumerate}
+    \item<1-> $f(x)=x-1+\dfrac{1}{x}$
+    \item<2-> $f(x)=2+\dfrac{1}{x+1}$
+  \end{enumerate}
 
-    % \hyperlink{Λύση6}{\beamerbutton{Λύση}}
+  % \hyperlink{Λύση6}{\beamerbutton{Λύση}}
 \end{askisi}
 
 \begin{askisi}
-    Έστω η συνάρτηση $f(x)=\dfrac{x^2+x+2a}{x-a^2}$. Να βρείτε τις τιμές του $α\in\mathbb{R}$, για τις οποίες η ευθεία $ε:x=1$ είναι ασύμπτωτη της $C_f$
+  Έστω η συνάρτηση $f(x)=\dfrac{x^2+x+2a}{x-a^2}$. Να βρείτε τις τιμές του $α\in\mathbb{R}$, για τις οποίες η ευθεία $ε:x=1$ είναι ασύμπτωτη της $C_f$
 
-    %\hyperlink{Λύση7}{\beamerbutton{Λύση}}
+  %\hyperlink{Λύση7}{\beamerbutton{Λύση}}
 \end{askisi}
 
 \begin{askisi}
-    Δίνεται η συνάρτηση $f(x)=\dfrac{a^2x^n+5x+1}{x^2+1}$. Να βρείτε τις τιμές των $a\in\mathbb{R}^*$ και $n\in\mathbb{N}-{0,1}$ για τις οποίες η ευθεία $ε:y=1$ είναι οριζόντια ασύμπτωτη της $C_f$ στο $+\infty$
+  Δίνεται η συνάρτηση $f(x)=\dfrac{a^2x^n+5x+1}{x^2+1}$. Να βρείτε τις τιμές των $a\in\mathbb{R}^*$ και $n\in\mathbb{N}-{0,1}$ για τις οποίες η ευθεία $ε:y=1$ είναι οριζόντια ασύμπτωτη της $C_f$ στο $+\infty$
 
-    %\hyperlink{Λύση8}{\beamerbutton{Λύση}}
+  %\hyperlink{Λύση8}{\beamerbutton{Λύση}}
 \end{askisi}
 
 \begin{askisi}
-    Να βρείτε τις τιμές των $α$ και $β\in\mathbb{R}$, ώστε
-    $$\lim\limits_{x \to +\infty}{ \left(   \dfrac{αx^2+βx+3}{x-1}-x \right)}=2$$
+  Να βρείτε τις τιμές των $α$ και $β\in\mathbb{R}$, ώστε
+  $$\lim\limits_{x \to +\infty}{ \left(   \dfrac{αx^2+βx+3}{x-1}-x \right)}=2$$
 
-    %\hyperlink{Λύση9}{\beamerbutton{Λύση}}
+  %\hyperlink{Λύση9}{\beamerbutton{Λύση}}
 \end{askisi}
-
-\begin{frame}
-    Στο moodle θα βρείτε τις ασκήσεις που πρέπει να κάνετε, όπως και αυτή τη παρουσίαση
-\end{frame}
 
 \end{document}

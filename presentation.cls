@@ -69,12 +69,19 @@
   \end{frame}
 }
 
+\newcommand{\moodle}{
+  \begin{frame}[noframenumbering,c]
+    Στο moodle θα βρείτε τις ασκήσεις που πρέπει να κάνετε, όπως και αυτή τη παρουσίαση
+  \end{frame}
+}
+
 \newcounter{askisi} % enviroment for exercises
 \newenvironment{askisi}
 {
     \refstepcounter{askisi}\par
     \subsection{Άσκηση \theaskisi}
-    \begin{frame}[label=Άσκηση\theaskisi,t]{Εξάσκηση \theaskisi}
+    \begin{frame}[label=Άσκηση\theaskisi,t]
+      \textbf{\theaskisi.} 
         }{
     \end{frame}
 }
