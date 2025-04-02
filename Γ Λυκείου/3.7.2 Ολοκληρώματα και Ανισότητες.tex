@@ -1,0 +1,177 @@
+\documentclass{../presentation}
+
+\title{Συναρτήσεις}
+\subtitle{Ολοκληρώματα και Ανισότητες}
+\author[Λόλας]{Κωνσταντίνος Λόλας}
+\institute[$10^ο$ ΓΕΛ]{$10^ο$ ΓΕΛ Θεσσαλονίκης}
+\date{}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\section{Θεωρία}
+
+\begin{frame}[noframenumbering]
+  Στο moodle θα βρείτε τις ασκήσεις που πρέπει να κάνετε, όπως και αυτή τη παρουσίαση
+\end{frame}
+
+\section{Ασκήσεις}
+
+\exercises
+
+\begin{askisi}
+  Δίνεται η συνάρτηση $f(x)=\sqrt{1+e^x}$. Να δείξετε ότι:
+  \begin{enumerate}[<+->]
+    \item Η συνάρτηση $f$ είναι γνησίως αύξουσα
+    \item $\sqrt{2}<f(x)<\sqrt{1+e}$, για κάθε $x\in [0,1]$
+    \item $\sqrt{2}<\int_{0}^{1} f(x)\, dx<\sqrt{1+e}$
+  \end{enumerate}
+\end{askisi}
+
+\begin{askisi}
+  Δίνεται η συνάρτηση $f(x)=\dfrac{e^x}{x}$, $x>0$
+  \begin{enumerate}[<+->]
+    \item Να μελετήσετε την $f$ ως προς τα ακρότατα
+    \item Να δείξετε ότι $\int_{\frac{1}{2}}^{2}f(x)\, dx>\dfrac{3e}{2}$
+  \end{enumerate}
+\end{askisi}
+
+\begin{askisi}
+  Δίνεται η συνάρτηση $f(x)=\ln (e^x+1)$
+  \begin{enumerate}[<+->]
+    \item Να δείξετε ότι η $f$ είναι κυρτή
+    \item Να βρείτε την εφαπτόμενη της $C_f$ στο $x_0=0$
+    \item Να δείξετε ότι:
+          \begin{enumerate}[<+->]
+            \item $\int_{0}^{1}f(x)\, dx>\dfrac{1}{4}+\ln 2$
+            \item $\int_{1}^{2}xf(x)\, dx>\dfrac{7+9\ln 2}{6}$
+          \end{enumerate}
+  \end{enumerate}
+\end{askisi}
+
+\begin{askisi}
+  Δίνεται η συνάρτηση $f(x)=\sqrt{x^2+2x+2}$. Να δείξετε ότι:
+  \begin{enumerate}[<+->]
+    \item Η ευθεία $y=x+1$ είναι ασύμπτωτη της $C_f$ για $x\to +\infty$ και είναι κάτω από την $C_f$ στο $[0,+\infty)$
+    \item $\int_{0}^{1}f(x)\, dx>\dfrac{3}{2}$
+  \end{enumerate}
+\end{askisi}
+
+\begin{askisi}
+  Δίνεται η συνάρτηση $f(x)=\ln (1+x^2)$. Να δείξετε ότι:
+  \begin{enumerate}[<+->]
+    \item $f(x)\le x^2$, για κάθε $x\in \mathbb{R}$
+    \item $\int_{0}^{1}f(x)\, dx<\dfrac{1}{3}$
+  \end{enumerate}
+\end{askisi}
+
+\begin{askisi}
+  Έστω $f:\mathbb{R}\to \mathbb{R}$ μια συνάρτηση η οποία είναι συνεχής και γνησίως αύξουσα. Να δείξετε ότι:
+  \begin{enumerate}[<+->]
+    \item $0<\int_{0}^{\frac{\pi}{2}}συνx\cdot f(ημx)\, dx<1$, όταν $f(0)=0$ και $f(1)=1$
+    \item $\int_{0}^{1}f(e^x)\, dx<2$, όταν $f(e)=2$
+    \item Αν $f(1)=2$, τότε
+          \begin{enumerate}[<+->]
+            \item $\int_{1}^{2}\dfrac{f(x)}{x}\, dx>2\ln 2$
+            \item $\int_{1}^{2}f^2(x)\, dx>4$
+          \end{enumerate}
+  \end{enumerate}
+\end{askisi}
+
+\begin{askisi}
+  Δίνεται η συνάρτηση $f(x)=2e^x-x^2-x-1$.
+  \begin{enumerate}[<+->]
+    \item Να μελετήσετε την $f$ ως προς την κυρτότητα και τα σημεία καμπής
+    \item Να δείξετε ότι $f(x)\ge x+1$, για κάθε $x\ge 0$
+    \item Να δείξετε ότι:
+          \begin{enumerate}[<+->]
+            \item $\int_{1}^{e}\frac{f(x)}{x}\, dx>e$
+            \item $\int_{1}^{2}xf(x)\, dx>\dfrac{23}{6}$
+            \item $\int_{0}^{1}xf(e^x)\, dx>\dfrac{3}{2}$
+          \end{enumerate}
+  \end{enumerate}
+\end{askisi}
+
+\begin{askisi}
+  Έστω $f:[1,e]\to \mathbb{R}$ μια συνάρτηση η οποία είναι συνεχής και ισχύουν:
+  $$f(x)\ge \frac{1}{x}+1 \text{, για κάθε } x\in [1,e] \text{ και } \int_{1}^{e}f(x)\, dx=e$$
+  Να βρείτε τη συνάρτηση $f$.
+\end{askisi}
+
+\begin{askisi}
+  Να αποδείξετε ότι $$\frac{4}{3}<\int_{0}^{1}e^{x^2}\, dx<e$$
+\end{askisi}
+
+\begin{askisi}
+  Έστω $f:[0,2]\to \mathbb{R}$ μια συνάρτηση η οποία είναι συνεχής με ελάχιστη τιμή $1$ και μέγιστη τιμή $3$. Να δείξετε ότι:
+  $$\frac{4}{3}<\int_{0}^{2}f(x)\, dx\cdot \int_{0}^{2}\frac{1}{f(x)}\, dx<12$$
+\end{askisi}
+
+\begin{askisi}
+  Έστω $f:\mathbb{R}\to \mathbb{R}$ μια συνάρτηση η οποία είναι θετική και συνεχής. Να δείξετε ότι
+  $$\int_{2}^{4}f(\frac{x}{2})\, dx > \int_{1}^{2}xf(x)\, dx$$
+\end{askisi}
+
+\begin{askisi}
+  Έστω $f:\mathbb{R}\to \mathbb{R}$ μια συνάρτηση η οποία είναι συνεχής. Αν $\int_{0}^{1}f^2(x)\, dx=1$ να δείξετε ότι $$2+3\int_{0}^{1}f(x)\, dx \ge 0$$
+\end{askisi}
+
+\begin{askisi}
+  Έστω $f:[0, +\infty)\to \mathbb{R}$ μια συνάρτηση η οποία είναι συνεχής και κυρτή. Να δείξετε ότι:
+  \begin{enumerate}[<+->]
+    \item $f(2x)-f(x)\ge xf'(x)$, για κάθε $x\ge 0$
+    \item $\int_{0}^{1}f(2x)\, dx=\dfrac{1}{2}\int_{0}^{2}f(x)\, dx$
+    \item $\int_{0}^{2}f(x)\, dx\ge 2f(1)$.
+  \end{enumerate}
+\end{askisi}
+
+\begin{askisi}
+  Δίνεται η συνάρτηση $f(x)=\begin{cases}
+      \dfrac{\ln x}{x-1}, & 0<x\ne 1 \\
+      1,                  & x=1
+    \end{cases}$.
+  \begin{enumerate}[<+->]
+    \item Να δείξετε ότι η $f$ είναι συνεχής.
+    \item Έστω $α$ ένας σταθερός αριθμός με $α\in (0,1)$. Να δείξετε ότι:
+          $$\int_{1}^{α}f(x)\, dx<\frac{1}{α^2} \int_{α}^{α^2}xf(x)\, dx$$
+  \end{enumerate}
+\end{askisi}
+
+\begin{askisi}
+  Έστω $f:[1,+\infty)\to \mathbb{R}$ μια συνεχής συνάρτηση με $f(1)=0$ και $xf'(x)>1$, για κάθε $x>1$.
+  \begin{enumerate}[<+->]
+    \item Να δείξετε ότι $f(x)\ge \ln x$, για κάθε $x\ge 1$
+    \item Να δείξετε ότι η εξίωση $(x-1)\int_{1}^{e}\dfrac{f(x)}{e-1}\, dx=1$ έχει μία τουλάχιστη λύση στο $(1,e)$
+  \end{enumerate}
+\end{askisi}
+
+\begin{askisi}
+  Έστω $f:\mathbb{R}\to \mathbb{R}$ μια συνάρτηση με $f(0)=0$, η οποία είναι παραγωγίσιμη και ισχύει $f'(x)>2 \left( xf(x)+e^{x^2} \right)$, για κάθε $x\in \mathbb{R}$. Να δείξετε ότι:
+  \begin{enumerate}[<+->]
+    \item $f(x)\ge 2xe^{x^2}$, για κάθε $x\in [0,1]$
+    \item $\int_{0}^{1}f(x)\, dx>e-1$
+    \item Η εξίσωση $x\int_{0}^{x}f(x)\, dx=e-x$ έχει ακριβώς μία ρίζα στο $(0,1)$
+  \end{enumerate}
+\end{askisi}
+
+\begin{askisi}
+  Έστω $f:\mathbb{R}\to \mathbb{R}$ μια συνάρτηση με $f(0)=0$, η οποία είναι κυρτή με $f'(1)=3$. Να δείξετε ότι:
+  \begin{enumerate}[<+->]
+    \item $f(x)\le 3x$, για κάθε $x\in [0,1]$
+    \item Υπάρχει μοναδικό $α\in (0,1)$ τέτοιο ώστε $α\int_{0}^{1}f(x^2)\, dx=2α-1$
+  \end{enumerate}
+\end{askisi}
+
+\begin{askisi}
+  Δίνεται η συνάρτηση $f(x)=\ln (1+e^x)$. Να δείξετε ότι:
+  \begin{enumerate}[<+->]
+    \item Η συνάρτηση $f$ είναι γνησίως αύξουσα και κυρτή
+    \item $\dfrac{1}{4}+\ln 2<\int_{0}^{1}f(x)\, dx<\ln (1+e)$
+    \item Υπάρχει μοναδικό $θ\in (0,1)$ τέτοιο ώστε $4\int_{0}^{θ}f(x)\, dx=4f(θ)-θ+1$
+  \end{enumerate}
+\end{askisi}
+
+\end{document}
