@@ -1,0 +1,582 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html data-uw-w-loader=""><script type="text/javascript" async="" defer="defer" src="B1.3_%20%CE%9C%CE%9F%CE%9D%CE%9F%CE%A4%CE%9F%CE%9D%CE%95%CE%A3%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%95%CE%99%CE%A3%20-%20%CE%91%CE%9D%CE%A4%CE%99%CE%A3%CE%A4%CE%A1%CE%9F%CE%A6%CE%97%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%97_files/matomo.js"></script><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="description" content="B1.3: ΜΟΝΟΤΟΝΕΣ ΣΥΝΑΡΤΗΣΕΙΣ - ΑΝΤΙΣΤΡΟΦΗ ΣΥΝΑΡΤΗΣΗ">
+<meta name="keywords" content="ΜΟΝΟΤΟΝΕΣ, ΣΥΝΑΡΤΗΣΕΙΣ, ΑΝΤΙΣΤΡΟΦΗ, ΣΥΝΑΡΤΗΣΗ">
+<meta http-equiv="content-language" content="el">
+<title>B1.3: ΜΟΝΟΤΟΝΕΣ ΣΥΝΑΡΤΗΣΕΙΣ - ΑΝΤΙΣΤΡΟΦΗ ΣΥΝΑΡΤΗΣΗ</title>
+<link href="B1.3_%20%CE%9C%CE%9F%CE%9D%CE%9F%CE%A4%CE%9F%CE%9D%CE%95%CE%A3%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%95%CE%99%CE%A3%20-%20%CE%91%CE%9D%CE%A4%CE%99%CE%A3%CE%A4%CE%A1%CE%9F%CE%A6%CE%97%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%97_files/style.css" rel="stylesheet" type="text/css">
+<link rel="icon" type="image/ico" href="https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika-G-Lykeiou-ThSp_html-apli/ebooks_player_files/favicon.ico">
+<link href="B1.3_%20%CE%9C%CE%9F%CE%9D%CE%9F%CE%A4%CE%9F%CE%9D%CE%95%CE%A3%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%95%CE%99%CE%A3%20-%20%CE%91%CE%9D%CE%A4%CE%99%CE%A3%CE%A4%CE%A1%CE%9F%CE%A6%CE%97%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%97_files/ebook_fullscreen.css" rel="stylesheet" type="text/css">
+<script src="B1.3_%20%CE%9C%CE%9F%CE%9D%CE%9F%CE%A4%CE%9F%CE%9D%CE%95%CE%A3%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%95%CE%99%CE%A3%20-%20%CE%91%CE%9D%CE%A4%CE%99%CE%A3%CE%A4%CE%A1%CE%9F%CE%A6%CE%97%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%97_files/jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="B1.3_%20%CE%9C%CE%9F%CE%9D%CE%9F%CE%A4%CE%9F%CE%9D%CE%95%CE%A3%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%95%CE%99%CE%A3%20-%20%CE%91%CE%9D%CE%A4%CE%99%CE%A3%CE%A4%CE%A1%CE%9F%CE%A6%CE%97%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%97_files/menu.js" type="text/javascript"></script>
+<script type="text/javascript">
+var _userway_config = {account: 'qHBtAX4Dn9'};
+</script>
+<script type="text/javascript" src="B1.3_%20%CE%9C%CE%9F%CE%9D%CE%9F%CE%A4%CE%9F%CE%9D%CE%95%CE%A3%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%95%CE%99%CE%A3%20-%20%CE%91%CE%9D%CE%A4%CE%99%CE%A3%CE%A4%CE%A1%CE%9F%CE%A6%CE%97%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%97_files/widget.js">
+</script>
+<link href="B1.3_%20%CE%9C%CE%9F%CE%9D%CE%9F%CE%A4%CE%9F%CE%9D%CE%95%CE%A3%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%95%CE%99%CE%A3%20-%20%CE%91%CE%9D%CE%A4%CE%99%CE%A3%CE%A4%CE%A1%CE%9F%CE%A6%CE%97%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%97_files/widget_lazy.css" type="text/css" rel="stylesheet"><link href="B1.3_%20%CE%9C%CE%9F%CE%9D%CE%9F%CE%A4%CE%9F%CE%9D%CE%95%CE%A3%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%95%CE%99%CE%A3%20-%20%CE%91%CE%9D%CE%A4%CE%99%CE%A3%CE%A4%CE%A1%CE%9F%CE%A6%CE%97%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%97_files/widget_base.css" type="text/css" rel="stylesheet"></head>
+<body>
+<div class="uwy userway_p3" data-uw-feature-ignore="true" data-uw-rm-ignore="true" style="background-color: transparent !important; overflow: initial !important;" title="Μενού Προσβασιμότητας"><div class="userway_buttons_wrapper"><div class="ulsti hidden userway_dark" id="userwayLstIcon" aria-label="Μενού Μεταφράσεις" role="button" tabindex="0" aria-haspopup="dialog" data-uw-s19-ignore="" title="Μενού Μεταφράσεις" style="background: rgb(5, 63, 103) !important;"><span class="uiiw"></span><div class="ups"><img width="43" height="43" data-uw-rm-ignore="" class="si_w" aria-hidden="true" alt="Spinner: White decorative" src="B1.3_%20%CE%9C%CE%9F%CE%9D%CE%9F%CE%A4%CE%9F%CE%9D%CE%95%CE%A3%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%95%CE%99%CE%A3%20-%20%CE%91%CE%9D%CE%A4%CE%99%CE%A3%CE%A4%CE%A1%CE%9F%CE%A6%CE%97%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%97_files/spin_wh.svg"></div><span class="usr lst-spacer"></span><img class="userway_check_on" data-uw-rm-ignore="" data-uw-ignore-s25="true" width="18" height="20" alt="Accessibility menu is on" src="B1.3_%20%CE%9C%CE%9F%CE%9D%CE%9F%CE%A4%CE%9F%CE%9D%CE%95%CE%A3%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%95%CE%99%CE%A3%20-%20%CE%91%CE%9D%CE%A4%CE%99%CE%A3%CE%A4%CE%A1%CE%9F%CE%A6%CE%97%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%97_files/check_on.svg"></div><div class="uai userway_dark" id="userwayAccessibilityIcon" aria-label="Μενού Προσβασιμότητας" role="button" tabindex="0" aria-haspopup="dialog" title="Μενού Προσβασιμότητας" style="background: rgb(5, 63, 103) !important;"><span class="uiiw"><img data-uw-rm-ignore="" class="ui_w" role="presentation" alt="" src="B1.3_%20%CE%9C%CE%9F%CE%9D%CE%9F%CE%A4%CE%9F%CE%9D%CE%95%CE%A3%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%95%CE%99%CE%A3%20-%20%CE%91%CE%9D%CE%A4%CE%99%CE%A3%CE%A4%CE%A1%CE%9F%CE%A6%CE%97%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%97_files/eye_wh.svg"></span><div class="ups"><img width="43" height="43" data-uw-rm-ignore="" class="si_w" aria-hidden="true" alt="Spinner: White decorative" src="B1.3_%20%CE%9C%CE%9F%CE%9D%CE%9F%CE%A4%CE%9F%CE%9D%CE%95%CE%A3%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%95%CE%99%CE%A3%20-%20%CE%91%CE%9D%CE%A4%CE%99%CE%A3%CE%A4%CE%A1%CE%9F%CE%A6%CE%97%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%97_files/spin_wh.svg"></div><span class="usr"></span><img class="userway_check_on" data-uw-rm-ignore="" data-uw-ignore-s25="true" width="18" height="20" alt="Accessibility menu is on" src="B1.3_%20%CE%9C%CE%9F%CE%9D%CE%9F%CE%A4%CE%9F%CE%9D%CE%95%CE%A3%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%95%CE%99%CE%A3%20-%20%CE%91%CE%9D%CE%A4%CE%99%CE%A3%CE%A4%CE%A1%CE%9F%CE%A6%CE%97%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%97_files/check_on.svg"></div><div class="uwaw-dictionary-tooltip"></div></div><iframe class="uwif userway_p3" data-uw-ignore-translate="true" name="userway" title="UserWay Μενού Προσβασιμότητας" style="max-width: 100vw !important; visibility: visible !important; opacity: 1 !important; color-scheme: light !important;"></iframe></div><div class="uw-s10-bottom-ruler-guide"></div><div class="uw-s10-right-ruler-guide"></div><div class="uw-s10-left-ruler-guide"></div><div class="uw-s10-reading-guide"><div class="uw-s10-reading-guide__arrow"></div></div><div class="uw-s12-tooltip" aria-hidden="true"></div><div id="eclass_ebook_header">
+  <div class="tools" id="tools">
+    <div class="ebook_left">
+      <span title="">Μαθηματικά (Γ΄ Λυκείου Θετικών Σπουδών &amp; Σπουδών Υγείας και Σπουδών Οικονομίας &amp; Πληροφορικής)- Βιβλίο Μαθητή</span>
+    </div>
+    <div class="ebook_right">
+      <a href="https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika-G-Lykeiou-ThSp_html-apli/indexB1_2.html" id="prev_active" style=""><img src="B1.3_%20%CE%9C%CE%9F%CE%9D%CE%9F%CE%A4%CE%9F%CE%9D%CE%95%CE%A3%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%95%CE%99%CE%A3%20-%20%CE%91%CE%9D%CE%A4%CE%99%CE%A3%CE%A4%CE%A1%CE%9F%CE%A6%CE%97%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%97_files/back.png" alt="&nbsp;&nbsp;&nbsp;B1.2: ΣΥΝΑΡΤΗΣΕΙΣ" title="&nbsp;&nbsp;&nbsp;B1.2: ΣΥΝΑΡΤΗΣΕΙΣ"></a> <img id="prev_inactive" style="display:none" src="B1.3_%20%CE%9C%CE%9F%CE%9D%CE%9F%CE%A4%CE%9F%CE%9D%CE%95%CE%A3%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%95%CE%99%CE%A3%20-%20%CE%91%CE%9D%CE%A4%CE%99%CE%A3%CE%A4%CE%A1%CE%9F%CE%A6%CE%97%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%97_files/back_grey.png" alt=""> <a href="https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika-G-Lykeiou-ThSp_html-apli/indexB1_4.html" id="next_active" style=""><img src="B1.3_%20%CE%9C%CE%9F%CE%9D%CE%9F%CE%A4%CE%9F%CE%9D%CE%95%CE%A3%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%95%CE%99%CE%A3%20-%20%CE%91%CE%9D%CE%A4%CE%99%CE%A3%CE%A4%CE%A1%CE%9F%CE%A6%CE%97%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%97_files/next.png" alt="&nbsp;&nbsp;&nbsp;B1.4: ΟΡΙΟ ΣΥΝΑΡΤΗΣΗΣ ΣΤΟ xₒ ϵ R" title="&nbsp;&nbsp;&nbsp;B1.4: ΟΡΙΟ ΣΥΝΑΡΤΗΣΗΣ ΣΤΟ xₒ ϵ R"></a> <img id="next_inactive" style="display:none" src="B1.3_%20%CE%9C%CE%9F%CE%9D%CE%9F%CE%A4%CE%9F%CE%9D%CE%95%CE%A3%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%95%CE%99%CE%A3%20-%20%CE%91%CE%9D%CE%A4%CE%99%CE%A3%CE%A4%CE%A1%CE%9F%CE%A6%CE%97%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%97_files/next_grey.png" alt="">
+    </div>
+    <div class="eclass_ebook_clear">
+    </div>
+    <div class="logo">
+      <a href="http://dschool.edu.gr/" title="" target="_blank"><img class="ebook-logo-dsch" src="B1.3_%20%CE%9C%CE%9F%CE%9D%CE%9F%CE%A4%CE%9F%CE%9D%CE%95%CE%A3%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%95%CE%99%CE%A3%20-%20%CE%91%CE%9D%CE%A4%CE%99%CE%A3%CE%A4%CE%A1%CE%9F%CE%A6%CE%97%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%97_files/digital-school-logo-small.png" alt="digital-school-small-logo"></a> <a href="https://ebooks.edu.gr/ebooks/" title="Αρχική σελίδα - Διαδραστικά Σχολικά Βιβλία"><img src="B1.3_%20%CE%9C%CE%9F%CE%9D%CE%9F%CE%A4%CE%9F%CE%9D%CE%95%CE%A3%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%95%CE%99%CE%A3%20-%20%CE%91%CE%9D%CE%A4%CE%99%CE%A3%CE%A4%CE%A1%CE%9F%CE%A6%CE%97%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%97_files/logo-small.png" alt="" title=""></a>
+      <div id="bookup">
+        <select name="section" onchange="change_section();">
+          <option value="index.html" class="speech_menu_0">Μαθηματικά (Γ΄ Λυκείου Θετικών Σπουδών &amp; Σπουδών Υγείας και Σπουδών Οικονομίας &amp; Πληροφορικής)</option>
+          <option value="index.html" class="speech_menu_0">&nbsp;&nbsp;&nbsp;ΕΙΣΑΓΩΓΗ-ΠΕΡΙΕΧΟΜΕΝΑ</option>
+          <!-- option value="indexA1_1.html" class="speech_menu_1">Α΄ ΜΕΡΟΣ (ΑΛΓΕΒΡΑ) ΚΕΦΑΛΑΙΟ 1: Πίνακες – Γραμμικά Συστήματα</option>
+          <!-- option value="indexA1_1.html" class="speech_menu_1">&nbsp;&nbsp;&nbsp;A1.1: Η ΕΝΝΟΙΑ ΤΟΥ ΠΙΝΑΚΑ</option>
+          <option value="indexA1_2.html" class="speech_menu_1">&nbsp;&nbsp;&nbsp;A1.2: ΠΡΟΣΘΕΣΗ ΠΙΝΑΚΩΝ - ΠΟΛΛΑΠΛΑΣΙΑΣΜΟΣ ΑΡΙΘΜΟΥ ΜΕ ΠΙΝΑΚΑ</option>
+          <option value="indexA1_3.html" class="speech_menu_1">&nbsp;&nbsp;&nbsp;A1.3: ΠΟΛΛΑΠΛΑΣΙΑΣΜΟΣ ΠΙΝΑΚΩΝ</option>
+          <option value="indexA1_4.html" class="speech_menu_1">&nbsp;&nbsp;&nbsp;A1.4: ΓΕΩΜΕΤΡΙΚΟΙ ΜΕΤΑΣΧΗΜΑΤΙΣΜΟΙ</option>
+          <option value="indexA1_5.html" class="speech_menu_1">&nbsp;&nbsp;&nbsp;A1.5: Η ΕΝΝΟΙΑ ΤΟΥ ΓΡΑΜΜΙΚΟΥ ΣΥΣΤΗΜΑΤΟΣ</option>
+          <option value="indexA1_6.html" class="speech_menu_1">&nbsp;&nbsp;&nbsp;A1.6: ΕΠΙΛΥΣΗ ΓΡΑΜΜΙΚΟΥ ΣΥΣΤΗΜΑΤΟΣ ΜΕ ΤΗ ΜΕΘΟΔΟ ΑΠΑΛΟΙΦΗΣ ΤΟΥ GAUSS</option>
+          <option value="indexA1_7.html" class="speech_menu_1">&nbsp;&nbsp;&nbsp;A1.7: ΕΠΙΛΥΣΗ ΓΡΑΜΜΙΚΟΥ ΣΥΣΤΗΜΑΤΟΣ ΜΕ ΤΗ ΜΕΘΟΔΟ ΟΡΙΖΟΥΣΩΝ</option>
+          <option value="indexA1_RevEx.html" class="speech_menu_1">&nbsp;&nbsp;&nbsp;A1: ΓΕΝΙΚΕΣ ΑΣΚΗΣΕΙΣ</option>
+          <option value="indexA1_RevQues.html" class="speech_menu_1">&nbsp;&nbsp;&nbsp;A1: ΕΡΩΤΗΣΕΙΣ ΚΑΤΑΝΟΗΣΗΣ</option>
+          <option value="indexA1_history.html" class="speech_menu_1">&nbsp;&nbsp;&nbsp;A1:ΙΣΤΟΡΙΚΟ ΣΗΜΕΙΩΜΑ</option>
+          <option value="indexA2_1.html" class="speech_menu_2">Α΄ ΜΕΡΟΣ (ΑΛΓΕΒΡΑ) ΚΕΦΑΛΑΙΟ 2: Μιγαδικοί Αριθμοί</option>
+          <option value="indexA2_1.html" class="speech_menu_2">&nbsp;&nbsp;&nbsp;A2.1: Η ΕΝΝΟΙΑ ΤΟΥ ΜΙΓΑΔΙΚΟΥ ΑΡΙΘΜΟΥ</option>
+          <option value="indexA2_2.html" class="speech_menu_2">&nbsp;&nbsp;&nbsp;A2.2: ΠΡΑΞΕΙΣ ΣΤΟ ΣΥΝΟΛΟ ₵ ΤΩΝ ΜΙΓΑΔΙΚΩΝ</option>
+          <option value="indexA2_3.html" class="speech_menu_2">&nbsp;&nbsp;&nbsp;A2.3: ΜΕΤΡΟ ΜΙΓΑΔΙΚΟΥ ΑΡΙΘΜΟΥ</option>
+          <option value="indexA2_4.html" class="speech_menu_2">&nbsp;&nbsp;&nbsp;A2.4: ΤΡΙΓΩΝΟΜΕΤΡΙΚΗ ΜΟΡΦΗ ΜΙΓΑΔΙΚΟΥ</option>
+          <option value="indexA2_5.html" class="speech_menu_2">&nbsp;&nbsp;&nbsp;A2.5: ΠΟΛΥΩΝΥΜΙΚΕΣ ΕΞΙΣΩΣΕΙΣ ΣΤΟ ₵</option>
+          <option value="indexA2_RevEx.html" class="speech_menu_2">&nbsp;&nbsp;&nbsp;A2: ΓΕΝΙΚΕΣ ΑΣΚΗΣΕΙΣ</option>
+          <option value="indexA2_RevQues.html" class="speech_menu_2">&nbsp;&nbsp;&nbsp;A2: ΕΡΩΤΗΣΕΙΣ ΚΑΤΑΝΟΗΣΗΣ</option -->
+          <option value="indexB1_1.html" class="speech_menu_3">Β΄ ΜΕΡΟΣ (ΑΝΑΛΥΣΗ) ΚΕΦΑΛΑΙΟ 1: Όριο - συνέχεια συνάρτησης</option>
+          <option value="indexB1_1.html" class="speech_menu_3">&nbsp;&nbsp;&nbsp;B1.1: ΠΡΑΓΜΑΤΙΚΟΙ ΑΡΙΘΜΟΙ</option>
+          <option value="indexB1_2.html" class="speech_menu_3">&nbsp;&nbsp;&nbsp;B1.2: ΣΥΝΑΡΤΗΣΕΙΣ</option>
+          <option value="indexB1_3.html" class="speech_menu_3" selected="selected">&nbsp;&nbsp;&nbsp;B1.3: ΜΟΝΟΤΟΝΕΣ ΣΥΝΑΡΤΗΣΕΙΣ - ΑΝΤΙΣΤΡΟΦΗ ΣΥΝΑΡΤΗΣΗ</option>
+          <option value="indexB1_4.html" class="speech_menu_3">&nbsp;&nbsp;&nbsp;B1.4: ΟΡΙΟ ΣΥΝΑΡΤΗΣΗΣ ΣΤΟ xₒ ϵ R</option>
+          <option value="indexB1_5.html" class="speech_menu_3">&nbsp;&nbsp;&nbsp;B1.5: ΙΔΙΟΤΗΤΕΣ ΤΩΝ ΟΡΙΩΝ</option>
+          <option value="indexB1_6.html" class="speech_menu_3">&nbsp;&nbsp;&nbsp;B1.6: ΜΗ ΠΕΠΕΡΑΣΜΕΝΟ ΟΡΙΟ ΣΤΟ xₒ ϵ R</option>
+          <option value="indexB1_7.html" class="speech_menu_3">&nbsp;&nbsp;&nbsp;B1.7: OΡΙΑ ΣΥΝΑΡΤΗΣΗΣ ΣΤΟ ΑΠΕΙΡΟ</option>
+          <option value="indexB1_8.html" class="speech_menu_3">&nbsp;&nbsp;&nbsp;B1.8: ΣΥΝΕΧΕΙΑ ΣΥΝΑΡΤΗΣΗΣ</option>
+          <option value="indexB1_RevQues.html" class="speech_menu_3">&nbsp;&nbsp;&nbsp;B1: ΕΡΩΤΗΣΕΙΣ ΚΑΤΑΝΟΗΣΗΣ</option>
+          <option value="indexB1_history.html" class="speech_menu_3">&nbsp;&nbsp;&nbsp;B1:ΙΣΤΟΡΙΚΟ ΣΗΜΕΙΩΜΑ</option>
+          <option value="indexB2_1.html" class="speech_menu_4">Β΄ ΜΕΡΟΣ (ΑΝΑΛΥΣΗ) ΚΕΦΑΛΑΙΟ 2: Διαφορικός Λογισμός</option>
+          <option value="indexB2_1.html" class="speech_menu_4">&nbsp;&nbsp;&nbsp;B2.1: Η ΕΝΝΟΙΑ ΤΗΣ ΠΑΡΑΓΩΓΟΥ</option>
+          <option value="indexB2_2.html" class="speech_menu_4">&nbsp;&nbsp;&nbsp;B2.2: ΠΑΡΑΓΩΓΙΣΙΜΕΣ ΣΥΝΑΡΤΗΣΕΙΣ - ΠΑΡΑΓΩΓΟΣ ΣΥΝΑΡΤΗΣΗ</option>
+          <option value="indexB2_3.html" class="speech_menu_4">&nbsp;&nbsp;&nbsp;B2.3: ΚΑΝΟΝΕΣ ΠΑΡΑΓΩΓΙΣΗΣ</option>
+          <option value="indexB2_4.html" class="speech_menu_4">&nbsp;&nbsp;&nbsp;B2.4: ΡΥΘΜΟΣ ΜΕΤΑΒΟΛΗΣ</option>
+          <option value="indexB2_5.html" class="speech_menu_4">&nbsp;&nbsp;&nbsp;B2.5: TO ΘΕΩΡΗΜΑ ΜΕΣΗΣ ΤΙΜΗΣ</option>
+          <option value="indexB2_6.html" class="speech_menu_4">&nbsp;&nbsp;&nbsp;B2.6: ΣΥΝΕΠΕΙΕΣ ΤΟΥ ΘΕΩΡΗΜΑΤΟΣ ΤHΣ ΜΕΣΗΣ ΤΙΜΗΣ</option>
+          <option value="indexB2_7.html" class="speech_menu_4">&nbsp;&nbsp;&nbsp;B2.7: TOΠΙΚΑ ΑΚΡΟΤΑΤΑ ΣΥΝΑΡΤΗΣΗΣ</option>
+          <option value="indexB2_8.html" class="speech_menu_4">&nbsp;&nbsp;&nbsp;B2.8: KΥΡΤΟΤΗΤΑ – ΣΗΜΕΙΑ ΚΑΜΠΗΣ ΣΥΝΑΡΤΗΣΗΣ</option>
+          <option value="indexB2_9.html" class="speech_menu_4">&nbsp;&nbsp;&nbsp;B2.9: ΑΣΥΜΠΤΩΤΕΣ - ΚΑΝΟΝΕΣ DE L' HOSPITAL</option>
+          <option value="indexB2_10.html" class="speech_menu_4">&nbsp;&nbsp;&nbsp;B2.10: ΜΕΛΕΤΗ ΚΑΙ ΧΑΡΑΞΗ ΤΗΣ ΓΡΑΦΙΚΗΣ ΠΑΡΑΣΤΑΣΗΣ ΜΙΑΣ ΣΥΝΑΡΤΗΣΗΣ</option>
+          <option value="indexB2_RevEx.html" class="speech_menu_4">&nbsp;&nbsp;&nbsp;B2: ΓΕΝΙΚΕΣ ΑΣΚΗΣΕΙΣ</option>
+          <option value="indexB2_RevQues.html" class="speech_menu_4">&nbsp;&nbsp;&nbsp;B2: ΕΡΩΤΗΣΕΙΣ ΚΑΤΑΝΟΗΣΗΣ</option>
+          <option value="indexB2_history.html" class="speech_menu_4">&nbsp;&nbsp;&nbsp;B2:ΙΣΤΟΡΙΚΟ ΣΗΜΕΙΩΜΑ</option>
+          <option value="indexB3_1.html" class="speech_menu_5">Β΄ ΜΕΡΟΣ (ΑΝΑΛΥΣΗ) ΚΕΦΑΛΑΙΟ 3: Ολοκληρωτικός Λογισμός</option>
+          <option value="indexB3_1.html" class="speech_menu_5">&nbsp;&nbsp;&nbsp;B3.1: ΑΟΡΙΣΤΟ ΟΛΟΚΛΗΡΩΜΑ</option>
+          <option value="indexB3_2.html" class="speech_menu_5">&nbsp;&nbsp;&nbsp;B3.2: MEΘΟΔΟΙ ΟΛΟΚΛΗΡΩΣΗΣ</option>
+          <option value="indexB3_3.html" class="speech_menu_5">&nbsp;&nbsp;&nbsp;B3.3: ΔΙΑΦΟΡΙΚΕΣ ΕΞΙΣΩΣΕΙΣ</option>
+          <option value="indexB3_4.html" class="speech_menu_5">&nbsp;&nbsp;&nbsp;B3.4: ΟΡΙΣΜΕΝΟ ΟΛΟΚΛΗΡΩΜΑ</option>
+          <option value="indexB3_5.html" class="speech_menu_5">&nbsp;&nbsp;&nbsp;B3.5: Θεμελιώδες θεώρημα του ολοκληρωτικού λογισμού</option>
+          <option value="indexB3_6.html" class="speech_menu_5">&nbsp;&nbsp;&nbsp;B3.6: ΘΕΩΡΗΜΑ ΜΕΣΗΣ ΤΙΜΗΣ ΤΟΥ ΟΛΟΚΛΗΡΩΤΙΚΟΥ ΛΟΓΙΣΜΟΥ</option>
+          <option value="indexB3_7.html" class="speech_menu_5">&nbsp;&nbsp;&nbsp;B3.7: EΜΒΑΔΟΝ ΕΠΙΠΕΔΟΥ ΧΩΡΙΟΥ</option>
+          <option value="indexB3_RevEx.html" class="speech_menu_5">&nbsp;&nbsp;&nbsp;B3: ΓΕΝΙΚΕΣ ΑΣΚΗΣΕΙΣ</option>
+          <option value="indexB3_RevQues.html" class="speech_menu_5">&nbsp;&nbsp;&nbsp;B3: ΕΡΩΤΗΣΕΙΣ ΚΑΤΑΝΟΗΣΗΣ</option>
+          <option value="indexB3_history.html" class="speech_menu_5">&nbsp;&nbsp;&nbsp;B3: ΙΣΤΟΡΙΚΟ ΣΗΜΕΙΩΜΑ</option>
+          <option value="solutions.html" class="speech_menu_5">&nbsp;&nbsp;&nbsp;ΥΠΟΔΕΙΞΕΙΣ - ΑΠΑΝΤΗΣΕΙΣ ΑΣΚΗΣΕΩΝ</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div id="hideDisplay" class="toggleDisplay" title="Απόκρυψη banner" style="display: block;" onclick="hideHeader();">
+  </div>
+  <div id="showDisplay" class="toggleDisplay" title="Εμφάνιση banner" style="display: none;" onclick="showHeader();">
+  </div>
+</div>
+<div class="eclass_ebook_clear">
+</div>
+<div id="eclass_ebook_body">
+  <table class="container" summary="table contains html body book page 148-149">
+    <tbody><tr>
+      <td><p class="title">1.3		 ΜΟΝΟΤΟΝΕΣ  ΣΥΝΑΡΤΗΣΕΙΣ -           ΑΝΤΙΣΤΡΟΦΗ  ΣΥΝΑΡΤΗΣΗ </p>
+        <p class="subtitle_blue">Μονοτονία συνάρτησης</p>
+        <p> <span class="theory">● Οι έννοιες "γνησίως αύξουσα 
+συνάρτηση", "γνησίως φθίνουσα συνάρτηση" είναι γνωστές από προηγούμενη 
+τάξη. Συγκεκριμένα, μάθαμε ότι :</span></p>
+        <p class="Definition">ΟΡΙΣΜΟΣ </p>
+        <table class="Definition-table" summary="table contains picture and/or text">
+          <tbody><tr>
+            <td><span class="theory">Μια συνάρτηση  f  λέγεται <sup>(1)</sup> :<br>
+              <br>
+              </span></td>
+          </tr>
+          <tr>
+            <td><span class="theory">● <strong>γνησίως αύξουσα</strong> σ' ένα δ ι ά σ τ η μ α  Δ του πεδίου ορισμού της, όταν για οποιαδήποτε<br>
+              x<sub>1</sub>, x<sub>2</sub> ϵ Δ &nbsp;&nbsp;με&nbsp;&nbsp;   x<sub>1</sub> &lt; x<sub>2</sub> ισχύει :</span></td>
+          </tr>
+          <tr>
+            <td><div align="center">
+                <span class="theory">f(x<sub>1</sub>) &lt; f(x<sub>2</sub>)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Σχ. α)</span>
+              </div></td>
+          </tr>
+          <tr>
+            <td><span class="theory">●<strong> γνησίως φθίνουσα </strong>σ' ένα δ ι ά σ τ η μ α  Δ του πεδίου ορισμού της, όταν για οποιαδήποτε <br>
+              x<sub>1</sub>, x<sub>2</sub> ϵ Δ &nbsp;&nbsp;με&nbsp;&nbsp;   x<sub>1</sub> &lt; x<sub>2</sub> ισχύει :</span></td>
+          </tr>
+          <tr>
+            <td><div align="center">
+                <span class="theory">f(x<sub>1</sub>) &gt; f(x<sub>2</sub>)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Σχ. β)</span>
+              </div></td>
+          </tr>
+        </tbody></table>
+        <p>&nbsp;</p>
+        <table align="center" summary="table contains picture and/or text">
+          <tbody><tr>
+            <td><img src="B1.3_%20%CE%9C%CE%9F%CE%9D%CE%9F%CE%A4%CE%9F%CE%9D%CE%95%CE%A3%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%95%CE%99%CE%A3%20-%20%CE%91%CE%9D%CE%A4%CE%99%CE%A3%CE%A4%CE%A1%CE%9F%CE%A6%CE%97%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%97_files/imgB1_80.jpg" alt="Εικόνα" width="596" height="175"></td>
+          </tr>
+        </tbody></table>
+        <p class="theory">Για να δηλώσουμε ότι η  f  είναι γνησίως 
+αύξουσα (αντιστοίχως γνησίως φθίνουσα) σε ένα διάστημα Δ, γράφουμε   f ↑
+ Δ (αντιστοίχως  f ↓ Δ).</p>
+        <table align="center" summary="table contains picture and/or text">
+          <tbody><tr>
+            <td width="483">Για παράδειγμα, η συνάρτηση  f(x) = x<sup>2</sup>:<br>
+              <br></td>
+            <td width="5" rowspan="5">&nbsp;</td>
+            <td width="246" rowspan="5"><img src="B1.3_%20%CE%9C%CE%9F%CE%9D%CE%9F%CE%A4%CE%9F%CE%9D%CE%95%CE%A3%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%95%CE%99%CE%A3%20-%20%CE%91%CE%9D%CE%A4%CE%99%CE%A3%CE%A4%CE%A1%CE%9F%CE%A6%CE%97%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%97_files/imgB1_83.jpg" alt="Εικόνα" width="226" height="195"></td>
+          </tr>
+          <tr>
+            <td>— είναι γνησίως αύξουσα στο  [0,+∞), αφού για   0 ≤ x<sub>1</sub> &lt; x<sub>2</sub> <br>
+              <br>
+              έχουμε <img src="B1.3_%20%CE%9C%CE%9F%CE%9D%CE%9F%CE%A4%CE%9F%CE%9D%CE%95%CE%A3%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%95%CE%99%CE%A3%20-%20%CE%91%CE%9D%CE%A4%CE%99%CE%A3%CE%A4%CE%A1%CE%9F%CE%A6%CE%97%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%97_files/imgB1_81.jpg" alt="Εικόνα" width="52" height="24" class="IMGabsmiddle">, δηλαδή</td>
+          </tr>
+          <tr>
+            <td><div align="center">
+                <span class="theory">f(x<sub>1</sub>) &lt; f(x<sub>2</sub>)&nbsp;</span><br>
+                <br>
+              </div></td>
+          </tr>
+          <tr>
+            <td>— είναι γνησίως φθίνουσα στο  (−∞,0], αφού για   x<sub>1</sub> &lt; x<sub>2</sub> ≤ 0 <br>
+              <br>
+              έχουμε  0 ≤  − x<sub>2</sub> &lt; − x<sub>1</sub>, οπότε <img src="B1.3_%20%CE%9C%CE%9F%CE%9D%CE%9F%CE%A4%CE%9F%CE%9D%CE%95%CE%A3%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%95%CE%99%CE%A3%20-%20%CE%91%CE%9D%CE%A4%CE%99%CE%A3%CE%A4%CE%A1%CE%9F%CE%A6%CE%97%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%97_files/imgB1_82.jpg" alt="Εικόνα" width="74" height="25" class="IMGabsmiddle">, δηλαδή </td>
+          </tr>
+          <tr>
+            <td><div align="center">
+                <span class="theory">f(x<sub>1</sub>) &gt; f(x<sub>2</sub>)&nbsp;&nbsp;</span><br>
+                <br>
+              </div></td>
+          </tr>
+        </tbody></table>
+        <p class="theory">Αν μια συνάρτηση  f  είναι γνησίως αύξουσα ή 
+γνησίως φθίνουσα σ' ένα διάστημα Δ του πεδίου ορισμού της, τότε λέμε ότι
+ η  f  είναι <strong>γνησίως μονότονη στο Δ</strong>. Στην περίπτωση που
+ το πεδίο ορισμού της  f  είναι ένα διάστημα Δ και η  f  είναι γνησίως 
+μονότονη σ' αυτό, τότε θα λέμε, απλώς, ότι η  f  είναι γνησίως μονότονη.</p>
+        <p class="theory">&nbsp;</p>
+        <p class="reference"><sup>(1) </sup><span class="over">Μια συνάρτηση f λέγεται, απλώς , :</span></p>
+        <p class="reference">● <strong>αύξουσα</strong> σ' ένα διάστημα Δ , όταν για οποιαδήποτε x<sub>1</sub> , x<sub>2</sub> ϵ Δ με x<sub>1</sub>&nbsp;&lt;&nbsp;x<sub>2</sub> ισχύει</p>
+        <table align="center" summary="table contains picture and/or text">
+          <tbody><tr>
+            <td class="reference">f(x<sub>1</sub>)&nbsp;≤&nbsp;f(x<sub>2</sub>) &nbsp;.</td>
+          </tr>
+        </tbody></table>
+        <p class="reference">● <strong>φθίνουσα</strong> σ' ένα διάστημα Δ , όταν για οποιαδήποτε x<sub>1</sub> , x<sub>2</sub> ϵ Δ με x<sub>1</sub>&nbsp;&lt;&nbsp;x<sub>2</sub> ισχύει</p>
+        <table align="center" summary="table contains picture and/or text">
+          <tbody><tr>
+            <td class="reference">f(x<sub>1</sub>)&nbsp;≥&nbsp;f(x<sub>2</sub>)&nbsp; .</td>
+          </tr>
+        </tbody></table></td>
+    </tr>
+  </tbody></table>
+  <table class="container" summary="table contains html body book page 150">
+    <tbody><tr>
+      <td><p class="subtitle_blue">Ακρότατα συνάρτησης </p>
+        <p class="theory">Οι έννοιες "μέγιστο", "ελάχιστο", συνάρτησης είναι και αυτές γνωστές από προηγούμενες τάξεις. Συγκεκριμένα μάθαμε ότι : </p>
+        <p class="Definition">ΟΡΙΣΜΟΣ</p>
+        <table class="Definition-table" summary="table contains picture and/or text">
+          <tbody><tr>
+            <td>Μια συνάρτηση  f  με πεδίο ορισμού Α θα λέμε ότι :<br>
+              <br></td>
+          </tr>
+          <tr>
+            <td><span class="theory">● Παρουσιάζει στο   x<sub>0</sub> ϵ A (ολικό) <strong>μέγιστο</strong>, το  f(x<sub>0</sub>), όταν<br>
+              <br>
+              </span></td>
+          </tr>
+          <tr>
+            <td><div align="center">
+                <span class="theory">f(x)&nbsp;&nbsp;≤&nbsp;&nbsp;f(x<sub>0</sub>)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>για κάθε <span class="theory">x ϵ A</span> &nbsp;&nbsp;&nbsp;(Σχ. 27α)<br>
+                <br>
+              </div></td>
+          </tr>
+          <tr>
+            <td><span class="theory">● Παρουσιάζει στο      x<sub>0</sub> ϵ A (ολικό) <strong>ελάχιστο</strong>, το  f(x<sub>0</sub>), όταν <br>
+              <br>
+              </span></td>
+          </tr>
+          <tr>
+            <td><div align="center">
+                <span class="theory">f(x)&nbsp;&nbsp;≥&nbsp;&nbsp;f(x<sub>0</sub>)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>για κάθε <span class="theory">x ϵ A</span> &nbsp;&nbsp;&nbsp;(Σχ. 27β)<br>
+              </div></td>
+          </tr>
+        </tbody></table>
+        <br>
+        <table align="center" summary="table contains picture and/or text">
+          <tbody><tr>
+            <td><img src="B1.3_%20%CE%9C%CE%9F%CE%9D%CE%9F%CE%A4%CE%9F%CE%9D%CE%95%CE%A3%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%95%CE%99%CE%A3%20-%20%CE%91%CE%9D%CE%A4%CE%99%CE%A3%CE%A4%CE%A1%CE%9F%CE%A6%CE%97%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%97_files/imgB1_84.jpg" alt="Εικόνα" width="602" height="185"></td>
+          </tr>
+        </tbody></table>
+        <p>Για παράδειγμα: </p>
+        <p class="theory">— Η συνάρτηση    f(x) = −&nbsp;x<sup>2</sup> + 1 (Σχ. 28α) παρουσιάζει μέγιστο στο x<sub>0</sub> = 0, το  f(0) = 1 , <br>
+          <br>
+          αφού     f(x) ≤ f(0) &nbsp;&nbsp;για κάθε&nbsp;&nbsp; x ϵ <strong>R</strong>. <br>
+          <br>
+        </p>
+        <p class="theory">— Η συνάρτηση   f(x) = | x−1 | (Σχ. 28β) παρουσιάζει ελάχιστο στο  x<sub>0</sub> = 1, το  f(1) = 0, <br>
+          <br>
+          αφού   f(x) ≥ f(1) &nbsp;&nbsp;για κάθε &nbsp;&nbsp; x ϵ <strong>R</strong>.</p>
+        <table align="center" summary="table contains picture and/or text">
+          <tbody><tr>
+            <td><img src="B1.3_%20%CE%9C%CE%9F%CE%9D%CE%9F%CE%A4%CE%9F%CE%9D%CE%95%CE%A3%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%95%CE%99%CE%A3%20-%20%CE%91%CE%9D%CE%A4%CE%99%CE%A3%CE%A4%CE%A1%CE%9F%CE%A6%CE%97%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%97_files/imgB1_85.jpg" alt="Εικόνα" width="555" height="212"></td>
+          </tr>
+        </tbody></table></td>
+    </tr>
+  </tbody></table>
+  <table class="container" summary="table contains html body book page 151">
+    <tbody><tr>
+      <td><p class="theory">— Η συνάρτηση   f(x) = ημx (Σχ. 29α) παρουσιάζει μέγιστο, το  y = 1, σε καθένα από τα σημεία <br>
+          <br>
+          2κπ + π/2,         κ ϵ <strong>Z </strong>και ελάχιστο, το  y = −1, σε καθένα από τα σημεία  2κπ − π/2,  κ ϵ <strong>Z</strong>, αφού   −1 ≤ ημx ≤ 1 <br>
+          <br>
+          για κάθε  x ϵ <strong>R</strong>.<br>
+          <br>
+        </p>
+        <p class="theory">— Η συνάρτηση   f(x) = x<sup>3</sup> (Σχ. 29β) δεν παρουσιάζει ούτε μέγιστο, ούτε ελάχιστο, αφού είναι γνησίως αύξουσα. </p>
+        <table align="center" summary="table contains picture and/or text">
+          <tbody><tr>
+            <td><img src="B1.3_%20%CE%9C%CE%9F%CE%9D%CE%9F%CE%A4%CE%9F%CE%9D%CE%95%CE%A3%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%95%CE%99%CE%A3%20-%20%CE%91%CE%9D%CE%A4%CE%99%CE%A3%CE%A4%CE%A1%CE%9F%CE%A6%CE%97%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%97_files/imgB1_86.jpg" alt="Εικόνα" width="577" height="191"></td>
+          </tr>
+        </tbody></table>
+        <p class="theory">Όπως είδαμε και στα προηγούμενα παραδείγματα, 
+άλλες συναρτήσεις παρουσιάζουν μόνο μέγιστο, άλλες μόνο ελάχιστο, άλλες 
+και μέγιστο και ελάχιστο και άλλες ούτε μέγιστο ούτε ελάχιστο. <br>
+          <br>
+          Το (ολικό) μέγιστο και το (ολικό) ελάχιστο μιας συνάρτησης  f  λέγονται (ολικά) <strong>ακρότατα</strong> της  f. </p>
+        <p class="subtitle_blue"><br>
+          Συνάρτηση 1−1 </p>
+        <table summary="table contains picture and/or text">
+          <tbody><tr>
+            <td>Έστω η συνάρτηση <img src="B1.3_%20%CE%9C%CE%9F%CE%9D%CE%9F%CE%A4%CE%9F%CE%9D%CE%95%CE%A3%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%95%CE%99%CE%A3%20-%20%CE%91%CE%9D%CE%A4%CE%99%CE%A3%CE%A4%CE%A1%CE%9F%CE%A6%CE%97%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%97_files/imgB1_88.jpg" alt="Εικόνα" width="68" height="43" class="IMGabsmiddle"> Παρατηρούμε ότι για οποιαδήποτε <br>
+              x<sub>1</sub> , x<sub>2</sub> ≠ 0 ισχύει η συνεπαγωγή: </td>
+            <td rowspan="4"><img src="B1.3_%20%CE%9C%CE%9F%CE%9D%CE%9F%CE%A4%CE%9F%CE%9D%CE%95%CE%A3%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%95%CE%99%CE%A3%20-%20%CE%91%CE%9D%CE%A4%CE%99%CE%A3%CE%A4%CE%A1%CE%9F%CE%A6%CE%97%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%97_files/imgB1_87.jpg" alt="Εικόνα" width="232" height="223"></td>
+          </tr>
+          <tr>
+            <td><div align="center">
+                "Aν   x<sub>1</sub> ≠  x<sub>2</sub>,  τότε f(x<sub>1</sub>) ≠  f(x<sub>2</sub>)",
+              </div></td>
+          </tr>
+          <tr>
+            <td>που σημαίνει ότι:</td>
+          </tr>
+          <tr>
+            <td>"Τα διαφορετικά στοιχεία   x<sub>1</sub> , x<sub>2</sub> <span class="theory">ϵ</span> D<sub>f</sub> &nbsp;έχουν πάντοτε διαφορετικές εικόνες".</td>
+          </tr>
+        </tbody></table>
+        <p class="theory">Λόγω της τελευταίας ιδιότητας η συνάρτηση <img src="B1.3_%20%CE%9C%CE%9F%CE%9D%CE%9F%CE%A4%CE%9F%CE%9D%CE%95%CE%A3%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%95%CE%99%CE%A3%20-%20%CE%91%CE%9D%CE%A4%CE%99%CE%A3%CE%A4%CE%A1%CE%9F%CE%A6%CE%97%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%97_files/imgB1_88.jpg" alt="Εικόνα" width="68" height="43" class="IMGabsmiddle"> λέγεται συνάρτηση   1−1 (ένα προς ένα). Γενικά: </p>
+        <p class="Definition">ΟΡΙΣΜΟΣ</p>
+        <table align="center" class="Definition-table" summary="table contains picture and/or text">
+          <tbody><tr>
+            <td>Μια συνάρτηση f : A → <strong>R</strong> λέγεται <strong>συνάρτηση <span class="theory">1−1</span></strong>, όταν για οποιαδήποτε   x<sub>1</sub> , x<sub>2</sub> <span class="theory">ϵ</span> A ισχύει η συνεπαγωγή:<br>
+              <br></td>
+          </tr>
+          <tr>
+            <td><div align="center">
+                αν&nbsp;&nbsp;&nbsp;   x<sub>1</sub> ≠  x<sub>2</sub>,&nbsp;&nbsp;&nbsp;  τότε&nbsp;&nbsp;&nbsp; f(x<sub>1</sub>) ≠  f(x<sub>2</sub>) .
+              </div></td>
+          </tr>
+        </tbody></table></td>
+    </tr>
+  </tbody></table>
+  <table class="container" summary="table contains html body book page 152">
+    <tbody><tr>
+      <td><p>Με απαγωγή σε άτοπο αποδεικνύεται ότι:</p>
+        <table align="center" class="Definition-table" summary="table contains picture and/or text">
+          <tbody><tr>
+            <td>Μια συνάρτηση f : A → <strong>R</strong> είναι <strong>συνάρτηση <span class="theory">1−1</span></strong>, αν και μόνο αν για οποιαδήποτε    x<sub>1</sub> , x<sub>2</sub> <span class="theory">ϵ</span> A ισχύει η συνεπαγωγή:<br>
+              <br></td>
+          </tr>
+          <tr>
+            <td><div align="center">
+                αν&nbsp;&nbsp;&nbsp; f(x<sub>1</sub>) =  f(x<sub>2</sub>) ,&nbsp;&nbsp;&nbsp;  τότε&nbsp;&nbsp;&nbsp;x<sub>1</sub> =  x<sub>2</sub>.
+              </div></td>
+          </tr>
+        </tbody></table>
+        <p>Έτσι για παράδειγμα: </p>
+        <p>— Η συνάρτηση  f(x) = αx + β, με   α ≠0 είναι συνάρτηση <span class="theory">1−1</span>.  (Σχ. 31α, β) </p>
+        <table align="center" summary="table contains picture and/or text">
+          <tbody><tr>
+            <td><img src="B1.3_%20%CE%9C%CE%9F%CE%9D%CE%9F%CE%A4%CE%9F%CE%9D%CE%95%CE%A3%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%95%CE%99%CE%A3%20-%20%CE%91%CE%9D%CE%A4%CE%99%CE%A3%CE%A4%CE%A1%CE%9F%CE%A6%CE%97%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%97_files/imgB1_89.jpg" alt="Εικόνα" width="600" height="164"></td>
+          </tr>
+        </tbody></table>
+        <p>αφού, αν υποθέσουμε ότι   f(x<sub>1</sub>) =  f(x<sub>2</sub>), τότε έχουμε διαδοχικά:</p>
+        <table align="center" summary="table contains picture and/or text">
+          <tbody><tr>
+            <td width="181"><div align="center">
+                αx<sub>1</sub> + β = αx<sub>2</sub> + β
+              </div></td>
+          </tr>
+          <tr>
+            <td><div align="center">
+                αx<sub>1</sub> = αx<sub>2</sub>
+              </div></td>
+          </tr>
+          <tr>
+            <td><div align="center">
+                x<sub>1</sub> = x<sub>2</sub>.
+              </div></td>
+          </tr>
+        </tbody></table>
+        <p>&nbsp;</p>
+        <table align="center" summary="table contains picture and/or text">
+          <tbody><tr>
+            <td class="theory"><p>—	Η συνάρτηση     f(x) = β δεν είναι συνάρτηση 1-1 (Σχ. 31γ), αφού <br>
+                <br>
+                f(x<sub>1</sub>) =  f(x<sub>2</sub>) = β για οποιαδήποτε  x<sub>1</sub> , x<sub>2</sub> ϵ <strong>R</strong>,</p>
+              <p>&nbsp;</p></td>
+            <td rowspan="3">&nbsp;</td>
+            <td rowspan="3"><img src="B1.3_%20%CE%9C%CE%9F%CE%9D%CE%9F%CE%A4%CE%9F%CE%9D%CE%95%CE%A3%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%95%CE%99%CE%A3%20-%20%CE%91%CE%9D%CE%A4%CE%99%CE%A3%CE%A4%CE%A1%CE%9F%CE%A6%CE%97%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%97_files/imgB1_90.jpg" alt="Εικόνα" width="231" height="184"></td>
+          </tr>
+          <tr>
+            <td class="theory">—	Η συνάρτηση   f(x) = x<sup>2</sup> (Σχ. 32) δεν είναι συνάρτηση  1-1, αφού <br>
+              <br>
+              f(−1) = f(1) = 1 αν και είναι  −1≠1.</td>
+          </tr>
+          <tr>
+            <td class="theory">&nbsp;</td>
+          </tr>
+        </tbody></table>
+        <p class="theory">ΣΧΟΛΙΑ </p>
+        <p class="theory">● Από τον παραπάνω ορισμό προκύπτει ότι μια συνάρτηση  f  είναι  1-1, αν και μόνο αν: <br>
+          <br>
+          —	Για κάθε στοιχείο y του συνόλου τιμών της η εξίσωση   f(x) = y έχει ακριβώς μια λύση ως προς x. <br>
+          <br>
+          —	Δεν υπάρχουν σημεία της γραφικής της παράστασης με την ίδια 
+τεταγμένη. Αυτό σημαίνει ότι κάθε οριζόντια ευθεία τέμνει τη γραφική 
+παράσταση της  f  το πολύ σε ένα σημείο (Σχ. 33α). </p>
+        <table align="center" summary="table contains picture and/or text">
+          <tbody><tr>
+            <td><img src="B1.3_%20%CE%9C%CE%9F%CE%9D%CE%9F%CE%A4%CE%9F%CE%9D%CE%95%CE%A3%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%95%CE%99%CE%A3%20-%20%CE%91%CE%9D%CE%A4%CE%99%CE%A3%CE%A4%CE%A1%CE%9F%CE%A6%CE%97%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%97_files/imgB1_91.jpg" alt="Εικόνα" width="559" height="211"></td>
+          </tr>
+        </tbody></table></td>
+    </tr>
+  </tbody></table>
+  <table class="container" summary="table contains html body book page 153">
+    <tbody><tr>
+      <td><table align="center" summary="table contains picture and/or text">
+          <tbody><tr>
+            <td><p class="theory">● Αν μια συνάρτηση είναι γνησίως μονότονη, τότε προφανώς, είναι συνάρτηση  ''1-1''. Έτσι, οι συναρτήσεις  f<sub>1</sub>(x)&nbsp;=&nbsp;αx&nbsp;+&nbsp;β,&nbsp;α&nbsp;≠&nbsp;0, f<sub>2</sub>(x)&nbsp;=&nbsp;αx<sup>3</sup>,  α&nbsp;≠&nbsp;0, f<sub>3</sub>(x)&nbsp;=&nbsp;α<sup>x</sup>&nbsp;,  0&lt;&nbsp;α&nbsp;≠1 &nbsp;&nbsp;και&nbsp;&nbsp; f<sub>4</sub>(x) = log<sub>α</sub>x,
+  0&lt; α ≠1 είναι συναρτήσεις  1-1. Υπάρχουν, όμως, συναρτήσεις που 
+είναι   1-1 αλλά δεν είναι γνησίως μονότονες, όπως για παράδειγμα η 
+συνάρτηση </p></td>
+            <td rowspan="2">&nbsp;</td>
+            <td rowspan="2"><img src="B1.3_%20%CE%9C%CE%9F%CE%9D%CE%9F%CE%A4%CE%9F%CE%9D%CE%95%CE%A3%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%95%CE%99%CE%A3%20-%20%CE%91%CE%9D%CE%A4%CE%99%CE%A3%CE%A4%CE%A1%CE%9F%CE%A6%CE%97%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%97_files/imgB1_92.jpg" alt="Εικόνα" width="235" height="228"></td>
+          </tr>
+          <tr>
+            <td><img src="B1.3_%20%CE%9C%CE%9F%CE%9D%CE%9F%CE%A4%CE%9F%CE%9D%CE%95%CE%A3%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%95%CE%99%CE%A3%20-%20%CE%91%CE%9D%CE%A4%CE%99%CE%A3%CE%A4%CE%A1%CE%9F%CE%A6%CE%97%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%97_files/imgB1_93.jpg" alt="Εικόνα" width="213" height="62"></td>
+          </tr>
+        </tbody></table>
+        <br>
+        <table align="center" summary="table contains picture and/or text">
+          <tbody><tr>
+            <td colspan="3"><span class="subtitle_blue">Αντίστροφη συνάρτηση<br>
+              </span></td>
+          </tr>
+          <tr>
+            <td><span class="theory">●</span> Έστω μια συνάρτηση  f : A → <strong>R</strong>.
+ Αν υποθέσουμε ότι αυτή είναι  1-1, τότε για κάθε στοιχείο y του συνόλου
+ τιμών, f(A) , της  f  υπάρχει μοναδικό στοιχείο x του πεδίου ορισμού 
+της Α για το οποίο ισχύει  f(x) = y. Επομένως ορίζεται μια συνάρτηση</td>
+            <td rowspan="2">&nbsp;</td>
+            <td rowspan="2"><img src="B1.3_%20%CE%9C%CE%9F%CE%9D%CE%9F%CE%A4%CE%9F%CE%9D%CE%95%CE%A3%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%95%CE%99%CE%A3%20-%20%CE%91%CE%9D%CE%A4%CE%99%CE%A3%CE%A4%CE%A1%CE%9F%CE%A6%CE%97%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%97_files/imgB1_94.jpg" alt="Εικόνα" width="241" height="206"></td>
+          </tr>
+          <tr>
+            <td><div align="center">
+                g : f(A) → <strong>R</strong>
+              </div></td>
+          </tr>
+          <tr>
+            <td colspan="3">&nbsp;</td>
+          </tr>
+          <tr>
+            <td colspan="3" class="theory">με την οποία κάθε   y ϵ f(A) αντιστοιχίζεται στο μοναδικό   x ϵ A για το οποίο ισχύει  f(x) = y. <br>
+              <br>
+              Από τον τρόπο που ορίστηκε η g προκύπτει ότι:<br>
+              <br>
+              — έχει πεδίο ορισμού το σύνολο τιμών   f(A) της  f, <br>
+              <br>
+              — έχει σύνολο τιμών το πεδίο ορισμού Α της  f  και <br>
+              <br>
+              — ισχύει η ισοδυναμία: </td>
+          </tr>
+          <tr>
+            <td colspan="3" class="theory"><div align="center">
+                f(x) = y &nbsp;&nbsp;&nbsp;⇔&nbsp;&nbsp;&nbsp;g(y) = x.
+              </div></td>
+          </tr>
+        </tbody></table></td>
+    </tr>
+  </tbody></table>
+  <table class="container" summary="table contains html body book page 154">
+    <tbody><tr>
+      <td><table align="center" summary="table contains picture and/or text">
+          <tbody><tr>
+            <td class="theory">Αυτό σημαίνει ότι, αν η  f  αντιστοιχίζει
+ το x στο y, τότε η g αντιστοιχίζει το y στο x και αντιστρόφως. Δηλαδή η
+ g είναι η αντίστροφη διαδικασία της  f. Για το λόγο αυτό η g λέγεται <strong>αντίστροφη συνάρτηση</strong> της  f  και συμβολίζεται με <strong>f<sup>&nbsp;−1</sup></strong> . Επομένως έχουμε</td>
+            <td>&nbsp;</td>
+            <td><img src="B1.3_%20%CE%9C%CE%9F%CE%9D%CE%9F%CE%A4%CE%9F%CE%9D%CE%95%CE%A3%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%95%CE%99%CE%A3%20-%20%CE%91%CE%9D%CE%A4%CE%99%CE%A3%CE%A4%CE%A1%CE%9F%CE%A6%CE%97%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%97_files/imgB1_95.jpg" alt="Εικόνα" width="240" height="170"></td>
+          </tr>
+        </tbody></table>
+        <br>
+        <table align="center" class="important" summary="table contains picture and/or text">
+          <tbody><tr>
+            <td width="180">f(x) = y &nbsp;&nbsp;&nbsp;⇔&nbsp;&nbsp;&nbsp;f<strong><sup> −1</sup></strong>(y) = x</td>
+          </tr>
+        </tbody></table>
+        <p>οπότε</p>
+        <table align="center" summary="table contains picture and/or text">
+          <tbody><tr>
+            <td><img src="B1.3_%20%CE%9C%CE%9F%CE%9D%CE%9F%CE%A4%CE%9F%CE%9D%CE%95%CE%A3%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%95%CE%99%CE%A3%20-%20%CE%91%CE%9D%CE%A4%CE%99%CE%A3%CE%A4%CE%A1%CE%9F%CE%A6%CE%97%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%97_files/imgB1_96.jpg" alt="Εικόνα" width="458" height="39"></td>
+          </tr>
+        </tbody></table>
+        <p>&nbsp;</p>
+        <table align="center" summary="table contains picture and/or text">
+          <tbody><tr>
+            <td width="486" class="theory">Για παράδειγμα, έστω η εκθετική συνάρτηση  f(x)&nbsp;=&nbsp;α<sup>x</sup>. Όπως είναι γνωστό η συνάρτηση 1-1 αυτή είναι   με πεδίο ορισμού το <strong>R</strong> και σύνολο τιμών το  (0,+∞). Επομένως ορίζεται η αντίστροφη συνάρτηση   f<strong><sup> −1</sup></strong> της  f. Η συνάρτηση αυτή, σύμφωνα με όσα είπαμε προηγουμένως,</td>
+            <td width="12">&nbsp;</td>
+            <td width="236"><img src="B1.3_%20%CE%9C%CE%9F%CE%9D%CE%9F%CE%A4%CE%9F%CE%9D%CE%95%CE%A3%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%95%CE%99%CE%A3%20-%20%CE%91%CE%9D%CE%A4%CE%99%CE%A3%CE%A4%CE%A1%CE%9F%CE%A6%CE%97%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%97_files/imgB1_97.jpg" alt="Εικόνα" width="236" height="154"></td>
+          </tr>
+          <tr>
+            <td colspan="3" class="theory"><p>—	έχει πεδίο ορισμού το   (0, +∞)</p>
+              <p>—	έχει σύνολο τιμών το <strong>R</strong> και</p>
+              <p> —	αντιστοιχίζει κάθε   y ϵ (0, +∞) στο μοναδικό   x ϵ <strong>R</strong> για το οποίο ισχύει  α<sup>x</sup> = y. Επειδή όμως </p></td>
+          </tr>
+          <tr>
+            <td colspan="3" class="theory"><div align="center">
+                α<sup>x</sup> = y &nbsp;&nbsp;&nbsp;&nbsp;⇔&nbsp;&nbsp;&nbsp; x = log<sub>α</sub>y
+              </div></td>
+          </tr>
+          <tr>
+            <td colspan="3" class="theory">θα είναι  f<strong><sup> −1</sup></strong>(y) = log<sub>α</sub>y. Επομένως, η αντίστροφη της εκθετικής συνάρτησης  f(x)&nbsp;=&nbsp;α<sup>x</sup>,    0&lt; α ≠1, είναι η λογαριθμική συνάρτηση  g(x) = log<sub>α</sub>x. Συνεπώς<br>
+              <br></td>
+          </tr>
+          <tr>
+            <td colspan="3" class="theory"><div align="center">
+                <img src="B1.3_%20%CE%9C%CE%9F%CE%9D%CE%9F%CE%A4%CE%9F%CE%9D%CE%95%CE%A3%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%95%CE%99%CE%A3%20-%20%CE%91%CE%9D%CE%A4%CE%99%CE%A3%CE%A4%CE%A1%CE%9F%CE%A6%CE%97%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%97_files/imgB1_98.jpg" alt="Εικόνα" width="334" height="27">
+              </div></td>
+          </tr>
+        </tbody></table>
+        <br>
+        <table align="center" summary="table contains picture and/or text">
+          <tbody><tr>
+            <td class="theory">●  Ας πάρουμε τώρα μια   1-1 συνάρτηση  f  και ας θεωρήσουμε τις γραφικές παραστάσεις C και Cʹʹ  των  f  και της   f<strong><sup> −1</sup></strong>, αντιστοίχως, στο ίδιο σύστημα αξόνων (Σχ. 37). Επειδή<br>
+              <br></td>
+            <td rowspan="3">&nbsp;</td>
+            <td rowspan="3"><img src="B1.3_%20%CE%9C%CE%9F%CE%9D%CE%9F%CE%A4%CE%9F%CE%9D%CE%95%CE%A3%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%95%CE%99%CE%A3%20-%20%CE%91%CE%9D%CE%A4%CE%99%CE%A3%CE%A4%CE%A1%CE%9F%CE%A6%CE%97%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%97_files/imgB1_99.jpg" alt="Εικόνα" width="273" height="230"></td>
+          </tr>
+          <tr>
+            <td class="theory"><div align="center">
+                f(x) = y &nbsp;&nbsp;&nbsp;⇔&nbsp;&nbsp;f<strong><sup> −1</sup></strong>(y) = x ,
+              </div></td>
+          </tr>
+          <tr>
+            <td class="theory"><p>αν ένα σημείο M(α, β) ανήκει στη 
+γραφική παράσταση C της  f, τότε το σημείο   Μʹ(α,β)  θα ανήκει στη 
+γραφική παράσταση Cʹ της f&nbsp;<strong><sup>−1</sup></strong> και αντιστρόφως. Τα σημεία, όμως, αυτά είναι συμμετρικά ως προς την ευθεία που διχοτομεί τις γωνίες   xOy και  xʹOyʹ. Επομένως:</p></td>
+          </tr>
+        </tbody></table></td>
+    </tr>
+  </tbody></table>
+  <table class="container" summary="table contains html body book page 155">
+    <tbody><tr>
+      <td><p class="Definition-table">Οι γραφικές παραστάσεις C  και   Cʹ των συναρτήσεων  f  και<span class="theory"> f<strong><sup> −1</sup></strong></span> είναι συμμετρικές ως προς την ευθεία   y&nbsp;=&nbsp;x που διχοτομεί τις γωνίες xOy και  xʹOyʹ.</p>
+        <p>Έτσι, οι γραφικές παραστάσεις των συναρτήσεων f(x) =   α<sup>x</sup> και <span class="theory">g(x) = log<sub>α</sub>x</span>, <span class="theory">&nbsp;&nbsp;0&lt; α ≠1</span>, είναι συμμετρικές ως προς την ευθεία  y = x.</p>
+        <p>&nbsp;</p>
+        <p class="subtitle_top">ΕΦΑΡΜΟΓΗ</p>
+        <p><strong>Να αποδειχτεί ότι η συνάρτηση   f(x) = 2e<sup>3x−2</sup> + 1είναι   1-1 και να βρεθεί η αντίστροφή της.</strong></p>
+        <p class="subtitle">ΛΥΣΗ</p>
+        <p>— Έστω   x<sub>1</sub> , x<sub>2</sub> ϵ <strong>R</strong> με  f(x<sub>1</sub>) =  f(x<sub>2</sub>). Θα δείξουμε ότι  x<sub>1</sub> = x<sub>2</sub>. Πράγματι έχουμε διαδοχικά:</p>
+        <table align="center" summary="table contains picture and/or text">
+          <tbody><tr>
+            <td><img src="B1.3_%20%CE%9C%CE%9F%CE%9D%CE%9F%CE%A4%CE%9F%CE%9D%CE%95%CE%A3%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%95%CE%99%CE%A3%20-%20%CE%91%CE%9D%CE%A4%CE%99%CE%A3%CE%A4%CE%A1%CE%9F%CE%A6%CE%97%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%97_files/imgB1_100.jpg" alt="Εικόνα" width="182" height="240"></td>
+          </tr>
+        </tbody></table>
+        <p>— Για να βρούμε την αντίστροφη της  f  θέτουμε   y =f(x) και λύνουμε ως προς x. Έχουμε λοιπόν</p>
+        <table align="center" summary="table contains picture and/or text">
+          <tbody><tr>
+            <td><img src="B1.3_%20%CE%9C%CE%9F%CE%9D%CE%9F%CE%A4%CE%9F%CE%9D%CE%95%CE%A3%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%95%CE%99%CE%A3%20-%20%CE%91%CE%9D%CE%A4%CE%99%CE%A3%CE%A4%CE%A1%CE%9F%CE%A6%CE%97%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%97_files/imgB1_101.jpg" alt="Εικόνα" width="276" height="277"></td>
+          </tr>
+        </tbody></table></td>
+    </tr>
+  </tbody></table>
+  <table class="container" summary="table contains html body book page 156">
+    <tbody><tr>
+      <td><p>Επομένως, <img src="B1.3_%20%CE%9C%CE%9F%CE%9D%CE%9F%CE%A4%CE%9F%CE%9D%CE%95%CE%A3%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%95%CE%99%CE%A3%20-%20%CE%91%CE%9D%CE%A4%CE%99%CE%A3%CE%A4%CE%A1%CE%9F%CE%A6%CE%97%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%97_files/imgB1_102.jpg" alt="Εικόνα" width="204" height="46" class="IMGabsmiddle">,   οπότε η αντίστροφη της  f  είναι η συνάρτηση</p>
+        <table align="center" summary="table contains picture and/or text">
+          <tbody><tr>
+            <td><img src="B1.3_%20%CE%9C%CE%9F%CE%9D%CE%9F%CE%A4%CE%9F%CE%9D%CE%95%CE%A3%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%95%CE%99%CE%A3%20-%20%CE%91%CE%9D%CE%A4%CE%99%CE%A3%CE%A4%CE%A1%CE%9F%CE%A6%CE%97%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%97_files/imgB1_103.jpg" alt="Εικόνα" width="236" height="65"></td>
+          </tr>
+        </tbody></table>
+        <p>&nbsp;</p>
+        <p class="excersices">ΑΣΚΗΣΕΙΣ </p>
+        <table align="center" summary="table contains picture and/or text">
+          <tbody><tr>
+            <td><strong>Α΄ ΟΜΑΔΑΣ</strong></td>
+          </tr>
+        </tbody></table>
+        <p><strong>1.</strong> Nα βρείτε ποιες από τις παρακάτω συναρτήσεις είναι γνησίως αύξουσες και ποιες γνησίως φθίνουσες</p>
+        <p><img src="B1.3_%20%CE%9C%CE%9F%CE%9D%CE%9F%CE%A4%CE%9F%CE%9D%CE%95%CE%A3%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%95%CE%99%CE%A3%20-%20%CE%91%CE%9D%CE%A4%CE%99%CE%A3%CE%A4%CE%A1%CE%9F%CE%A6%CE%97%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%97_files/imgB1_104.jpg" alt="Εικόνα" width="462" height="67"></p>
+        <p><strong>2.</strong> <span class="theory">Να βρείτε ποιες από τις παρακάτω συναρτήσεις είναι   "1-1" και για καθεμία απ' αυτές να βρείτε την </span><span class="theory">αντίστροφή της</span></p>
+        <p><img src="B1.3_%20%CE%9C%CE%9F%CE%9D%CE%9F%CE%A4%CE%9F%CE%9D%CE%95%CE%A3%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%95%CE%99%CE%A3%20-%20%CE%91%CE%9D%CE%A4%CE%99%CE%A3%CE%A4%CE%A1%CE%9F%CE%A6%CE%97%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%97_files/imgB1_105.jpg" alt="Εικόνα" width="424" height="132"></p>
+        <p><strong>3.</strong> Δίνονται οι γραφικές παραστάσεις των συναρτήσεων   f, g, φ και  ψ.</p>
+        <table align="center" summary="table contains picture and/or text">
+          <tbody><tr>
+            <td><img src="B1.3_%20%CE%9C%CE%9F%CE%9D%CE%9F%CE%A4%CE%9F%CE%9D%CE%95%CE%A3%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%95%CE%99%CE%A3%20-%20%CE%91%CE%9D%CE%A4%CE%99%CE%A3%CE%A4%CE%A1%CE%9F%CE%A6%CE%97%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%97_files/imgB1_106.jpg" alt="Εικόνα" width="481" height="197"></td>
+          </tr>
+        </tbody></table></td>
+    </tr>
+  </tbody></table>
+  <table class="container" summary="table contains html body book page 157">
+    <tbody><tr>
+      <td><table align="center" summary="table contains picture and/or text">
+          <tbody><tr>
+            <td><img src="B1.3_%20%CE%9C%CE%9F%CE%9D%CE%9F%CE%A4%CE%9F%CE%9D%CE%95%CE%A3%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%95%CE%99%CE%A3%20-%20%CE%91%CE%9D%CE%A4%CE%99%CE%A3%CE%A4%CE%A1%CE%9F%CE%A6%CE%97%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%97_files/imgB1_107.jpg" alt="Εικόνα" width="475" height="181"></td>
+          </tr>
+        </tbody></table>
+        <p class="theory">Να βρείτε ποιες από τις συναρτήσεις   f, g, φ,
+ ψ έχουν αντίστροφη και για καθεμία απ' αυτές να χαράξετε τη γραφική 
+παράσταση της αντίστροφής της.</p>
+        <p class="theory"><strong>4.</strong> Να δείξετε ότι: <br>
+          <br>
+          i)	Αν μια συνάρτηση  f  είναι γνησίως αύξουσα σε ένα διάστημα 
+Δ, τότε η συνάρτηση   −&nbsp;f είναι γνησίως φθίνουσα στο Δ. <br>
+          <br>
+          ii)	Αν δύο συναρτήσεις   f, g είναι γνησίως αύξουσες σε ένα 
+διάστημα Δ, τότε η συνάρτηση   f + g είναι γνησίως αύξουσα στο Δ. <br>
+          <br>
+          iii)	Αν δύο συναρτήσεις   f, g είναι γνησίως αύξουσες σε ένα 
+διάστημα Δ και ισχύει   f(x) ≥ 0 και g(x) ≥ 0 για κάθε  x ϵ Δ, τότε η 
+συνάρτηση   fg είναι γνησίως αύξουσα στο Δ. <br>
+          <br>
+          Ανάλογα συμπεράσματα διατυπώνονται, αν οι   f, g είναι γνησίως φθίνουσες σε ένα διάστημα Δ. </p></td>
+    </tr>
+  </tbody></table>
+</div>
+<!-- APACHE SUBS - Matomo --><script type="text/javascript">  var _paq = window._paq || [];  /* tracker methods like 'setCustomDimension' should be called before 'trackPageView' */  _paq.push(['trackPageView']);  _paq.push(['enableLinkTracking']);  (function() {    var u='//analytics.dschool.edu.gr/';   _paq.push(['setTrackerUrl', u+'matomo.php']);    _paq.push(['setSiteId', '2']);    var d=document, g=d.createElement('script'),s=d.getElementsByTagName('script')[0];    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js';s.parentNode.insertBefore(g,s);  })();</script><noscript><p><img src='//analytics.dschool.edu.gr/matomo.php?idsite=2&amp;rec=1' style='border:0;' alt='' /></p></noscript><!-- End Matomo Code -->     
+<script src="B1.3_%20%CE%9C%CE%9F%CE%9D%CE%9F%CE%A4%CE%9F%CE%9D%CE%95%CE%A3%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%95%CE%99%CE%A3%20-%20%CE%91%CE%9D%CE%A4%CE%99%CE%A3%CE%A4%CE%A1%CE%9F%CE%A6%CE%97%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%97_files/widget_app_1742809797938.js" async="" id="a11yWidgetSrc" crossorigin="anonymous" integrity="sha256-ub4bB4iTznsvgeJfdswC78HOaVW0PmIBAHTkkv4TPwg="></script><script crossorigin="anonymous" integrity="sha256-EuMB14bJyodB/AZwYWKJFN2J4tOoGN6LfdHTl68q+0o=" src="B1.3_%20%CE%9C%CE%9F%CE%9D%CE%9F%CE%A4%CE%9F%CE%9D%CE%95%CE%A3%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%95%CE%99%CE%A3%20-%20%CE%91%CE%9D%CE%A4%CE%99%CE%A3%CE%A4%CE%A1%CE%9F%CE%A6%CE%97%20%CE%A3%CE%A5%CE%9D%CE%91%CE%A1%CE%A4%CE%97%CE%A3%CE%97_files/remediation_1742809797938.js"></script></body></html>
