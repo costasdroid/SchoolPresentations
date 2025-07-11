@@ -1,0 +1,74 @@
+Οταν οι τιμές μιας συνάρτησης $f$ προσεγγίζουν όσο θέλουμε έναν πραγματικό αριθμό $l$ καθώς το $x$ προσεγγίζει με οποιονδήποτε τρόπο τον αριθμό $x_0$, τότε γράφουμε $\lim\limits_{x\to x_0}f(x)=l${TRUE}
+
+Για να αναζητήσουμε το όριο μιας συνάρτησης $f$ στο $x_0$ πρέπει το $x_0$ να ανήκει στο πεδίο ορισμού της συνάρτησης $f$.{FALSE}
+
+Η τιμή της $f$ στο $x_0$, όταν υπάρχει, μπορεί να είναι ίση με το όριο της στο $x_0$ ή διαφορετική από αυτό.{TRUE}
+
+Ισχύει η ισοδυναμία $\lim\limits_{x\to x_0}f(x)=l\iff\lim\limits_{x\to x_0}(f(x)-l)=0$.{TRUE}
+
+Ισχύει η ισοδυναμία $\lim\limits_{x\to x_0}f(x)=l\iff\lim\limits_{h\to 0}f(x_0+h)=l$.{TRUE}
+
+Αν μία συνάρτηση $f$ είναι ορισμένη σε ένα σύνολο της μορφής $(α,x_0) \cup (x_0,β)$ τότε ισχύει η ισοδυναμία $$\lim\limits_{x\to x_0}f(x)=l\iff\lim\limits_{x\to x_0^+}f(x)=\lim\limits_{x\to x_0^-}f(x)=l$${TRUE}
+
+Αν $\lim\limits_{x\to x_0}f(x)>0$, τότε $f(x)>0$ κοντά στο $x_0$.{TRUE}
+
+Αν $\lim\limits_{x\to x_0}f(x)\le 0$, τότε $f(x)\le 0$ κοντά στο $x_0$.{FALSE}
+
+Για όλες τις συναρτήσεις $f$, $g$ οι οποίες έχουν όριο στο $x_0$ και είναι τέτοιες ώστε $f(x)<g(x)$ κοντά στο $x_0$, ισχύει $\lim\limits_{x\to x_0}f(x)<\lim\limits_{x\to x_0}g(x)$.{FALSE}
+
+Αν υπάρχει το όριο της συνάρτησης $f$ στο $x_0$, τότε $$\lim\limits_{x\to x_0}|f(x)|=\left| \lim\limits_{x\to x_0}f(x)\right|$${TRUE}
+
+Αν υπάρχει το όριο της συνάρτησης $f$ στο $x_0$ και $\lim\limits_{x\to x_0}|f(x)|=0$, τότε $$\lim\limits_{x\to x_0}f(x)=0$${TRUE}
+
+Αν υπάρχει το όριο της συνάρτησης $f$ στο $x_0$ και $f(x)\ge 0$ κοντά στο $x_0$, τότε $\lim\limits_{x\to x_0}\sqrt[ν]{f(x)}=\sqrt[ν]{\lim\limits_{x\to x_0}f(x)}$, $ν\in \mathbb{N}$ με $ν\ge 2${TRUE}
+
+Για οποιεσδήποτε συναρτήσεις $f$, $g$ για τις οποίες υπάρχει το $\lim\limits_{x\to x_0}\left[f(x)+g(x)\right]$ υπάρχουν επίσης τα $\lim\limits_{x\to x_0}f(x)$ και $\lim\limits_{x\to x_0}g(x)$.{FALSE}
+
+Για κάθε πολυωνυμική συνάρτηση $P(x)$ ισχύει $\lim\limits_{x\to x_0}P(x)=P(x_0)$.{TRUE}
+
+Αν για τις συναρτήσεις $f$, $g$ και $h$ ισχύει $h(x)<f(x)<g(x)$ κοντά στο $x_0$ και $\lim\limits_{x\to x_0}h(x)=\lim\limits_{x\to x_0}g(x)=l$ τότε $\lim\limits_{x\to x_0}f(x)=l$.{TRUE}
+
+Αν για τις συναρτήσεις $f$, $g$ και $h$ ισχύει $h(x)\le f(x)\le g(x)$ κοντά στο $x_0$ και $\lim\limits_{x\to x_0}h(x)\ne \lim\limits_{x\to x_0}g(x)$ τότε δεν υπάρχει το $\lim\limits_{x\to x_0}f(x)$.{FALSE}
+
+Ισχύει η σχέση $|ημx|\le |x|$ για κάθε $x\in \mathbb{R}$.{TRUE}
+
+Ισχύει $\lim\limits_{x\to 0}\dfrac{ημx}{x}=1$.{TRUE}
+
+Ισχύει $\lim\limits_{x\to 0}\dfrac{1-συνx}{x}=1$.{FALSE}
+
+Αν $\lim\limits_{x\to x_0}f(x)=+\infty$, τότε $f(x)>0$ κοντά στο $x_0$.{TRUE}
+
+Αν $\lim\limits_{x\to x_0}f(x)=+\infty$ ή $-\infty$, τότε $\lim\limits_{x\to x_0}\dfrac{1}{f(x)}=0${TRUE}
+
+Αν $\lim\limits_{x\to x_0}f(x)=0$ και $f(x)>0$ κοντά στο $x_0$, τότε $\lim\limits_{x\to x_0}\dfrac{1}{f(x)}=+\infty$.{TRUE}
+
+Αν $\lim\limits_{x\to x_0}f(x)=0$ και $f(x)<0$ κοντά στο $x_0$, τότε $\lim\limits_{x\to x_0}\dfrac{1}{f(x)}=-\infty$.{TRUE}
+
+Αν $f(x)\le g(x)$ κοντά στο $x_0$ και $\lim\limits_{x\to x_0}f(x)=+\infty$, τότε $$\lim\limits_{x\to x_0}g(x)=+\infty$${TRUE}
+
+Αν $f(x)\le g(x)$ κοντά στο $x_0$ και $\lim\limits_{x\to x_0}f(x)=-\infty$, τότε $$\lim\limits_{x\to x_0}g(x)=-\infty$${FALSE}
+
+Ισχύει $\lim\limits_{x\to 0}\dfrac{1}{x^{2ν}}=+\infty$, $ν\in\mathbb{N}^*$.{TRUE}
+
+Ισχύει $\lim\limits_{x\to 0}\dfrac{1}{x^{2ν+1}}=-\infty$, $ν\in\mathbb{N}^*$.{FALSE}
+
+Αν $\lim\limits_{x\to x_0}f(x)=+\infty$ και $\lim\limits_{x\to x_0}g(x)=-\infty$, τότε $$\lim\limits_{x\to x_0}\left[f(x)+g(x)\right]=0$${FALSE}
+
+Αν $\lim\limits_{x\to x_0}f(x)=0$ και $\lim\limits_{x\to x_0}g(x)=+\infty$ ή $-\infty$, τότε $$\lim\limits_{x\to x_0}\left[f(x)\cdot g(x)\right]=0$${FALSE}
+
+Όταν καθώς το $x$ αυξάνεται απεριόριστα με οποιονδήποτε τρόπο το $f(x)$ προσεγγίζει όσο θέλουμε τον πραγματικό αριθμό $l$, τότε λέμε ότι η $f$ έχει στο $+\infty$ όριο το $l$.{TRUE}
+
+Για κάθε $ν\in\mathbb{N}^*$ ισχύει $\lim\limits_{x\to +\infty}\dfrac{1}{x^ν}=0$.{TRUE}
+
+Για κάθε $ν\in\mathbb{N}^*$ ισχύει $\lim\limits_{x\to -\infty}x^ν=-\infty$.{FALSE}
+
+Για κάθε πολυωνυμική συνάρτηση $$P(x)=a_ν x^ν + a_{ν-1}x^{n-1}+\ldots+a_1 x+a_0$$ με $a_ν\ne 0$ ισχύει $\lim\limits_{x\to +\infty}P(x)=\lim\limits_{x\to +\infty}\left( a_ν x^ν\right)$.{TRUE}
+
+Αν $a>1$, τότε $\lim\limits_{x\to -\infty}a^x=0$.{TRUE}
+
+Αν $a<1$, τότε $\lim\limits_{x\to +\infty}a^x=+\infty$.{FALSE}
+
+Ισχύει $\lim\limits_{x\to 0}\ln x=-\infty$.{TRUE}
+
+Ισχύει $\lim\limits_{x\to +\infty}\ln x=+\infty$.{TRUE}
+

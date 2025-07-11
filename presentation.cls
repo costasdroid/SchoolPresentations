@@ -81,8 +81,7 @@
     \refstepcounter{askisi}\par
     \subsection{Άσκηση \theaskisi}
     \begin{frame}[label=Άσκηση\theaskisi,t]
-      \textbf{\theaskisi.} 
-        }{
+}{
     \end{frame}
 }
 
@@ -105,3 +104,20 @@
         }{
     \end{frame}
 }
+
+% Presentation version
+\def\presentationversion{2.7}
+
+% Patch \insertdate to always append version info on title slide
+\let\beamer@originsertdate\insertdate
+\renewcommand{\insertdate}{\beamer@originsertdate~---~\textbf{Έκδοση:}~\presentationversion}
+
+% Changelog
+% 2.7 - 2024-07-10: Removed numbering from askisi's description.
+% 2.6 - 2024-06-10: Added changelog section, patched \insertdate for version info
+% 2.5 - 2024-05-20: Added environments for askisi, lisi, apodiksi
+% 2.4 - 2024-04-15: Added tikz styles for flowcharts
+% 2.3 - 2024-03-01: Switched to Calibri font, added xgreek
+% 2.2 - 2024-02-10: Added appendixnumberbeamer, polynom, cancel
+% 2.1 - 2024-01-05: Initial beamer customization, theme and color
+% 2.0 - 2023-12-01: Initial version

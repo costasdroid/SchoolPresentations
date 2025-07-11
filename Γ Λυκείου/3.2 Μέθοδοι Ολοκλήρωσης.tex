@@ -4,265 +4,265 @@
 \subtitle{Μέθοδοι Ολοκλήρωσης}
 \author[Λόλας]{Κωνσταντίνος Λόλας}
 \institute[$10^ο$ ΓΕΛ]{$10^ο$ ΓΕΛ Θεσσαλονίκης}
-\date{}
+
 
 \begin{document}
 
 \begin{frame}
-    \titlepage
+  \titlepage
 \end{frame}
 
 \section{Θεωρία}
 \begin{frame}{Σιγά τα ολοκληρώματα!}
-    Τι μπορούμε να ολοκληρώσουμε
-    \begin{enumerate}
-        \item Πολυώνυμα
-        \item Εκθετικές
-        \item Τριγωνομετρικές
-        \item Ρητές με πρωτοβάθμιο διαιρέτη
-        \item Πρωτοβάθμιες άρρητες
-        \item Έτοιμες από σύνθεση και φυσικά
-        \item κάθε πρόσθεση ή αφαίρεση αυτών ΜΟΝΟ
-    \end{enumerate}
-    Τι γίνεται με τον πολλαπλασιασμό? Διαίρεση? Ακόμα και την απλή $\ln x$?
+  Τι μπορούμε να ολοκληρώσουμε
+  \begin{enumerate}
+    \item Πολυώνυμα
+    \item Εκθετικές
+    \item Τριγωνομετρικές
+    \item Ρητές με πρωτοβάθμιο διαιρέτη
+    \item Πρωτοβάθμιες άρρητες
+    \item Έτοιμες από σύνθεση και φυσικά
+    \item κάθε πρόσθεση ή αφαίρεση αυτών ΜΟΝΟ
+  \end{enumerate}
+  Τι γίνεται με τον πολλαπλασιασμό? Διαίρεση? Ακόμα και την απλή $\ln x$?
 \end{frame}
 
 \begin{frame}{Ιστορία}
-    Ξέρουμε να παραγωγίζουμε γινόμενο
-    \begin{align*}
-        (f\cdot g)' & =f'g+fg'         \\
-        f'g         & =(f\cdot g)'-fg'
-    \end{align*}
-    \onslide<2-> {
-        Άρα
-        $$\int f'g\, dx=\int (f\cdot g)'\,dx - \int fg'\, dx$$
-        $$\int f'g\, dx=f\cdot g - \int fg'\, dx$$}
+  Ξέρουμε να παραγωγίζουμε γινόμενο
+  \begin{align*}
+    (f\cdot g)' & =f'g+fg'         \\
+    f'g         & =(f\cdot g)'-fg'
+  \end{align*}
+  \onslide<2-> {
+    Άρα
+    $$\int f'g\, dx=\int (f\cdot g)'\,dx - \int fg'\, dx$$
+    $$\int f'g\, dx=f\cdot g - \int fg'\, dx$$}
 \end{frame}
 
 \begin{frame}{Έ και?}
-    $$\int f'g\, dx=f\cdot g - \int fg'\, dx$$
-    Βρείτε λόγους για να περάσουμε την παράγωγο από την μία συνάρτηση στην άλλη
-    \begin{itemize}
-        \item<2-> Γιατί τελικά... εξαφανίζεται
-        \item<3-> Γιατί δεν ξέρουμε να την ολοκληρώνουμε
-        \item<4-> Γιατί μπορούμε να ξαναφτάσουμε στον ίδιο τύπο!!!!!!
-    \end{itemize}
+  $$\int f'g\, dx=f\cdot g - \int fg'\, dx$$
+  Βρείτε λόγους για να περάσουμε την παράγωγο από την μία συνάρτηση στην άλλη
+  \begin{itemize}
+    \item<2-> Γιατί τελικά... εξαφανίζεται
+    \item<3-> Γιατί δεν ξέρουμε να την ολοκληρώνουμε
+    \item<4-> Γιατί μπορούμε να ξαναφτάσουμε στον ίδιο τύπο!!!!!!
+  \end{itemize}
 \end{frame}
 
 \begin{frame}{Παραδείγματα}
-    \begin{enumerate}
-        \item<1-> $\int xe^x\,dx$
-        \item<2-> $\int x^3e^x\,dx$
-        \item<3-> $\int x\ln x\,dx$
-        \item<4-> $\int e^{2x}ημ(3x+1)\,dx$
-    \end{enumerate}
+  \begin{enumerate}
+    \item<1-> $\int xe^x\,dx$
+    \item<2-> $\int x^3e^x\,dx$
+    \item<3-> $\int x\ln x\,dx$
+    \item<4-> $\int e^{2x}ημ(3x+1)\,dx$
+  \end{enumerate}
 \end{frame}
 
 \begin{frame}{Και στα εντός ύλης!}
-    \begin{block}{Κατά παράγοντες}
-        $$\int_a^b f'(x)g(x)\,dx=\left[ f(x)g(x) \right]_a^b -\int_a^b f(x)g'(x)\,dx$$
-    \end{block}
+  \begin{block}{Κατά παράγοντες}
+    $$\int_a^b f'(x)g(x)\,dx=\left[ f(x)g(x) \right]_a^b -\int_a^b f(x)g'(x)\,dx$$
+  \end{block}
 \end{frame}
 
 \begin{frame}{Hold your horses}
 
-    Δεν θα μάθουμε \emph{ΠΟΤΕ} να ολοκληρώνουμε όλες τις συναρτήσεις! Μαθηματικό...!
+  Δεν θα μάθουμε \emph{ΠΟΤΕ} να ολοκληρώνουμε όλες τις συναρτήσεις! Μαθηματικό...!
 
-    Μεθόδους για "όμορφες"
+  Μεθόδους για "όμορφες"
 
-    \begin{itemize}
-        \item<2-> ρητές
-        \item<3-> άρρητες
-        \item<4-> τριγωνομετρικές
-        \item<5-> από σύνθεση?????
-    \end{itemize}
+  \begin{itemize}
+    \item<2-> ρητές
+    \item<3-> άρρητες
+    \item<4-> τριγωνομετρικές
+    \item<5-> από σύνθεση?????
+  \end{itemize}
 
 \end{frame}
 
 \begin{frame}{Δοκιμές σύνθεσης}
-    \begin{enumerate}
-        \item<1-> $\int \dfrac{x}{x^2+1}\,dx$
-        \item<2-> $\int \dfrac{\ln x}{x}\, dx$
-        \item<3-> $\int 4xεφ(x^2)\ln (ημ(x^2))\, dx$
-    \end{enumerate}
+  \begin{enumerate}
+    \item<1-> $\int \dfrac{x}{x^2+1}\,dx$
+    \item<2-> $\int \dfrac{\ln x}{x}\, dx$
+    \item<3-> $\int 4xεφ(x^2)\ln (ημ(x^2))\, dx$
+  \end{enumerate}
 
 \end{frame}
 
 \begin{frame}{Ναι, αλλά... τύπο έχουμε?}
-    \begin{block}{Μέθοδος Αντικατάστασης}
-        $$\int_a^b f(x)\, dx$$
-        Θέτω $x=g(u)$, άρα
-        \begin{itemize}
-            \item για $x=a\implies u=k$
-            \item για $x=b\implies u=l$
-            \item $dx=g'(u)du$
-        \end{itemize}
-        $$\int_a^b f(x)\, dx=\int_{k}^{l} f(g(u))g'(u)\,du$$
-    \end{block}
+  \begin{block}{Μέθοδος Αντικατάστασης}
+    $$\int_a^b f(x)\, dx$$
+    Θέτω $x=g(u)$, άρα
+    \begin{itemize}
+      \item για $x=a\implies u=k$
+      \item για $x=b\implies u=l$
+      \item $dx=g'(u)du$
+    \end{itemize}
+    $$\int_a^b f(x)\, dx=\int_{k}^{l} f(g(u))g'(u)\,du$$
+  \end{block}
 
 \end{frame}
 
 \section{Ασκήσεις}
 \begin{askisi}
-    Να υπολογίσετε τα ολοκληρώματα
-    \begin{enumerate}
-        \item<1-> $\int_{0}^{1}x\,dx$
-        \item<2-> $\int_{0}^{\frac{π}{2}}xημx\,dx$
-        \item<3-> $\int_{0}^{π}x^2συνx\,dx$
-    \end{enumerate}
+  Να υπολογίσετε τα ολοκληρώματα
+  \begin{enumerate}
+    \item<1-> $\int_{0}^{1}x\,dx$
+    \item<2-> $\int_{0}^{\frac{π}{2}}xημx\,dx$
+    \item<3-> $\int_{0}^{π}x^2συνx\,dx$
+  \end{enumerate}
 
-    % \hyperlink{Λύση1}{\beamerbutton{Λύση}}
+  % \hyperlink{Λύση1}{\beamerbutton{Λύση}}
 \end{askisi}
 
 \begin{askisi}
-    Να υπολογίσετε τα ολοκληρώματα
-    \begin{enumerate}
-        \item<1-> $\int_{1}^{2} 2x\ln x \,dx$
-        \item<2-> $\int_{1}^{2} \ln x \,dx$
-        \item<3-> $\int_{0}^{1} \ln (x+1) \,dx$
-        \item<4-> $\int_{1}^{2} \dfrac{\ln x}{x^2} \,dx$
-        \item<5-> $\int_{1}^{9} \dfrac{\ln x}{\sqrt{x}} \,dx$
-    \end{enumerate}
+  Να υπολογίσετε τα ολοκληρώματα
+  \begin{enumerate}
+    \item<1-> $\int_{1}^{2} 2x\ln x \,dx$
+    \item<2-> $\int_{1}^{2} \ln x \,dx$
+    \item<3-> $\int_{0}^{1} \ln (x+1) \,dx$
+    \item<4-> $\int_{1}^{2} \dfrac{\ln x}{x^2} \,dx$
+    \item<5-> $\int_{1}^{9} \dfrac{\ln x}{\sqrt{x}} \,dx$
+  \end{enumerate}
 
-    % \hyperlink{Λύση2}{\beamerbutton{Λύση}}
+  % \hyperlink{Λύση2}{\beamerbutton{Λύση}}
 \end{askisi}
 
 \begin{askisi}
-    Να υπολογίσετε τα ολοκληρώματα
-    \begin{enumerate}
-        \item<1-> $\int_{0}^{π} e^xσυνx \,dx$
-        \item<2-> $\int_{0}^{π} \dfrac{ημ2x}{e^x} \,dx$
-    \end{enumerate}
+  Να υπολογίσετε τα ολοκληρώματα
+  \begin{enumerate}
+    \item<1-> $\int_{0}^{π} e^xσυνx \,dx$
+    \item<2-> $\int_{0}^{π} \dfrac{ημ2x}{e^x} \,dx$
+  \end{enumerate}
 
-    % \hyperlink{Λύση3}{\beamerbutton{Λύση}}
+  % \hyperlink{Λύση3}{\beamerbutton{Λύση}}
 \end{askisi}
 
 \begin{askisi}
-    Να υπολογίσετε το ολοκλήρωμα $\int_{0}^{\frac{0}{4}} \dfrac{x}{συν^2x} \,dx$
+  Να υπολογίσετε το ολοκλήρωμα $\int_{0}^{\frac{0}{4}} \dfrac{x}{συν^2x} \,dx$
 
-    % \hyperlink{Λύση4}{\beamerbutton{Λύση}}
+  % \hyperlink{Λύση4}{\beamerbutton{Λύση}}
 \end{askisi}
 
 \begin{askisi}
-    Έστω $F$ μία παράγουσα στο $\mathbb{R}$ της συνάρτησης $f(x)=e^{x^2}$, με $F(1)=0$. Να υπολογίσετε το ολοκλήρωμα $\int_{0}^{1} F(x) \,dx$
+  Έστω $F$ μία παράγουσα στο $\mathbb{R}$ της συνάρτησης $f(x)=e^{x^2}$, με $F(1)=0$. Να υπολογίσετε το ολοκλήρωμα $\int_{0}^{1} F(x) \,dx$
 
-    % \hyperlink{Λύση5}{\beamerbutton{Λύση}}
+  % \hyperlink{Λύση5}{\beamerbutton{Λύση}}
 \end{askisi}
 
 \begin{askisi}
-    Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση με $f(0)=0$ και συνεχή δεύτερη παράγωγο για την οποία ισχύει $\int_{0}^{π} \left( f(x)+f''(x) \right)ημx  \,dx=π$. Να δείξετε ότι $f(π)=π$
+  Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση με $f(0)=0$ και συνεχή δεύτερη παράγωγο για την οποία ισχύει $\int_{0}^{π} \left( f(x)+f''(x) \right)ημx  \,dx=π$. Να δείξετε ότι $f(π)=π$
 
-    % \hyperlink{Λύση6}{\beamerbutton{Λύση}}
+  % \hyperlink{Λύση6}{\beamerbutton{Λύση}}
 \end{askisi}
 
 \begin{askisi}
-    Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση, η οποία παρουσιάζει τοπικό ακρότατο στο $x_0=2$, έχει συνεχή $f''$ και ισχύει
-    $$\int_{0}^{2} \left( xf''(x)+2f'(x) \right) \,dx=0$$
-    \begin{enumerate}
-        \item<1-> Να δείξετε ότι $f(0)=f(2)$
-        \item<2-> Να δείξετε ότι υπάρχει $ξ\in (0,2)$, τέτοιο ώστε $f'(ξ)=0$
-    \end{enumerate}
+  Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση, η οποία παρουσιάζει τοπικό ακρότατο στο $x_0=2$, έχει συνεχή $f''$ και ισχύει
+  $$\int_{0}^{2} \left( xf''(x)+2f'(x) \right) \,dx=0$$
+  \begin{enumerate}
+    \item<1-> Να δείξετε ότι $f(0)=f(2)$
+    \item<2-> Να δείξετε ότι υπάρχει $ξ\in (0,2)$, τέτοιο ώστε $f'(ξ)=0$
+  \end{enumerate}
 
-    %\hyperlink{Λύση7}{\beamerbutton{Λύση}}
+  %\hyperlink{Λύση7}{\beamerbutton{Λύση}}
 \end{askisi}
 
 \begin{askisi}
-    Δίνεται η συνάρτηση $f(x)=4x-2x+1$. Να υπολογίσετε τα ολοκληρώματα:
-    \begin{enumerate}
-        \item<1-> $\int_{-1}^{0} f(x+1) \,dx$
-        \item<2-> $\int_{1}^{e} \dfrac{f(\ln x)}{x} \,dx$
-    \end{enumerate}
+  Δίνεται η συνάρτηση $f(x)=4x-2x+1$. Να υπολογίσετε τα ολοκληρώματα:
+  \begin{enumerate}
+    \item<1-> $\int_{-1}^{0} f(x+1) \,dx$
+    \item<2-> $\int_{1}^{e} \dfrac{f(\ln x)}{x} \,dx$
+  \end{enumerate}
 
-    %\hyperlink{Λύση8}{\beamerbutton{Λύση}}
+  %\hyperlink{Λύση8}{\beamerbutton{Λύση}}
 \end{askisi}
 
 \begin{askisi}
-    Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση η οποία είναι συνεχής. Να δείξετε ότι
-    $$\int_{2}^{4} f\left( \dfrac{2}{x} \right)  \,dx=2\int_{\frac{1}{2}}^{1} \dfrac{f(x)}{x^2} \,dx$$
+  Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση η οποία είναι συνεχής. Να δείξετε ότι
+  $$\int_{2}^{4} f\left( \dfrac{2}{x} \right)  \,dx=2\int_{\frac{1}{2}}^{1} \dfrac{f(x)}{x^2} \,dx$$
 
-    %\hyperlink{Λύση9}{\beamerbutton{Λύση}}
+  %\hyperlink{Λύση9}{\beamerbutton{Λύση}}
 \end{askisi}
 
 \begin{askisi}
-    ΔΝα υπολογίσετε τα ολοκληρώματα
-    \begin{enumerate}
-        \item<1-> $\int_{0}^{\frac{π}{2}} συν(x-\frac{π}{3}) \,dx$
-        \item<2-> $\int_{0}^{1} \dfrac{1}{2x+1} \,dx$
-        \item<3-> $\int_{0}^{\sqrt{3}} \dfrac{x}{\sqrt{x^2+1}} \,dx$
-        \item<4-> $\int_{1}^{e} \dfrac{\sqrt{\ln x}}{x} \,dx$
-    \end{enumerate}
+  ΔΝα υπολογίσετε τα ολοκληρώματα
+  \begin{enumerate}
+    \item<1-> $\int_{0}^{\frac{π}{2}} συν(x-\frac{π}{3}) \,dx$
+    \item<2-> $\int_{0}^{1} \dfrac{1}{2x+1} \,dx$
+    \item<3-> $\int_{0}^{\sqrt{3}} \dfrac{x}{\sqrt{x^2+1}} \,dx$
+    \item<4-> $\int_{1}^{e} \dfrac{\sqrt{\ln x}}{x} \,dx$
+  \end{enumerate}
 
-    %\hyperlink{Λύση10}{\beamerbutton{Λύση}}
+  %\hyperlink{Λύση10}{\beamerbutton{Λύση}}
 \end{askisi}
 
 \begin{askisi}
-    Δίνεται η συνάρτηση $f(x)=e^x+x-1$
-    \begin{enumerate}
-        \item<1-> Να δείξετε ότι ορίζεται η αντίστροφη συνάρτηση $f^{-1}$ και να βρείτε το πεδίο ορισμού της
-        \item<2-> Να υπολογίσετε το $\int_{0}^{e} f^{-1}(x) \,dx$
-    \end{enumerate}
+  Δίνεται η συνάρτηση $f(x)=e^x+x-1$
+  \begin{enumerate}
+    \item<1-> Να δείξετε ότι ορίζεται η αντίστροφη συνάρτηση $f^{-1}$ και να βρείτε το πεδίο ορισμού της
+    \item<2-> Να υπολογίσετε το $\int_{0}^{e} f^{-1}(x) \,dx$
+  \end{enumerate}
 
-    %\hyperlink{Λύση11}{\beamerbutton{Λύση}}
+  %\hyperlink{Λύση11}{\beamerbutton{Λύση}}
 \end{askisi}
 
 \begin{askisi}
-    Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση με $f(\mathbb{R})=\mathbb{R}$, η οποία είναι παραγωγίσιμη και ισχύει
-    $$f^3(x)+f(x)=x \text{, για κάθε } x\in\mathbb{R}$$
-    \begin{enumerate}
-        \item<1-> Να δείξετε ότι η συνάρτηση $f$ αντιστρέφεται και να βρείτε την $f^{-1}$
-        \item<2-> Να υπολογίσετε το $\int_{0}^{2} f(x) \,dx$
-    \end{enumerate}
+  Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση με $f(\mathbb{R})=\mathbb{R}$, η οποία είναι παραγωγίσιμη και ισχύει
+  $$f^3(x)+f(x)=x \text{, για κάθε } x\in\mathbb{R}$$
+  \begin{enumerate}
+    \item<1-> Να δείξετε ότι η συνάρτηση $f$ αντιστρέφεται και να βρείτε την $f^{-1}$
+    \item<2-> Να υπολογίσετε το $\int_{0}^{2} f(x) \,dx$
+  \end{enumerate}
 
-    %\hyperlink{Λύση12}{\beamerbutton{Λύση}}
+  %\hyperlink{Λύση12}{\beamerbutton{Λύση}}
 \end{askisi}
 
 \begin{askisi}
-    Έστω $f:[-a,a]\to\mathbb{R}$ μία συνάρτηση, η οποία είναι συνεχής. Να δείξετε ότι:
-    \begin{enumerate}
-        \item
-              \begin{enumerate}
-                  \item<1-> Αν η $f$ είναι περιττή, τότε $\int_{-a}^{a} f(x) \,dx=0$
-                  \item<2-> Να υπολογίσετε το ολοκλήρωμα $J=\int_{-1}^{1} \dfrac{x}{2+συνx} \,dx$
-              \end{enumerate}
-        \item<3-> Αν η $f$ είναι άρτια, τότε $\int_{-a}^{a} f(x) \,dx=2\int_{0}^{a} f(x) \,dx$
-    \end{enumerate}
+  Έστω $f:[-a,a]\to\mathbb{R}$ μία συνάρτηση, η οποία είναι συνεχής. Να δείξετε ότι:
+  \begin{enumerate}
+    \item
+          \begin{enumerate}
+            \item<1-> Αν η $f$ είναι περιττή, τότε $\int_{-a}^{a} f(x) \,dx=0$
+            \item<2-> Να υπολογίσετε το ολοκλήρωμα $J=\int_{-1}^{1} \dfrac{x}{2+συνx} \,dx$
+          \end{enumerate}
+    \item<3-> Αν η $f$ είναι άρτια, τότε $\int_{-a}^{a} f(x) \,dx=2\int_{0}^{a} f(x) \,dx$
+  \end{enumerate}
 
-    %\hyperlink{Λύση13}{\beamerbutton{Λύση}}
+  %\hyperlink{Λύση13}{\beamerbutton{Λύση}}
 \end{askisi}
 
 \begin{askisi}
-    Έστω μία συνεχής συνάρτηση $f:[0,2]\to\mathbb{R}$ για την οποία ισχύει
-    $$f(1-x)+f(1+x)=2\text{ για κάθε }x\in [-1,1]$$
-    Να υπολογίσετε το ολοκλήρωμα $\int_{0}^{2} f(x) \,dx$
+  Έστω μία συνεχής συνάρτηση $f:[0,2]\to\mathbb{R}$ για την οποία ισχύει
+  $$f(1-x)+f(1+x)=2\text{ για κάθε }x\in [-1,1]$$
+  Να υπολογίσετε το ολοκλήρωμα $\int_{0}^{2} f(x) \,dx$
 
-    %\hyperlink{Λύση14}{\beamerbutton{Λύση}}
+  %\hyperlink{Λύση14}{\beamerbutton{Λύση}}
 \end{askisi}
 
 \begin{askisi}
-    Να υπολογίσετε το ολοκλήρωμα $\int_{1}^{e^2} |\ln x-1| \,dx$
+  Να υπολογίσετε το ολοκλήρωμα $\int_{1}^{e^2} |\ln x-1| \,dx$
 
-    %\hyperlink{Λύση15}{\beamerbutton{Λύση}}
+  %\hyperlink{Λύση15}{\beamerbutton{Λύση}}
 \end{askisi}
 
 \begin{askisi}
-    Να υπολογίσετ το ολοκλήρωμα $\int_{1}^{e} ημ(\ln x) \,dx$
+  Να υπολογίσετ το ολοκλήρωμα $\int_{1}^{e} ημ(\ln x) \,dx$
 
-    %\hyperlink{Λύση16}{\beamerbutton{Λύση}}
+  %\hyperlink{Λύση16}{\beamerbutton{Λύση}}
 \end{askisi}
 
 \begin{askisi}
-    Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση η οποία είναι συνεχής και ισχύει:
-    $$f(x)=e^x+\int_{0}^{1} xf(x) \,dx\, , x\in\mathbb{R}$$
-    Να βρείτε την $f$
+  Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση η οποία είναι συνεχής και ισχύει:
+  $$f(x)=e^x+\int_{0}^{1} xf(x) \,dx\, , x\in\mathbb{R}$$
+  Να βρείτε την $f$
 
-    %\hyperlink{Λύση17}{\beamerbutton{Λύση}}
+  %\hyperlink{Λύση17}{\beamerbutton{Λύση}}
 \end{askisi}
 
 \begin{askisi}
-    Αν η συνάρτηση $f$ είναι συνεχής στο $[α,β]$ και ισχύει $f(x)=f(α+β-x)$, για κάθε $x\in [α,β]$, να δείξετε ότι:
-    $$\int_{α}^{β} xf(x) \,dx=\dfrac{α+β}{2}\int_{α}^{β} f(x) \,dx$$
+  Αν η συνάρτηση $f$ είναι συνεχής στο $[α,β]$ και ισχύει $f(x)=f(α+β-x)$, για κάθε $x\in [α,β]$, να δείξετε ότι:
+  $$\int_{α}^{β} xf(x) \,dx=\dfrac{α+β}{2}\int_{α}^{β} f(x) \,dx$$
 
-    %\hyperlink{Λύση18}{\beamerbutton{Λύση}}
+  %\hyperlink{Λύση18}{\beamerbutton{Λύση}}
 \end{askisi}
 
 

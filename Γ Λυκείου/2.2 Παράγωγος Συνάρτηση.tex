@@ -4,515 +4,515 @@
 \subtitle{Παράγωγος}
 \author[Λόλας]{Κωνσταντίνος Λόλας}
 \institute[$10^ο$ ΓΕΛ]{$10^ο$ ΓΕΛ Θεσσαλονίκης}
-\date{}
+
 
 \begin{document}
 
 \begin{frame}
-    \titlepage
+  \titlepage
 \end{frame}
 
 \section{Θεωρία}
 \begin{frame}{Αν είσαι τεμπέλης!}
-    Γιατί να ψάχνουμε την κλίση σε κάθε σημείο ξεχωριστά? \pause
+  Γιατί να ψάχνουμε την κλίση σε κάθε σημείο ξεχωριστά? \pause
 
-    Ας τη βρούμε για όλα και ΜΕΤΑ να κάνουμε αντικατάσταση
+  Ας τη βρούμε για όλα και ΜΕΤΑ να κάνουμε αντικατάσταση
 \end{frame}
 
 \begin{frame}{Συνάρτηση παράγωγος}
-    \begin{block}{Παράγωγος}
-        Έστω μια συνάρτηση $f$. Η συνάρτηση παράγωγος της $f$ θα είναι η συνάρτηση που απεικονίζει το $x_0$ στο $f'(x_0)$
-    \end{block}
+  \begin{block}{Παράγωγος}
+    Έστω μια συνάρτηση $f$. Η συνάρτηση παράγωγος της $f$ θα είναι η συνάρτηση που απεικονίζει το $x_0$ στο $f'(x_0)$
+  \end{block}
 \end{frame}
 
 \begin{frame}{Παράδειγμα}
-    Ας παίξουμε:
-    \begin{block}{$f(x)=c$}
-        $c'=0$
-    \end{block} \pause
+  Ας παίξουμε:
+  \begin{block}{$f(x)=c$}
+    $c'=0$
+  \end{block} \pause
 
-    \begin{block}{$f(x)=x$}
-        $x'=1$
-    \end{block} \pause
+  \begin{block}{$f(x)=x$}
+    $x'=1$
+  \end{block} \pause
 
-    \begin{block}{$f(x)=x^2$}
-        $(x^2)'=2x$
-    \end{block}
+  \begin{block}{$f(x)=x^2$}
+    $(x^2)'=2x$
+  \end{block}
 \end{frame}
 
 \begin{frame}{Αποδεικνύεται ότι:}
-    \begin{block}{$f(x)=e^x$}
-        $(e^x)'=e^x$
-    \end{block} \pause
+  \begin{block}{$f(x)=e^x$}
+    $(e^x)'=e^x$
+  \end{block} \pause
 
-    \begin{block}{$f(x)=\ln x$}
-        $(\ln x)'=\dfrac{1}{x}$
-    \end{block} \pause
+  \begin{block}{$f(x)=\ln x$}
+    $(\ln x)'=\dfrac{1}{x}$
+  \end{block} \pause
 
-    \begin{block}{$f(x)=ημx$}
-        $(ημx)'=συνx$
-    \end{block} \pause
+  \begin{block}{$f(x)=ημx$}
+    $(ημx)'=συνx$
+  \end{block} \pause
 
-    \begin{block}{$f(x)=συνx$}
-        $(συνx)'=-ημx$
-    \end{block}
+  \begin{block}{$f(x)=συνx$}
+    $(συνx)'=-ημx$
+  \end{block}
 \end{frame}
 
 \begin{frame}{Αποδείξεις (άθροισμα - διαφορά)}
-    \begin{block}{$f+g$}
-        $(f(x)+g(x))'=f'(x)+g'(x)$
-    \end{block} \pause
+  \begin{block}{$f+g$}
+    $(f(x)+g(x))'=f'(x)+g'(x)$
+  \end{block} \pause
 
-    \begin{block}{$f-g$}
-        $(f(x)-g(x))'=f'(x)-g'(x)$
-    \end{block}
+  \begin{block}{$f-g$}
+    $(f(x)-g(x))'=f'(x)-g'(x)$
+  \end{block}
 \end{frame}
 
 \begin{frame}{Αποδείξεις (γινόμενο - πηλίκο)}
-    \begin{block}{$f\cdot g$}
-        $(f(x)\cdot g(x))'=f'(x)g(x)+f(x)g'(x)$
-    \end{block} \pause
+  \begin{block}{$f\cdot g$}
+    $(f(x)\cdot g(x))'=f'(x)g(x)+f(x)g'(x)$
+  \end{block} \pause
 
-    \begin{block}{$f/g$}
-        $(f(x)/g(x))'=\dfrac{f'(x)g(x)-f(x)g'(x)}{g^2(x)}$
-    \end{block}
+  \begin{block}{$f/g$}
+    $(f(x)/g(x))'=\dfrac{f'(x)g(x)-f(x)g'(x)}{g^2(x)}$
+  \end{block}
 \end{frame}
 
 \begin{frame}{Παράδειγμα}
-    Ας παίξουμε:
-    \begin{block}{$f(x)=εφx$}
-        $(εφx)'=1+εφ^2x$
-    \end{block} \pause
+  Ας παίξουμε:
+  \begin{block}{$f(x)=εφx$}
+    $(εφx)'=1+εφ^2x$
+  \end{block} \pause
 
-    \begin{block}{$f(x)=σφx$}
-        $(σφx)'=-1-σφ^2x$
-    \end{block}
+  \begin{block}{$f(x)=σφx$}
+    $(σφx)'=-1-σφ^2x$
+  \end{block}
 \end{frame}
 
 \begin{frame}{Αποδείξεις (σύνθεση)}
-    \begin{block}{$f(g)$}
-        $(f(g(x)))'=f'(g(x))g'(x)$
-    \end{block}
+  \begin{block}{$f(g)$}
+    $(f(g(x)))'=f'(g(x))g'(x)$
+  \end{block}
 \end{frame}
 
 \begin{frame}{Παράδειγμα}
-    \begin{block}{$f(x)=α^x$}
-        $(α^x)'=α^x\ln α$
-    \end{block}
+  \begin{block}{$f(x)=α^x$}
+    $(α^x)'=α^x\ln α$
+  \end{block}
 \end{frame}
 
 \begin{frame}{Και μια εξτρά!}
-    Τι γίνεται με την $$(f^{-1})'$$
-    \begin{enumerate}
-        \item Γιατί?
-        \item Πώς? Υπάρχει σαν ασκηση πιο κάτω!
-    \end{enumerate}
+  Τι γίνεται με την $$(f^{-1})'$$
+  \begin{enumerate}
+    \item Γιατί?
+    \item Πώς? Υπάρχει σαν ασκηση πιο κάτω!
+  \end{enumerate}
 \end{frame}
 
 \begin{frame}{Συγκεντρωτικά}
-    \begin{small}
-        \begin{multicols}{2}
-            \begin{itemize}
-                \item $c'=0$
-                \item $(f^a)'=af^{a-1}f'$
-                \item $\left(\sqrt{f}\right)'=\dfrac{f'}{2\sqrt{f}}$
-                \item $\left( \dfrac{1}{f}\right)'=-\dfrac{f'}{f^2}$
-                \item $(a^{f})'=a^{f}f'\ln a$
-                \item $(ημf)'=f'συνf$
-                \item $(συνf)'=-f'ημf$
-                \item $(εφf)'=(1+εφ^2f)f'$
-                \item $(f^{-1})'(x)=\dfrac{1}{f'(f(x))}$
-                \item $(f\cdot g)'=f'g+fg'$
-                \item $\left(\dfrac{f}{g}\right)'=\dfrac{f'g-fg'}{g^2}$
-            \end{itemize}
-        \end{multicols}
-    \end{small}
+  \begin{small}
+    \begin{multicols}{2}
+      \begin{itemize}
+        \item $c'=0$
+        \item $(f^a)'=af^{a-1}f'$
+        \item $\left(\sqrt{f}\right)'=\dfrac{f'}{2\sqrt{f}}$
+        \item $\left( \dfrac{1}{f}\right)'=-\dfrac{f'}{f^2}$
+        \item $(a^{f})'=a^{f}f'\ln a$
+        \item $(ημf)'=f'συνf$
+        \item $(συνf)'=-f'ημf$
+        \item $(εφf)'=(1+εφ^2f)f'$
+        \item $(f^{-1})'(x)=\dfrac{1}{f'(f(x))}$
+        \item $(f\cdot g)'=f'g+fg'$
+        \item $\left(\dfrac{f}{g}\right)'=\dfrac{f'g-fg'}{g^2}$
+      \end{itemize}
+    \end{multicols}
+  \end{small}
 \end{frame}
 
 \begin{frame}{Ενδιαφέρουσες αποδείξεις εκτός ύλης}
-    \label{Θεωρία}
-    \begin{itemize}
-        \item $e^x$ \hyperlink{Απόδειξη1}{\beamerbutton{Απόδειξη}}
-        \item $\ln x$ \hyperlink{Απόδειξη2}{\beamerbutton{Απόδειξη}}
-        \item $e^x$ γνωρίζοντας το $\ln x$ ή ανάποδα! \hyperlink{Απόδειξη3}{\beamerbutton{Απόδειξη}}
-        \item $ημx$ ή $συνx$ \hyperlink{Απόδειξη4}{\beamerbutton{Απόδειξη}}
-    \end{itemize}
+  \label{Θεωρία}
+  \begin{itemize}
+    \item $e^x$ \hyperlink{Απόδειξη1}{\beamerbutton{Απόδειξη}}
+    \item $\ln x$ \hyperlink{Απόδειξη2}{\beamerbutton{Απόδειξη}}
+    \item $e^x$ γνωρίζοντας το $\ln x$ ή ανάποδα! \hyperlink{Απόδειξη3}{\beamerbutton{Απόδειξη}}
+    \item $ημx$ ή $συνx$ \hyperlink{Απόδειξη4}{\beamerbutton{Απόδειξη}}
+  \end{itemize}
 \end{frame}
 
 \begin{frame}[noframenumbering]
-    Στο moodle θα βρείτε τις ασκήσεις που πρέπει να κάνετε, όπως και αυτή τη παρουσίαση
+  Στο moodle θα βρείτε τις ασκήσεις που πρέπει να κάνετε, όπως και αυτή τη παρουσίαση
 \end{frame}
 
 \section{Ασκήσεις}
 
 \begin{frame}[noframenumbering]
-    \vfill
-    \centering
-    \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
-        \usebeamerfont{title}Ασκήσεις
-    \end{beamercolorbox}
-    \vfill
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+    \usebeamerfont{title}Ασκήσεις
+  \end{beamercolorbox}
+  \vfill
 \end{frame}
 
 \section{Ασκήσεις}
 
 \begin{askisi}
-    Να βρείτε την παράγωγο της συνάρτησης $f$ στο $x_0$, όταν:
-    \begin{enumerate}
-        \item<1-> $f(x)=x^5$, $x_0=-1$
-        \item<2-> $f(x)=συνx$, $x_0=\dfrac{3π}{4}$
-    \end{enumerate}
+  Να βρείτε την παράγωγο της συνάρτησης $f$ στο $x_0$, όταν:
+  \begin{enumerate}
+    \item<1-> $f(x)=x^5$, $x_0=-1$
+    \item<2-> $f(x)=συνx$, $x_0=\dfrac{3π}{4}$
+  \end{enumerate}
 
-    % \hyperlink{Λύση1}{\beamerbutton{Λύση}}
+  % \hyperlink{Λύση1}{\beamerbutton{Λύση}}
 \end{askisi}
 
 \begin{askisi}
-    Να βρείτε την παράγωγο των συναρτήσεων:
-    \begin{enumerate}
-        \item<1-> $f(x)=e^x+x+συνx$
-        \item<2-> $f(x)=\ln x+\sqrt{x}+α^3$
-        \item<3-> $f(x)=x^3+ημx+\ln 2$
-    \end{enumerate}
+  Να βρείτε την παράγωγο των συναρτήσεων:
+  \begin{enumerate}
+    \item<1-> $f(x)=e^x+x+συνx$
+    \item<2-> $f(x)=\ln x+\sqrt{x}+α^3$
+    \item<3-> $f(x)=x^3+ημx+\ln 2$
+  \end{enumerate}
 
-    % \hyperlink{Λύση2}{\beamerbutton{Λύση}}
+  % \hyperlink{Λύση2}{\beamerbutton{Λύση}}
 \end{askisi}
 
 \begin{askisi}
-    Να βρείτε την παράγωγο των συναρτήσεων:
-    \begin{enumerate}
-        \item<1-> $f(x)=2\ln x$
-        \item<2-> $f(x)=4x^3$
-        \item<3-> $f(x)=-\dfrac{5}{3}x^3+\dfrac{1}{2}x^2+2x-3$
-        \item<4-> $f(x)=\dfrac{3}{4}x^4-α\ln x-β$
-        \item<5-> $f(x)=x^3(2x^2-5)$
-        \item<6-> $f(x)=\ln \dfrac{e^x}{x}+\ln \dfrac{1}{x}+e^{\ln x}$
-    \end{enumerate}
+  Να βρείτε την παράγωγο των συναρτήσεων:
+  \begin{enumerate}
+    \item<1-> $f(x)=2\ln x$
+    \item<2-> $f(x)=4x^3$
+    \item<3-> $f(x)=-\dfrac{5}{3}x^3+\dfrac{1}{2}x^2+2x-3$
+    \item<4-> $f(x)=\dfrac{3}{4}x^4-α\ln x-β$
+    \item<5-> $f(x)=x^3(2x^2-5)$
+    \item<6-> $f(x)=\ln \dfrac{e^x}{x}+\ln \dfrac{1}{x}+e^{\ln x}$
+  \end{enumerate}
 
-    % \hyperlink{Λύση3}{\beamerbutton{Λύση}}
+  % \hyperlink{Λύση3}{\beamerbutton{Λύση}}
 \end{askisi}
 
 \begin{askisi}
-    Να βρείτε την παράγωγο των συναρτήσεων:
-    \begin{enumerate}
-        \item<1-> $f(x)=e^xσυνx$
-        \item<2-> $f(x)=3x^2\ln x$
-        \item<3-> $f(x)=(x^2+1)e^x$
-        \item<4-> $f(x)=xe^xημx$
-    \end{enumerate}
+  Να βρείτε την παράγωγο των συναρτήσεων:
+  \begin{enumerate}
+    \item<1-> $f(x)=e^xσυνx$
+    \item<2-> $f(x)=3x^2\ln x$
+    \item<3-> $f(x)=(x^2+1)e^x$
+    \item<4-> $f(x)=xe^xημx$
+  \end{enumerate}
 
-    % \hyperlink{Λύση4}{\beamerbutton{Λύση}}
+  % \hyperlink{Λύση4}{\beamerbutton{Λύση}}
 \end{askisi}
 
 \begin{askisi}
-    Να βρείτε την παράγωγο της συνάρτησης $f(x)=\sqrt{x}ημx$
+  Να βρείτε την παράγωγο της συνάρτησης $f(x)=\sqrt{x}ημx$
 
-    % \hyperlink{Λύση5}{\beamerbutton{Λύση}}
+  % \hyperlink{Λύση5}{\beamerbutton{Λύση}}
 \end{askisi}
 
 \begin{askisi}
-    Έστω $f$,$g:\mathbb{R}\to\mathbb{R}$ δύο συναρτήσεις οι οποίες είναι παραγωγίσιμες στο $0$ με $f(0)=g(0)=1$ και $f'(0)=2$, $g'(0)=3$.
+  Έστω $f$,$g:\mathbb{R}\to\mathbb{R}$ δύο συναρτήσεις οι οποίες είναι παραγωγίσιμες στο $0$ με $f(0)=g(0)=1$ και $f'(0)=2$, $g'(0)=3$.
 
-    \begin{enumerate}
-        \item<1-> Να βρείτε την $(f\cdot g)'(0)$
-        \item<2-> Αν $h(x)=ημx \cdot f(x)$, $x\in\mathbb{R}$, να βρείτε την $h'(0)$
-    \end{enumerate}
+  \begin{enumerate}
+    \item<1-> Να βρείτε την $(f\cdot g)'(0)$
+    \item<2-> Αν $h(x)=ημx \cdot f(x)$, $x\in\mathbb{R}$, να βρείτε την $h'(0)$
+  \end{enumerate}
 
-    % \hyperlink{Λύση6}{\beamerbutton{Λύση}}
+  % \hyperlink{Λύση6}{\beamerbutton{Λύση}}
 \end{askisi}
 
 \begin{askisi}
-    Να βρείτε την παράγωγο των συναρτήσεων:
-    \begin{enumerate}
-        \item<1-> $\dfrac{\ln x}{x}$
-        \item<2-> $\dfrac{x}{x^2+1}$
-        \item<3-> $\dfrac{x}{e^x}$
-        \item<4-> $\dfrac{ημx}{1+συνx}$
-        \item<5-> $εφx-x$
-    \end{enumerate}
+  Να βρείτε την παράγωγο των συναρτήσεων:
+  \begin{enumerate}
+    \item<1-> $\dfrac{\ln x}{x}$
+    \item<2-> $\dfrac{x}{x^2+1}$
+    \item<3-> $\dfrac{x}{e^x}$
+    \item<4-> $\dfrac{ημx}{1+συνx}$
+    \item<5-> $εφx-x$
+  \end{enumerate}
 
-    %\hyperlink{Λύση7}{\beamerbutton{Λύση}}
+  %\hyperlink{Λύση7}{\beamerbutton{Λύση}}
 \end{askisi}
 
 \begin{askisi}
-    Να βρείτε την παράγωγο των συναρτήσεων:
-    \begin{enumerate}
-        \item<1-> $\dfrac{1}{x^2}$
-        \item<2-> $\dfrac{1}{2\ln x}$
-        \item<3-> $\dfrac{x^2+2x-3}{x}$
-    \end{enumerate}
+  Να βρείτε την παράγωγο των συναρτήσεων:
+  \begin{enumerate}
+    \item<1-> $\dfrac{1}{x^2}$
+    \item<2-> $\dfrac{1}{2\ln x}$
+    \item<3-> $\dfrac{x^2+2x-3}{x}$
+  \end{enumerate}
 
-    %\hyperlink{Λύση8}{\beamerbutton{Λύση}}
+  %\hyperlink{Λύση8}{\beamerbutton{Λύση}}
 \end{askisi}
 
 \begin{askisi}
-    Να βρείτε την παράγωγο των συναρτήσεων:
-    \begin{enumerate}
-        \item<1-> $ημ(2x-5)$
-        \item<2-> $συν(2x)$
-        \item<3-> $e^{-x}$
-        \item<4-> $e^{\frac{1}{x}}$
-        \item<5-> $2\sqrt{\ln x}$
-    \end{enumerate}
+  Να βρείτε την παράγωγο των συναρτήσεων:
+  \begin{enumerate}
+    \item<1-> $ημ(2x-5)$
+    \item<2-> $συν(2x)$
+    \item<3-> $e^{-x}$
+    \item<4-> $e^{\frac{1}{x}}$
+    \item<5-> $2\sqrt{\ln x}$
+  \end{enumerate}
 
-    %\hyperlink{Λύση9}{\beamerbutton{Λύση}}
+  %\hyperlink{Λύση9}{\beamerbutton{Λύση}}
 \end{askisi}
 
 \begin{askisi}
-    Να βρείτε την παράγωγο των συναρτήσεων:
-    \begin{enumerate}
-        \item<1-> $\ln \sqrt{x^2+1}$
-        \item<2-> $\ln(\sqrt{x^2+1})-x$
-    \end{enumerate}
+  Να βρείτε την παράγωγο των συναρτήσεων:
+  \begin{enumerate}
+    \item<1-> $\ln \sqrt{x^2+1}$
+    \item<2-> $\ln(\sqrt{x^2+1})-x$
+  \end{enumerate}
 
-    %\hyperlink{Λύση10}{\beamerbutton{Λύση}}
+  %\hyperlink{Λύση10}{\beamerbutton{Λύση}}
 \end{askisi}
 
 \begin{askisi}
-    Να βρείτε την παράγωγο των συναρτήσεων:
-    \begin{enumerate}
-        \item<1-> $(x^2+2)^3$
-        \item<2-> $ημ^3x$
-        \item<3-> $\ln^2(x^2+2)$
-        \item<4-> $ημ^23x$
-    \end{enumerate}
+  Να βρείτε την παράγωγο των συναρτήσεων:
+  \begin{enumerate}
+    \item<1-> $(x^2+2)^3$
+    \item<2-> $ημ^3x$
+    \item<3-> $\ln^2(x^2+2)$
+    \item<4-> $ημ^23x$
+  \end{enumerate}
 
-    %\hyperlink{Λύση11}{\beamerbutton{Λύση}}
+  %\hyperlink{Λύση11}{\beamerbutton{Λύση}}
 \end{askisi}
 
 \begin{askisi}
-    Να βρείτε την παράγωγο της συνάρτησης:
-    $$f(x)=x^{\frac{1}{x}}$$
+  Να βρείτε την παράγωγο της συνάρτησης:
+  $$f(x)=x^{\frac{1}{x}}$$
 
-    %\hyperlink{Λύση12}{\beamerbutton{Λύση}}
+  %\hyperlink{Λύση12}{\beamerbutton{Λύση}}
 \end{askisi}
 
 \begin{askisi}
-    Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση που είναι παραγωγίσιμη. Να βρείτε την παράγωγο της συνάρτησης $g$ όταν:
-    \begin{enumerate}
-        \item<1-> $g(x)=f(x+ημx)$
-        \item<2-> $g(x)=f^2(-x)$
-    \end{enumerate}
+  Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση που είναι παραγωγίσιμη. Να βρείτε την παράγωγο της συνάρτησης $g$ όταν:
+  \begin{enumerate}
+    \item<1-> $g(x)=f(x+ημx)$
+    \item<2-> $g(x)=f^2(-x)$
+  \end{enumerate}
 
-    %\hyperlink{Λύση13}{\beamerbutton{Λύση}}
+  %\hyperlink{Λύση13}{\beamerbutton{Λύση}}
 \end{askisi}
 
 \begin{askisi}
-    Να βρείτε την παράγωγο των συναρτήσεων:
-    \begin{enumerate}
-        \item<1-> $f(x)=x^{\frac{2}{3}}$
-        \item<2-> $f(x)=\sqrt[4]{x^5}$
-        \item<3-> $f(x)=\sqrt[3]{x^2}$
-    \end{enumerate}
+  Να βρείτε την παράγωγο των συναρτήσεων:
+  \begin{enumerate}
+    \item<1-> $f(x)=x^{\frac{2}{3}}$
+    \item<2-> $f(x)=\sqrt[4]{x^5}$
+    \item<3-> $f(x)=\sqrt[3]{x^2}$
+  \end{enumerate}
 
-    %\hyperlink{Λύση14}{\beamerbutton{Λύση}}
+  %\hyperlink{Λύση14}{\beamerbutton{Λύση}}
 \end{askisi}
 
 \begin{askisi}
-    Να βρείτε την δεύτερη παράγωγο των συναρτήσεων:
-    \begin{enumerate}
-        \item<1-> $f(x)=x^3+5x^2-3x+1$
-        \item<2-> $f(x)=\dfrac{1}{x^2+1}$
-    \end{enumerate}
+  Να βρείτε την δεύτερη παράγωγο των συναρτήσεων:
+  \begin{enumerate}
+    \item<1-> $f(x)=x^3+5x^2-3x+1$
+    \item<2-> $f(x)=\dfrac{1}{x^2+1}$
+  \end{enumerate}
 
-    %\hyperlink{Λύση15}{\beamerbutton{Λύση}}
+  %\hyperlink{Λύση15}{\beamerbutton{Λύση}}
 \end{askisi}
 
 \begin{askisi}
-    Δίνεται η συνάρτηση
-    $f(x)=\begin{cases}
-            x^3, & x\le 0 \\
-            x^2, & x>0
-        \end{cases}$
+  Δίνεται η συνάρτηση
+  $f(x)=\begin{cases}
+      x^3, & x\le 0 \\
+      x^2, & x>0
+    \end{cases}$
 
-    Να βρείτε την $f''(x)$
+  Να βρείτε την $f''(x)$
 
-    %\hyperlink{Λύση16}{\beamerbutton{Λύση}}
+  %\hyperlink{Λύση16}{\beamerbutton{Λύση}}
 \end{askisi}
 
 \begin{askisi}
-    Έστω $x$, $y$, $θ:[0,+\infty)\to \mathbb{R}$ τρεις συναρτήσεις με μεταβλητή το χρόνο $t$, οι οποίες είναι παραγωγίσιμες. Να βρείτε τις παραγώγους των συναρτήσεων:
-    \begin{enumerate}
-        \item<1-> $f(t)=t^2+x(t)y(t)$
-        \item<2-> $f(t)=\ln x(t) +x^2(t)$
-        \item<3-> $f(t)=εφ(θ(t))$
-    \end{enumerate}
+  Έστω $x$, $y$, $θ:[0,+\infty)\to \mathbb{R}$ τρεις συναρτήσεις με μεταβλητή το χρόνο $t$, οι οποίες είναι παραγωγίσιμες. Να βρείτε τις παραγώγους των συναρτήσεων:
+  \begin{enumerate}
+    \item<1-> $f(t)=t^2+x(t)y(t)$
+    \item<2-> $f(t)=\ln x(t) +x^2(t)$
+    \item<3-> $f(t)=εφ(θ(t))$
+  \end{enumerate}
 
-    %\hyperlink{Λύση17}{\beamerbutton{Λύση}}
+  %\hyperlink{Λύση17}{\beamerbutton{Λύση}}
 \end{askisi}
 
 \begin{askisi}
-    Αν η συνάρτηση $x(t)$ είναι παραγωγίσιμη στο $[0,+\infty)$ και ισχύουν $y(t)=x^2(t)$, $y'(t)=2x'(t)$ και $x'(t)>0$, για κάθε $t\ge 0$, να δείξετε ότι $x(t)=1$ για κάθε $t\ge 0$.
+  Αν η συνάρτηση $x(t)$ είναι παραγωγίσιμη στο $[0,+\infty)$ και ισχύουν $y(t)=x^2(t)$, $y'(t)=2x'(t)$ και $x'(t)>0$, για κάθε $t\ge 0$, να δείξετε ότι $x(t)=1$ για κάθε $t\ge 0$.
 
-    %\hyperlink{Λύση18}{\beamerbutton{Λύση}}
+  %\hyperlink{Λύση18}{\beamerbutton{Λύση}}
 \end{askisi}
 
 \begin{askisi}
-    Έστω οι παραγωγίσιμες συναρτήσεις $x$, $y:[0,+\infty)\to\mathbb{R}$ με μεταβλητή το χρόνο $t$, για τις οποίες ισχύει $y^2(t)=3+x^2(t)$, για κάθε $t\in [0,+\infty )$. Αν τη χρονική στιγμή $t_0=1$ είναι $x(1)=1$, $x'(1)=4$ και $y(1)>0$, να βρείτε το $y'(1)$.
+  Έστω οι παραγωγίσιμες συναρτήσεις $x$, $y:[0,+\infty)\to\mathbb{R}$ με μεταβλητή το χρόνο $t$, για τις οποίες ισχύει $y^2(t)=3+x^2(t)$, για κάθε $t\in [0,+\infty )$. Αν τη χρονική στιγμή $t_0=1$ είναι $x(1)=1$, $x'(1)=4$ και $y(1)>0$, να βρείτε το $y'(1)$.
 
-    %\hyperlink{Λύση19}{\beamerbutton{Λύση}}
+  %\hyperlink{Λύση19}{\beamerbutton{Λύση}}
 \end{askisi}
 
 \begin{askisi}
-    \begin{enumerate}
-        \item<1->  Να βρείτε πολυώνυμο $f(x)$ δευτέρου βαθμού, για το οποίο ισχύουν $f(0)=1$, $f'(2)=7$ και $f''(2016)=6$
-        \item<2-> Να βρείτε πολυώνυμο $P(x)$, για το οποίο ισχύουν: $P(0)=4$ και $8P(x)=\left( P'(x)\right)^2\cdot P''(x)  $, για κάθε $x\in\mathbb{R}$
-    \end{enumerate}
+  \begin{enumerate}
+    \item<1->  Να βρείτε πολυώνυμο $f(x)$ δευτέρου βαθμού, για το οποίο ισχύουν $f(0)=1$, $f'(2)=7$ και $f''(2016)=6$
+    \item<2-> Να βρείτε πολυώνυμο $P(x)$, για το οποίο ισχύουν: $P(0)=4$ και $8P(x)=\left( P'(x)\right)^2\cdot P''(x)  $, για κάθε $x\in\mathbb{R}$
+  \end{enumerate}
 
-    %\hyperlink{Λύση20}{\beamerbutton{Λύση}}
+  %\hyperlink{Λύση20}{\beamerbutton{Λύση}}
 \end{askisi}
 
 \begin{askisi}
-    Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση. Αν η $f$ είναι παραγωγίσιμη, να δείξετε ότι:
-    \begin{enumerate}
-        \item<1-> $\lim\limits_{h \to 0}{ \dfrac{f(x+ah)-f(x)}{h} }=af'(x)$, $a\in\mathbb{R}^*$
-        \item<2-> $\lim\limits_{h \to 0}{ \dfrac{f(x+h)-f(x-h)}{h} }=2f'(x)$
-    \end{enumerate}
+  Έστω $f:\mathbb{R}\to\mathbb{R}$ μία συνάρτηση. Αν η $f$ είναι παραγωγίσιμη, να δείξετε ότι:
+  \begin{enumerate}
+    \item<1-> $\lim\limits_{h \to 0}{ \dfrac{f(x+ah)-f(x)}{h} }=af'(x)$, $a\in\mathbb{R}^*$
+    \item<2-> $\lim\limits_{h \to 0}{ \dfrac{f(x+h)-f(x-h)}{h} }=2f'(x)$
+  \end{enumerate}
 
-    %\hyperlink{Λύση21}{\beamerbutton{Λύση}}
+  %\hyperlink{Λύση21}{\beamerbutton{Λύση}}
 \end{askisi}
 
 \begin{askisi}
-    Έστω $f:\mathbb{R}\to\mathbb{R}$ μία παραγωγίσιμη συνάρτηση, για την οποία ισχύει
-    $$f(x)+e^{f(x)}=x \text{, για κάθε } x\in\mathbb{R}$$
-    \begin{enumerate}
-        \item<1-> Να δείξετε ότι η $f$ είναι δύο φορές παραγωγίσιμη
-        \item<2-> Να δείξετε ότι $f'(x)<1$ για κάθε $x\in\mathbb{R}$
-    \end{enumerate}
+  Έστω $f:\mathbb{R}\to\mathbb{R}$ μία παραγωγίσιμη συνάρτηση, για την οποία ισχύει
+  $$f(x)+e^{f(x)}=x \text{, για κάθε } x\in\mathbb{R}$$
+  \begin{enumerate}
+    \item<1-> Να δείξετε ότι η $f$ είναι δύο φορές παραγωγίσιμη
+    \item<2-> Να δείξετε ότι $f'(x)<1$ για κάθε $x\in\mathbb{R}$
+  \end{enumerate}
 
-    %\hyperlink{Λύση22}{\beamerbutton{Λύση}}
+  %\hyperlink{Λύση22}{\beamerbutton{Λύση}}
 \end{askisi}
 
 \begin{askisi}
-    Έστω $f:\mathbb{R}\to\mathbb{R}$ μία παραγωγίσιμη συνάρτηση, για την οποία ισχύουν $f'(0)=1$
-    $$f(x)\cdot f'(-x)=1 \text{, για κάθε } x\in\mathbb{R}$$
-    \begin{enumerate}
-        \item<1-> Να δείξετε ότι η παράγωγος της συνάρτησης $f$ είναι συνεχής
-        \item<2-> Να δείξετε ότι $f'(x)>0$ για κάθε $x\in\mathbb{R}$
-        \item<3-> Αν $g(x)=f(x)\cdot f(-x)$, για κάθε $x\in\mathbb{R}$, να δείξετε ότι $g'(x)=x$, για κάθε $x\in\mathbb{R}$
-    \end{enumerate}
+  Έστω $f:\mathbb{R}\to\mathbb{R}$ μία παραγωγίσιμη συνάρτηση, για την οποία ισχύουν $f'(0)=1$
+  $$f(x)\cdot f'(-x)=1 \text{, για κάθε } x\in\mathbb{R}$$
+  \begin{enumerate}
+    \item<1-> Να δείξετε ότι η παράγωγος της συνάρτησης $f$ είναι συνεχής
+    \item<2-> Να δείξετε ότι $f'(x)>0$ για κάθε $x\in\mathbb{R}$
+    \item<3-> Αν $g(x)=f(x)\cdot f(-x)$, για κάθε $x\in\mathbb{R}$, να δείξετε ότι $g'(x)=x$, για κάθε $x\in\mathbb{R}$
+  \end{enumerate}
 
-    %\hyperlink{Λύση23}{\beamerbutton{Λύση}}
+  %\hyperlink{Λύση23}{\beamerbutton{Λύση}}
 \end{askisi}
 
 \begin{askisi}
-    Έστω $f:Δ\to\mathbb{R}$ μία συνάρτηση με $f(Δ)\subseteq Δ$, για την οποία ορίζεται η συνάρτηση $f^{-1}:f(Δ)\to\mathbb{R}$ με $f'(x)\ne 0$, $x\in Δ$.
+  Έστω $f:Δ\to\mathbb{R}$ μία συνάρτηση με $f(Δ)\subseteq Δ$, για την οποία ορίζεται η συνάρτηση $f^{-1}:f(Δ)\to\mathbb{R}$ με $f'(x)\ne 0$, $x\in Δ$.
 
-    Αν θεωρήσουμε γνωστό ότι η $f^{-1}$ είναι παραγωγίσιμη στο $f(Δ)$, να δείξετε ότι:
-    \begin{enumerate}
-        \item<1-> $(f^{-1})'(x)=\dfrac{1}{f'(f^{-1}(x))}$
-        \item<2-> $(f^{-1})'(f(x))=\dfrac{1}{f'(x)}$
-    \end{enumerate}
+  Αν θεωρήσουμε γνωστό ότι η $f^{-1}$ είναι παραγωγίσιμη στο $f(Δ)$, να δείξετε ότι:
+  \begin{enumerate}
+    \item<1-> $(f^{-1})'(x)=\dfrac{1}{f'(f^{-1}(x))}$
+    \item<2-> $(f^{-1})'(f(x))=\dfrac{1}{f'(x)}$
+  \end{enumerate}
 
-    %\hyperlink{Λύση24}{\beamerbutton{Λύση}}
+  %\hyperlink{Λύση24}{\beamerbutton{Λύση}}
 \end{askisi}
 
 \begin{askisi}
-    Δίνεται η συνάρτηση $f(x)=x^5+x^3$
-    \begin{enumerate}
-        \item<1-> Να βρείτε το σύνολο τιμών της $f$
-        \item<2-> Να δείξετε ότι υπάρχει η συνάρτηση $f^{-1}$ και να βρείτε το πεδίο ορισμού της
-        \item<3-> Να δείξετε ότι η $f^{-1}$ δεν παραγωγίζεται στο $x_0=0$
-    \end{enumerate}
+  Δίνεται η συνάρτηση $f(x)=x^5+x^3$
+  \begin{enumerate}
+    \item<1-> Να βρείτε το σύνολο τιμών της $f$
+    \item<2-> Να δείξετε ότι υπάρχει η συνάρτηση $f^{-1}$ και να βρείτε το πεδίο ορισμού της
+    \item<3-> Να δείξετε ότι η $f^{-1}$ δεν παραγωγίζεται στο $x_0=0$
+  \end{enumerate}
 
-    %\hyperlink{Λύση25}{\beamerbutton{Λύση}}
+  %\hyperlink{Λύση25}{\beamerbutton{Λύση}}
 \end{askisi}
 
 \begin{askisi}
-    Δίνεται η συνάρτηση $f(x)=e^x+x$, $x\in\mathbb{R}$
-    \begin{enumerate}
-        \item<1-> Να δείξετε ότι υπάρχει η συνάρτηση $f^{-1}$
-        \item<2-> Αν θεωρήσουμε γνωστό ότι η $f^{-1}$ είναι παραγωγίσιμη στο $f(\mathbb{R})=\mathbb{R}$, να βρείτε την $(f^{-1})'(1)$
-    \end{enumerate}
+  Δίνεται η συνάρτηση $f(x)=e^x+x$, $x\in\mathbb{R}$
+  \begin{enumerate}
+    \item<1-> Να δείξετε ότι υπάρχει η συνάρτηση $f^{-1}$
+    \item<2-> Αν θεωρήσουμε γνωστό ότι η $f^{-1}$ είναι παραγωγίσιμη στο $f(\mathbb{R})=\mathbb{R}$, να βρείτε την $(f^{-1})'(1)$
+  \end{enumerate}
 
-    %\hyperlink{Λύση26}{\beamerbutton{Λύση}}
+  %\hyperlink{Λύση26}{\beamerbutton{Λύση}}
 \end{askisi}
 
 \begin{askisi}
-    Έστω $f:(0,+\infty)\to\mathbb{R}$ μία συνάρτηση που είναι παραγωγίσιμη και ισχύει
+  Έστω $f:(0,+\infty)\to\mathbb{R}$ μία συνάρτηση που είναι παραγωγίσιμη και ισχύει
 
-    $$f(x\cdot y)=yf(x)+xf(y) \text{, } x \text{, } y>0$$
+  $$f(x\cdot y)=yf(x)+xf(y) \text{, } x \text{, } y>0$$
 
-    Να δείξετε ότι $f'(x)=\dfrac{f(x)}{x}+f'(1)$, $x>0$
+  Να δείξετε ότι $f'(x)=\dfrac{f(x)}{x}+f'(1)$, $x>0$
 
-    %\hyperlink{Λύση27}{\beamerbutton{Λύση}}
+  %\hyperlink{Λύση27}{\beamerbutton{Λύση}}
 \end{askisi}
 
 \appendix
 \section*{Αποδείξεις}
 
 \begin{frame}[noframenumbering]
-    \vfill
-    \centering
-    \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
-        \usebeamerfont{title}Αποδείξεις - Λύσεις
-    \end{beamercolorbox}
-    \vfill
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+    \usebeamerfont{title}Αποδείξεις - Λύσεις
+  \end{beamercolorbox}
+  \vfill
 \end{frame}
 
 \begin{frame}{Περιεχόμενα }
-    \tableofcontents
+  \tableofcontents
 \end{frame}
 
 \begin{apodiksi}[$(e^x)'=e^x$]
-    Γνωρίζουμε ότι $\lim\limits_{x \to +\infty}{ \left( 1+\dfrac{1}{x} \right)^x  }=e$. Τότε
-    \begin{align*}
-        (e^x)'=\lim\limits_{h \to 0}{ \frac{e^{x+h}-e^x}{h} }=\lim\limits_{h \to 0}{ \frac{e^xe^h-e^x}{h} }
-        =e^x\lim\limits_{h \to 0}{ \frac{e^h-1}{h} }
-    \end{align*}
-    Θέτω $e^h-1=y\implies h=\ln (y+1)$, και όταν $h\to 0^+\implies y\to 0^+$
-    \begin{align*}
-        (e^x)' & =e^x\lim\limits_{h \to 0}{ \frac{e^h-1}{h} }
-        =e^x\lim\limits_{y \to 0}{ \frac{y}{\ln(y+1)} }
-        =e^x\lim\limits_{y \to 0}{ \frac{1}{\frac{1}{y}\ln(y+1)} }             \\
-               & =e^x\lim\limits_{y \to 0}{ \frac{1}{\ln(1+y)^{\frac{1}{y}}} }
-        =e^x \frac{1}{\ln e }=e^x
-    \end{align*}
-    Τι θα κάνετε για το $0^-$?
+  Γνωρίζουμε ότι $\lim\limits_{x \to +\infty}{ \left( 1+\dfrac{1}{x} \right)^x  }=e$. Τότε
+  \begin{align*}
+    (e^x)'=\lim\limits_{h \to 0}{ \frac{e^{x+h}-e^x}{h} }=\lim\limits_{h \to 0}{ \frac{e^xe^h-e^x}{h} }
+    =e^x\lim\limits_{h \to 0}{ \frac{e^h-1}{h} }
+  \end{align*}
+  Θέτω $e^h-1=y\implies h=\ln (y+1)$, και όταν $h\to 0^+\implies y\to 0^+$
+  \begin{align*}
+    (e^x)' & =e^x\lim\limits_{h \to 0}{ \frac{e^h-1}{h} }
+    =e^x\lim\limits_{y \to 0}{ \frac{y}{\ln(y+1)} }
+    =e^x\lim\limits_{y \to 0}{ \frac{1}{\frac{1}{y}\ln(y+1)} }             \\
+           & =e^x\lim\limits_{y \to 0}{ \frac{1}{\ln(1+y)^{\frac{1}{y}}} }
+    =e^x \frac{1}{\ln e }=e^x
+  \end{align*}
+  Τι θα κάνετε για το $0^-$?
 
-    \hyperlink{Θεωρία}{\beamerbutton{Πίσω στην θεωρία}}
+  \hyperlink{Θεωρία}{\beamerbutton{Πίσω στην θεωρία}}
 \end{apodiksi}
 
 \begin{apodiksi}[$(\ln x)'=\frac{1}{x}$]
-    \begin{align*}
-        (\ln x)' & =\lim\limits_{h \to 0}{ \frac{\ln (x+h) - \ln x}{h}}=\lim\limits_{h \to 0}{ \frac{\ln \frac{x+h}{x}}{h}}         \\
-                 & =\lim\limits_{h \to 0}{ \frac{\ln (1+\frac{h}{x})}{h}}=\lim\limits_{h \to 0}{ \ln (1+\frac{h}{x})^{\frac{1}{h}}}
-    \end{align*}
-    Θέτω $h\cdot y=x\implies h=\dfrac{x}{y}$ και $h\to 0^+ \implies y\to +\infty$
-    \begin{align*}
-        (\ln x)' & =\lim\limits_{h \to 0}{ \ln (1+\frac{h}{x})^{\frac{1}{h}}}=\lim\limits_{y \to \infty}{ \ln (1+\frac{1}{y})^{\frac{y}{x}}} \\
-                 & =\frac{1}{x}\lim\limits_{y \to \infty}{ \ln (1+\frac{1}{y})^y}=\frac{1}{x}\ln e=\frac{1}{x}
-    \end{align*}
-    Τί γίνεται με $h\to 0^-$?
-    \hyperlink{Θεωρία}{\beamerbutton{Πίσω στην θεωρία}}
+  \begin{align*}
+    (\ln x)' & =\lim\limits_{h \to 0}{ \frac{\ln (x+h) - \ln x}{h}}=\lim\limits_{h \to 0}{ \frac{\ln \frac{x+h}{x}}{h}}         \\
+             & =\lim\limits_{h \to 0}{ \frac{\ln (1+\frac{h}{x})}{h}}=\lim\limits_{h \to 0}{ \ln (1+\frac{h}{x})^{\frac{1}{h}}}
+  \end{align*}
+  Θέτω $h\cdot y=x\implies h=\dfrac{x}{y}$ και $h\to 0^+ \implies y\to +\infty$
+  \begin{align*}
+    (\ln x)' & =\lim\limits_{h \to 0}{ \ln (1+\frac{h}{x})^{\frac{1}{h}}}=\lim\limits_{y \to \infty}{ \ln (1+\frac{1}{y})^{\frac{y}{x}}} \\
+             & =\frac{1}{x}\lim\limits_{y \to \infty}{ \ln (1+\frac{1}{y})^y}=\frac{1}{x}\ln e=\frac{1}{x}
+  \end{align*}
+  Τί γίνεται με $h\to 0^-$?
+  \hyperlink{Θεωρία}{\beamerbutton{Πίσω στην θεωρία}}
 \end{apodiksi}
 
 \begin{apodiksi}[Μέσω αντίστροφης]
-    Από $\ln e^x=x$ έχουμε
-    \begin{align*}
-        \left( \ln e^x \right)'          & =1 \\
-        \frac{1}{e^x}\left( e^x \right)' & =1 \\
-        \left( e^x \right)' = e^x
-    \end{align*}
-    Ή ανάποδα, από $e^{\ln x}=x$ έχουμε
-    \begin{align*}
-        \left( e^{\ln x} \right)'      & =1           \\
-        e^{\ln x}\left( \ln x \right)' & =1           \\
-        \left( \ln x \right)'          & =\frac{1}{x}
-    \end{align*}
-    \hyperlink{Θεωρία}{\beamerbutton{Πίσω στην θεωρία}}
+  Από $\ln e^x=x$ έχουμε
+  \begin{align*}
+    \left( \ln e^x \right)'          & =1 \\
+    \frac{1}{e^x}\left( e^x \right)' & =1 \\
+    \left( e^x \right)' = e^x
+  \end{align*}
+  Ή ανάποδα, από $e^{\ln x}=x$ έχουμε
+  \begin{align*}
+    \left( e^{\ln x} \right)'      & =1           \\
+    e^{\ln x}\left( \ln x \right)' & =1           \\
+    \left( \ln x \right)'          & =\frac{1}{x}
+  \end{align*}
+  \hyperlink{Θεωρία}{\beamerbutton{Πίσω στην θεωρία}}
 \end{apodiksi}
 
 \begin{apodiksi}[$(ημx)'=συνx$ και $(συνx)'=-ημx$]
-    \begin{align*}
-        (ημ x)' & =\lim\limits_{h \to 0}{ \frac{ημ (x+h) - ημ x}{h}}=\lim\limits_{h \to 0}{ \frac{ημ x συν h + συν x ημ h - ημx}{h}} \\
-                & =\lim\limits_{h \to 0}{ \left( ημx\frac{συνh-1}{h}+συνx\frac{ημh}{h} \right) }=συνx
-    \end{align*}
-    Όμοια
-    \begin{align*}
-        (συν x)' & =\lim\limits_{h \to 0}{ \frac{συν (x+h) - συν x}{h}}=\lim\limits_{h \to 0}{ \frac{συν x συν h - ημ x ημ h - συνx}{h}} \\
-                 & =\lim\limits_{h \to 0}{ \left( συνx\frac{συνh-1}{h}-ημx\frac{ημh}{h} \right) }=-ημx
-    \end{align*}
-    \hyperlink{Θεωρία}{\beamerbutton{Πίσω στην θεωρία}}
+  \begin{align*}
+    (ημ x)' & =\lim\limits_{h \to 0}{ \frac{ημ (x+h) - ημ x}{h}}=\lim\limits_{h \to 0}{ \frac{ημ x συν h + συν x ημ h - ημx}{h}} \\
+            & =\lim\limits_{h \to 0}{ \left( ημx\frac{συνh-1}{h}+συνx\frac{ημh}{h} \right) }=συνx
+  \end{align*}
+  Όμοια
+  \begin{align*}
+    (συν x)' & =\lim\limits_{h \to 0}{ \frac{συν (x+h) - συν x}{h}}=\lim\limits_{h \to 0}{ \frac{συν x συν h - ημ x ημ h - συνx}{h}} \\
+             & =\lim\limits_{h \to 0}{ \left( συνx\frac{συνh-1}{h}-ημx\frac{ημh}{h} \right) }=-ημx
+  \end{align*}
+  \hyperlink{Θεωρία}{\beamerbutton{Πίσω στην θεωρία}}
 \end{apodiksi}
 
 \end{document}
