@@ -1,0 +1,147 @@
+\documentclass{../presentation}
+
+\title{Συστήματα}
+\subtitle{Γραμμικά}
+\author[Λόλας]{Κωνσταντίνος Λόλας}
+\date{}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\section{Θεωρία}
+\begin{frame}{Σύστημα?}
+  Πρώτα εξίσωση, μετά σύστημα
+  \begin{itemize}[<+->]
+    \item \textbf{Εξίσωση} είναι μια ισότητα αλγεβρικών παραστάσεων.
+    \item \textbf{Λύση} μιας εξίσωσης είναι η τιμή της μεταβλητής που την καθιστά αληθή.
+    \item \textbf{Σύστημα} είναι δύο ή περισσότερες εξισώσεις με σκοπό να λυθούν ταυτόχρονα.
+    \item \textbf{Λύση} ενός συστήματος είναι ένα σύνολο τιμών των μεταβλητών που ικανοποιεί όλες τις εξισώσεις του συστήματος.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Τύποι συστημάτων}
+  \begin{itemize}[<+->]
+    \item \textbf{Γραμμικό σύστημα} είναι το σύστημα στο οποίο όλες οι εξισώσεις είναι γραμμικές ως προς τις μεταβλητές τους.
+    \item \textbf{Μη γραμμικό σύστημα} είναι το σύστημα όπου τουλάχιστον μία εξίσωση δεν είναι γραμμική.
+    \item \textbf{Ομογενές σύστημα} είναι το σύστημα όπου όλες οι εξισώσεις του έχουν μηδενικό όρο.
+    \item \textbf{Μη ομογενές σύστημα} είναι το σύστημα όπου τουλάχιστον μία εξίσωση έχει μη μηδενικό όρο.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Τύποι εξισώσεων}
+  \begin{itemize}[<+->]
+    \item \textbf{πολυωνύμων}
+    \item \textbf{εκθετικών}
+    \item \textbf{λογαριθμικών}
+    \item \textbf{τριγωνομετρικών}
+    \item \textbf{διαφορικών}
+    \item \textbf{διαφορών}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \begin{block}{Γραμμικό σύστημα}
+    Ένα σύστημα του οποίου οι εξισώσεις έχουν αγνώστους το πολύ στον πρώτο βαθμό.
+  \end{block}
+  \begin{block}{Κανονική μορφή γραμμικού συστήματος}
+    $$
+      \begin{cases}
+        a_{11}x_1+a_{12}x_2+\cdots+a_{1n}x_n=b_1 \\
+        a_{21}x_1+a_{22}x_2+\cdots+a_{2n}x_n=b_2 \\
+        \vdots                                   \\
+        a_{m1}x_1+a_{m2}x_2+\cdots+a_{mn}x_n=b_m
+      \end{cases}
+    $$
+  \end{block}
+
+\end{frame}
+
+\begin{frame}{Επίλυση}
+  \begin{itemize}[<+- | alert@+>]
+    \item Αντικατάσταση
+    \item Αντίθετων συντελεστών
+  \end{itemize}
+\end{frame}
+
+\section{Ασκήσεις}
+\exercises
+
+\begin{askisi}
+  Δίνεται η εξίσωση $x+4y=1$.
+  \begin{enumerate}
+    \item Να εξετάσετε αν τα ζεύγη $(-2,1)$, $(1,-2)$ είναι λύσεις της εξίσωσης.
+    \item Να βρείτε την τιμή του $α$, για την οποία το ζεύγος $(α,α-1)$ είναι λύση της εξίσωσης.
+    \item Να λύσετε την εξίσωση.
+  \end{enumerate}
+\end{askisi}
+
+\begin{askisi}
+  Να λύσετε το σύστημα
+  $$\begin{cases}
+      2x+y=4 \\
+      5x+2y=10
+    \end{cases}$$
+\end{askisi}
+
+\begin{askisi}
+  Να λύσετε το σύστημα
+  $$\begin{cases}
+      3x-5y=8 \\
+      4x+7y=-3
+    \end{cases}$$
+\end{askisi}
+
+\begin{askisi}
+  Να λύσετε τα συστήματα
+  \begin{multicols}{2}
+    \begin{enumerate}[<+->]
+      \item
+            $\begin{cases}
+                x+2y=1 \\
+                2x+4y=0
+              \end{cases}$
+      \item
+            $\begin{cases}
+                x(y+1)-y(x-3)=6 \\
+                \dfrac{x}{3}+y=2
+              \end{cases}$
+    \end{enumerate}
+  \end{multicols}
+\end{askisi}
+
+\begin{askisi}
+  Να προσδιορίσετε το πλήθος των λύσεων των συστημάτων
+  \begin{multicols}{3}
+    \begin{enumerate}[<+->]
+      \item
+            $\begin{cases}
+                3x+y=5 \\
+                4x+3y=10
+              \end{cases}$
+      \item
+            $\begin{cases}
+                3x-2y=10 \\
+                6x-4y=5
+              \end{cases}$
+      \item
+            $\begin{cases}
+                2x+4y=2 \\
+                x+2y=1
+              \end{cases}$
+    \end{enumerate}
+  \end{multicols}
+\end{askisi}
+
+\begin{askisi}
+  Εκατόν τριάντα έξι τουρίστες μεταφέρθηκαν με 10 λεωφορεία των 12 θέσεων και 16 θέσεων. Πόσα ήταν τα λεωφορεία κάθε τύπου?
+\end{askisi}
+
+\section{}
+\begin{frame}
+  Στο moodle θα βρείτε τις ασκήσεις που πρέπει να κάνετε, όπως και αυτή τη παρουσίαση
+\end{frame}
+
+\end{document}
