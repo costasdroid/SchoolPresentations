@@ -1,0 +1,210 @@
+\documentclass{presentation}
+
+\title{Άλγεβρα - Εξισώσεις}
+\subtitle{Εξισώσεις της μορφής $x^ν = α$}
+\author[Λόλας]{Κωνσταντίνος Λόλας }
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\section{Θεωρία}
+
+\begin{frame}{Όταν το $x$ κάνει γυμναστική!}
+  Μέχρι τώρα είχαμε απλές εξισώσεις... τώρα το $x$ ανέβηκε σε άλλο level!
+  \begin{itemize}[<+->]
+    \item $x=5$ (παιδάκι)
+    \item $2x+3=7$ (έφηβος)
+    \item $x^2=9$ (ενήλικας με δύναμη!)
+    \item $x^3=8$ (bodybuilder!)
+    \item $x^ν=α$ (Hulk mode!)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Η βασική ιδέα}
+  \begin{block}{Το πρόβλημα}
+    Πώς λύνουμε την εξίσωση $x^ν=α$;
+  \end{block}
+  \pause
+
+  \begin{itemize}[<+->]
+    \item Εξαρτάται από το $ν$ (τον εκθέτη)
+    \item Εξαρτάται από το $α$ (τον αριθμό)
+    \item Το $ν$ καθορίζει πόσες λύσεις θα έχουμε
+    \item Το $α$ καθορίζει αν έχουμε λύσεις!
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Όταν ο εκθέτης είναι περιττός}
+  \begin{block}{Περιττός εκθέτης: $ν=2κ+1$}
+    Για την εξίσωση $x^ν=α$ με $ν$ περιττό:
+    \begin{itemize}[<+->]
+      \item Αν $α>0$: $x=\sqrt[ν]{α}$ (μία θετική λύση)
+      \item Αν $α=0$: $x=0$ (μία λύση)
+      \item Αν $α<0$: $x=-\sqrt[ν]{-α}$ (μία αρνητική λύση)
+    \end{itemize}
+  \end{block}
+  \pause
+
+  \begin{exampleblock}{Παραδείγματα}
+    \begin{itemize}[<+->]
+      \item $x^3=8 \Rightarrow x=\sqrt[3]{8}=2$
+      \item $x^3=-8 \Rightarrow x=-\sqrt[3]{8}=-2$
+      \item $x^5=32 \Rightarrow x=\sqrt[5]{32}=2$
+      \item $x^5=-32 \Rightarrow x=-\sqrt[5]{32}=-2$
+    \end{itemize}
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}{Γιατί οι περιττοί χρειάζονται δύο περιπτώσεις;}
+  \begin{itemize}[<+->]
+    \item Η ρίζα ορίζεται \textbf{μόνο} για θετικούς αριθμούς!
+    \item Για $x^3=8$: Απλά $x=\sqrt[3]{8}=2$ \quad (OK!)
+    \item Για $x^3=-8$: Δεν μπορούμε να γράψουμε $\sqrt[3]{-8}$!
+
+          \textbf{Λύση}: Γράφουμε $x^3=-8$ ως $x^3=-1\cdot 8$
+
+          \begin{itemize}[<+->]
+            \item Αν $x^3=-8$, τότε $(-x)^3=8$ (αλλαγή προσήμου!)
+            \item Άρα $-x=\sqrt[3]{8}=2 \Rightarrow x=-2$
+            \item Γενικά: $x^ν=α$ με $α<0$ γίνεται $x=-\sqrt[ν]{-α}$
+          \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Όταν ο εκθέτης είναι άρτιος}
+  \begin{block}{Άρτιος εκθέτης: $ν=2κ$}
+    Για την εξίσωση $x^ν=α$ με $ν$ άρτιο:
+    \begin{itemize}[<+->]
+      \item Αν $α<0$: \textbf{Καμία λύση} (αδύνατη!)
+      \item Αν $α=0$: $x=0$ (μία λύση)
+      \item Αν $α>0$: $x=\pm\sqrt[ν]{α}$ (δύο λύσεις!)
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}{Γιατί οι άρτιοι είναι τόσο καβγαδιάρηδες;}
+  \begin{itemize}[<+->]
+    \item Οι άρτιες δυνάμεις \textbf{χάνουν} το πρόσημο!
+    \item $(-2)^2=4$ (έγινε θετικό!)
+    \item $(2)^2=4$ (ήταν θετικό!)
+    \item Άρα $x^{2κ}\ge 0$ πάντα!
+    \item Δεν μπορούμε να φτάσουμε σε αρνητικό αριθμό
+    \item Αλλά από δύο δρόμους φτάνουμε στον ίδιο θετικό: $x$ και $-x$
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Παραδείγματα με άρτιο εκθέτη}
+  \begin{exampleblock}{Με λύσεις}
+    \begin{itemize}[<+->]
+      \item $x^2=9 \Rightarrow x=\pm 3$ (δύο λύσεις)
+      \item $x^4=16 \Rightarrow x=\pm 2$ (δύο λύσεις)
+      \item $x^6=64 \Rightarrow x=\pm 2$ (δύο λύσεις)
+    \end{itemize}
+  \end{exampleblock}
+  \pause
+
+  \begin{alertblock}{Χωρίς λύσεις}
+    \begin{itemize}[<+->]
+      \item $x^2=-4$ (αδύνατη!)
+      \item $x^4=-16$ (αδύνατη!)
+      \item $x^{100}=-1$ (αδύνατη!)
+    \end{itemize}
+  \end{alertblock}
+\end{frame}
+
+\begin{frame}{Σύνοψη - Ο χάρτης επιβίωσης}
+  \begin{center}
+    \begin{tabular}{|c|c|c|c|}
+      \hline
+      \textbf{Εκθέτης} & \textbf{Αριθμός} & \textbf{Λύση}      & \textbf{Πλήθος} \\
+      \hline
+      \hline
+      Περιττός         & $α>0$            & $x=\sqrt[ν]{α}$    & 1               \\
+      $ν=2κ+1$         & $α=0$            & $x=0$              & 1               \\
+                       & $α<0$            & $x=-\sqrt[ν]{-α}$  & 1               \\
+      \hline
+      \hline
+      Άρτιος           & $α>0$            & $x=\pm\sqrt[ν]{α}$ & 2               \\
+      $ν=2κ$           & $α=0$            & $x=0$              & 1               \\
+                       & $α<0$            & Αδύνατη            & 0               \\
+      \hline
+    \end{tabular}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Προσοχή στις παγίδες!}
+  \begin{alertblock}{Σωστό ή Λάθος;}
+    \begin{itemize}
+      \item<1-> $x^2=9 \Rightarrow x=3$ \onslide<2->{\quad (\textbf{Λάθος!} Ξέχασες το $-3$)}
+      \item<3-> $x^3=-8 \Rightarrow \sqrt[3]{-8}$ \onslide<4->{\quad (\textbf{Λάθος!} Δεν ορίζεται!)}
+      \item<5-> $x^4=-1 \Rightarrow x=\pm 1$ \onslide<6->{\quad (\textbf{Λάθος!} Είναι αδύνατη!)}
+      \item<7-> $\sqrt{x^2}=x$ \onslide<8->{\quad (\textbf{Λάθος!} Είναι $\sqrt{x^2}=|x|$)}
+    \end{itemize}
+  \end{alertblock}
+\end{frame}
+
+\begin{frame}{Ειδική περίπτωση: $x^2=α^2$}
+  \begin{block}{Προσοχή!}
+    Αν έχουμε $x^2=α^2$, τότε:
+    $$x^2-α^2=0 \Rightarrow (x-α)(x+α)=0$$
+    $$x=α \text{ ή } x=-α$$
+    Δηλαδή: $x=\pm α$
+  \end{block}
+  \pause
+
+  \begin{exampleblock}{Παράδειγμα}
+    $x^2=(2x-1)^2 \Rightarrow x=\pm(2x-1)$
+    \begin{itemize}
+      \item $x=2x-1 \Rightarrow x=1$
+      \item $x=-(2x-1) \Rightarrow x=-2x+1 \Rightarrow 3x=1 \Rightarrow x=\frac{1}{3}$
+    \end{itemize}
+  \end{exampleblock}
+\end{frame}
+
+\moodle
+
+\section{Ασκήσεις}
+
+\exercises
+
+\begin{askisi}
+  Λύστε τις εξισώσεις:
+  \begin{enumerate}[<+->]
+    \item $x^3-8=0$
+    \item $x^3+1=0$
+    \item $x^3+5=0$
+    \item $x^2-4=0$
+    \item $x^4-2=0$
+    \item $x^4+1=0$
+  \end{enumerate}
+\end{askisi}
+
+\begin{askisi}
+  Λύστε τις εξισώσεις:
+  \begin{enumerate}[<+->]
+    \item $x^3=5x$
+    \item $x^5-32x^2=0$
+  \end{enumerate}
+\end{askisi}
+
+\begin{askisi}
+  Να λύσετε τις εξισώσεις:
+  \begin{enumerate}[<+->]
+    \item $(x-1)^4-81=0$
+    \item $(3x-1)^5+32=0$
+    \item $8x^3-(x-1)^3=0$
+  \end{enumerate}
+\end{askisi}
+
+\begin{askisi}
+  Να λύσετε την εξίσωση $(x-2)^4-|x-2|=0$.
+\end{askisi}
+
+\begin{askisi}
+  Να λύσετε την εξίσωση $26x^3+3x^2-3x+1=0$.
+\end{askisi}
+
+\end{document}
