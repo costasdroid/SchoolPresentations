@@ -1,0 +1,228 @@
+\documentclass{presentation}
+
+\title{Τριγωνομετρία}
+\subtitle{Αναγωγή στο Α΄ Τεταρτημόριο}
+\author[Λόλας]{Κωνσταντίνος Λόλας }
+\institute[$10^ο$ ΓΕΛ]{$10^ο$ ΓΕΛ Θεσσαλονίκης}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\section{Θεωρία}
+
+\begin{frame}{Γιατί αναγωγή;}
+  Το πρόβλημα: Πώς υπολογίζουμε τριγωνομετρικούς αριθμούς γωνιών εκτός του Α΄ τεταρτημορίου;
+  \begin{itemize}[<+->]
+    \item $ημ30^{\circ}=\frac{1}{2}$ (εύκολο!)
+    \item $ημ150^{\circ}=$ ??? (Β΄ τεταρτημόριο)
+    \item $ημ210^{\circ}=$ ??? (Γ΄ τεταρτημόριο)
+    \item $ημ330^{\circ}=$ ??? (Δ΄ τεταρτημόριο)
+    \item Θα μάθουμε να τα φέρνουμε όλα στο Α΄ τεταρτημόριο!
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Η μαγική ιδέα}
+  \begin{block}{Αναγωγή στο Α΄ Τεταρτημόριο}
+    Κάθε γωνία μπορεί να γραφεί σε σχέση με μια γωνία του Α΄ τεταρτημορίου!
+  \end{block}
+  \pause
+
+  \begin{itemize}[<+->]
+    \item Β΄ τεταρτημόριο: $90^{\circ}<θ<180^{\circ}$ ή $\frac{π}{2}<θ<π$
+    \item Γ΄ τεταρτημόριο: $180^{\circ}<θ<270^{\circ}$ ή $π<θ<\frac{3π}{2}$
+    \item Δ΄ τεταρτημόριο: $270^{\circ}<θ<360^{\circ}$ ή $\frac{3π}{2}<θ<2π$
+    \item Όλες μπορούν να αναχθούν στο $0^{\circ}<ω<90^{\circ}$
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Παραπληρωματική γωνία}
+  \begin{block}{Τύπος}
+    Για γωνία $θ$ στο Β΄ τεταρτημόριο: $θ=180^{\circ}-ω$ ή $θ=π-ω$
+
+    όπου $ω$ είναι η παραπληρωματική γωνία στο Α΄ τεταρτημόριο
+  \end{block}
+  \pause
+
+  \begin{exampleblock}{Τριγωνομετρικοί αριθμοί}
+    \begin{itemize}[<+->]
+      \item $ημ(180^{\circ}-ω)=+ημω$ (θετικό!)
+      \item $συν(180^{\circ}-ω)=-συνω$ (αρνητικό!)
+      \item $εφ(180^{\circ}-ω)=-εφω$ (αρνητικό!)
+    \end{itemize}
+  \end{exampleblock}
+  \pause
+
+  \textbf{Παράδειγμα}: $ημ150^{\circ}=ημ(180^{\circ}-30^{\circ})=ημ30^{\circ}=\frac{1}{2}$
+\end{frame}
+
+\begin{frame}{Γ΄ Τεταρτημόριο}
+  \begin{block}{Τύπος}
+    Για γωνία $θ$ στο Γ΄ τεταρτημόριο: $θ=180^{\circ}+ω$ ή $θ=π+ω$
+
+    όπου $ω$ είναι γωνία του Α΄ τεταρτημορίου
+  \end{block}
+  \pause
+
+  \begin{exampleblock}{Τριγωνομετρικοί αριθμοί}
+    \begin{itemize}[<+->]
+      \item $ημ(180^{\circ}+ω)=-ημω$ (αρνητικό!)
+      \item $συν(180^{\circ}+ω)=-συνω$ (αρνητικό!)
+      \item $εφ(180^{\circ}+ω)=+εφω$ (θετικό!)
+    \end{itemize}
+  \end{exampleblock}
+  \pause
+
+  \textbf{Παράδειγμα}: $συν210^{\circ}=συν(180^{\circ}+30^{\circ})=-συν30^{\circ}=-\frac{\sqrt{3}}{2}$
+\end{frame}
+
+\begin{frame}{Αντίθετη γωνία}
+  \begin{block}{Τύπος}
+    Για γωνία $θ$ στο Δ΄ τεταρτημόριο: $θ=-ω$
+
+    όπου $ω$ είναι γωνία του Α΄ τεταρτημορίου
+  \end{block}
+  \pause
+
+  \begin{exampleblock}{Τριγωνομετρικοί αριθμοί}
+    \begin{itemize}[<+->]
+      \item $ημ(-ω)=-ημω$ (αρνητικό!)
+      \item $συν-ω)=+συνω$ (θετικό!)
+      \item $εφ(-ω)=-εφω$ (αρνητικό!)
+    \end{itemize}
+  \end{exampleblock}
+  \pause
+
+  \textbf{Παράδειγμα}: $συν(-30^{\circ})=συν30^{\circ}=\frac{\sqrt{3}}{2}$
+\end{frame}
+
+\begin{frame}{Ειδικές γωνίες - Το μυστικό όπλο!}
+  Γωνίες που απλοποιούν τα πάντα:
+  \begin{multicols}{2}
+    \begin{itemize}[<+->]
+      \item $ημ(90^{\circ}-ω)=συνω$
+      \item $συν(90^{\circ}-ω)=ημω$
+      \item $εφ(90^{\circ}-ω)=σφω$
+      \item $ημ(-ω)=-ημω$
+      \item $συν(-ω)=συνω$
+      \item $εφ(-ω)=-εφω$
+    \end{itemize}
+  \end{multicols}
+  \pause
+
+  \textbf{Παράδειγμα}: $ημ60^{\circ}=ημ(90^{\circ}-30^{\circ})=συν30^{\circ}=\frac{\sqrt{3}}{2}$
+\end{frame}
+
+\begin{frame}{One rule to rule them all}
+  \begin{enumerate}[<+->]
+    \item Βρες σε ποιο τεταρτημόριο βρίσκεται η γωνία
+    \item Διάλεξε άξονα από τον οποίο θα ξεκινήσεις
+    \item Γράψε την γωνία στην κατάλληλη μορφή
+          \begin{itemize}
+            \item $\pi \pm ω$
+            \item $-ω$
+            \item $\frac{\pi}{2}\pm ω$
+            \item $\frac{3\pi}{2}\pm ω$
+          \end{itemize}
+    \item Αν από άξονα "$x'x$" κρατάμε το ίδιο, αλλιώς αλλάζουμε
+    \item Βάλε το πρόσημο
+  \end{enumerate}
+\end{frame}
+
+\moodle
+
+\section{Ασκήσεις}
+
+\exercises
+
+\begin{askisi}
+  Να υπολογίσετε τις τιμές των τριγωνομετρικών αριθμών:
+  \begin{enumerate}[<+->]
+    \item $ημ120^{\circ}$
+    \item $συν150^{\circ}$
+    \item $εφ135^{\circ}$
+    \item $ημ210^{\circ}$
+    \item $συν240^{\circ}$
+    \item $εφ300^{\circ}$
+  \end{enumerate}
+\end{askisi}
+
+\begin{askisi}
+  Να υπολογίσετε χωρίς τη χρήση αριθμομηχανής:
+  \begin{enumerate}[<+->]
+    \item $ημ\frac{2π}{3}$
+    \item $συν\frac{3π}{4}$
+    \item $εφ\frac{5π}{6}$
+    \item $ημ\frac{7π}{6}$
+    \item $συν\frac{5π}{3}$
+  \end{enumerate}
+\end{askisi}
+
+\begin{askisi}
+  Να απλοποιήσετε τις παραστάσεις:
+  \begin{enumerate}[<+->]
+    \item $ημ(180^{\circ}-x)+συν(180^{\circ}+x)$
+    \item $εφ(360^{\circ}-x)\cdot συν(90^{\circ}-x)$
+    \item $\frac{ημ(π-x)\cdot συν(π+x)}{εφ(2π-x)}$
+  \end{enumerate}
+\end{askisi}
+
+\begin{askisi}
+  Αν $ημx=\frac{3}{5}$ και $\frac{π}{2}<x<π$, να βρείτε τα:
+  \begin{enumerate}[<+->]
+    \item $συνx$
+    \item $εφx$
+    \item $ημ(180^{\circ}-x)$
+    \item $συν(180^{\circ}+x)$
+  \end{enumerate}
+\end{askisi}
+
+\begin{askisi}
+  Να υπολογίσετε την τιμή της παράστασης:
+  $$Α=ημ120^{\circ}\cdot συν210^{\circ}+εφ135^{\circ}\cdot συν300^{\circ}$$
+\end{askisi}
+
+\begin{askisi}
+  Να δείξετε ότι:
+  \begin{enumerate}[<+->]
+    \item $ημ(180^{\circ}-x)+ημ(180^{\circ}+x)=0$
+    \item $συν(360^{\circ}-x)+συν(180^{\circ}-x)=0$
+    \item $εφ(180^{\circ}+x)\cdot εφ(360^{\circ}-x)=-εφ^2x$
+  \end{enumerate}
+\end{askisi}
+
+\begin{askisi}
+  Να βρείτε το πρόσημο των παραστάσεων:
+  \begin{enumerate}[<+->]
+    \item $Α=ημ100^{\circ}\cdot συν200^{\circ}$
+    \item $Β=εφ150^{\circ}\cdot συν300^{\circ}$
+    \item $Γ=ημ250^{\circ}\cdot εφ320^{\circ}$
+  \end{enumerate}
+\end{askisi}
+
+\begin{askisi}
+  Να υπολογίσετε χωρίς αριθμομηχανή:
+  $$Α=ημ^2150^{\circ}+συν^2150^{\circ}+εφ135^{\circ}\cdot σφ135^{\circ}$$
+\end{askisi}
+
+\begin{askisi}
+  Αν $συνx=-\frac{5}{13}$ και $π<x<\frac{3π}{2}$, να υπολογίσετε:
+  \begin{enumerate}[<+->]
+    \item τους υπόλοιπους τριγωνομετρικούς αριθμούς του $x$
+    \item το $ημ(π-x)$
+    \item το $συν(2π-x)$
+  \end{enumerate}
+\end{askisi}
+
+\begin{askisi}
+  Να λύσετε τις εξισώσεις στο $[0,2π]$:
+  \begin{enumerate}[<+->]
+    \item $ημx=ημ\frac{π}{6}$
+    \item $συνx=συν\frac{π}{4}$
+    \item $εφx=\sqrt{3}$
+  \end{enumerate}
+\end{askisi}
+
+\end{document}
