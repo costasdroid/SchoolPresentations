@@ -2,11 +2,10 @@
 applyTo: "**"
 ---
 
-
-
 # Ενοποιημένες Οδηγίες LaTeX & Project (SchoolPresentations)
 
 ## Περιγραφή
+
 Το αποθετήριο περιέχει παρουσιάσεις μαθηματικών Λυκείου στα Ελληνικά με LaTeX Beamer. Όλες οι οδηγίες συγγραφής, μορφοποίησης, αρχιτεκτονικής και build περιλαμβάνονται εδώ.
 
 ---
@@ -45,6 +44,7 @@ applyTo: "**"
 ```
 
 **Σημαντικό**:
+
 - Χρησιμοποιούμε πάντα `\documentclass{presentation}` (όχι σχετικό path)
 - Δεν βάζουμε `\date{}` — το cls το προσθέτει αυτόματα
 
@@ -74,6 +74,7 @@ applyTo: "**"
 - `\exercises`: Εμφανές frame "Ασκήσεις" (με beamercolorbox)
 
 ### Παράδειγμα askisi
+
 ```latex
 \begin{askisi}
   Δίνεται η συνάρτηση $f(x)=x^3-6x^2+9x$
@@ -108,6 +109,7 @@ applyTo: "**"
 ## Παραδείγματα patterns
 
 ### Piecewise
+
 ```latex
 f(x)=\begin{cases}
   x^2+2, & x<2 \\
@@ -117,6 +119,7 @@ f(x)=\begin{cases}
 ```
 
 ### Σύστημα εξισώσεων
+
 ```latex
 \begin{cases}
   2x+y=4 \\

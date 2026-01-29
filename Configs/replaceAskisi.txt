@@ -1,3 +1,0 @@
-\\subsection\{Άσκηση \d+\}\s*\n\\begin\{frame\}\[label=Άσκηση\d+\]\{Εξάσκηση \d+\}\s*([\s\S]*?)\s*%\s*\\hyperlink\{Λύση\d+\}\{\\beamerbutton\{Λύση\}\}\s*\\end\{frame\}
-
-\begin{askisi}\n$1\n\end{askisi}
