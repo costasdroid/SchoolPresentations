@@ -1,0 +1,179 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage{amsmath, amsthm, amssymb}
+
+\usepackage{unicode-math}
+\usepackage{xltxtra}
+\usepackage{xgreek}
+\setmainfont{Calibri}
+
+\usepackage{fancyhdr}
+\renewcommand{\footrulewidth}{0.4pt}% default is 0pt
+\usepackage{lastpage}
+
+\usepackage[a4paper, top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm, headheight=1cm, footskip=1.5cm]{geometry}
+
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+
+% Ρυθμίσεις σελίδας
+\geometry{top=2cm, bottom=2cm, left=2.5cm, right=2.5cm}
+
+% Ρυθμίσεις Επικεφαλίδων
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Στατιστική Γ' Λυκείου}
+\lhead{Συνδυασμοί $n$ ανά $\kappa$}
+\cfoot{\thepage}
+
+\begin{document}
+
+% ----------------------------------------------------------------------
+% 1. ΣΧΕΔΙΟ ΜΑΘΗΜΑΤΟΣ ΓΙΑ ΤΟΝ ΑΞΙΟΛΟΓΗΤΗ
+% ----------------------------------------------------------------------
+\begin{center}
+  \LARGE \textbf{Σχέδιο Μαθήματος (Lesson Plan)} \\
+  \large \textbf{Θέμα: Συνδυασμοί $n$ ανά $\kappa$ (Επιλογή χωρίς σειρά)} \\
+  \vspace{0.2cm}
+  \small \textit{Πλαίσιο Αξιολόγησης Α1 - Προσανατολισμός Ανθρωπιστικών Σπουδών}
+\end{center}
+
+\section*{Γενικά Στοιχεία}
+\begin{itemize}
+  \item \textbf{Κοινό:} Μαθητές Ανθρωπιστικών Σπουδών.
+  \item \textbf{Διάρκεια:} 45 λεπτά.
+  \item \textbf{Βασική Σύνδεση:} Μετάβαση από τις Διατάξεις (σημασία στη σειρά) στους Συνδυασμούς (σημασία στη σύνθεση της ομάδας).
+  \item \textbf{Πλαίσιο Εφαρμογών:} Στατιστική έρευνα, επιλογή δειγμάτων και ανάλυση τυχερών παιχνιδιών.
+\end{itemize}
+
+\section*{Διδακτικοί Στόχοι}
+\begin{enumerate}
+  \item Διάκριση μεταξύ Διάταξης και Συνδυασμού με βάση το κριτήριο της σειράς.
+  \item Κατανόηση του συμβόλου $\binom{n}{\kappa}$ και του τρόπου υπολογισμού του.
+  \item Αντίληψη της πρακτικής αξίας των συνδυασμών στην επιλογή αντιπροσωπευτικών δειγμάτων για έρευνες πεδίου.
+\end{enumerate}
+
+\section*{Ροή Μαθήματος (Χρονοδιάγραμμα)}
+\begin{itemize}
+  \item \textbf{00'--08' (Εισαγωγή):} Βιωματικό παράδειγμα: Επιλογή μαθητών για ρόλους με ιεραρχία vs επιλογή για μια ενιαία ομάδα εργασίας.
+  \item \textbf{08'--15' (Θεωρία):} Ορισμός του Συνδυασμού. Παρουσίαση του τύπου και επεξήγηση της διαίρεσης με το $\kappa!$ (απαλοιφή της σειράς).
+  \item \textbf{15'--25' (Εφαρμογή):} Παράδειγμα έρευνας αγοράς/κοινής γνώμης. Επιλογή 3 ατόμων από 10 για συμμετοχή σε ομάδα συζήτησης (Focus Group).
+  \item \textbf{25'--35' (Πραγματικά Δεδομένα):} Ανάλυση του Τζόκερ. Υπολογισμός πιθανοτήτων και συζήτηση για το μέγεθος του δειγματικού χώρου.
+  \item \textbf{35'--40' (Ομαδική Εργασία):} Επίλυση προβλήματος δειγματοληψίας από δύο διαφορετικές πληθυσμιακές ομάδες.
+  \item \textbf{40'--45' (Ανατροφοδότηση):} Συμπλήρωση των φύλλων αξιολόγησης.
+\end{itemize}
+
+\newpage
+
+% ----------------------------------------------------------------------
+% 2. ΦΥΛΛΟ ΕΡΓΑΣΙΑΣ ΜΑΘΗΤΩΝ (ΟΜΑΔΙΚΟ)
+% ----------------------------------------------------------------------
+\begin{center}
+  \Large \textbf{ΦΥΛΛΟ ΕΡΓΑΣΙΑΣ: «Εφαρμογές της Στατιστικής»} \\
+  \small Τμήμα: \dots\dots \quad Ομάδα: \dots\dots\dots\dots\dots\dots
+\end{center}
+
+\vspace{0.5cm}
+
+\textbf{Δραστηριότητα 1: Το κριτήριο της σειράς} \\
+Σε μια ομάδα 5 εθελοντών, θέλουμε να επιλέξουμε 2 άτομα για μια δράση.
+\begin{enumerate}
+  \item Αν ο ένας θα είναι «Υπεύθυνος» και ο άλλος «Βοηθός», πόσες διαφορετικές επιλογές έχουμε; (Διατάξεις $P_{5,2}$).
+  \item Αν και οι δύο έχουν ακριβώς τις ίδιες αρμοδιότητες ως μέλη της ίδιας ομάδας, πόσες επιλογές έχουμε; (Συνδυασμοί $\binom{5}{2}$).
+\end{enumerate}
+
+\vspace{3.5cm}
+\textit{Απάντηση:} \dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots
+
+\vspace{1cm}
+
+\textbf{Δραστηριότητα 2: Σχεδιασμός Έρευνας} \\
+Ένας ερευνητής θέλει να μελετήσει τις συνήθειες μιας κοινότητας που αποτελείται από 6 εργαζόμενους στον ιδιωτικό τομέα και 6 στον δημόσιο. Πρέπει να επιλέξει ένα δείγμα που να αποτελείται από 2 άτομα από κάθε τομέα.
+\begin{enumerate}
+  \item Με πόσους τρόπους μπορεί να επιλέξει τους εργαζόμενους από τον ιδιωτικό τομέα; $\binom{6}{2} = $ \dots\dots\dots
+  \item Με πόσους τρόπους μπορεί να επιλέξει τους εργαζόμενους από τον δημόσιο τομέα; $\binom{6}{2} = $ \dots\dots\dots
+  \item Πόσα διαφορετικά δείγματα (συνδυασμοί ατόμων) μπορούν να σχηματιστούν συνολικά;
+\end{enumerate}
+
+\vspace{3.5cm}
+\textit{Λύση:} \dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots
+
+\vspace{1cm}
+
+\textbf{Δραστηριότητα 3: Πιθανότητες και Τζόκερ} \\
+Στην κλήρωση του Τζόκερ επιλέγουμε 5 αριθμούς από 45.
+
+\begin{enumerate}
+  \item Υπολογίστε το πλήθος των πιθανών πεντάδων: $\binom{45}{5} = \frac{45 \cdot 44 \cdot 43 \cdot 42 \cdot 41}{5 \cdot 4 \cdot 3 \cdot 2 \cdot 1}$.
+  \item Στο Τζόκερ, εκτός από τους 5 αριθμούς, επιλέγεται και \textbf{ένας αριθμός Τζόκερ από τα 20}. Πόσες συνολικά διαφορετικές στήλες μπορούν να συμπληρωθούν;
+  \item Γράψτε τον τύπο που δίνει το συνολικό πλήθος στηλών:
+        \[
+          \text{Σύνολο στηλών} = \binom{45}{5} \times 20
+        \]
+  \item Με βάση το αποτέλεσμα (περίπου 24 εκατομμύρια), πώς θα σχολιάζατε τη φράση «έχω ένα σύστημα που προβλέπει τους αριθμούς»;
+\end{enumerate}
+
+\vspace{2.5cm}
+\textit{Σχόλιο:} \dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots
+
+\newpage
+
+% ----------------------------------------------------------------------
+% 3 & 4. ΑΥΤΟΑΞΙΟΛΟΓΗΣΗ & ΑΞΙΟΛΟΓΗΣΗ ΜΑΘΗΜΑΤΟΣ
+% ----------------------------------------------------------------------
+\begin{center}
+  \Large \textbf{Σύνοψη Μαθήματος (Exit Ticket)}
+\end{center}
+
+\section*{Μέρος Α: Έλεγχος Κατανόησης}
+\textit{Επιλέξτε τη σωστή απάντηση.}
+
+\vspace{0.4cm}
+
+\textbf{1. Πότε χρησιμοποιούμε τον τύπο των Συνδυασμών;} \\
+$\square$ Όταν η σειρά εμφάνισης των στοιχείων μεταβάλλει το αποτέλεσμα. \\
+$\square$ Όταν μας ενδιαφέρει μόνο ποια στοιχεία αποτελούν την ομάδα, ανεξάρτητα από τη σειρά τους.
+
+\vspace{0.4cm}
+
+\textbf{2. Πόσοι είναι οι συνδυασμοί 10 ατόμων ανά 1;} \\
+α) 1 \hspace{2cm} β) 10 \hspace{2cm} γ) 0
+
+\vspace{0.4cm}
+
+\textbf{3. Ποια θεωρείτε τη σημαντικότερη εφαρμογή των συνδυασμών στην έρευνα (π.χ. δημοσκοπήσεις);} \\
+\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots
+
+\vspace{1cm}
+\hrule
+\vspace{1cm}
+
+\section*{Μέρος Β: Αξιολόγηση Διδακτικής Εμπειρίας}
+\textit{Η γνώμη σας με βοηθά να βελτιώσω τον τρόπο διδασκαλίας μου.}
+
+\vspace{0.5cm}
+
+\begin{tabularx}{\textwidth}{X c c c c c}
+  \textbf{Κριτήριο}                             & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} \\
+  \hline
+  Σαφήνεια στη διαφορά Διάταξης - Συνδυασμού    & $\square$  & $\square$  & $\square$  & $\square$  & $\square$  \\
+  Σύνδεση των μαθηματικών με την καθημερινότητα & $\square$  & $\square$  & $\square$  & $\square$  & $\square$  \\
+  Οργάνωση της ομαδικής εργασίας                & $\square$  & $\square$  & $\square$  & $\square$  & $\square$  \\
+  Χρήση παραδειγμάτων (Τζόκερ, δειγματοληψία)   & $\square$  & $\square$  & $\square$  & $\square$  & $\square$  \\
+\end{tabularx}
+
+\vspace{0.8cm}
+
+\textbf{Τι σας φάνηκε πιο ενδιαφέρον σήμερα;} \\
+
+\vspace{2.5cm}
+\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots
+
+\vspace{0.5cm}
+
+\textbf{Υπάρχει κάτι που θα θέλατε να εξηγηθεί με διαφορετικό τρόπο;} \\
+
+\vspace{2.5cm}
+\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots
+
+\end{document}
