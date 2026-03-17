@@ -1,12 +1,11 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{presentation}
 
-\LoadClass[greek]{beamer}
+\LoadClass{beamer}
 
 \usepackage{amsmath,amsthm} % needed for mathematics
 \usepackage{fontspec}
 \usepackage{unicode-math}
-\usepackage{xltxtra}
 \usepackage{graphicx}
 \usetheme{CambridgeUS}
 \usecolortheme{seagull}
@@ -106,13 +105,14 @@
 }
 
 % Presentation version
-\def\presentationversion{2.7}
+\def\presentationversion{2.8}
 
 % Patch \insertdate to always append version info on title slide
 \let\beamer@originsertdate\insertdate
 \renewcommand{\insertdate}{\beamer@originsertdate~---~\textbf{Έκδοση:}~\presentationversion}
 
 % Changelog
+% 2.8 - 2026-03-17: Removed redundant xltxtra and babel greek option (xgreek handles everything)
 % 2.7 - 2024-07-10: Removed numbering from askisi's description.
 % 2.6 - 2024-06-10: Added changelog section, patched \insertdate for version info
 % 2.5 - 2024-05-20: Added environments for askisi, lisi, apodiksi
