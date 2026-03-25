@@ -8,19 +8,16 @@ on:
 jobs:
   build_latex:
     runs-on: ubuntu-latest
+    container:
+      image: texlive/texlive:latest
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v4
 
-      - name: Install TeX Live
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y --no-install-recommends texlive-full
-
       - name: Install Calibri Fonts
         run: |
-          sudo apt-get update
-          sudo apt-get install -y --no-install-recommends wget cabextract
+          apt-get update
+          apt-get install -y --no-install-recommends wget cabextract
           # Fetch the PowerPoint Viewer which contains the original Calibri fonts
           # Using a reliable archive.org link to an official redistributable package
           wget -q "https://web.archive.org/web/20200508123300/https://download.microsoft.com/download/E/6/7/E675FFFC-2A6D-4AB0-B372-A1B6B49A39A0/PowerPointViewer.exe"
@@ -35,13 +32,13 @@ jobs:
           cabextract -q -d fonts_temp fonts_temp/ppviewer.cab
 
           # Create a system font directory
-          sudo mkdir -p /usr/share/fonts/truetype/vista
+          mkdir -p /usr/share/fonts/truetype/vista
 
           # Copy the TrueType fonts to the system directory
-          sudo find fonts_temp -name "*.TTF" -exec sudo cp {} /usr/share/fonts/truetype/vista/ \;
+          find fonts_temp -name "*.TTF" -exec cp {} /usr/share/fonts/truetype/vista/ \;
 
           # Rebuild font cache
-          sudo fc-cache -fv
+          fc-cache -fv
 
           # Clean up temporary files
           rm -rf fonts_temp PowerPointViewer.exe
