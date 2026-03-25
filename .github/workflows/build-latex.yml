@@ -1,0 +1,88 @@
+name: Build LaTeX Presentations
+
+on:
+  push:
+    branches:
+      - master # Adjust if your main branch is called 'main'
+
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Install TeX Live
+        uses: vinzsom/setup-texlive@v1
+        with:
+          # A full installation is required to ensure all packages from the README are present.
+          packages: all
+          # The README specifies TeX Live 2022+, so 2023 is a safe choice.
+          version: 2023
+
+      - name: Install Calibri Fonts
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends wget cabextract
+          # Fetch the PowerPoint Viewer which contains the original Calibri fonts
+          # Using a reliable archive.org link to an official redistributable package
+          wget -q "https://web.archive.org/web/20200508123300/https://download.microsoft.com/download/E/6/7/E675FFFC-2A6D-4AB0-B372-A1B6B49A39A0/PowerPointViewer.exe"
+          
+          # Create a directory to extract files
+          mkdir -p fonts_temp
+          
+          # Extract the fonts from the executable
+          cabextract -q -d fonts_temp PowerPointViewer.exe
+          
+          # The actual font files are inside this cab
+          cabextract -q -d fonts_temp fonts_temp/ppviewer.cab
+          
+          # Create a system font directory
+          sudo mkdir -p /usr/share/fonts/truetype/vista
+          
+          # Copy the TrueType fonts to the system directory
+          sudo find fonts_temp -name "*.TTF" -exec sudo cp {} /usr/share/fonts/truetype/vista/ \;
+          
+          # Rebuild font cache
+          sudo fc-cache -fv
+          
+          # Clean up temporary files
+          rm -rf fonts_temp PowerPointViewer.exe
+          echo "Calibri font installed."
+
+      - name: Compile LaTeX presentations
+        run: |
+          # Create a directory to store all generated PDFs for artifact upload
+          mkdir -p artifacts
+          
+          # Find all .tex files in the main content directories
+          # The -maxdepth 1 ensures we only get files directly in those dirs, as per project structure
+          find "Α Λυκείου" "Β Λυκείου" "Γ Λυκείου" "Φυσική" -maxdepth 1 -type f -name "*.tex" | while read texfile; do
+            echo "=================================================="
+            echo "Compiling: $texfile"
+            echo "=================================================="
+            
+            DIR=$(dirname "$texfile")
+            FILENAME=$(basename "$texfile")
+            
+            # Run latexmk from the file's directory to ensure presentation.cls is found.
+            # The output directory is set to the same directory.
+            (cd "$DIR" && latexmk -xelatex -file-line-error -interaction=nonstopmode -output-directory=. "$FILENAME")
+            
+            PDF_NAME="${texfile%.tex}.pdf"
+            if [ -f "$PDF_NAME" ]; then
+              echo "Successfully created $PDF_NAME"
+              # Copy the PDF to the artifacts directory, preserving the path structure from the repo root
+              rsync -R "$PDF_NAME" ./artifacts/
+            else
+              # If compilation fails, output a warning in the Actions log
+              echo "::warning file=$texfile::Could not find generated PDF. Compilation may have failed."
+            fi
+          done
+
+      - name: Upload PDF Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: PDF-Presentations
+          path: artifacts/
+          if-no-files-found: warn # Don't fail the workflow if no PDFs were generated

@@ -1,4 +1,4 @@
-\documentclass{../presentation}
+\documentclass{presentation}
 
 \title{Πολυώνυμα}
 \subtitle{Πολυωνυμικές Εξισώσεις}
@@ -42,22 +42,22 @@
     child {
         node [rectangle,draw] {$x=-\dfrac{β}{α}$, Μοναδική}
         edge from parent
-        node[left] {$α\ne 0$}
+          node[left] {$α\ne 0$}
       }
     child{
         node {$0=β$}
         child {
             node [rectangle,draw] {Ταυτότητα, Άπειρες}
             edge from parent
-            node[left] {$β=0$}
+              node[left] {$β=0$}
           }
         child {
             node [rectangle,draw] {Αδύνατη, Καμία}
             edge from parent
-            node[right] {$β\ne 0$}
+              node[right] {$β\ne 0$}
           }
         edge from parent
-        node[right] {$α=0$}
+          node[right] {$α=0$}
       };
   \end{tikzpicture}
 \end{frame}
@@ -72,12 +72,12 @@
     child[grow=down] {
         node {$αx^2+γ=0$}
         edge from parent
-        node[left] {$β= 0$}
+          node[left] {$β= 0$}
       }
     child[grow=south east] {
         node{$αx^2+βx=0$}
         edge from parent
-        node[right] {$γ=0$}
+          node[right] {$γ=0$}
       }
     child[grow=east] {
         node{Ταυτότητα}
@@ -118,7 +118,7 @@
     Αν ένα πολυώνυμο με ακέραιους συντελεστές έχει ακέραια ρίζα, τότε η ρίζα αυτή διαιρεί την σταθερά του πολυωνύμου
   \end{block}
   \only<3>
-  {$$P(ρ)=0$$ $$α_νρ^ν+α_{ν-1}ρ^{ν-1}+\cdots+α_1ρ+α_0=0$$ $$a_0=-α_νρ^ν-α_{ν-1}ρ^{ν-1}-\cdots-α_1ρ $$ $$a_0=ρ(-α_νρ^{ν-1}-α_{ν-1}ρ^{ν-2}-\cdots-α_1)$$}
+    {$$P(ρ)=0$$ $$α_νρ^ν+α_{ν-1}ρ^{ν-1}+\cdots+α_1ρ+α_0=0$$ $$a_0=-α_νρ^ν-α_{ν-1}ρ^{ν-1}-\cdots-α_1ρ $$ $$a_0=ρ(-α_νρ^{ν-1}-α_{ν-1}ρ^{ν-2}-\cdots-α_1)$$}
 
 \end{frame}
 
