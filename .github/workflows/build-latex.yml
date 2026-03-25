@@ -16,33 +16,11 @@ jobs:
 
       - name: Install Calibri Fonts
         run: |
-          apt-get update
-          apt-get install -y --no-install-recommends wget cabextract
-          # Fetch the PowerPoint Viewer which contains the original Calibri fonts
-          # Using a reliable archive.org link to an official redistributable package
-          wget -q "https://web.archive.org/web/20200508123300/https://download.microsoft.com/download/E/6/7/E675FFFC-2A6D-4AB0-B372-A1B6B49A39A0/PowerPointViewer.exe"
-
-          # Create a directory to extract files
-          mkdir -p fonts_temp
-
-          # Extract the fonts from the executable
-          cabextract -q -d fonts_temp PowerPointViewer.exe
-
-          # The actual font files are inside this cab
-          cabextract -q -d fonts_temp fonts_temp/ppviewer.cab
-
-          # Create a system font directory
-          mkdir -p /usr/share/fonts/truetype/vista
-
-          # Copy the TrueType fonts to the system directory
-          find fonts_temp -name "*.TTF" -exec cp {} /usr/share/fonts/truetype/vista/ \;
-
-          # Rebuild font cache
+          # Copy Calibri fonts committed in the repo's fonts/ directory
+          mkdir -p /usr/share/fonts/truetype/calibri
+          cp fonts/*.ttf /usr/share/fonts/truetype/calibri/
           fc-cache -fv
-
-          # Clean up temporary files
-          rm -rf fonts_temp PowerPointViewer.exe
-          echo "Calibri font installed."
+          echo "Calibri fonts installed from repo."
 
       - name: Compile LaTeX presentations
         run: |
