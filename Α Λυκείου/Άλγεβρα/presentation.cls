@@ -1,1 +1,1 @@
-../presentation.cls
+../../presentation.cls

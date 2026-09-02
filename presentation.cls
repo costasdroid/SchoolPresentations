@@ -1,35 +1,43 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{presentation}
 
+\newif\if@shownotes\@shownotesfalse
+\DeclareOption{notes}{\@shownotestrue}
+\DeclareOption*{\PassOptionsToClass{\CurrentOption}{beamer}}
+\ProcessOptions\relax
+
 \LoadClass{beamer}
 
-\usepackage{amsmath,amsthm} % needed for mathematics
+\usepackage{amsmath, amsthm}
+
+% Αντί για το fontsetup, χρησιμοποιούμε fontspec
 \usepackage{fontspec}
+\setmainfont{DejaVu Sans} % Ή "Arial", "Calibri", "Liberation Sans"
+\setsansfont{DejaVu Sans}
 \usepackage{unicode-math}
-\usepackage{graphicx}
+\usepackage{polyglossia}
+\setmainlanguage{greek}
+\setotherlanguage{english}
+
+
 \usetheme{CambridgeUS}
 \usecolortheme{seagull}
-\usepackage{hyperref}
-\usepackage{ulem} % underline words package
-\usepackage{xgreek}
+\usepackage[normalem]{ulem} % underline words package
 
 \usepackage{pgfpages}
+\if@shownotes
+  \setbeameroption{show notes on second screen}
+\fi
 
 \usepackage{tikz} % package for shapes and more
-%\setbeameroption{show notes on second screen}
-%\setbeameroption{show only notes}
 
 \usepackage{ifthen} % package for if then else macros
-
-\setsansfont{Calibri} % it is said that Calibri is the proper font for reading difficulties
 
 \usepackage{multicol} % package for two or more columns
 
 \usepackage{appendixnumberbeamer} % remove page numbering in appendix
 
 \usepackage{polynom} % polynomial divisions package
-
-\usepackage{pgffor} % macros
 
 \usepackage{cancel} % cancel terms in equations
 
@@ -38,32 +46,42 @@
 
 \usetikzlibrary{mindmap,trees}\usetikzlibrary{shapes.geometric, arrows}
 
-  \tikzstyle{startstop} = [rectangle, rounded corners,
-  minimum width=3cm,
-  minimum height=1cm,
-  text centered,
-  draw=black,
-  fill=red!30]
-  \tikzstyle{decision} = [diamond,
-  minimum width=3cm,
-  minimum height=1cm,
-  text centered,
-  draw=black,
-  fill=green!30]
-  \tikzstyle{arrow} = [thick,->,>=stealth]
-  \tikzstyle{process} = [rectangle,
-  minimum width=3cm,
-  minimum height=1cm,
-  text centered,
-  text width=3cm,
-  draw=black,
-  fill=orange!30]
+\tikzset{
+  startstop/.style={rectangle, rounded corners,
+    minimum width=3cm,
+    minimum height=1cm,
+    text centered,
+    draw=black,
+    fill=red!30},
+  decision/.style={diamond,
+    minimum width=3cm,
+    minimum height=1cm,
+    text centered,
+    draw=black,
+    fill=green!30},
+  arrow/.style={thick,->,>=stealth},
+  process/.style={rectangle,
+    minimum width=3cm,
+    minimum height=1cm,
+    text centered,
+    text width=3cm,
+    draw=black,
+    fill=orange!30},
+}
 \usepackage{tkz-tab}
 
 \newcommand{\exercises}{
   \begin{frame}[noframenumbering,c]
     \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
       \usebeamerfont{title}Ασκήσεις
+    \end{beamercolorbox}
+  \end{frame}
+}
+
+\newcommand{\theory}{
+  \begin{frame}[noframenumbering,c]
+    \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+      \usebeamerfont{title}Θεωρία
     \end{beamercolorbox}
   \end{frame}
 }
@@ -99,19 +117,21 @@
 {
     \refstepcounter{apodiksi}\par
     \subsection{Απόδειξη \theapodiksi}
-    \begin{frame}[label=Απόδειξη\theapodiksi,t]{Απόδειξη #1}
+    \begin{frame}[label=Απόδειξη\theapodiksi,t]{Απόδειξη \theapodiksi\ifthenelse{\equal{#1}{}}{}{:~#1}}
         }{
     \end{frame}
 }
 
 % Presentation version
-\def\presentationversion{2.8}
+\def\presentationversion{3.1}
 
 % Patch \insertdate to always append version info on title slide
 \let\beamer@originsertdate\insertdate
 \renewcommand{\insertdate}{\beamer@originsertdate~---~\textbf{Έκδοση:}~\presentationversion}
 
 % Changelog
+% 3.1 - 2026-05-27: Removed redundant graphicx (loaded by beamer)\n% 3.0 - 2026-05-27: tikzstyle→tikzset, [normalem]{ulem}, removed pgffor+hyperref, added \\theory, notes option, apodiksi title shows number
+% 2.9 - 2026-05-27: Switched to polyglossia, NewCM10 fonts
 % 2.8 - 2026-03-17: Removed redundant xltxtra and babel greek option (xgreek handles everything)
 % 2.7 - 2024-07-10: Removed numbering from askisi's description.
 % 2.6 - 2024-06-10: Added changelog section, patched \insertdate for version info
