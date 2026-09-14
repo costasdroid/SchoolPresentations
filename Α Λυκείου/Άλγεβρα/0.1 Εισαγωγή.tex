@@ -1,0 +1,244 @@
+\documentclass{presentation}
+
+\title{Άλγεβρα Α Λυκείου}
+\subtitle{Προτάσεις και λογικοί σύνδεσμοι}
+\author[Λόλας]{Κωνσταντίνος Λόλας}
+\institute[$10^ο$ ΓΕΛ]{$10^ο$ ΓΕΛ Θεσσαλονίκης}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\section{Θεωρία}
+
+\begin{frame}{Η Άλγεβρα κάνει δηλώσεις}
+  \begin{itemize}[<+->]
+    \item «Το $2+3$ κάνει $5$.»
+    \item «Αν $x=4$, τότε $x^2=16$.»
+    \item «Το $x$ είναι μεγαλύτερο από $2$ και μικρότερο από $5$.»
+  \end{itemize}
+
+  \begin{exampleblock}{Σήμερα}
+    Θα μάθουμε να διαβάζουμε αυτές τις δηλώσεις χωρίς να χρειάζεται
+    αποκωδικοποιητής.
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}{1. Πρόταση}
+  \begin{block}{Πρόταση}
+    Είναι μια πρόταση που είναι είτε \textbf{αληθής} είτε \textbf{ψευδής}.
+  \end{block}
+
+  \begin{itemize}[<+->]
+    \item $2+3=5$ \hfill Αληθής
+    \item $10<4$ \hfill Ψευδής
+    \item «Λύσε την άσκηση!» \hfill Δεν είναι πρόταση
+    \item $x+1>3$ χωρίς γνωστό $x$ \hfill Δεν αποφασίζεται ακόμη
+  \end{itemize}
+
+  \begin{alertblock}{Γρήγορος έλεγχος}
+    Μπορώ να απαντήσω «Αληθές» ή «Ψευδές»; Τότε έχω πρόταση.
+  \end{alertblock}
+\end{frame}
+
+\begin{frame}{Πρόταση με γράμμα}
+  Ονομάζουμε τις προτάσεις με κεφαλαία γράμματα:
+  \[
+    A: x=3, \qquad B: x+2=5.
+  \]
+
+  Για $x=3$ ισχύουν και οι δύο. Για $x=1$ δεν ισχύει καμία.
+
+  \begin{exampleblock}{Μικρή προσοχή}
+    Το $A$ είναι ολόκληρη η πρόταση. Το $x$ είναι απλώς ο άγνωστος.
+    Μην τα γνωρίσετε και μπερδευτούν!
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}{2. Συνεπαγωγή}
+  \begin{block}{«Αν $A$, τότε $B$»}
+    \[
+      A\Rightarrow B
+    \]
+  \end{block}
+
+  \begin{exampleblock}{Παράδειγμα}
+    \[
+      x=4\Rightarrow x^2=16
+    \]
+    Το $x=4$ αρκεί για να πάρουμε $x^2=16$.
+  \end{exampleblock}
+
+  \begin{alertblock}{Το βέλος έχει φορά!}
+    \[
+      x^2=16\not\Rightarrow x=4
+    \]
+    Μπορεί να είναι και $x=-4$. Το βέλος δεν κάνει αναστροφή χωρίς φλας.
+  \end{alertblock}
+\end{frame}
+
+\begin{frame}{3. Ισοδυναμία}
+  \begin{block}{«$A$ αν και μόνο αν $B$»}
+    \[
+      A\Leftrightarrow B
+    \]
+    Δηλαδή ισχύουν και οι δύο κατευθύνσεις:
+    \[
+      A\Rightarrow B \quad\text{και}\quad B\Rightarrow A.
+    \]
+  \end{block}
+
+  \begin{exampleblock}{Παράδειγμα}
+    \[
+      x^2=0\Leftrightarrow x=0.
+    \]
+    Οι δύο πλευρές έχουν ακριβώς τις ίδιες λύσεις.
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}{4. Το «ή»}
+  \begin{block}{Διάζευξη}
+    \[
+      A\vee B
+    \]
+    σημαίνει «$A$ ή $B$». Αρκεί να ισχύει τουλάχιστον μία.
+  \end{block}
+
+  \begin{exampleblock}{Παράδειγμα}
+    \[
+      x<0\ \text{ή}\ x=0
+      \quad\Longleftrightarrow\quad x\le0.
+    \]
+    Στα μαθηματικά το «ή» επιτρέπει και τις δύο περιπτώσεις. Γενναιόδωρο!
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}{5. Το «και»}
+  \begin{block}{Σύζευξη}
+    \[
+      A\wedge B
+    \]
+    σημαίνει «$A$ και $B$». Πρέπει να ισχύουν και τα δύο.
+  \end{block}
+
+  \begin{exampleblock}{Παράδειγμα}
+    \[
+      x\ge2\ \text{και}\ x\le5
+      \quad\Longleftrightarrow\quad 2\le x\le5.
+    \]
+    Το $x$ περνάει από δύο ελέγχους. Δεν αρκεί να περάσει μόνο τον έναν!
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}{6. Άρνηση}
+  \begin{block}{Το «όχι»}
+    Η άρνηση της $A$ γράφεται $\overline{A}$ και κάνει την αληθή πρόταση ψευδή
+    και την ψευδή αληθή.
+  \end{block}
+
+  \begin{exampleblock}{Στις ανισώσεις}
+    \[
+      \overline{(x>3)}\Leftrightarrow x\le3,
+      \qquad
+      \overline{(x\ge2)}\Leftrightarrow x<2.
+    \]
+  \end{exampleblock}
+
+  \begin{alertblock}{Δεν αλλάζουμε μόνο το σύμβολο}
+    Η ισότητα πηγαίνει κι αυτή στην απέναντι πλευρά.
+  \end{alertblock}
+\end{frame}
+
+\begin{frame}{7. Αντιθετοαντιστροφή}
+  \begin{block}{Ο κανόνας}
+    \[
+      A\Rightarrow B
+      \quad\Longleftrightarrow\quad
+      \overline{B}\Rightarrow\overline{A}.
+    \]
+  \end{block}
+
+  \begin{exampleblock}{Παράδειγμα}
+    \[
+      x>5\Rightarrow x>2
+    \]
+    έχει αντιθετοαντίστροφη:
+    \[
+      x\le2\Rightarrow x\le5.
+    \]
+  \end{exampleblock}
+
+  \begin{alertblock}{Η συνταγή}
+    Αρνούμαι το $B$, αρνούμαι το $A$, αλλάζω σειρά. Έτοιμο!
+  \end{alertblock}
+\end{frame}
+
+\begin{frame}{Η κάρτα-σκονάκι}
+  \begin{center}
+    \begin{tabular}{c|c}
+      Λόγια & Σύμβολο\\ \hline
+      αν $A$, τότε $B$ & $A\Rightarrow B$\\
+      $A$ αν και μόνο αν $B$ & $A\Leftrightarrow B$\\
+      $A$ ή $B$ & $A\vee B$\\
+      $A$ και $B$ & $A\wedge B$\\
+      όχι $A$ & $\overline{A}$
+    \end{tabular}
+  \end{center}
+
+  \begin{block}{Σκέψου πρώτα τα λόγια}
+    Μετά διάλεξε το σύμβολο. Τα σύμβολα είναι βοηθοί, όχι εξεταστές!
+  \end{block}
+\end{frame}
+
+\moodle
+
+\section{Ασκήσεις}
+
+\exercises
+
+\begin{askisi}
+  \textbf{Το διάλειμμα του $x$.} Έστω $x\in\mathbb{R}$ και
+  \[
+    A: x\ge2,\qquad B: x\le5,\qquad C: x=4.
+  \]
+
+  \begin{enumerate}[<+->]
+    \item Ποιο είναι το σύνολο λύσεων της $A\wedge B$;
+    \item Τι σημαίνει η $\overline{A}\vee\overline{B}$;
+    \item Είναι σωστή η $A\wedge B\Rightarrow C$; Βρες ένα αντιπαράδειγμα.
+    \item Γράψε την αντιθετοαντίστροφη της προηγούμενης συνεπαγωγής.
+    \item Δείξε ότι $C\Leftrightarrow(x\ge4\wedge x\le4)$.
+  \end{enumerate}
+\end{askisi}
+
+\begin{lisi}
+  \textbf{Συζήτηση}
+  \begin{enumerate}[<+->]
+    \item $A\wedge B$ σημαίνει $2\le x\le5$, άρα $x\in[2,5]$.
+    \item $\overline{A}\vee\overline{B}$ σημαίνει $x<2$ ή $x>5$.
+    \item Όχι. Για $x=3$ ισχύει $A\wedge B$, αλλά όχι $C$.
+    \item Η αντιθετοαντίστροφη είναι
+          $\overline{C}\Rightarrow\overline{(A\wedge B)}$, δηλαδή
+          $x\ne4\Rightarrow(x<2\vee x>5)$.
+  \end{enumerate}
+\end{lisi}
+
+\begin{frame}{Το τελευταίο βήμα}
+  \[
+    x=4\Leftrightarrow(x\ge4\wedge x\le4).
+  \]
+
+  Για να ισχύουν και οι δύο ανισώσεις, το $x$ δεν έχει πού αλλού να πάει:
+  \[
+    x=4.
+  \]
+
+  \begin{block}{Συμπέρασμα}
+    Το «και» κρατά το κοινό μέρος, το «ή» ενώνει περιπτώσεις και η
+    αντιθετοαντιστροφή γυρίζει τον συλλογισμό χωρίς να τον χαλάει.
+  \end{block}
+\end{frame}
+
+\end{document}

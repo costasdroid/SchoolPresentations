@@ -7,29 +7,44 @@
 
 ---
 
+## Γρήγορη εισαγωγή
+
+Αυτό το αποθετήριο περιέχει έτοιμες παρουσιάσεις για την Α', Β' και Γ' Λυκείου και για Φυσική, με κοινό style και κοινή αρχιτεκτονική LaTeX/Beamer.
+
+Το βασικό εργαλείο για να δουλέψεις σωστά είναι να ακολουθείς την ίδια δομή και τις ίδιες συμβάσεις σε όλα τα αρχεία.
+
+---
+
 ## Δομή αποθετηρίου
 
-```
+```text
 presentation.cls        ← Κεντρικό custom Beamer class (version 2.7)
-Α Λυκείου/              ← Παρουσιάσεις Α΄ Λυκείου
-  presentation.cls      ← Τοπικό cls (κληρονομεί από root)
-  ...
-Β Λυκείου/              ← Παρουσιάσεις Β΄ Λυκείου
+Α Λυκείου/
   presentation.cls
   ...
-Γ Λυκείου/              ← Παρουσιάσεις Γ΄ Λυκείου
+Β Λυκείου/
   presentation.cls
   ...
-Φυσική/                 ← Παρουσιάσεις Φυσικής
+Γ Λυκείου/
+  presentation.cls
+  ...
+Φυσική/
   presentation.cls
   ...
 ```
 
 Κάθε φάκελος τάξης:
 
-- Περιέχει το δικό του `presentation.cls` (κληρονομεί / εξειδικεύει το root)
-- Όλα τα `.tex` αρχεία βρίσκονται **επίπεδα** (flat) στον φάκελο — χωρίς υποφακέλους ανά θέμα
-- Ονοματολογία: `κεφάλαιο.ενότητα[.υποενότητα] Τίτλος.tex` (π.χ. `2.5.1 Θεώρημα Rolle.tex`)
+- περιέχει το δικό του `presentation.cls` (κληρονομεί / εξειδικεύει το root)
+- τα `.tex` αρχεία βρίσκονται απευθείας στον φάκελο ή σε κοινές θεματικές ομάδες
+- δεν δημιουργούμε υποφάκελο για κάθε μεμονωμένη παρουσίαση
+- η ονοματολογία είναι: `κεφάλαιο.ενότητα[.υποενότητα] Τίτλος.tex`
+
+Παράδειγμα:
+
+- `2.1 Παράγωγος.tex`
+- `2.5.1 Θεώρημα Rolle.tex`
+- `3.3 Αναγωγή στο 1ο Τεταρτημόριο.tex`
 
 ---
 
@@ -37,10 +52,8 @@ presentation.cls        ← Κεντρικό custom Beamer class (version 2.7)
 
 ### 1. Fork
 
-Μπες στη σελίδα του αποθετηρίου στο GitHub:
+Πήγαινε στο GitHub και κάνε fork στο δικό σου λογαριασμό:
 [https://github.com/costasdroid/SchoolPresentations](https://github.com/costasdroid/SchoolPresentations)
-
-Κάνε κλικ στο κουμπί **Fork** (πάνω δεξιά). Το GitHub θα δημιουργήσει ένα προσωπικό αντίγραφο στο λογαριασμό σου.
 
 ### 2. Clone
 
@@ -49,7 +62,7 @@ git clone https://github.com/<your-username>/SchoolPresentations.git
 cd SchoolPresentations
 ```
 
-### 3. Δημιουργία branch (προαιρετικό αλλά προτεινόμενο)
+### 3. Δημιουργία branch
 
 ```bash
 git checkout -b new-presentation
@@ -57,7 +70,7 @@ git checkout -b new-presentation
 
 ### 4. Αλλαγές
 
-Δημιούργησε ή επεξεργάσου `.tex` αρχεία σύμφωνα με τις οδηγίες παρακάτω. Μόλις τελειώσεις:
+Δημιούργησε ή επεξεργάσου `.tex` αρχεία σύμφωνα με τις οδηγίες παρακάτω. Όταν τελειώσεις:
 
 ```bash
 git add .
@@ -76,11 +89,11 @@ git push origin new-presentation
 git push origin master
 ```
 
-### 6. Pull Request (για συνεισφορά στο πρωτότυπο)
+### 6. Pull Request
 
-Αν θέλεις να προτείνεις τις αλλαγές σου στο αρχικό αποθετήριο, άνοιξε **Pull Request** από το GitHub UI του fork σου.
+Άνοιξε Pull Request από το fork σου στο πρωτότυπο αποθετήριο.
 
-### 7. Συγχρονισμός με το upstream (αν έχεις κάνει fork)
+### 7. Συγχρονισμός με το upstream
 
 ```bash
 git remote add upstream https://github.com/costasdroid/SchoolPresentations.git
@@ -94,14 +107,14 @@ git merge upstream/master
 
 ### Απαιτήσεις συστήματος
 
-| Εργαλείο         | Έκδοση                                                  |
-| ---------------- | ------------------------------------------------------- |
-| TeX distribution | TeX Live 2022+ ή MiKTeX                                 |
-| Compiler         | **XeLaTeX**                                             |
-| Build tool       | **latexmk**                                             |
-| Γραμματοσειρά    | **Calibri** (πρέπει να είναι εγκατεστημένη στο σύστημα) |
+| Εργαλείο | Έκδοση |
+| --- | --- |
+| TeX distribution | TeX Live 2022+ ή MiKTeX |
+| Compiler | **XeLaTeX** |
+| Build tool | **latexmk** |
+| Γραμματοσειρά | **Calibri** |
 
-Απαιτούμενα πακέτα LaTeX (περιλαμβάνονται συνήθως στο TeX Live full):
+Απαιτούμενα πακέτα LaTeX (συνήθως περιλαμβάνονται στο TeX Live full):
 `beamer`, `fontspec`, `unicode-math`, `xltxtra`, `xgreek`, `tikz`, `pgfplots`, `tkz-tab`, `polynom`, `multicol`, `appendixnumberbeamer`, `cancel`, `pgffor`, `ifthen`, `ulem`, `hyperref`
 
 ### Boilerplate νέας παρουσίασης
@@ -137,18 +150,18 @@ git merge upstream/master
 \end{document}
 ```
 
-> **Σημαντικό:** Πάντα `\documentclass{presentation}` — χωρίς relative path. Δεν χρησιμοποιείται `\date{}`.
+> **Σημαντικό:** Πάντα `\documentclass{presentation}` χωρίς relative path. Δεν χρησιμοποιούμε `\date{}`.
 
 ### Custom εντολές & περιβάλλοντα
 
-| Εντολή / Περιβάλλον                         | Περιγραφή                    |
-| ------------------------------------------- | ---------------------------- |
-| `\exercises`                                | Frame-διαχωριστής "Ασκήσεις" |
-| `\moodle`                                   | Frame με οδηγία για Moodle   |
-| `\begin{askisi}...\end{askisi}`             | Άσκηση (αυτόματη αρίθμηση)   |
-| `\begin{lisi}...\end{lisi}`                 | Λύση (αυτόματη αρίθμηση)     |
+| Εντολή / Περιβάλλον | Περιγραφή |
+| --- | --- |
+| `\exercises` | Frame διαχωριστής "Ασκήσεις" |
+| `\moodle` | Frame με οδηγία για Moodle |
+| `\begin{askisi}...\end{askisi}` | Άσκηση (αυτόματη αρίθμηση) |
+| `\begin{lisi}...\end{lisi}` | Λύση (αυτόματη αρίθμηση) |
 | `\begin{apodiksi}[τίτλος]...\end{apodiksi}` | Απόδειξη (αυτόματη αρίθμηση) |
-| `\begin{block}{Τίτλος}...\end{block}`       | Θεώρημα / Ορισμός            |
+| `\begin{block}{Τίτλος}...\end{block}` | Θεώρημα / Ορισμός |
 
 ### Progressive reveal
 
@@ -184,17 +197,28 @@ f(x)=\begin{cases}
 \end{cases}
 ```
 
-### Ονοματολογία αρχείων
+---
 
-`κεφάλαιο.ενότητα[.υποενότητα] Τίτλος.tex`
+## Build & validation
 
-Παραδείγματα:
+Για να τρέξεις μια παρουσίαση:
 
-- `2.1 Παράγωγος.tex`
-- `2.5.1 Θεώρημα Rolle.tex`
-- `3.3 Αναγωγή στο 1ο Τεταρτημόριο.tex`
+```bash
+latexmk -xelatex -interaction=nonstopmode -synctex=1 -file-line-error <όνομα-αρχείου>.tex
+```
 
-### Αρχεία που αγνοούνται (`.gitignore`)
+Αν δουλεύεις μέσα σε VS Code με LaTeX Workshop, προτίμησε recipe `latexmk (xelatex)`.
+
+Πριν κάνεις commit:
+
+- έλεγξε ότι το αρχείο χρησιμοποιεί σωστή ονοματολογία
+- έλεγξε ότι το `\documentclass{presentation}` είναι σωστό
+- έλεγξε ότι δεν έχεις αφήσει generated αρχεία (`.aux`, `.log`, `.nav`, `.pdf`, κλπ.) στο repo
+- έλεγξε αν η παρουσίαση compiles χωρίς σφάλματα
+
+---
+
+## Αρχεία που αγνοούνται (`.gitignore`)
 
 Το `.gitignore` αποκλείει αυτόματα όλα τα generated αρχεία του LaTeX:
 `.aux`, `.log`, `.nav`, `.snm`, `.synctex.gz`, `.fdb_latexmk`, `.pdf`, κλπ.
@@ -210,23 +234,18 @@ f(x)=\begin{cases}
 #### 1. LaTeX Workshop
 
 **ID:** `James-Yu.latex-workshop`
-Το βασικό extension για LaTeX. Παρέχει compile on save, SyncTeX (μετάβαση PDF ↔ κώδικας), syntax highlighting, IntelliSense για εντολές.
 
 #### 2. LTeX – Grammar/Spell Checker
 
 **ID:** `valentjn.vscode-ltex`
-Ορθογραφικός και γραμματικός έλεγχος για Ελληνικά (και άλλες γλώσσες) μέσα σε LaTeX αρχεία.
 
 #### 3. GitHub Copilot _(προαιρετικό)_
 
 **ID:** `GitHub.copilot`
-AI autocomplete — χρήσιμο για επαναλαμβανόμενα LaTeX patterns.
-
----
 
 ### Ρύθμιση LaTeX Workshop
 
-Πρόσθεσε τα παρακάτω στο αρχείο `settings.json` του VS Code (File → Preferences → Settings → Open Settings JSON):
+Στο `settings.json` του VS Code:
 
 ```json
 {
@@ -257,7 +276,60 @@ AI autocomplete — χρήσιμο για επαναλαμβανόμενα LaTeX
     {
       "name": "latexmk (xelatex)",
       "tools": ["latexmk-xelatex"]
-    },
+    }
+  ]
+}
+```
+
+---
+
+## Check-list πριν το commit
+
+- [ ] σωστή ονοματολογία αρχείου
+- [ ] σωστό `\documentclass{presentation}`
+- [ ] δεν έχεις `\date{}`
+- [ ] το περιεχόμενο είναι στα Ελληνικά
+- [ ] τα frames είναι σύντομα και διδακτικά
+- [ ] το άθροισμα / θεωρία / ασκήσεις είναι συνεπές
+- [ ] η παρουσίαση compiles με XeLaTeX
+- [ ] δεν έχεις generated αρχεία στο repo
+
+---
+
+## Μην...
+
+- μην χρησιμοποιείς relative path στο `\documentclass`
+- μην βάζεις `\date{}`
+- μην δημιουργείς υποφάκελο για κάθε μεμονωμένη παρουσίαση
+- μην επεξεργάζεσαι generated αρχεία
+- μην γράφεις στα αγγλικά όταν το project είναι στα Ελληνικά
+- μην αγνοείς τη δομή των υπαρχόντων υποφακέλων
+
+---
+
+## AI συγγραφική συμπεριφορά
+
+Όταν δημιουργείς νέο εκπαιδευτικό υλικό:
+
+- μιμήσου το ύφος των υπαρχουσών παρουσιάσεων
+- χρησιμοποίησε ευρηματικούς τίτλους χωρίς να γεμίζεις κάθε frame με κείμενο
+- κράτα σύντομο και προφορικό ύφος
+- μην εισάγεις άσχετες τεχνικές ή ασκήσεις που δεν έχουν παρουσιαστεί
+- συνέχισε τη σειρά και τη λογική των προηγούμενων διαφανειών
+
+---
+
+## Versioning
+
+- το `presentation.cls` έχει version tracking
+- η πληροφορία εμφανίζεται στην title slide
+
+---
+
+## Τελική παρατήρηση
+
+Το repository λειτουργεί καλύτερα όταν η δομή, η ονοματολογία και ο τρόπος συγγραφής είναι συνεπείς σε όλα τα αρχεία. Αυτή η συνέπεια είναι που κάνει τα έτοιμα slides εύκολα να αναπαράγονται και να συντηρούνται.
+
     {
       "name": "xelatex",
       "tools": ["xelatex"]
