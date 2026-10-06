@@ -201,13 +201,13 @@ f(x)=\begin{cases}
 
 ## Build & validation
 
-Για να τρέξεις μια παρουσίαση:
+Για να τρέξεις μια παρουσίαση από τον φάκελο του αρχείου:
 
 ```bash
-latexmk -xelatex -interaction=nonstopmode -synctex=1 -file-line-error <όνομα-αρχείου>.tex
+xelatex -synctex=1 -interaction=nonstopmode -file-line-error "<όνομα-αρχείου>.tex"
 ```
 
-Αν δουλεύεις μέσα σε VS Code με LaTeX Workshop, προτίμησε recipe `latexmk (xelatex)`.
+Στο VS Code με LaTeX Workshop, το προεπιλεγμένο recipe είναι `xelatex` και περνά το basename του αρχείου από τον φάκελό του, ώστε να υποστηρίζονται κενά στο όνομα.
 
 Πριν κάνεις commit:
 
@@ -245,7 +245,7 @@ latexmk -xelatex -interaction=nonstopmode -synctex=1 -file-line-error <όνομ�
 
 ### Ρύθμιση LaTeX Workshop
 
-Στο `settings.json` του VS Code:
+Το ελάχιστο recipe στο `settings.json` του workspace είναι:
 
 ```json
 {
@@ -257,27 +257,18 @@ latexmk -xelatex -interaction=nonstopmode -synctex=1 -file-line-error <όνομ�
         "-synctex=1",
         "-interaction=nonstopmode",
         "-file-line-error",
-        "%DOC%"
-      ]
-    },
-    {
-      "name": "latexmk-xelatex",
-      "command": "latexmk",
-      "args": [
-        "-xelatex",
-        "-synctex=1",
-        "-interaction=nonstopmode",
-        "-file-line-error",
-        "%DOC%"
+        "%DOCFILE_EXT%"
       ]
     }
   ],
+  "latex-workshop.latex.workingDirectory": "%DIR%",
   "latex-workshop.latex.recipes": [
     {
-      "name": "latexmk (xelatex)",
-      "tools": ["latexmk-xelatex"]
+      "name": "xelatex",
+      "tools": ["xelatex"]
     }
-  ]
+  ],
+  "latex-workshop.latex.recipe.default": "xelatex"
 }
 ```
 
